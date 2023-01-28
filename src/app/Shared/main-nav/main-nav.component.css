@@ -4,7 +4,7 @@
 mat-toolbar{
     z-index: 999;
     box-shadow: #a7a7a7 0px 0px 5px;
-    
+
     color: aliceblue;
 }
 a.mat-raised-button{
@@ -16,8 +16,8 @@ button{
 
  }
  button.active{
-   
-    background: rgb(1, 92, 166);
+
+    background: red;
  }
  button:hover{
     background: rgb(69, 123, 156);
