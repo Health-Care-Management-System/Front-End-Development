@@ -1,0 +1,73 @@
+<div class="container" fxLayout="row" fxLayout.lt-sm="column"> 
+
+    <div class="left-part" >
+    </div>
+
+    <div class="right-part" >
+        <span>
+            <h1 id="title" class="md-display-3">Sign up for doctor account</h1>
+        </span>
+        <form class="doc-form" fxLayoutAlign="center center">
+            <table class="docform-full-width" cellspacing="0">
+                <tr>
+                    <td>
+                        <p id="formtitle" class="md-title">SLMC registration number</p>
+                        <mat-form-field class="docform-full-width" appearance="fill">
+                            <mat-label>Your SLMC registration number</mat-label>
+                            <input matInput>
+                        </mat-form-field>
+                    </td>
+                    <td>
+                        <p id="formtitle" class="md-title">Specilality</p>
+                        <mat-form-field class="docform-full-width" appearance="fill">
+                            <mat-label>select Your Specilality </mat-label>
+                            <input type="text"
+                            placeholder="Pick one"
+                            aria-label="Number"
+                            matInput
+                          
+                            [matAutocomplete]="auto">
+                     <mat-autocomplete #auto="matAutocomplete">
+                       <mat-option *ngFor="let option of " [value]="option">
+                         {{option}}
+                       </mat-option>
+                     </mat-autocomplete>
+                            
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p id="formtitle" class="md-title">SLMC registration type</p>
+                        <mat-form-field class="docform-full-width" appearance="fill">
+                            <mat-label>select SLMC registration type </mat-label>
+                            <input type="text"
+                            placeholder="Pick one"
+                            aria-label="Number"
+                            matInput
+                          
+                            [matAutocomplete]="auto">
+                     <mat-autocomplete #auto="matAutocomplete">
+                       <mat-option *ngFor="let option of " [value]="option">
+                         {{option}}
+                       </mat-option>
+                     </mat-autocomplete>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="formtitle" class="md-title">upload Your recent image</p>
+                        
+                    </td>
+                </tr>
+                
+               
+            </table>
+        </form>
+        <span id="button" class="middle" fxLayoutAlign="center center"><button mat-raised-button color="primary"routerLink="/signupnext">Submit</button></span>
+        <span  class="middle" fxLayoutAlign="center center"><h3 class="login" >Already have an account ? <a routerLink=""> Log in</a></h3></span>
+
+    </div>
+
+</div>

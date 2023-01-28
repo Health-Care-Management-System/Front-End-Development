@@ -1,0 +1,46 @@
+#docsection {
+    height: 750px;
+    background: url("src/assets/img/doc1.png");
+    /* background-size: 100%; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.doctor {
+    position: absolute;
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    align-content: center;
+    margin-left: 100px;
+
+}
+.card1{
+    position: relative;
+    /* top , right , bottom , left */
+    margin: 20px 40px 20px 20px;
+}
+
+.card2{
+    position: relative;
+     /* top , right , bottom , left */
+    margin: 20px 20px 20px 40px;
+
+}
+.patientDoc {
+    position: relative;
+}
+
+.iamDoc {}
+
+mat-divider{
+   height:200px;
+   background-color: black;
+}
+button{
+
+}

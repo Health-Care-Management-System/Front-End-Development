@@ -1,0 +1,24 @@
+.spacer {
+    flex: 1 1 auto;
+}
+mat-toolbar{
+    z-index: 999;
+    box-shadow: #a7a7a7 0px 0px 5px;
+    
+    color: aliceblue;
+}
+a.mat-raised-button{
+    margin-left: 15px;
+}
+
+button{
+    margin-left: 2px;
+
+ }
+ button.active{
+   
+    background: rgb(1, 92, 166);
+ }
+ button:hover{
+    background: rgb(69, 123, 156);
+ }
