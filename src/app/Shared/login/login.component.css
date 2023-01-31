@@ -1,5 +1,13 @@
 .userselect{
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+#container1{
+  left: 0  !important;
+  right: auto;
+}
+
+.userbutton{
+  background-color: #E1EBFF;
 }

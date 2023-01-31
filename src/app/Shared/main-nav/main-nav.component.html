@@ -1,40 +1,44 @@
 
 <mat-toolbar color="primary">
-    <!-- if want add shadow to navbar -->
-    <!-- <mat-toolbar color="primary" class="mat-elevation-za"></mat-toolbar> -->
+  <!-- if want add shadow to navbar -->
+  <!-- <mat-toolbar color="primary" class="mat-elevation-za"></mat-toolbar> -->
 
-    <span><a routerLink="/home" style="text-decoration: none; color: azure;"></a><img src="assets/img/logo.png" style="height: 57px; width: auto" alt="logo"></span>
+  <span>
+        <a routerLink="/home" >
+        <img src="../../assets/img/logo.png" class="logo" alt="logo" >
+        </a>
+    </span>
 
-    <div class="spacer"></div>
+  <div class="spacer"></div>
 
-    <!-- fxHide fxShow.gt-sm - means the the above element will be hidden by default and ONLY shown on viewport sizes greater than mobile. -->
-    <div fxLayout="row" fxHide fxShow.gt-sm>
-        <a routerLink="" mat-button>Home</a>
-        <a routerLink="/doctor" mat-button>Doctor</a>
-        <a routerLink="" mat-button>Hospitals</a>
-        <a routerLink="" mat-button>Phamacy</a>
-        <a routerLink="" mat-button>Ambulance</a>
-        <a routerLink="" mat-button>About</a>
-        <a routerLink="" mat-button>Contact</a>
-        <a routerLink="login" mat-raised-button>Login</a>
-        <a routerLink="/signup" mat-raised-button>Sign up</a>
-    </div>
+  <!-- fxHide fxShow.gt-sm - means the the above element will be hidden by default and ONLY shown on viewport sizes greater than mobile. -->
+  <div fxLayout="row" fxHide fxShow.gt-sm>
+    <a class="nav-link" routerLink="" mat-button>Home</a>
+    <a class="nav-link" routerLink="/doctor" mat-button>Doctor</a>
+    <a class="nav-link" routerLink="" mat-button>Hospitals</a>
+    <a class="nav-link" routerLink="" mat-button>Phamacy</a>
+    <a class="nav-link" routerLink="" mat-button>Ambulance</a>
+    <a class="nav-link" routerLink="" mat-button>About</a>
+    <a class="nav-link" routerLink="" mat-button>Contact</a>
+    <a class="nav-link" routerLink="/login" mat-stroked-button>Login</a>
+    <a class="nav-link" routerLink="/signup" mat-raised-button>Sign up</a>
+  </div>
 
-    <!-- responsive menu part -->
-    <!-- fxShow fxHide.md  - means the the above element will be shown by default and ONLY hidden on viewport sizes == md mediaQuery ranges. -->
-    <button mat-button [mat-menu-trigger-for]="menu" fxShow fxHide.gt-sm>
-        <mat-icon>menu</mat-icon>
-    </button>
+  <!-- responsive menu part -->
+  <!-- fxShow fxHide.md  - means the the above element will be shown by default and ONLY hidden on viewport sizes == md mediaQuery ranges. -->
+  <button mat-button [mat-menu-trigger-for]="menu" fxShow fxHide.gt-sm>
+    <mat-icon>menu</mat-icon>
+  </button>
 </mat-toolbar>
 
 <mat-menu x-position = "before" #menu>
-    <button routerLink="" mat-menu-item>Home</button>
-    <button routerLink="/doctor" mat-menu-item>Doctor</button>
-    <button routerLink="" mat-menu-item>Hospital</button>
-    <button routerLink="" mat-menu-item>Pharmacy</button>
-    <button routerLink="" mat-menu-item>Ambulance</button>
-    <button routerLink="" mat-menu-item>About</button>
-    <button routerLink="" mat-menu-item>Contact</button>
-    <button routerLink="/login" mat-menu-item>Login</button>
-    <button routerLink="/signup" mat-menu-item>Sign up</button>
+  <button routerLink="" mat-menu-item>Home</button>
+  <button routerLink="" mat-menu-item>Doctor</button>
+  <button routerLink="" mat-menu-item>Hospital</button>
+  <button routerLink="" mat-menu-item>Pharmacy</button>
+  <button routerLink="" mat-menu-item>Ambulance</button>
+  <button routerLink="" mat-menu-item>About</button>
+  <button routerLink="" mat-menu-item>Contact</button>
+  <button routerLink="" mat-menu-item>Login</button>
+  <button routerLink="" mat-menu-item>Sign up</button>
 </mat-menu>
