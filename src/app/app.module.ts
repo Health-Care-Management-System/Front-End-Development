@@ -18,6 +18,7 @@ import { DoctorSignupComponent } from './Modules/Doctor/doctor-signup-page-1/doc
 import { DoctorSignupNextComponent } from './Modules/Doctor/doctor-signup-page-2/doctor-signup-next.component';
 import { LoginComponent } from './Shared/login/login.component';
 import { HomeComponent } from './Shared/home/home.component';
+import { AmbulanceComponent } from './modules/ambulance/ambulance.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { HomeComponent } from './Shared/home/home.component';
     DoctorSignupNextComponent,
     LoginComponent,
     HomeComponent,
+    AmbulanceComponent,
   ],
   imports: [
     BrowserModule,
