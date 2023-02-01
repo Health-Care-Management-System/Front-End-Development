@@ -7,6 +7,7 @@ import { DoctorComponent } from './Modules/Doctor/doctor landing page/doctor.com
 import { DoctorSignupComponent } from './Modules/Doctor/doctor-signup-page-1/doctor-signup.component';
 import { DoctorSignupNextComponent } from './Modules/Doctor/doctor-signup-page-2/doctor-signup-next.component';
 import { LoginComponent } from './Shared/login/login.component';
+import {AmbulanceComponent} from "./Modules/ambulance/ambulance.component";
 
 
 // routes for the components
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'doctor' , component:DoctorComponent},
   {path:'signup' ,component:DoctorSignupComponent },
   {path: 'signupnext' , component:DoctorSignupNextComponent},
-  {path: 'login' , component:LoginComponent}
+  {path: 'login' , component:LoginComponent},
+  {path: 'ambulance',component:AmbulanceComponent}
 
 ];
 
