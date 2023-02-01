@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+
 // import flexLayout
 import {FlexLayoutModule} from '@angular/flex-layout';
 
@@ -17,6 +18,11 @@ import { DoctorComponent } from './Modules/Doctor/doctor landing page/doctor.com
 import { DoctorSignupComponent } from './Modules/Doctor/doctor-signup-page-1/doctor-signup.component';
 import { DoctorSignupNextComponent } from './Modules/Doctor/doctor-signup-page-2/doctor-signup-next.component';
 import { LoginComponent } from './Shared/login/login.component';
+<<<<<<< Updated upstream
+=======
+import { HomeComponent } from './Shared/home/home.component';
+import { AmbulanceComponent} from './Modules/Ambulance/ambulance.component'
+>>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
