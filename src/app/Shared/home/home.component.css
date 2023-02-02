@@ -1,5 +1,5 @@
 .container {
-  margin-left: 50px;
+  margin-left: 60px;
 }
 h1{
   font-size: 4.4rem;
@@ -31,7 +31,7 @@ p {
   height: 95%;
 }
 .hero h1 {
-  margin-top: 150px;
+  margin-top: 125px;
   line-height: 70px;
   color:#00be99;
 }
@@ -41,6 +41,9 @@ p {
 .hero p {
   margin-bottom: 50px;
 }
+.hero-btns{
+  margin-left: 85px;
+}
 .hero-btns a:first-child {
   background-color: #00BE99;
   border:2px solid #00BE99;
@@ -48,8 +51,8 @@ p {
   padding: 17px 35px;
   font-size: 1.3rem;
   border-radius: 30px;
-  -webkit-box-shadow: 0px 4px 5px 0px rgba(57, 255, 126, 0.15);
-  -moz-box-shadow: 0px 4px 5px 0px rgba(57, 255, 126, 0.15);
+  /*-webkit-box-shadow: 0px 4px 5px 0px rgba(57, 255, 126, 0.15);*/
+  /*-moz-box-shadow: 0px 4px 5px 0px rgba(57, 255, 126, 0.15);*/
   box-shadow: 0px 4px 5px 0px rgba(57, 255, 126, 0.15);
 }
 .hero-btns a:first-child:hover {
@@ -58,7 +61,7 @@ p {
   color: #065560;
   padding: 17px 35px;
   font-size: 1.3rem;
-  border-radius: 30px;
+  border-radius: 35px;
   transition: all 0.3s ease;
 }
 .hero-btns a:last-child {
