@@ -9,6 +9,7 @@ import { DoctorSignupNextComponent } from './Modules/Doctor/doctor-signup-page-2
 import { LoginComponent } from './Shared/login/login.component';
 import { HomeComponent } from './Shared/home/home.component';
 import {AmbulanceComponent} from "./Modules/ambulance/ambulance.component";
+import { FooterComponent } from './Shared/footer/footer.component';
 
 
 
@@ -19,7 +20,9 @@ const routes: Routes = [
   {path:'signup' ,component:DoctorSignupComponent },
   {path: 'signupnext' , component:DoctorSignupNextComponent},
   {path: 'login' , component:LoginComponent},
-  {path: 'ambulance',component:AmbulanceComponent}
+  {path: 'ambulance',component:AmbulanceComponent},
+  {path:'footer' , component:FooterComponent},
+  {path:'' , redirectTo:'/home' , pathMatch:'full'}
 
 ];
 

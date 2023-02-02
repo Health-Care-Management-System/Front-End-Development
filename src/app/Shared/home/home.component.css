@@ -11,7 +11,7 @@ h1{
 a{
   text-decoration: none;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   position: relative;
 }
 p {
@@ -25,8 +25,10 @@ p {
   top: 0;
   right: 0;
   z-index: -9;
-  margin-top: 30px;
+  margin-top: 20px;
+  margin-right: 50px;
   width: 50%;
+  height: 95%;
 }
 .hero h1 {
   margin-top: 150px;
@@ -44,7 +46,7 @@ p {
   border:2px solid #00BE99;
   color: #fff;
   padding: 17px 35px;
-  font-size: 1.0rem;
+  font-size: 1.3rem;
   border-radius: 30px;
   -webkit-box-shadow: 0px 4px 5px 0px rgba(57, 255, 126, 0.15);
   -moz-box-shadow: 0px 4px 5px 0px rgba(57, 255, 126, 0.15);
@@ -55,14 +57,14 @@ p {
   border:2px solid #00BE99;
   color: #065560;
   padding: 17px 35px;
-  font-size: 1.0rem;
+  font-size: 1.3rem;
   border-radius: 30px;
   transition: all 0.3s ease;
 }
 .hero-btns a:last-child {
   color: #FFFFFF;
   padding: 17px 35px;
-  font-size: 1.0rem;
+  font-size: 1.3rem;
 }
 .hero-btns a:last-child:hover {
   color: #00BE99;

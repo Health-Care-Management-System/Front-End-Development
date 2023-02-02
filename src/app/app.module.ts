@@ -18,8 +18,8 @@ import { DoctorSignupComponent } from './Modules/Doctor/doctor-signup-page-1/doc
 import { DoctorSignupNextComponent } from './Modules/Doctor/doctor-signup-page-2/doctor-signup-next.component';
 import { LoginComponent } from './Shared/login/login.component';
 import { HomeComponent } from './Shared/home/home.component';
-
 import {AmbulanceComponent} from './Modules/ambulance/ambulance.component';
+import { FooterComponent } from './Shared/footer/footer.component';
 
 
 @NgModule({
@@ -32,6 +32,7 @@ import {AmbulanceComponent} from './Modules/ambulance/ambulance.component';
     LoginComponent,
     HomeComponent,
     AmbulanceComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
