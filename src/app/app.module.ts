@@ -12,6 +12,8 @@ import 'hammerjs';
 import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import {FormsModule} from '@angular/forms';
+
 import { MainNavComponent } from './Shared/main-nav/main-nav.component';
 import { DoctorComponent } from './Modules/Doctor/doctor landing page/doctor.component';
 import { DoctorSignupComponent } from './Modules/Doctor/doctor-signup-page-1/doctor-signup.component';
@@ -41,7 +43,8 @@ import { UserSelectComponent } from './Shared/user-select/user-select.component'
     AppRoutingModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
