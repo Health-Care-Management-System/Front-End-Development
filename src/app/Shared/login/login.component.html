@@ -1,33 +1,64 @@
-<!-- fxLayout="row" fxLayout.lt-sm="column"  -->
+<div id="loginsection" class="container" fxLayoutAlign="center center">
+  <div class="login" fxLayout="row" fxLayout.lt-sm="column"  >
+    <div  class="card1">
+      <span>
+        <img src="../../../assets/img/login-icon.png" style="width: 500px; height: auto">
+      </span>
+    </div>
 
-<div >
-  <div class="container" id="container1" fxLayout="row" fxLayout.lt-sm="column" >
-    <div class="users">
-      <!--  (click)="openLoginForm()" -->
-      <button mat-raised-button class="userbutton" >
-        <img src="../../assets/img/user.png" alt="patient">
-        <p>I am patient</p>
-      </button>
-    </div>
-    <div class="users">
-      <button mat-raised-button class="userbutton"> <img src="../../assets/img/user.png" alt="">
-        <p>I am doctor</p></button>
-    </div>
-    <div class="users">
-      <button mat-raised-button class="userbutton"> <img src="../../assets/img/user.png" alt="">
-        <p>I am doctor</p></button>
-    </div>
-    <div class="users">
-      <button mat-raised-button class="userbutton" > <img src="../../assets/img/user.png" alt="">
-        <p>I am doctor</p></button>
-    </div>
-    <div class="users">
-      <button mat-raised-button class="userbutton"> <img src="../../assets/img/user.png" alt="">
-        <p>I am doctor</p></button>
+    <mat-divider vertical></mat-divider>
+
+    <div  class="card2">
+      <span class="1line"><h2>Log In</h2></span>
+      <p>{{user| json}}</p>
+      <mat-card>
+        <mat-card-content>
+          <form novalidate #loginForm="ngForm" class="myclass" (ngSubmit)="onSubmit()">
+            <table class="loginform">
+              <tr>
+                <p class="md-title">User Name</p>
+                <mat-form-field appearance="fill">
+                  <mat-label>Your User Name</mat-label>
+                  <input matInput placeholder="Type Your Username" type="text"
+                         [(ngModel)]="user.username"
+                         name="username"
+                         #username="ngModel" required >
+                  <!--error message displaying-->
+                  <mat-error *ngIf="username.errors?.['required']">
+                    Username is required
+                  </mat-error>
+                </mat-form-field>
+              </tr>
+              <tr>
+                <p class="md-title">Password</p>
+                <mat-form-field appearance="fill">
+                  <mat-label>Your Password Name</mat-label>
+                  <input matInput placeholder="Enter Your Password" type="text"
+                         [(ngModel)]="user.password"
+                         name="password"
+                         #password="ngModel" required >
+                  <!--error message displaying-->
+                  <mat-error *ngIf="password.errors?.['required']">
+                    Password is required
+                  </mat-error>
+                </mat-form-field>
+              </tr>
+            </table>
+
+            <mat-checkbox [(ngModel)]="user.remember" name="remember" >Remember me</mat-checkbox>
+
+            <span  class="middle" fxLayoutAlign="center center">
+            <button mat-raised-button
+                    color="primary"
+                    type="submit"
+                    [disabled]="loginForm.form.invalid">Log In</button>
+          </span>
+          </form>
+        </mat-card-content>
+      </mat-card>
+
     </div>
   </div>
 
-  <span class="userselect"><img src="../../assets/img/userselect.png" alt=""></span>
+
 </div>
-
-

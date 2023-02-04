@@ -12,14 +12,17 @@ import 'hammerjs';
 import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import {FormsModule} from '@angular/forms';
+
 import { MainNavComponent } from './Shared/main-nav/main-nav.component';
 import { DoctorComponent } from './Modules/Doctor/doctor landing page/doctor.component';
 import { DoctorSignupComponent } from './Modules/Doctor/doctor-signup-page-1/doctor-signup.component';
 import { DoctorSignupNextComponent } from './Modules/Doctor/doctor-signup-page-2/doctor-signup-next.component';
 import { LoginComponent } from './Shared/login/login.component';
 import { HomeComponent } from './Shared/home/home.component';
-import {AmbulanceComponent} from './Modules/ambulance/ambulance.component';
+import {AmbulanceComponent} from './Modules/Ambulance_/ambulance landing page/ambulance.component';
 import { FooterComponent } from './Shared/footer/footer.component';
+import { UserSelectComponent } from './Shared/user-select/user-select.component';
 
 
 @NgModule({
@@ -33,13 +36,15 @@ import { FooterComponent } from './Shared/footer/footer.component';
     HomeComponent,
     AmbulanceComponent,
     FooterComponent,
+    UserSelectComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

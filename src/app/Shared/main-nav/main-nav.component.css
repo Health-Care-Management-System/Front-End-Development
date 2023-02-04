@@ -2,13 +2,14 @@
   flex: 1 1 auto;
 }
 .logo{
-  height: 57px;
+  height: 61px;
   width: auto;
   margin-top: 15px;
-  margin-left: 15px;
+  margin-left: 20px;
 }
 mat-toolbar{
-  margin-top: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   padding: 20px;
   z-index: 999;
   /*box-shadow: #8d9391 0px 0px 5px;*/
@@ -24,7 +25,7 @@ mat-toolbar{
 a.mat-raised-button{
   margin-left: 25px;
   border-radius: 15px !important;
-  border-shadow:none !important;
+  border-shadow:0 !important;
   background-color: #00be99 ;
   color: white;
   margin-right: 30px;

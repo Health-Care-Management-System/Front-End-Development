@@ -1,8 +1,13 @@
+/*#bg-pic{*/
+/*  background: url("../../../assets/img/home-bg.png");*/
+/*  background-size: 100%;*/
+/*  background-position: center;*/
+/*}*/
 .container {
-  margin-left: 60px;
+  margin-left: 150px;
 }
 h1{
-  font-size: 4.4rem;
+  font-size: 4.0rem;
   margin-bottom: 20px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -19,6 +24,9 @@ p {
   line-height: 1.8;
   margin-bottom: 15px;
   letter-spacing: 0.025em;
+}
+.container-fluid{
+
 }
 .hero img {
   position: absolute;
@@ -39,17 +47,18 @@ p {
   color: #065560;
 }
 .hero p {
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 .hero-btns{
-  margin-left: 85px;
+  margin-left: 75px;
+  /*margin-bottom: 210px;*/
 }
 .hero-btns a:first-child {
   background-color: #00BE99;
   border:2px solid #00BE99;
   color: #fff;
-  padding: 17px 35px;
-  font-size: 1.3rem;
+  padding: 15px 35px;
+  font-size: 1.0rem;
   border-radius: 30px;
   /*-webkit-box-shadow: 0px 4px 5px 0px rgba(57, 255, 126, 0.15);*/
   /*-moz-box-shadow: 0px 4px 5px 0px rgba(57, 255, 126, 0.15);*/
@@ -60,14 +69,14 @@ p {
   border:2px solid #00BE99;
   color: #065560;
   padding: 17px 35px;
-  font-size: 1.3rem;
+  font-size: 1.0rem;
   border-radius: 35px;
   transition: all 0.3s ease;
 }
 .hero-btns a:last-child {
   color: #FFFFFF;
   padding: 17px 35px;
-  font-size: 1.3rem;
+  font-size: 1.0rem;
 }
 .hero-btns a:last-child:hover {
   color: #00BE99;
