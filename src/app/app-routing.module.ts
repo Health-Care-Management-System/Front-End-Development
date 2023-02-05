@@ -10,20 +10,17 @@ import { LoginComponent } from './Shared/login/login.component';
 import { HomeComponent } from './Shared/home/home.component';
 import {AmbulanceComponent} from "./Modules/Ambulance_/ambulance landing page/ambulance.component";
 import { FooterComponent } from './Shared/footer/footer.component';
-import { PharmacyLandingComponent } from './Modules/Pharmacy/pharmacy-landing/pharmacy-landing.component';
-import { HospitalLandingComponent } from './Modules/Hospital/hospital-landing/hospital-landing.component';
+
 
 
 // routes for the components
 const routes: Routes = [
   {path: 'home', component:HomeComponent},
   {path: 'doctor' , component:DoctorComponent},
-  {path:'doctorsignup' ,component:DoctorSignupComponent },
-  {path: 'doctorsignupnext' , component:DoctorSignupNextComponent},
+  {path:'signup' ,component:DoctorSignupComponent },
+  {path: 'signupnext' , component:DoctorSignupNextComponent},
   {path: 'login' , component:LoginComponent},
   {path: 'ambulance',component:AmbulanceComponent},
-  {path: 'pharmacy', component:PharmacyLandingComponent},
-  {path: 'hospital' , component:HospitalLandingComponent},
   {path:'footer' , component:FooterComponent},
   {path:'' , redirectTo:'/home' , pathMatch:'full'}
 
