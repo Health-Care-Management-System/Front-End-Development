@@ -8,8 +8,8 @@
   margin-left: 20px;
 }
 mat-toolbar{
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   padding: 20px;
   z-index: 999;
   /*box-shadow: #8d9391 0px 0px 5px;*/
@@ -17,11 +17,11 @@ mat-toolbar{
   background-color: #FFFFFF !important;
   color: #065560 !important;
 }
-/*.sticky{*/
-/*  position:fixed;*/
-/*  width: 100%;*/
-/*  top: 0;*/
-/*}*/
+.sticky{
+  position:fixed;
+  width: 100%;
+  top: 0;
+}
 a.mat-raised-button{
   margin-left: 25px;
   border-radius: 15px !important;

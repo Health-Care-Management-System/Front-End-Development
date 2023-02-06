@@ -14,10 +14,10 @@ export class MainNavComponent implements OnInit {
     //   matToolBar.classList.toggle("sticky", window.scrollY>0);
     // })
 
-    // window.addEventListener('scroll' , function(){
-    //   var matToolBar = document.querySelector("mat-toolbar");
-    //   matToolBar?.classList.toggle("sticky" , window.scrollY>0);
-    // })
+    window.addEventListener('scroll' , function(){
+      var matToolBar = document.querySelector("mat-toolbar");
+      matToolBar?.classList.toggle("sticky" , window.scrollY>0);
+    })
   }
 
   ngOnInit(): void {

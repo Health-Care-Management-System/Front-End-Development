@@ -10,7 +10,9 @@ import 'hammerjs';
 
 // Angular material
 import { MaterialModule } from './material/material.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
+
+// import {MdbCheckboxModule} from'/mdb-angular-ui-kit/checkbox';
 
 import {FormsModule} from '@angular/forms';
 
@@ -20,9 +22,27 @@ import { DoctorSignupComponent } from './Modules/Doctor/doctor-signup-page-1/doc
 import { DoctorSignupNextComponent } from './Modules/Doctor/doctor-signup-page-2/doctor-signup-next.component';
 import { LoginComponent } from './Shared/login/login.component';
 import { HomeComponent } from './Shared/home/home.component';
-import {AmbulanceComponent} from './Modules/Ambulance_/ambulance landing page/ambulance.component';
 import { FooterComponent } from './Shared/footer/footer.component';
 import { UserSelectComponent } from './Shared/user-select/user-select.component';
+import { HospitalLandingComponent } from './Modules/Hospital/hospital-landing/hospital-landing.component';
+import { AmbulanceLadingComponent } from './Modules/Ambulance/ambulance-lading/ambulance-lading.component';
+import { PharmacyLandingComponent } from './Modules/Pharmacy/pharmacy-landing/pharmacy-landing.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
+import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
+import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
+import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
+import { MdbDropdownModule } from 'mdb-angular-ui-kit/dropdown';
+import { MdbFormsModule } from 'mdb-angular-ui-kit/forms';
+import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
+import { MdbPopoverModule } from 'mdb-angular-ui-kit/popover';
+import { MdbRadioModule } from 'mdb-angular-ui-kit/radio';
+import { MdbRangeModule } from 'mdb-angular-ui-kit/range';
+import { MdbRippleModule } from 'mdb-angular-ui-kit/ripple';
+import { MdbScrollspyModule } from 'mdb-angular-ui-kit/scrollspy';
+import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
+import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
+import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 
 
 @NgModule({
@@ -34,9 +54,11 @@ import { UserSelectComponent } from './Shared/user-select/user-select.component'
     DoctorSignupNextComponent,
     LoginComponent,
     HomeComponent,
-    AmbulanceComponent,
     FooterComponent,
     UserSelectComponent,
+    HospitalLandingComponent,
+    AmbulanceLadingComponent,
+    PharmacyLandingComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +66,24 @@ import { UserSelectComponent } from './Shared/user-select/user-select.component'
     BrowserAnimationsModule,
     FlexLayoutModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    NgbModule,
+    MdbAccordionModule,
+    MdbCarouselModule,
+    MdbCheckboxModule,
+    MdbCollapseModule,
+    MdbDropdownModule,
+    MdbFormsModule,
+    MdbModalModule,
+    MdbPopoverModule,
+    MdbRadioModule,
+    MdbRangeModule,
+    MdbRippleModule,
+    MdbScrollspyModule,
+    MdbTabsModule,
+    MdbTooltipModule,
+    MdbValidationModule,
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

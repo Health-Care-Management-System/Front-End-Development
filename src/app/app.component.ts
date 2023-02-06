@@ -8,7 +8,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 })
 
 export class AppComponent {
-  title = 'codeclans13';
+  title = 'E-Dowz Health';
 
   // opened = true;
   // @ViewChild('sidenav', { static: true })

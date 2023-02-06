@@ -15,16 +15,16 @@ h3{
   padding-top: 0px;
 }
 #mainsection {
-    height: 750px;
-    background: url("src/assets/img/doc3.jpg");
-    /* background-size: 100%; */
-    background-size: 100%;
-    background-position: center;
+  height: 750px;
+  background: url("src/assets/img/ambulance-landing.jpg");
+  /* background-size: 100%; */
+  background-size: 100%;
+  background-position: center;
 }
 
 .pagecards {
-    position: absolute;
-    background: #FFFFFF;
+  position: absolute;
+  background: #FFFFFF;
   border-radius: 20px;
   padding: 25px 15px 25px 15px;
   align-content: center;
@@ -33,8 +33,8 @@ h3{
 
 }
 .card1{
-    position: relative;
-    /* top , right , bottom , left */
+  position: relative;
+  /* top , right , bottom , left */
   margin: 0px 40px 20px 20px;
   align-content: flex-start;
 }
@@ -45,8 +45,8 @@ h3{
   color: #FE8E3C;
 }
 .card2{
-    position: relative;
-     /* top , right , bottom , left */
+  position: relative;
+  /* top , right , bottom , left */
   margin: 70px 20px 10px 40px;
 }
 .card2.h2{

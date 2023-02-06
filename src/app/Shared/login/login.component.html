@@ -16,21 +16,20 @@
           <form novalidate #loginForm="ngForm" class="myclass" (ngSubmit)="onSubmit()">
             <table class="loginform">
               <tr>
-                <p class="md-title">User Name</p>
-                <mat-form-field appearance="fill">
-                  <mat-label>Your User Name</mat-label>
-                  <input matInput placeholder="Type Your Username" type="text"
-                         [(ngModel)]="user.username"
-                         name="username"
-                         #username="ngModel" required >
-                  <!--error message displaying-->
-                  <mat-error *ngIf="username.errors?.['required']">
-                    Username is required
-                  </mat-error>
-                </mat-form-field>
+                  <mat-form-field appearance="fill">
+                    <mat-label>Your User Name</mat-label>
+                    <input matInput placeholder="Type Your Username" type="text"
+                           [(ngModel)]="user.username"
+                           name="username"
+                           #username="ngModel" required >
+                    <!--error message displaying-->
+                    <mat-error *ngIf="username.errors?.['required']">
+                      Username is required
+                    </mat-error>
+                  </mat-form-field>
               </tr>
+
               <tr>
-                <p class="md-title">Password</p>
                 <mat-form-field appearance="fill">
                   <mat-label>Your Password Name</mat-label>
                   <input matInput placeholder="Enter Your Password" type="text"
