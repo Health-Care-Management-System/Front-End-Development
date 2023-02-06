@@ -1,1 +1,34 @@
-<p>ambulance-lading works!</p>
+<div id="mainsection" class="container" fxLayout="row" fxLayoutAlign ="0 center">
+
+  <div class="pagecards" fxLayout="row" fxLayout.lt-sm="column"  >
+    <div  class="card1">
+      <h2> <span class="fline">Discover</span>
+        <br>Your Health
+      </h2>
+      <span><h3>Find a ambulance service you <br>like to get the service</h3></span>
+      <span fxLayoutAlign="center center">
+            <button class="btn"
+                    mat-raised-button routerLink="#"
+                    id="findbtn" >Find An Ambulance</button>
+          </span>
+    </div>
+
+    <mat-divider vertical></mat-divider>
+
+    <div  class="card2">
+          <span>
+            <h2>Are you an <br><span class="sline">Ambulance Owner? </span></h2>
+          </span>
+      <span>
+            <h3>Register with E-dows Medicine and <br>give your service</h3>
+          </span>
+      <span fxLayoutAlign="center center">
+            <button class="btn"
+                    mat-stroked-button
+                    id="servicebtn"
+                    routerLink="/doctorsignup">Partner with <br>E-dowz Medicine</button>
+          </span>
+    </div>
+
+  </div>
+</div>
