@@ -20,9 +20,11 @@ import { DoctorSignupComponent } from './Modules/Doctor/doctor-signup-page-1/doc
 import { DoctorSignupNextComponent } from './Modules/Doctor/doctor-signup-page-2/doctor-signup-next.component';
 import { LoginComponent } from './Shared/login/login.component';
 import { HomeComponent } from './Shared/home/home.component';
-import {AmbulanceComponent} from './Modules/Ambulance_/ambulance landing page/ambulance.component';
 import { FooterComponent } from './Shared/footer/footer.component';
 import { UserSelectComponent } from './Shared/user-select/user-select.component';
+import { HospitalLandingComponent } from './Modules/Hospital/hospital-landing/hospital-landing.component';
+import { AmbulanceLadingComponent } from './Modules/Ambulance/ambulance-lading/ambulance-lading.component';
+import { PharmacyLandingComponent } from './Modules/Pharmacy/pharmacy-landing/pharmacy-landing.component';
 
 
 @NgModule({
@@ -34,9 +36,11 @@ import { UserSelectComponent } from './Shared/user-select/user-select.component'
     DoctorSignupNextComponent,
     LoginComponent,
     HomeComponent,
-    AmbulanceComponent,
     FooterComponent,
     UserSelectComponent,
+    HospitalLandingComponent,
+    AmbulanceLadingComponent,
+    PharmacyLandingComponent,
   ],
   imports: [
     BrowserModule,
