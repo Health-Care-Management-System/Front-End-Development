@@ -12,6 +12,8 @@ import 'hammerjs';
 import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+// import {MdbCheckboxModule} from'/mdb-angular-ui-kit/checkbox';
+
 import {FormsModule} from '@angular/forms';
 
 import { MainNavComponent } from './Shared/main-nav/main-nav.component';
@@ -25,6 +27,7 @@ import { UserSelectComponent } from './Shared/user-select/user-select.component'
 import { HospitalLandingComponent } from './Modules/Hospital/hospital-landing/hospital-landing.component';
 import { AmbulanceLadingComponent } from './Modules/Ambulance/ambulance-lading/ambulance-lading.component';
 import { PharmacyLandingComponent } from './Modules/Pharmacy/pharmacy-landing/pharmacy-landing.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -48,7 +51,8 @@ import { PharmacyLandingComponent } from './Modules/Pharmacy/pharmacy-landing/ph
     BrowserAnimationsModule,
     FlexLayoutModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
