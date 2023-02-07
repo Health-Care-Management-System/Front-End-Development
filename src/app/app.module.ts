@@ -12,7 +12,7 @@ import 'hammerjs';
 import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-// import {MdbCheckboxModule} from'/mdb-angular-ui-kit/checkbox';
+
 
 import {FormsModule} from '@angular/forms';
 
