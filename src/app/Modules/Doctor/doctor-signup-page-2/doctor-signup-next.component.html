@@ -1,4 +1,4 @@
-<div class="container" fxLayout="row" fxLayout.lt-sm="column"> 
+<div class="container-fluid" fxLayout="row" fxLayout.lt-sm="column">
 
     <div class="left-part" >
     </div>
@@ -25,14 +25,14 @@
                             placeholder="Pick one"
                             aria-label="Number"
                             matInput
-                          
+
                             [matAutocomplete]="auto">
                      <mat-autocomplete #auto="matAutocomplete">
                        <mat-option *ngFor="let option of " [value]="option">
                          {{option}}
                        </mat-option>
                      </mat-autocomplete>
-                            
+
                         </mat-form-field>
                     </td>
                 </tr>
@@ -45,7 +45,7 @@
                             placeholder="Pick one"
                             aria-label="Number"
                             matInput
-                          
+
                             [matAutocomplete]="auto">
                      <mat-autocomplete #auto="matAutocomplete">
                        <mat-option *ngFor="let option of " [value]="option">
@@ -58,11 +58,11 @@
                 <tr>
                     <td>
                         <p id="formtitle" class="md-title">upload Your recent image</p>
-                        
+
                     </td>
                 </tr>
-                
-               
+
+
             </table>
         </form>
         <span id="button" class="middle" fxLayoutAlign="center center"><button mat-raised-button color="primary"routerLink="/signupnext">Submit</button></span>
