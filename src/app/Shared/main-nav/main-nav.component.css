@@ -4,8 +4,9 @@
 .logo{
   height: 61px;
   width: auto;
-  margin-top: 15px;
+  margin-top: 20px;
   margin-left: 20px;
+  margin-bottom: 20px;
 }
 mat-toolbar{
   margin-top: 0px;
