@@ -1,65 +1,87 @@
-.container {
-  margin-left: 150px;
+/*-----------------------------------------------------------
+    1. General Styles
+-------------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
 }
-h1{
-  font-size: 4.0rem;
-  margin-bottom: 20px;
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+a {
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  position: relative;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
   font-weight: 600;
   letter-spacing: 1px;
 }
-a{
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  position: relative;
+/*-----------------------------------------------------------
+  2. Typography
+------------------------------------------------------------*/
+body {
+  font-size: 14px;
+  font-weight: 400;
+  overflow-x: hidden;
+  transition: opacity 1s;
+  min-width: 330px;
+}
+h1,
+.h1 {
+  font-size: 4.0rem;
+}
+ h2,
+.h2 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
 }
 p {
   font-size: 1.1rem;
   line-height: 1.8;
-  margin-bottom: 15px;
   letter-spacing: 0.025em;
 }
-.container-fluid{
-
-}
-.hero img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -9;
-  margin-top: 20px;
-  margin-right: 50px;
-  width: 50%;
-  height: 95%;
-}
-.hero h1 {
-  margin-top: 125px;
-  line-height: 70px;
-  color:#00be99;
-}
-.hero h1 span{
-  color: #065560;
-}
-.hero p {
-  margin-bottom: 60px;
-}
-.hero-btns{
-  margin-left: 75px;
-  /*margin-bottom: 210px;*/
-}
+/*-----------------------------------------------------------
+  3. Buttons & Links
+-------------------------------------------------------------*/
 .hero-btns a:first-child {
   background-color: #00BE99;
   border:2px solid #00BE99;
   color: #fff;
-  padding: 15px 35px;
+  padding: 17px 35px;
   font-size: 1.0rem;
-  border-radius: 30px;
+  border-radius: 35px;
+  -webkit-box-shadow:0px 4px 5px 0px rgba(57, 255, 126, 0.15);
+  -moz-box-shadow: 0px 4px 5px 0px rgba(57, 255, 126, 0.15);
   box-shadow: 0px 4px 5px 0px rgba(57, 255, 126, 0.15);
 }
 .hero-btns a:first-child:hover {
   background-color: #fff;
   border:2px solid #00BE99;
-  color: #065560;
+  color:  #065560;
   padding: 17px 35px;
   font-size: 1.0rem;
   border-radius: 35px;
@@ -74,3 +96,180 @@ p {
   color: #00BE99;
   transition: all 0.3s ease;
 }
+/*-----------------------------------------------------------
+  4. Header
+-------------------------------------------------------------*/
+.container{
+  margin-left: 150px;
+}
+.hero-btns {
+  margin-bottom: 350px;
+}
+.hero img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -9;
+  margin-top: 20px;
+  margin-right: 50px;
+  width: 50%;
+  height: 95%;
+}
+.hero h1 {
+  font-size: 4.0rem;
+  margin-bottom: 20px;
+  margin-top: 150px;
+  line-height: 70px;
+  color:#00be99;
+}
+.hero h1 span{
+  color: #065560;
+}
+.hero h2{
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  margin-bottom: 50px;
+}
+.hero p {
+  margin-bottom: 50px;
+}
+/*-----------------------------------------------------------
+  2. textarea
+-------------------------------------------------------------*/
+#textarea{
+  height: auto;
+}
+#textarea .container-fluid{
+  /* fallback for old browsers */
+  background: #37ecba;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to bottom, rgba(6, 245, 198 , 0.7), rgba(231, 252, 247, 1));
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to bottom, rgba(6, 245, 198 , 0.7),   rgba(231, 252, 247, 1));
+}
+.textarea {
+  padding-top: 90px;
+  padding-bottom: 10px;
+}
+.textarea h2{
+  color: #065560;
+}
+.text-cards{
+  padding:40px 100px 80px 100px ;
+}
+.text-cards mat-card{
+  border-radius: 25px;
+  box-shadow: none;
+  background: white;
+  padding:25px 20px 25px 20px ;
+}
+.text-cards mat-card-title{
+  font-size: 23px;
+  color: #036a79;
+}
+.text-cards mat-card-content{
+  text-align: center;
+  color: #6f706f;
+}
+.text-cards mat-card img{
+  width: 70px;
+  height: auto;
+}
+
+
+/*-----------------------------------------------------------
+  11. Responsive
+-------------------------------------------------------------*/
+@media (max-width: 1700px) {
+  .hero-btns {
+    margin-bottom: 200px;
+  }
+}
+@media (max-width: 1500px) {
+  .hero img {
+    margin-top: 130px;
+  }
+}
+@media (max-width: 1350px) {
+  .hero-btns {
+    margin-bottom: 140px;
+  }
+}
+@media (max-width: 1199px) {
+.container{
+  margin-left: 90px;
+}
+  .hero img {
+    margin-top: 150px;
+    width: 45%;
+  }
+  .hero h1 {
+    margin-top: 150px;
+  }
+  h2 {
+    font-size: 2rem;
+    line-height: 3.0rem;
+  }
+  h3 {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    margin-bottom: 20px;
+  }
+  .services p {
+    font-size: 0.8rem;
+  }
+  .hero-btns {
+    margin-bottom: 120px;
+  }
+}
+@media (max-width: 991px) {
+
+  .hero img {
+    display: none;
+  }
+  .hero {
+    text-align: center;
+  }
+  .hero h1 {
+    margin-top: 80px;
+    margin-right: 100px;
+  }
+
+  .hero-btns {
+    margin-bottom: 70px;
+  }
+}
+@media (max-width: 768px) {
+  .container{
+    margin-left: 50px;
+  }
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 454px) {
+  .container{
+    margin-left: 50px;
+  }
+  .hero h1 {
+    font-size: 3.0rem;
+    margin-top: 50px;
+  }
+  .hero p {
+    font-size: 0.8rem;
+  }
+  .hero-btns a:first-child {
+    font-size: 0.8rem;
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+  }
+  .hero-btns a:last-child {
+    font-size: 0.8rem;
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+
