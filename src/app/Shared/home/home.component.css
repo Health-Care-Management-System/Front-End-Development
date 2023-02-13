@@ -165,13 +165,16 @@ p {
 }
 .text-cards mat-card-title{
   font-size: 23px;
-  color: #065560;
+  color: #067a5b;
 }
 .text-cards mat-card-content{
   text-align: center;
   color: #6f706f;
 }
-
+.text-cards mat-card img{
+  width: 70px;
+  height: auto;
+}
 
 /*-----------------------------------------------------------
   11. Responsive
