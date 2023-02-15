@@ -7,21 +7,38 @@
         <span>
             <h1 id="title" class="md-display-3">Sign up for doctor account</h1>
         </span>
-        <form class="doc-form" fxLayoutAlign="center center">
+      <p>{{user | json}}</p>
+        <form class="doc-form" fxLayoutAlign="center center" novalidate #signupForm="ngForm" (ngSubmit)="onSubmit()">
             <table class="docform-full-width" >
                 <tr>
+
                     <td>
                         <p  class="md-title">First Name</p>
                         <mat-form-field class="docform-full-width" appearance="fill">
                             <mat-label>Your First Name</mat-label>
-                            <input matInput>
+                            <input matInput type="text"
+                                   [(ngModel)]="user.firstname"
+                                   name="firstname"
+                                   #firstname="ngModel"  required>
+                          <!--error message displaying-->
+                          <mat-error *ngIf="firstname.errors?.['required']">
+                            Your First Name is required
+                          </mat-error>
                         </mat-form-field>
                     </td>
+
                     <td>
                         <p  class="md-title">Last Name</p>
                         <mat-form-field class="docform-full-width" appearance="fill">
                             <mat-label>Your Last Name </mat-label>
-                            <input matInput>
+                            <input matInput type="text"
+                                   [(ngModel)]="user.lastname"
+                                   name="lastname"
+                                   #lastname="ngModel"  required>
+                          <!--error message displaying-->
+                          <mat-error *ngIf="lastname.errors?.['required']">
+                            Your Last Name is required
+                          </mat-error>
                         </mat-form-field>
                     </td>
                 </tr>
@@ -30,7 +47,12 @@
                         <p class="md-title">Email Address</p>
                         <mat-form-field class="docform-full-width" appearance="fill">
                             <mat-label>Your Email Address </mat-label>
-                            <input matInput>
+                            <input matInput placeholder="perera@codeclans.com"
+                                   [formControl]="email"
+                                   [(ngModel)]="user.email"
+                                   name="email"
+                                   required>
+                            <mat-error *ngIf="email.invalid">{{getErrorEmailMessage()}}</mat-error>
                         </mat-form-field>
                     </td>
                 </tr>
@@ -39,15 +61,30 @@
                         <p  class="md-title">National ID Number</p>
                         <mat-form-field class="docform-full-width" appearance="fill">
                             <mat-label>Your National ID Number</mat-label>
-                            <input matInput>
+                            <input matInput type="text"
+                                   [(ngModel)]="user.id"
+                                   name="id"
+                                   #id="ngModel"  required>
+                          <!--error message displaying-->
+                          <mat-error *ngIf="id.errors?.['required']">
+                            Your  National ID is required
+                          </mat-error>
+
                         </mat-form-field>
                     </td>
                     <td>
                         <p  class="md-title">Telephone Number</p>
                         <mat-form-field class="docform-full-width" appearance="fill">
                             <mat-label>Your Telephone Number </mat-label>
-                            <input matInput>
-                            <mat-icon matSuffix>phone</mat-icon>
+                            <input matInput type="text"
+                                   [(ngModel)]="user.phonenumber"
+                                   name="phonenumber"
+                                   #phonenumber="ngModel"  required>
+                          <!--error message displaying-->
+                          <mat-error *ngIf="phonenumber.errors?.['required']">
+                            Your Telephone Number is required
+                          </mat-error>
+                          <mat-icon matSuffix>phone</mat-icon>
                         </mat-form-field>
                     </td>
                 </tr>
@@ -56,19 +93,34 @@
                         <p  class="md-title">Address (Personal)</p>
                         <mat-form-field class="docform-full-width" appearance="fill">
                             <mat-label>Your Personal Address </mat-label>
-                            <textarea matInput placeholder="Ex. 100 Main St"></textarea>
+                            <textarea matInput placeholder="Ex. 100 Main St"
+                                      [(ngModel)]="user.address"
+                                      name="address"
+                                      #address="ngModel"  required>
+                            </textarea>
+                          <mat-error *ngIf="address.errors?.['required']">
+                            Your Address is required
+                          </mat-error>
                         </mat-form-field>
                     </td>
                 </tr>
             </table>
         </form>
         <span id="term" class="middle" fxLayoutAlign="center center">
-          <mat-checkbox class="accept">I accept all <a class="terms" routerLink="">terms and condition</a>
+          <mat-checkbox class="accept"
+                        [(ngModel)]="user.accept"
+                        name="accept">
+            I accept all <a class="terms" routerLink="">terms and condition</a>
           </mat-checkbox>
         </span>
 
         <span  class="middle" fxLayoutAlign="center center">
-          <button mat-raised-button color="primary"routerLink="/signupnext" class="nextbutton" >Next</button>
+          <button mat-raised-button
+                  color="primary"
+                  routerLink="/signupnext"
+                  class="nextbutton"
+                  type="submit"
+                  [disabled]="signupForm.form.invalid">Next</button>
         </span>
 
         <span  class="middle" fxLayoutAlign="center center">

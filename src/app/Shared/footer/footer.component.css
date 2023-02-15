@@ -1,3 +1,21 @@
-mat-icon-button{
-  color: #00be99;
+.footer{
+  font-size: 17px;
+  background: #A5FAE9;
+}
+.form{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.submit{
+  color: white;
+  background-color: #065560;
+  border-color: #065560;
+}
+.text-uppercase{
+  font-size: 15px;
+  font-weight: bold;
+}
+.copyright{
+
+  margin-top: 20px;
 }

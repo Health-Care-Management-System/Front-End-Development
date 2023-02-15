@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+
 // import flexLayout
 import {FlexLayoutModule} from '@angular/flex-layout';
 
@@ -14,7 +15,7 @@ import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform
 
 
 
-import {FormsModule} from '@angular/forms';
+import {FormsModule , ReactiveFormsModule} from '@angular/forms';
 
 import { MainNavComponent } from './Shared/main-nav/main-nav.component';
 import { DoctorComponent } from './Modules/Doctor/doctor landing page/doctor.component';
@@ -43,6 +44,7 @@ import { MdbScrollspyModule } from 'mdb-angular-ui-kit/scrollspy';
 import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
+import { MiddleComponent } from './Shared/middle/middle.component';
 
 
 @NgModule({
@@ -59,6 +61,7 @@ import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
     HospitalLandingComponent,
     AmbulanceLadingComponent,
     PharmacyLandingComponent,
+    MiddleComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,6 +70,7 @@ import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
     FlexLayoutModule,
     MaterialModule,
     FormsModule,
+    ReactiveFormsModule,
     NgbModule,
     MdbAccordionModule,
     MdbCarouselModule,

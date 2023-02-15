@@ -165,7 +165,7 @@ p {
 }
 .text-cards mat-card-title{
   font-size: 23px;
-  color: #036a79;
+  color: #067a5b;
 }
 .text-cards mat-card-content{
   text-align: center;
@@ -175,7 +175,6 @@ p {
   width: 70px;
   height: auto;
 }
-
 
 /*-----------------------------------------------------------
   11. Responsive
