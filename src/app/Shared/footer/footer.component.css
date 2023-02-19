@@ -1,15 +1,27 @@
 .footer{
+  font-size: 16px;
+  background:#065560;
+}
+.topic{
+  font-weight: normal;
   font-size: 17px;
-  background: #A5FAE9;
+  color: #37ecba;
 }
 .form{
   padding-top: 15px;
   padding-bottom: 15px;
 }
+.pt-2{
+  font-weight: normal;
+}
+.links{
+  margin-top: 40px;
+  color: beige;
+}
 .submit{
   color: white;
   background-color: #065560;
-  border-color: #065560;
+  border-color: #37ecba;
 }
 .text-uppercase{
   font-size: 15px;
@@ -18,4 +30,7 @@
 .copyright{
 
   margin-top: 20px;
+}
+.logo{
+  width: 200px;
 }
