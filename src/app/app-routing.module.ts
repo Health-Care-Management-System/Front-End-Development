@@ -38,7 +38,6 @@ const routes: Routes = [
   {path:'ambulance' , component:AmbulanceLadingComponent},
   {path:'pharmacy' , component:PharmacyLandingComponent},
   {path:'footer' , component:FooterComponent},
-  {path:'' , redirectTo:'/home' , pathMatch:'full'},
 
   //routes for the doctor
   {path:'dashboard',component:DoctorprofileComponent},
@@ -51,8 +50,7 @@ const routes: Routes = [
   {path:'test',component:TeastComponent},
   {path:'searchdoctor',component:SearchdoctorComponent},
   {path:'selecthospitalselectdoctor',component:SelecthositalSelectdoctorComponent},
-
-  {path:'' , redirectTo:'/home' , pathMatch:'full'}
+  {path:'', redirectTo:'home' , pathMatch:'full'}
 
 
 ];
