@@ -78,7 +78,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatSliderModule} from '@angular/material/slider';
 
->>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
