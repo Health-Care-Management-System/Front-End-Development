@@ -26,11 +26,11 @@ mat-toolbar{
 a.mat-raised-button{
   margin-left: 25px;
   border-radius: 15px !important;
-  border-shadow:0 !important;
   background-color: #00be99 ;
   color: white;
   margin-right: 30px;
   text-transform: capitalize;
+  box-shadow: none;
 
 }
 a.mat-stroked-button{
