@@ -10,23 +10,20 @@ import 'hammerjs';
 
 // Angular material
 import { MaterialModule } from './material/material.module';
-<<<<<<< Updated upstream
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-=======
+
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 import {FormsModule , ReactiveFormsModule} from '@angular/forms';
->>>>>>> Stashed changes
+
 
 import { MainNavComponent } from './Shared/main-nav/main-nav.component';
 import { DoctorComponent } from './Modules/Doctor/doctor landing page/doctor.component';
 import { DoctorSignupComponent } from './Modules/Doctor/doctor-signup-page-1/doctor-signup.component';
 import { DoctorSignupNextComponent } from './Modules/Doctor/doctor-signup-page-2/doctor-signup-next.component';
 import { LoginComponent } from './Shared/login/login.component';
-<<<<<<< Updated upstream
-=======
+
 import { HomeComponent } from './Shared/home/home.component';
 import { FooterComponent } from './Shared/footer/footer.component';
 import { UserSelectComponent } from './Shared/user-select/user-select.component';
@@ -91,8 +88,7 @@ import {MatSliderModule} from '@angular/material/slider';
     DoctorSignupComponent,
     DoctorSignupNextComponent,
     LoginComponent,
-<<<<<<< Updated upstream
-=======
+
     HomeComponent,
     FooterComponent,
     UserSelectComponent,
@@ -115,18 +111,13 @@ import {MatSliderModule} from '@angular/material/slider';
     TeastComponent,
     ShowrequestComponent,
 
-    
-
->>>>>>> Stashed changes
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-<<<<<<< Updated upstream
-    MaterialModule
-=======
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
@@ -152,34 +143,20 @@ import {MatSliderModule} from '@angular/material/slider';
     MatIconModule,
     MatButtonModule,
     MatAutocompleteModule,
-        MatSelectModule,
-        MatCardModule,
-        FlexLayoutModule,
-        MatSidenavModule,
-        MatMenuModule,
-        MatDividerModule,
-        MatListModule,
-        MatTableModule,
-        MatDatepickerModule,
-        MatInputModule,
-        MatFormFieldModule,
-        MatNativeDateModule,
-        MatSliderModule,
+    MatSelectModule,
+    MatCardModule,
+    FlexLayoutModule,
+    MatSidenavModule,
+    MatMenuModule,
+    MatDividerModule,
+    MatListModule,
+    MatTableModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    MatSliderModule,
         
-        
-        
-     
-
-
-
-
-
-
-
-
-
-    
->>>>>>> Stashed changes
   ],
   providers: [],
   bootstrap: [AppComponent]
