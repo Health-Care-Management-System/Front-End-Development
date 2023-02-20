@@ -1,13 +1,33 @@
-.userselect{
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
+#loginsection {
+  width: auto;
+  height: 100%;
+  background: url("../../../assets/img/log-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-#container1{
-  left: 0  !important;
-  right: auto;
+.login {
+  position: absolute;
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  align-content: center;
+  margin-top: 10px;
+  margin-left: 100px;
+  box-shadow: 0px 4px 5px 0px rgba(50, 51, 50, 0.15);
+
+}
+.card1{
+  position: relative;
+  /* top , right , bottom , left */
+  margin: 20px 40px 20px 20px;
 }
 
-.userbutton{
-  background-color: #E1EBFF;
+.card2{
+  position: relative;
+  /* top , right , bottom , left */
+  margin: 20px 20px 20px 40px;
+
 }

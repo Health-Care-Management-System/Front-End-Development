@@ -1,64 +1,34 @@
-<div id="docsection" class="container" fxLayout="row" fxLayoutAlign ="0 center">
+<div id="mainsection" class="container-fluid" fxLayout="row" fxLayoutAlign ="0 center">
 
-    <div class="doctor" fxLayout="row" fxLayout.lt-sm="column"  >
+  <div class="pagecards" fxLayout="row" fxLayout.lt-sm="column"  >
         <div  class="card1">
-            <span class="1line"><h2>Discover Your Health </h2></span>
-            <span><h3>Meet with the doctors you like</h3></span>
-            <button mat-raised-button color="primary">Find A Doctor</button>
+          <h2> <span class="fline">Discover</span>
+            <br>Your Health
+          </h2>
+          <span><h3>Meet with the doctors you like</h3></span>
+          <span fxLayoutAlign="center center">
+            <button class="btn"
+                    mat-raised-button routerLink="#"
+                    id="findbtn" >Find A Doctor</button>
+          </span>
         </div>
+
         <mat-divider vertical></mat-divider>
+
         <div  class="card2">
-            <span class="1line"><h2>Are you a Doctor </h2></span>
-            <button mat-stroked-button color="primary">Partner with E-dowz mecdicine..</button>
+          <span>
+            <h2>Are you a <br><span class="sline">Doctor? </span></h2>
+          </span>
+          <span>
+            <h3>Register with E-dows Medicine and <br>give your service</h3>
+          </span>
+          <span fxLayoutAlign="center center">
+            <button class="btn"
+                    mat-stroked-button
+                    id="servicebtn"
+                    routerLink="/doctorsignup">Partner with <br>E-dowz Medicine</button>
+          </span>
         </div>
     </div>
-
-
-
-<!-- <div class="doctor" fxLayout="row" fxLayout.lt-sm="column" >
-    <div flex>
-        <mat-card class="patientDoc" >
-            <mat-card-header>
-                <mat-card-title>
-                    <span class="1line">Discover </span>
-                    <span class="2line">Your Health</span>
-                </mat-card-title>
-                <mat-card-subtitle>Meet with the doctors you like</mat-card-subtitle>
-            </mat-card-header>
-            <mat-card-actions>
-                <button mat-raised-button color="primary">Find A Doctor</button>
-            </mat-card-actions>
-        </mat-card>
-        <div  class="card1">
-            <span class="1line"><h2>Discover Your Health </h2></span>
-            <span><h3>Meet with the doctors you like</h3></span>
-            <button mat-raised-button color="primary">Find A Doctor</button>
-        </div>
-    </div>
-
-    <mat-divider vertical style="height:500px"></mat-divider>
-
-    <div flex>
-        <mat-card class="iamDoc">
-            <mat-card-header>
-                <mat-card-title>
-                    <span class="1line">Are you a </span>
-                    <span class="2line">Doctor</span>
-                        
-                 <mat-divider vertical style="height:100px"></mat-divider>
-                </mat-card-title>
-            </mat-card-header>
-            <mat-card-actions>
-                <button mat-stroked-button color="primary">Partner with E-dowz mecdicine</button>
-            </mat-card-actions>
-        </mat-card> 
-        <div  class="card2">
-            <span class="1line"><h2>Are you a Doctor </h2></span>
-            <button mat-stroked-button color="primary">Partner with E-dowz mecdicine</button>
-        </div>
-    </div>
-
-</div> -->
-
 </div>
 

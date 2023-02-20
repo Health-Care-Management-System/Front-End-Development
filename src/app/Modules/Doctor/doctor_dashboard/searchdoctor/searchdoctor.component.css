@@ -1,0 +1,251 @@
+.icon {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: -13px;
+    align-items: center;
+}
+
+.full {
+    width: 380px;
+    height: 50px;
+    left: 56px;
+    top: 393px;
+    border-radius: 10px;
+}
+
+.placeholder {
+    height: 40px;
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: #979797;
+    text-align: center;
+}
+
+.lable1 {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    color: #000000;
+    left: 40px;
+    position: relative;
+}
+
+.icon2 {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: -13px;
+    align-items: center;
+}
+
+.full2 {
+    width: 380px;
+    height: 50px;
+    left: 56px;
+    top: 690px;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.placeholder2 {
+    height: 40px;
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: #979797;
+    text-align: center;
+}
+
+.lable2 {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    color: #000000;
+    left: 40px;
+    position: relative;
+}
+
+.icon3 {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: -13px;
+    align-items: center;
+}
+
+.full3 {
+    width: 380px;
+    height: 50px;
+    left: 56px;
+    top: 548px;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.placeholder3 {
+    height: 40px;
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: #979797;
+    text-align: center;
+}
+
+.lable3 {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    color: #000000;
+    left: 70px;
+    position: relative;
+}
+
+.button {
+    position: absolute;
+    width: 236px;
+    height: 60px;
+    left: 137px;
+    top: 826px;
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.asiri1 {
+    position: absolute;
+    width: 324px;
+    height: 389px;
+    left: 500px;
+    top: 299px;
+}
+
+.asiri1 :hover {
+    background-color: blue;
+}
+
+.asiri1::after {
+    content: "lllll";
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform.3s ease-in-out;
+}
+
+.text1 {
+    /* position: absolute;
+width: 176.16px;
+height: 29.47px;
+left: 527.48px;
+top: 540.65px; */
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.text2 {
+    /* position: absolute;
+width: 131.9px;
+height: 24.56px;
+left: 549.61px;
+top: 575.03px; */
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.asiri2 {
+    position: absolute;
+    width: 324px;
+    height: 389px;
+    left: 850px;
+    top: 299px;
+}
+
+.asiri3 {
+    position: absolute;
+    width: 324px;
+    height: 389px;
+    left: 1200px;
+    top: 299px;
+}
+
+.asiri4 {
+    position: absolute;
+    width: 324px;
+    height: 389px;
+    left: 500px;
+    top: 699px;
+}
+
+.asiri5 {
+    position: absolute;
+    width: 324px;
+    height: 389px;
+    left: 850px;
+    top: 699px;
+}
+
+.asiri6 {
+    position: absolute;
+    width: 324px;
+    height: 389px;
+    left: 1200px;
+    top: 699px;
+}
+
+.search1 {
+    position: absolute;
+    left: 30.34%;
+    /* right: 36.7%; */
+    top: 15.92%;
+    bottom: 83.92%;
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 80px;
+    color: #000000;
+}
+
+.search2 {
+    position: absolute;
+    left: 17.17%;
+    right: 16.36%;
+    top: 30.08%;
+    bottom: 80.85%;
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    color: #979797;
+}
+
+.all {
+    width: 100%;
+}
+
+.imageori {
+    border-radius: 90px;
+}

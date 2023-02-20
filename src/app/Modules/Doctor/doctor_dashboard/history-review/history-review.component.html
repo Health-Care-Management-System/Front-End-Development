@@ -1,0 +1,94 @@
+<app-mininavbar (toggleLeftToolBarForMe)="leftToolBarToggler()">
+</app-mininavbar>
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" [opened]="sideBarOpen">
+        <app-left-tool-bar></app-left-tool-bar>
+    </mat-drawer>
+    <mat-drawer-content>
+        <mat-card class="card1">
+            <mat-card-title>Announcements</mat-card-title>
+            <mat-card class="card11">
+                <mat-card-content>
+
+                    <img class="annimage1" mat-card-sm-image src={{image}}> {{longText2}}
+                </mat-card-content>
+            </mat-card>
+            <mat-card class="card12">
+                <mat-card-content class="card12c">
+                    <img class="annimage2" mat-card-sm-image src={{image}}> {{longText2}}
+                </mat-card-content>
+            </mat-card>
+
+        </mat-card>
+        <div class="hr1">
+            <hr>
+        </div>
+        <div class=" cardbig3 ">
+            <mat-card class="card2 ">
+                <mat-card-header>
+                    <mat-card-title-group>
+                        <img class="card2img " mat-card-sm-image src={{image}}>
+                        <mat-card-title class="card2tittle ">{{title}}</mat-card-title>
+                        <mat-card-subtitle class="card2subtittle ">{{subtitle}}</mat-card-subtitle>
+
+                    </mat-card-title-group>
+                </mat-card-header>
+                <mat-card-content>
+                    <div class="content2para">
+                        {{longText}}</div>
+                    <div class="starset2 ">
+                        <mat-icon class="star1 ">star</mat-icon>
+                        <mat-icon class="star2 ">star</mat-icon>
+                        <mat-icon class="star3 ">star</mat-icon>
+                        <mat-icon class="star4 ">star</mat-icon>
+                        <mat-icon class="star5 ">star</mat-icon>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+
+            <mat-card class="card3 ">
+                <mat-card-header>
+                    <mat-card-title-group>
+                        <img class="card3img " mat-card-sm-image src={{image}}>
+
+                        <mat-card-title class="card3tittle ">{{title}}</mat-card-title>
+                        <mat-card-subtitle class="card3subtittle ">{{subtitle}}</mat-card-subtitle>
+
+                    </mat-card-title-group>
+                </mat-card-header>
+                <mat-card-content>
+                    <div class="content2para">
+                        {{longText}}</div>
+                    <div class="starset3 ">
+                        <mat-icon class="star1 ">star</mat-icon>
+                        <mat-icon class="star2 ">star</mat-icon>
+                        <mat-icon class="star3 ">star</mat-icon>
+                        <mat-icon class="star4 ">star</mat-icon>
+                        <mat-icon class="star5 ">star</mat-icon>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+            <mat-card class="card4 ">
+                <mat-card-header>
+                    <mat-card-title-group>
+                        <img class="card4img " mat-card-sm-image src={{image}}>
+                        <mat-card-title class="card4tittle ">{{title}}</mat-card-title>
+                        <mat-card-subtitle class="card4subtittle ">{{subtitle}}</mat-card-subtitle>
+
+                    </mat-card-title-group>
+                </mat-card-header>
+                <mat-card-content>
+                    <div class="content2para">
+                        {{longText}}</div>
+                    <div class="starset4 ">
+                        <mat-icon class="star1 ">star</mat-icon>
+                        <mat-icon class="star2 ">star</mat-icon>
+                        <mat-icon class="star3 ">star</mat-icon>
+                        <mat-icon class="star4 ">star</mat-icon>
+                        <mat-icon class="star5 ">star</mat-icon>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>
