@@ -1,0 +1,129 @@
+.patient {
+    height: 217px;
+    width: 194px;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+    background: #E1EBFF;
+    border: 3px solid #3580E4;
+    border-radius: 20px;
+}
+
+.doctor {
+    height: 217px;
+    width: 194px;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+    background: #E1EBFF;
+    border: 3px solid #3580E4;
+    border-radius: 20px;
+}
+
+.hospital {
+    height: 217px;
+    width: 194px;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+    background: #E1EBFF;
+    border: 3px solid #3580E4;
+    border-radius: 20px;
+}
+
+.ambulance {
+    height: 217px;
+    width: 194px;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+    background: #E1EBFF;
+    border: 3px solid #3580E4;
+    border-radius: 20px;
+}
+
+.pharmacy {
+    height: 217px;
+    width: 194px;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+    background: #E1EBFF;
+    border: 3px solid #3580E4;
+    border-radius: 20px;
+}
+
+.t {
+    width: 1000px;
+    height: 600px;
+    top: 250px;
+    left: 295px;
+    border-style: none;
+    /* border: #E1EBFF;
+    background-color: #E1EBFF; */
+}
+
+.tt {
+    width: 900px;
+    height: 250px;
+    justify-content: space-evenly;
+    display: flex;
+    margin: 50px;
+}
+
+.ttt {
+    width: 900px;
+    height: 250px;
+    justify-content: space-evenly;
+    display: flex;
+    margin-left: 40px;
+}
+
+h1 {
+    position: absolute;
+    width: 778px;
+    height: 218px;
+    left: 106px;
+    top: 160px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 109%;
+    /* or 44px */
+    color: #404040;
+}
+
+.qq {
+    position: absolute;
+    width: 90px;
+    left: 70px;
+    top: 35px;
+    border-radius: 0px;
+}
+
+.button1 {
+    height: 88px;
+    width: 126px;
+    left: 38px;
+    top: 129px;
+    border-radius: nullpx;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 25px;
+    line-height: 22px;
+    color: rgba(21, 21, 21, 0.9);
+}
+
+.design {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    left: 1200px;
+    top: 571px;
+}
+
+.span {
+    color: red;
+}
