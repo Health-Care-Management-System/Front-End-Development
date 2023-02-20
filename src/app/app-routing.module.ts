@@ -7,6 +7,13 @@ import { DoctorComponent } from './Modules/Doctor/doctor landing page/doctor.com
 import { DoctorSignupComponent } from './Modules/Doctor/doctor-signup-page-1/doctor-signup.component';
 import { DoctorSignupNextComponent } from './Modules/Doctor/doctor-signup-page-2/doctor-signup-next.component';
 import { LoginComponent } from './Shared/login/login.component';
+import { HomeComponent } from './Shared/home/home.component';
+import { HospitalLandingComponent } from './Modules/Hospital/hospital-landing/hospital-landing.component';
+import { AmbulanceLadingComponent } from './Modules/Ambulance/ambulance-lading/ambulance-lading.component';
+import { PharmacyLandingComponent } from './Modules/Pharmacy/pharmacy-landing/pharmacy-landing.component';
+import { FooterComponent } from './Shared/footer/footer.component';
+
+
 
 import { HomeComponent } from './Shared/home/home.component';
 import { HospitalLandingComponent } from './Modules/Hospital/hospital-landing/hospital-landing.component';
@@ -30,7 +37,7 @@ import { SelecthositalSelectdoctorComponent } from './Modules/Doctor/doctor_dash
 
 // routes for the components
 const routes: Routes = [
-  // {path: 'home', component:},
+  {path: 'home', component:HomeComponent},
   {path: 'doctor' , component:DoctorComponent},
   {path:'signup' ,component:DoctorSignupComponent },
   {path: 'signupnext' , component:DoctorSignupNextComponent},
@@ -52,6 +59,9 @@ const routes: Routes = [
   {path:'test',component:TeastComponent},
   {path:'searchdoctor',component:SearchdoctorComponent},
   {path:'selecthospitalselectdoctor',component:SelecthositalSelectdoctorComponent}
+
+  {path:'' , redirectTo:'/home' , pathMatch:'full'}
+
 
 ];
 
