@@ -34,6 +34,7 @@ const routes: Routes = [
   {path:'signup' ,component:DoctorSignupComponent },
   {path: 'signupnext' , component:DoctorSignupNextComponent},
   {path: 'login' , component:LoginComponent},
+
   {path:'hospital' , component:HospitalLandingComponent},
   {path:'ambulance' , component:AmbulanceLadingComponent},
   {path:'pharmacy' , component:PharmacyLandingComponent},
@@ -50,7 +51,9 @@ const routes: Routes = [
   {path:'test',component:TeastComponent},
   {path:'searchdoctor',component:SearchdoctorComponent},
   {path:'selecthospitalselectdoctor',component:SelecthositalSelectdoctorComponent},
+
   {path:'', redirectTo:'home' , pathMatch:'full'}
+
 
 
 ];
