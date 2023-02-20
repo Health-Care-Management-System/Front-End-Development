@@ -7,8 +7,7 @@ import { DoctorComponent } from './Modules/Doctor/doctor landing page/doctor.com
 import { DoctorSignupComponent } from './Modules/Doctor/doctor-signup-page-1/doctor-signup.component';
 import { DoctorSignupNextComponent } from './Modules/Doctor/doctor-signup-page-2/doctor-signup-next.component';
 import { LoginComponent } from './Shared/login/login.component';
-<<<<<<< Updated upstream
-=======
+
 import { HomeComponent } from './Shared/home/home.component';
 import { HospitalLandingComponent } from './Modules/Hospital/hospital-landing/hospital-landing.component';
 import { AmbulanceLadingComponent } from './Modules/Ambulance/ambulance-lading/ambulance-lading.component';
@@ -26,7 +25,7 @@ import { SearchdoctorComponent } from './Modules/Doctor/doctor_dashboard/searchd
 import { SelecthositalSelectdoctorComponent } from './Modules/Doctor/doctor_dashboard/selecthosital-selectdoctor/selecthosital-selectdoctor.component';
 
 
->>>>>>> Stashed changes
+
 
 
 // routes for the components
@@ -35,9 +34,6 @@ const routes: Routes = [
   {path: 'doctor' , component:DoctorComponent},
   {path:'signup' ,component:DoctorSignupComponent },
   {path: 'signupnext' , component:DoctorSignupNextComponent},
-<<<<<<< Updated upstream
-  {path: 'login' , component:LoginComponent}
-=======
   {path: 'login' , component:LoginComponent},
   {path:'hospital' , component:HospitalLandingComponent},
   {path:'ambulance' , component:AmbulanceLadingComponent},
@@ -56,7 +52,6 @@ const routes: Routes = [
   {path:'test',component:TeastComponent},
   {path:'searchdoctor',component:SearchdoctorComponent},
   {path:'selecthospitalselectdoctor',component:SelecthositalSelectdoctorComponent}
->>>>>>> Stashed changes
 
 ];
 
