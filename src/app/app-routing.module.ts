@@ -17,7 +17,27 @@ const routes: Routes = [
   {path:'signup' ,component:DoctorSignupComponent },
   {path: 'signupnext' , component:DoctorSignupNextComponent},
   {path: 'login' , component:LoginComponent},
-  {path: 'ambulance',component:AmbulanceComponent}
+
+  {path: 'ambulance',component:AmbulanceComponent},
+  {path:'hospital' , component:HospitalLandingComponent},
+  {path:'ambulance' , component:AmbulanceLadingComponent},
+  {path:'pharmacy' , component:PharmacyLandingComponent},
+  {path:'footer' , component:FooterComponent},
+
+  //routes for the doctor
+  {path:'dashboard',component:DoctorprofileComponent},
+  {path:'appoinment',component:ShowrequestComponent},
+  {path:'menu',component:LeftToolBarComponent},
+  {path:'availability',component:AvailabilityShedulingComponent},
+  {path:'password',component:ChangePasswordComponent},
+  {path:'history',component:HistoryReviewComponent},
+  {path:'searchhospital',component:HospitalSearchComponent},
+  {path:'test',component:TeastComponent},
+  {path:'searchdoctor',component:SearchdoctorComponent},
+  {path:'selecthospitalselectdoctor',component:SelecthositalSelectdoctorComponent},
+  {path:'', redirectTo:'home', pathMatch:'full'}
+
+
 
 ];
 
