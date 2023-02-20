@@ -12,14 +12,6 @@ import { HospitalLandingComponent } from './Modules/Hospital/hospital-landing/ho
 import { AmbulanceLadingComponent } from './Modules/Ambulance/ambulance-lading/ambulance-lading.component';
 import { PharmacyLandingComponent } from './Modules/Pharmacy/pharmacy-landing/pharmacy-landing.component';
 import { FooterComponent } from './Shared/footer/footer.component';
-
-
-
-import { HomeComponent } from './Shared/home/home.component';
-import { HospitalLandingComponent } from './Modules/Hospital/hospital-landing/hospital-landing.component';
-import { AmbulanceLadingComponent } from './Modules/Ambulance/ambulance-lading/ambulance-lading.component';
-import { PharmacyLandingComponent } from './Modules/Pharmacy/pharmacy-landing/pharmacy-landing.component';
-import { FooterComponent } from './Shared/footer/footer.component';
 import { DoctorprofileComponent } from './Modules/Doctor/doctor_dashboard/doctorprofile/doctorprofile.component';
 import { ShowrequestComponent } from './Modules/Doctor/doctor_dashboard/showrequest/showrequest.component';
 import { LeftToolBarComponent } from './Modules/Doctor/doctor_dashboard/left-tool-bar/left-tool-bar.component';
@@ -58,7 +50,7 @@ const routes: Routes = [
   {path:'searchhospital',component:HospitalSearchComponent},
   {path:'test',component:TeastComponent},
   {path:'searchdoctor',component:SearchdoctorComponent},
-  {path:'selecthospitalselectdoctor',component:SelecthositalSelectdoctorComponent}
+  {path:'selecthospitalselectdoctor',component:SelecthositalSelectdoctorComponent},
 
   {path:'' , redirectTo:'/home' , pathMatch:'full'}
 
