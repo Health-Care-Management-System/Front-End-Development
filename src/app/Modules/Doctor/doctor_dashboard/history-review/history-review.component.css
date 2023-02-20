@@ -1,0 +1,219 @@
+    .card1 {
+        position: absolute;
+        left: 30.53%;
+        right: 20.23%;
+        top: 5.64%;
+        bottom: 68.08%;
+        background: #FFFFFF;
+        box-shadow: 0px 4.07454px 24.4472px -1.01863px rgba(0, 0, 0, 0.11);
+        backdrop-filter: blur(20.3727px);
+        /* Note: backdrop-filter has minimal browser support */
+        border-radius: 20px;
+        height: 170px;
+        width: 600px;
+    }
+    
+    .card2 {
+        position: absolute;
+        left: 24.53%;
+        right: 12.84%;
+        top: 50.25%;
+        bottom: 51.54%;
+        height: 150px;
+        background: #EEEDF4;
+        border-radius: 40px;
+        width: 800px;
+        color: blue;
+    }
+    
+    .card3 {
+        position: absolute;
+        left: 24.82%;
+        right: 12.55%;
+        top: 84.95%;
+        bottom: 23.83%;
+        height: 150px;
+        background: #EEEDF4;
+        border-radius: 40px;
+        width: 800px;
+        color: blue;
+    }
+    
+    .card4 {
+        position: absolute;
+        left: 24.82%;
+        right: 12.55%;
+        top: 120.66%;
+        bottom: 16.13%;
+        height: 150px;
+        background: #EEEDF4;
+        border-radius: 40px;
+        width: 800px;
+        color: blue;
+    }
+    
+    .card11 {
+        position: absolute;
+        left: 12.23%;
+        right: 13.46%;
+        top: 28.54%;
+        bottom: 77.22%;
+        background: gray;
+        box-shadow: 10.0715px 12.2297px 28.7757px 2.87757px rgba(112, 144, 176, 0.08);
+        border-radius: 21.5817px;
+        height: 20px;
+    }
+    
+    .card12 {
+        position: absolute;
+        left: 12.23%;
+        right: 13.46%;
+        top: 64.27%;
+        bottom: 71.49%;
+        background: #FFFFFF;
+        box-shadow: 10.0715px 12.2297px 28.7757px 2.87757px rgba(112, 144, 176, 0.08);
+        border-radius: 21.5817px;
+        background: gray;
+        height: 20px;
+    }
+    
+    .image1 {
+        height: 27px;
+        width: 25px;
+        left: 50px;
+        top: 600px;
+        border-radius: 50px;
+    }
+    
+    .image2 {
+        height: 27px;
+        width: 25px;
+        left: 745px;
+        top: 130px;
+        border-radius: 50px;
+    }
+    
+    .card12c {}
+    
+    .annimage1 {
+        position: absolute;
+        left: -9.7%;
+        right: 53.67%;
+        top: 19.12%;
+        bottom: 77.81%;
+        background: #C4C4C4;
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+    }
+    
+    .annimage2 {
+        position: absolute;
+        left: -9.7%;
+        right: 53.67%;
+        top: 17.12%;
+        bottom: 77.81%;
+        background: #C4C4C4;
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+    }
+    
+    .card2img {
+        position: relative;
+        right: 200px;
+        border-radius: 60px;
+        height: 60px;
+        width: 60px;
+    }
+    
+    .card3img {
+        position: relative;
+        right: 200px;
+        border-radius: 60px;
+        height: 60px;
+        width: 60px;
+    }
+    
+    .card4img {
+        position: relative;
+        right: 200px;
+        border-radius: 60px;
+        height: 60px;
+        width: 60px;
+    }
+    
+    .card2tittle {
+        position: relative;
+        left: 49px;
+    }
+    
+    .card3tittle {
+        position: relative;
+        left: 49px;
+    }
+    
+    .card4tittle {
+        position: relative;
+        left: 49px;
+    }
+    
+    .card2subtittle {
+        position: relative;
+        left: 49px;
+    }
+    
+    .card3subtittle {
+        position: relative;
+        left: 49px;
+    }
+    
+    .card4subtittle {
+        position: relative;
+        left: 49px;
+    }
+    
+    .starset2 {
+        position: relative;
+        bottom: 100px;
+        left: 650px;
+    }
+    
+    .starset3 {
+        position: relative;
+        bottom: 100px;
+        left: 650px;
+    }
+    
+    .starset4 {
+        position: relative;
+        bottom: 100px;
+        left: 650px;
+    }
+    
+    .hr1 {
+        position: relative;
+        top: 290px;
+        width: 80%;
+        left: 180px;
+    }
+    
+    .content2para {
+        position: relative;
+        top: 20px;
+    }
+    
+     :host {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    mat-drawer {
+        width: 260px;
+        background: #383993;
+    }
+    
+    mat-drawer-container {
+        height: 100%;
+    }
