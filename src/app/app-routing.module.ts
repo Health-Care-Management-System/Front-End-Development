@@ -34,11 +34,11 @@ const routes: Routes = [
   {path:'signup' ,component:DoctorSignupComponent },
   {path: 'signupnext' , component:DoctorSignupNextComponent},
   {path: 'login' , component:LoginComponent},
+
   {path:'hospital' , component:HospitalLandingComponent},
   {path:'ambulance' , component:AmbulanceLadingComponent},
   {path:'pharmacy' , component:PharmacyLandingComponent},
   {path:'footer' , component:FooterComponent},
-  {path:'' , redirectTo:'/home' , pathMatch:'full'},
 
   //routes for the doctor
   {path:'dashboard',component:DoctorprofileComponent},
@@ -52,7 +52,8 @@ const routes: Routes = [
   {path:'searchdoctor',component:SearchdoctorComponent},
   {path:'selecthospitalselectdoctor',component:SelecthositalSelectdoctorComponent},
 
-  {path:'' , redirectTo:'/home' , pathMatch:'full'}
+  {path:'', redirectTo:'home' , pathMatch:'full'}
+
 
 
 ];
