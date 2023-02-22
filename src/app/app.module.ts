@@ -136,6 +136,7 @@ import {MatSliderModule} from '@angular/material/slider';
 
     NoopAnimationsModule,
     //doctorcharuka
+
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
