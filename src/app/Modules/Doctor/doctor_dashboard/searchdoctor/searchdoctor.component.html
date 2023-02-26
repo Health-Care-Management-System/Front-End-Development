@@ -1,7 +1,17 @@
+<!-- <app-mininavbar (toggleLeftToolBarForMe)="leftToolBarToggler()">
+</app-mininavbar>
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" [opened]="sideBarOpen">
+        <app-left-tool-bar></app-left-tool-bar>
+    </mat-drawer>
+    <mat-drawer-content> -->
+<app-main-nav></app-main-nav>
 <div class="all">
-    <div class="search1">
-        Search for Hospital </div>
-    <div class="search2">Discover the best clinic, hospitals, nearest cities that suits your calender </div>
+    <div class="container-flud">
+        <div class="search1">
+            Search for Hospital </div>
+        <div class="search2">Discover the best clinic, hospitals, nearest cities that suits your calender </div>
+    </div>
     <form>
         <mat-form-field class="full" appearance="outline">
 
@@ -66,17 +76,41 @@
 
         </mat-form-field>
     </form>
+
     <button class="button" mat-raised-button color="primary">show hospital</button>
-    <button class="asiri1" mat-raised-button>
-    <div class="text1"><img class="imageori" src="assets\img\asiri_hospital.png"><br>{{text1}}</div><div class="text2">{{text2}}</div></button>
-    <button class="asiri2" mat-raised-button>
-        <div class="text1"><img src="assets\img\asiri_hospital.png"><br>{{text1}}</div><div class="text2">{{text2}}</div></button>
-    <button class="asiri3" mat-raised-button>
-            <div class="text1"><img src="assets\img\asiri_hospital.png"><br>{{text1}}</div><div class="text2">{{text2}}</div></button>
-    <button class="asiri4" mat-raised-button>
-                <div class="text1"><img src="assets\img\asiri_hospital.png"><br>{{text1}}</div><div class="text2">{{text2}}</div></button>
-    <button class="asiri5" mat-raised-button>
-                    <div class="text1"><img src="assets\img\asiri_hospital.png"><br>{{text1}}</div><div class="text2">{{text2}}</div></button>
-    <button class="asiri6" mat-raised-button>
-                        <div class="text1"><img src="assets\img\asiri_hospital.png"><br>{{text1}}</div><div class="text2">{{text2}}</div></button>
+    <div class="allbutton" fxLayout="row" fxLayout.lt-sm="column">
+
+        <div class="button1">
+            <button class=" asiri1 " mat-raised-button>
+        
+            <div class="text1 "><img class="imageori " src="assets\img\asiri_hospital.png "><br>{{text1}}</div><div class="text2 ">{{text2}}</div></button>
+        </div>
+        <div class="button2">
+            <button class="asiri2 " mat-raised-button>
+                <div class="text1 "><img src="assets\img\asiri_hospital.png "><br>{{text1}}</div><div class="text2 ">{{text2}}</div></button>
+        </div>
+        <div class="button3">
+            <button class="asiri3 " mat-raised-button>
+                <div class="text1 "><img src="assets\img\asiri_hospital.png "><br>{{text1}}</div><div class="text2 ">{{text2}}</div></button>
+        </div>
+        <div class="button4">
+            <button class="asiri4 " mat-raised-button>
+                <div class="text1 "><img src="assets\img\asiri_hospital.png "><br>{{text1}}</div><div class="text2 ">{{text2}}</div></button>
+        </div>
+        <div class="button5">
+            <button class="asiri5 " mat-raised-button>
+                <div class="text1 "><img src="assets\img\asiri_hospital.png "><br>{{text1}}</div><div class="text2 ">{{text2}}</div></button>
+        </div>
+        <div class="button6">
+            <button class="asiri6 " mat-raised-button>
+            <div class="text1 "><img src="assets\img\asiri_hospital.png ">
+                <br>{{text1}}
+            </div>
+            <div class="text2 ">{{text2}}</div></button>
+        </div>
+
+    </div>
 </div>
+
+<!-- </mat-drawer-content>
+</mat-drawer-container> -->
