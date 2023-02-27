@@ -158,6 +158,7 @@ import { FavoritesComponent } from './Modules/Patient/favorites/favorites/favori
 
     NoopAnimationsModule,
     //doctorcharuka
+
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,

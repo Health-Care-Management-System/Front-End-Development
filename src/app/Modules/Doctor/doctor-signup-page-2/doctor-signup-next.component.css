@@ -4,6 +4,8 @@
 
 .left-part {
     flex: 0 0 50%;
+    
+    background-image: url(src/assets/img/doc23.png);
 
     background-position: center;
     background-repeat: no-repeat;
