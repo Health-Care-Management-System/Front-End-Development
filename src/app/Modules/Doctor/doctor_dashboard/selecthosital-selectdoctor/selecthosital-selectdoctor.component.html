@@ -1,7 +1,15 @@
+<!-- <app-mininavbar (toggleLeftToolBarForMe)="leftToolBarToggler()">
+</app-mininavbar>
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" [opened]="sideBarOpen">
+        <app-left-tool-bar></app-left-tool-bar>
+    </mat-drawer>
+    <mat-drawer-content> -->
+<app-main-nav></app-main-nav>
 <form>
     <mat-form-field class="full" appearance="outline">
 
-        <mat-label class="lable1">Search Hospitals</mat-label>
+        <mat-label class="lable1">Search Doctor</mat-label>
         <input type="text" class="placeholder" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
         <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
             <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
@@ -19,7 +27,7 @@
 
 <mat-form-field class="full3" appearance="outline">
 
-    <mat-label class="lable3">Search District </mat-label>
+    <mat-label class="lable3">speciality </mat-label>
     <input class="placeholder3" matInput placeholder="Search District">
 
     <mat-icon class="icon3" matSuffix>search</mat-icon>
@@ -30,7 +38,7 @@
     <input matSliderThumb>
 </mat-slider>
 
-<button class="button" mat-raised-button color="primary">show hospital</button>
+<button class="button" mat-raised-button color="primary">show doctors</button>
 <div class="head">{{heading}}</div>
 <div class="discription">{{discription}}</div>
 
@@ -43,3 +51,5 @@
     <div class="include2content">{{add2content}}</div>
 </div>
 <img src={{myimage1}}>
+<!-- </mat-drawer-content>
+</mat-drawer-container> -->

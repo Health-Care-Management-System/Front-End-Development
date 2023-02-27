@@ -249,3 +249,18 @@ top: 575.03px; */
 .imageori {
     border-radius: 90px;
 }
+
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+mat-drawer {
+    width: 260px;
+    background: #383993;
+}
+
+mat-drawer-container {
+    height: 100%;
+}

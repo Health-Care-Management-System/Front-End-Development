@@ -17,12 +17,16 @@ export class SearchdoctorComponent implements OnInit {
   filteredOptions!: Observable<string[]>;
 
   constructor() { }
-
+  title = 'edowzori';
+  sideBarOpen=true;
   ngOnInit(): void {this.filteredOptions = this.myControl.valueChanges.pipe(
     startWith(''),
     map(value => this._filter(value || '')),
   );
 }
+leftToolBarToggler(){
+  this.sideBarOpen=!this.sideBarOpen;
+ }
 private _filter(value: string): string[] {
   const filterValue = value.toLowerCase();
 

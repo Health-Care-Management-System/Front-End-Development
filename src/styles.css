@@ -1,18 +1,26 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 /*@import './_variables.scss';*/
+
+
 /*@import "node_modules/font-awesome/css/font-awesome.css";*/
 
+html,
+body {
+    height: 100%;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 .spacer {
-  flex: 1 1 auto;
+    flex: 1 1 auto;
 }
-/*@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';*/
-/*@import '~@fortawesome/fontawesome-free/scss/solid.scss';*/
-/*@import '~@fortawesome/fontawesome-free/scss/regular.scss';*/
-/*@import '~@fortawesome/fontawesome-free/scss/brands.scss';*/
 
-/*@import '~mdb-angular-ui-kit/assets/scss/mdb.scss';*/
+
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+@import '~@fortawesome/fontawesome-free/scss/regular.scss';
+@import '~@fortawesome/fontawesome-free/scss/brands.scss';

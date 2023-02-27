@@ -22,6 +22,12 @@ import { HospitalSearchComponent } from './Modules/Doctor/doctor_dashboard/hospi
 import { TeastComponent } from './Modules/Doctor/doctor_dashboard/teast/teast.component';
 import { SearchdoctorComponent } from './Modules/Doctor/doctor_dashboard/searchdoctor/searchdoctor.component';
 import { SelecthositalSelectdoctorComponent } from './Modules/Doctor/doctor_dashboard/selecthosital-selectdoctor/selecthosital-selectdoctor.component';
+import { HospitalProfileComponent } from './Modules/Hospital/hospital-dashboard/hospital-profile/hospital-profile/hospital-profile.component';
+import { PharmacyProfileComponent } from './Modules/Pharmacy/pharmacy-dashboard/pharmacy-profile/pharmacy-profile/pharmacy-profile.component';
+import { PatientProfileComponent } from './Modules/Patient/patient-profile/patient-profile/patient-profile.component';
+import { PatientProfileDisplayedComponent } from './Modules/Patient/patient profile displayed/patient-profile-displayed/patient-profile-displayed.component';
+import { FavoritesComponent } from './Modules/Patient/favorites/favorites/favorites.component';
+
 
 
 
@@ -40,7 +46,6 @@ const routes: Routes = [
   {path:'pharmacy' , component:PharmacyLandingComponent},
   {path:'footer' , component:FooterComponent},
 
-  //routes for the doctor
   {path:'dashboard',component:DoctorprofileComponent},
   {path:'appoinment',component:ShowrequestComponent},
   {path:'menu',component:LeftToolBarComponent},
@@ -52,7 +57,13 @@ const routes: Routes = [
   {path:'searchdoctor',component:SearchdoctorComponent},
   {path:'selecthospitalselectdoctor',component:SelecthositalSelectdoctorComponent},
 
-  {path:'', redirectTo:'home' , pathMatch:'full'}
+ {path:'', redirectTo:'home' , pathMatch:'full'},
+ {path:'hospitalprofile',component:HospitalProfileComponent},
+ {path:'pharmcyprofile',component:PharmacyProfileComponent},
+ {path:'patientprofile',component:PatientProfileComponent},
+{path:'patientprofiledisplayed',component:PatientProfileDisplayedComponent},
+{path:'favorite',component:FavoritesComponent}
+
 
 
 

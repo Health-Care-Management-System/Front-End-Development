@@ -1,19 +1,19 @@
-.tool {
-    justify-content: space-evenly;
-    background-color: #3f51b5;
-    width: 60%;
-}
-
-.tool2 {
+    .tool {
+        justify-content: space-evenly;
+        background-color: #065560;
+        width: 100%;
+        display: flex;
+        color: aliceblue;
+    }
+    /* .tool2 {
     width: 40%;
     justify-content: space-evenly;
-}
-
-.n {
+    background-color: #065560;
+} */
+    /* .n {
     display: flex;
-}
-
-.search {
+} */
+    /* .search {
     height: 25px;
     width: 660px;
     border-radius: 49px;
@@ -22,48 +22,55 @@
     border-style: hidden;
     margin-left: 10px;
     padding-left: 40px;
-}
-
-.menu {
-    width: 35px;
-    font-size: 40px;
-}
-
-.menu1 {
-    width: 35px;
-}
-
-.help {
-    font-size: 20px;
-    position: relative;
-}
-
-.nn {
-    font-size: 30px;
-}
-
-.lable {
-    position: relative;
-    top: 3px;
-}
-
-.formfield {
-    width: 190px;
-    align-items: center;
-    text-align: center;
-    padding: 0px 0px;
-    margin: opx;
-    height: 100px;
-}
-
-.searchicon {
-    position: absolute;
+    
+} */
+    
+    .container-fluidsearch {
+        width: 660px;
+    }
+    
+    .menu {
+        width: 35px;
+        font-size: 40px;
+    }
+    
+    .menu1 {
+        width: 35px;
+    }
+    
+    .help {
+        /* font-size: 20px;
+        position: relative;
+        left: 110px; */
+    }
+    
+    .shareiconq {
+        font-size: 30px;
+        position: relative;
+        left: 20px;
+    }
+    
+    .lable {
+        position: relative;
+        top: 3px;
+    }
+    
+    .formfield {
+        width: 190px;
+        align-items: center;
+        text-align: center;
+        padding: 0px 0px;
+        margin: opx;
+        height: 100px;
+    }
+    
+    .searchicon {
+        /* position: absolute;
     left: 270px;
     color: #8F9BBA;
-    top: 20px;
-}
-
-.searchbar {
+    top: 20px; */
+    }
+    /* .searchbar {
     color: wheat;
     background-color: aliceblue;
     width: 700px;
@@ -72,26 +79,38 @@
     border-radius: 60px;
     font-size: 20px;
     text-indent: 10px;
-}
-
-
-/* .mati {
+} */
+    /* .mati {
     position: absolute;
     bottom: 10px;
     height: 20px;
     align-items: center;
 } */
-
-.host {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.demo-section+.demo-section {
-    margin-top: 16px;
-}
-
-.notification {
-    font-size: 35px;
-}
+    
+    .host {
+        /* display: flex; */
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .demo-section+.demo-section {
+        margin-top: 16px;
+    }
+    
+    .notification {
+        /* font-size: 10 px;
+        position: absolute;
+        top: 25px; */
+    }
+    
+    .badge rounded-pill badge-notification bg-danger {
+        top: 50px;
+    }
+    
+    .logo {
+        height: 30px;
+        /* width: auto; */
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
