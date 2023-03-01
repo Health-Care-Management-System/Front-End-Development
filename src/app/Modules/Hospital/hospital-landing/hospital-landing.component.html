@@ -1,36 +1,42 @@
-<div id="mainsection" class="container-fluid" fxLayout="row" fxLayoutAlign ="0 center">
+<app-main-nav></app-main-nav>
 
-  <div class="pagecards" fxLayout="row" fxLayout.lt-sm="column"  >
-    <div  class="card1">
-      <h2> <span class="fline">Discover</span>
-        <br>Your Health
-      </h2>
-      <span><h3>Meet with the doctors you like</h3></span>
-      <span fxLayoutAlign="center center">
+<div id="mainsection" class="container-fluid" fxLayout="row" fxLayoutAlign="0 center">
+
+
+    <div class="pagecards" fxLayout="row" fxLayout.lt-sm="column">
+        <div class="card1">
+            <h2> <span class="fline">Discover</span>
+                <br>Your Health
+            </h2>
+            <span><h3>Meet with the doctors you like</h3></span>
+            <span fxLayoutAlign="center center">
             <button class="btn"
                     mat-raised-button routerLink="#"
-                    id="findbtn" >Find A Hospital</button>
+                    id="findbtn" routerLink="/searchhospital" >Find A Hospital</button>
           </span>
-    </div>
+        </div>
 
-    <mat-divider vertical></mat-divider>
+        <mat-divider vertical></mat-divider>
 
-    <div  class="card2">
-          <span>
+        <div class="card2">
+            <span>
             <h2>Are you a <br><span class="sline">Hospital Owner? </span></h2>
-          </span>
-      <span>
+            </span>
+            <span>
             <h3>Register with E-dows Medicine and <br>give your service</h3>
           </span>
-      <span fxLayoutAlign="center center">
+            <span fxLayoutAlign="center center">
             <button class="btn"
                     mat-stroked-button
                     id="servicebtn"
                     routerLink="/doctorsignup">Partner with <br>E-dowz Medicine</button>
           </span>
-    </div>
+        </div>
 
-  </div>
+    </div>
 </div>
 
+<app-middle></app-middle>
+
+<app-footer></app-footer>
 

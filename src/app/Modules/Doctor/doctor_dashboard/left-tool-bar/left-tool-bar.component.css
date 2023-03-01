@@ -1,13 +1,13 @@
-.b {
-    color: white;
-}
-
-.e {
-    color: red;
-}
-
-.edowz {
-    position: absolute;
+    .b {
+        color: white;
+    }
+    
+    .e {
+        color: red;
+    }
+    
+    .edowz {
+        /* position: absolute;
     width: 219.7px;
     height: 65.62px;
     left: 69.34px;
@@ -16,9 +16,19 @@
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
-    line-height: 48px;
-}
-
-.nav {
-    position: absolute;
-}
+    line-height: 48px; */
+    }
+    
+    .logo {
+        height: 61px;
+        width: auto;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .nav {
+        position: absolute;
+    }
+    
+    .navori {}

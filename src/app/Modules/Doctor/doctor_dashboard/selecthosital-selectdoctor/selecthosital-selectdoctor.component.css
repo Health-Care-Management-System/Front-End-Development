@@ -206,3 +206,18 @@ mat-slider {
     width: 10px;
     height: 10px;
 }
+
+ :host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+mat-drawer {
+    width: 260px;
+    background: #383993;
+}
+
+mat-drawer-container {
+    height: 100%;
+}
