@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as AOS from 'aos';
+import * as  AOS from 'aos';
 
 
 @Component({
@@ -14,5 +14,6 @@ export class MiddleComponent implements OnInit {
   ngOnInit(): void  {
     AOS.init({disable: 'mobile'});
     }
+    
 
 }
