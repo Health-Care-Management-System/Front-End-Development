@@ -1,33 +1,124 @@
-#loginsection {
+
+
+*{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+img{
+  max-width: 100%;
+}
+a{
+  text-decoration: none;
+  outline: none;
+  color: #065560;
+}
+
+a:hover{
+  color: #065560;
+}
+
+ul{
+  margin-bottom: 0;
+  padding-left: 0;
+}
+a:hover,
+a:focus,
+input,
+textarea {
+  text-decoration: none;
+  outline: none;
+}
+.right-part{
+  background-color:#065560 !important;
+}
+h4{
+  color: #FFFFFF;
+}
+p{
+  color: #FFFFFF;
+}
+.login{
+  color: #065560;
+}
+mat-form-field{
+  width: 450px;
+}
+button{
+  width: 450px;
+}
+
+.hero-btns a:first-child {
+  background-color: #fff;
+  border:2px solid #065560;
+  color: #065560 !important;
+  padding: 6px 30px !important;
+  font-size: 1.0rem;
+  border-radius: 35px;
+  -webkit-box-shadow:0px 4px 5px 0px rgba(57, 255, 126, 0.15);
+  -moz-box-shadow: 0px 4px 5px 0px rgba(57, 255, 126, 0.15);
+  box-shadow: 0px 4px 5px 0px rgba(57, 255, 126, 0.15);
+}
+.hero-btns a:first-child:hover {
+  background-color:#00BE99;
+  border:2px solid #00BE99;
+  color:  #FFFFFF !important;
+  padding: 6px 30px;
+  font-size: 1.0rem;
+  border-radius: 35px;
+  transition: all 0.3s ease;
+}
+.hero-btns a:last-child {
+  color: #FFFFFF;
+  padding: 17px 35px;
+  font-size: 1.0rem;
+}
+.hero-btns a:last-child:hover {
+  color: #00BE99;
+  transition: all 0.3s ease;
+}
+
+.logo{
+  height: 61px;
   width: auto;
-  height: 100%;
-  background: url("../../../assets/img/log-bg.png");
+}
+
+
+.blob {
+  margin-left: 60px;
+  width:550px;
+  height:550px;
+  overflow: hidden;
+  border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+  background:url(../../../assets/img/login.png);
   background-size: cover;
-  background-repeat: no-repeat;
-}
-.login {
-  position: absolute;
-  background: #FFFFFF;
-  border-radius: 12px;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-left: 30px;
-  padding-right: 30px;
-  align-content: center;
-  margin-top: 10px;
-  margin-left: 100px;
-  box-shadow: 0px 4px 5px 0px rgba(50, 51, 50, 0.15);
-
-}
-.card1{
-  position: relative;
-  /* top , right , bottom , left */
-  margin: 20px 40px 20px 20px;
+  background-position: center;
+  /* box-shadow: 0 0 15px rgba(0, 0, 0, .2); */
+  animation: blob 3.7s linear infinite;
 }
 
-.card2{
-  position: relative;
-  /* top , right , bottom , left */
-  margin: 20px 20px 20px 40px;
+@keyframes blob {
+  0%, 100% {
+      border-radius:
+          42% 56% 72% 28% / 42% 42% 56% 48%;
+  }
 
+  33% {
+      border-radius:
+          42% 28% 48% 48% / 28% 28% 72% 72%;
+  }
+
+  66% {
+      border-radius:
+          100% 56% 56% 100% / 100% 100% 56% 56%;
+  }
+}
+
+.loginbtn{
+  background-color:#00BE99;
+  color: #FFFFFF;
+}
+.loginbtn:hover{
+  background-color: #018369;
 }

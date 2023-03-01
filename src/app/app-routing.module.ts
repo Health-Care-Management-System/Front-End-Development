@@ -7,6 +7,7 @@ import { DoctorComponent } from './Modules/Doctor/doctor landing page/doctor.com
 import { DoctorSignupComponent } from './Modules/Doctor/doctor-signup-page-1/doctor-signup.component';
 import { DoctorSignupNextComponent } from './Modules/Doctor/doctor-signup-page-2/doctor-signup-next.component';
 import { LoginComponent } from './Shared/login/login.component';
+import { UserSelectComponent } from './Shared/user-select/user-select.component';
 import { HomeComponent } from './Shared/home/home.component';
 import { HospitalLandingComponent } from './Modules/Hospital/hospital-landing/hospital-landing.component';
 import { AmbulanceLadingComponent } from './Modules/Ambulance/ambulance-lading/ambulance-lading.component';
@@ -40,6 +41,7 @@ const routes: Routes = [
   {path:'signup' ,component:DoctorSignupComponent },
   {path: 'signupnext' , component:DoctorSignupNextComponent},
   {path: 'login' , component:LoginComponent},
+  {path:'userselect' , component:UserSelectComponent},
 
   {path:'hospital' , component:HospitalLandingComponent},
   {path:'ambulance' , component:AmbulanceLadingComponent},

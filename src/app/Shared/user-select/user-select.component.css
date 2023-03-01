@@ -7,7 +7,17 @@
   left: 0  !important;
   right: auto;
 }
-
+.text{
+  font-size: 1.4rem;
+  font-weight:bold;
+  letter-spacing: 2px;
+  color: #065560;
+  text-transform: uppercase;
+}
 .userbutton{
-  background-color: #E1EBFF;
+  background-color:#e1eeea;
+}
+.userimage{
+  height: 140px;
+  width: auto;
 }

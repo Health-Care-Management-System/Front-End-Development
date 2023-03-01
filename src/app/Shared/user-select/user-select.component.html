@@ -1,35 +1,38 @@
 <app-main-nav></app-main-nav>
-<!-- fxLayout="row" fxLayout.lt-sm="column"  -->
 
-<div>
-    <div class="container" id="container1" fxLayout="row" fxLayout.lt-sm="column">
-        <div class="users">
-            <!--  (click)="openLoginForm()" -->
-            <button mat-raised-button class="userbutton">
-        <img src="../../assets/img/user.png" alt="patient">
-        <p>I am patient</p>
-      </button>
-        </div>
-        <div class="users">
-            <button mat-raised-button class="userbutton"> <img src="../../assets/img/user.png" alt="">
-        <p>I am doctor</p></button>
-        </div>
-        <div class="users">
-            <button mat-raised-button class="userbutton"> <img src="../../assets/img/user.png" alt="">
-        <p>I am doctor</p></button>
-        </div>
-        <div class="users">
-            <button mat-raised-button class="userbutton"> <img src="../../assets/img/user.png" alt="">
-        <p>I am doctor</p></button>
-        </div>
-        <div class="users">
-            <button mat-raised-button class="userbutton"> <img src="../../assets/img/user.png" alt="">
-        <p>I am doctor</p></button>
-        </div>
+<div class="container-fluid vh-100 overflow-auto" fxLayout="column" fxLayoutAlign="center center" >
+    <div class="p-5 text">
+        <span>Please select a user type</span>
     </div>
 
-    <span class="userselect"><img src="../../assets/img/userselect.png" alt=""></span>
+    <div class=""  fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="50px">
+        <div class="users">
+            <!--  (click)="openLoginForm()" -->
+            <button mat-raised-button class="userbutton"><img class="userimage" src="../../../assets/img/user-patient.png" alt="patient">
+        <p>I am patient</p></button>
+        </div>
+        <div class="users">
+            <button mat-raised-button class="userbutton"> <img class="userimage" src="../../../assets/img/user-doctor.png" alt="">
+        <p>I am doctor</p></button>
+        </div>
+        <div class="users">
+            <button mat-raised-button class="userbutton"> <img class="userimage" src="../../../assets/img/user-ambulance.png" alt="">
+        <p>I am doctor</p></button>
+        </div>
+        <div class="users">
+            <button mat-raised-button class="userbutton"> <img class="userimage" src="../../../assets/img/user-hospital.png" alt="">
+        <p>I am doctor</p></button>
+        </div>
+        <div class="users">
+            <button mat-raised-button class="userbutton"> <img class="userimage" src="../../../assets/img/user-pharmacy.png" alt="">
+        <p>I am doctor</p></button>
+        </div>
+
+    </div>
 </div>
+    
+       
+
 
 
 <app-middle></app-middle>
