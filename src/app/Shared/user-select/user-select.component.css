@@ -11,9 +11,26 @@
 }
 .right-part{
   flex: 0 0 70%;
-  padding: 2rem;
+  padding: 1.5rem;
   background-color: #065560;
   
+}
+.topbar{
+  top: 0;
+}
+.logo{
+  height: 61px;
+  width: auto;
+}
+.link{
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #e1eeea;
+  font-size: 1.1rem;
+  padding-left: 780px;
+}
+.userRowSecond{
+  padding-top: 25px;
 }
 .userselect{
   position: absolute;
@@ -25,16 +42,27 @@
   right: auto;
 }
 .text{
-  font-size: 1.4rem;
+  font-size: 2.4rem;
   font-weight:bold;
   letter-spacing: 2px;
   color: #e1eeea;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 .userbutton{
   background-color:#e1eeea;
+  padding-top: 10px;
 }
 .userimage{
-  height: 140px;
+  height: 130px;
   width: auto;
+}
+.userbutton p{
+  color: #065560;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  padding-top: 10px;
+
+}
+.userbutton:hover{
+  background-color: #b1d6cb;
 }
