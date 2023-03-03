@@ -1,10 +1,11 @@
 .container-fluid {
   /*height: 100vh;*/
   margin: 0px;
+  padding: 0px;
 }
 
 .left-part {
-  flex: 0 0 50%;
+  flex: 0 0 45%;
   background-image: url(../../../../assets/img/doc23.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -12,23 +13,27 @@
 }
 
 .right-part {
-  flex: 0 0 50%;
-  padding: 2rem 2rem 0rem 2rem;
+  flex: 0 0 55%;
+  padding: 0.8rem 6rem 0rem 6rem;
   box-sizing: border-box;
   overflow-y: auto;
-  background-color: #DCD7D7;
+  background-color:#065560;
 }
-
+.logo{
+  height: 61px;
+  width: auto;
+  padding-bottom: 7px;
+}
 .docform-full-width {
   width: 100%;
 }
 
 #title {
-  font-size: 30px;
+  font-size: 1.5rem;
   font-weight: 500;
   text-transform: capitalize;
-  padding-bottom: 20px;
   text-align: center;
+  color: #e1eeea;
 }
 
 #formtitle {
@@ -36,7 +41,10 @@
   font-weight: 500;
   text-transform: capitalize;
 }
-
+.docform-full-width{
+  padding-bottom: 10px;
+  margin: 0px;
+}
 mat-label {
   text-transform: capitalize;
   font-size: 15px;
@@ -44,14 +52,16 @@ mat-label {
 
 mat-form-field {
   font-size: 12px;
-  padding-right: 0px !important;
+  padding: 0px !important;
 
 }
-td {
-  padding-right: 8px;
-  padding-left: 12px;
-
+mat-input{
+  padding-top: 10px !important;
 }
+.icon{
+  transform: scale(1.5);
+}
+
 
 .middle {
   margin-top: 10px;
@@ -73,7 +83,8 @@ td {
 
 /* change the mat-field background colour */
 ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
-  background-color: #F8F7F7;
+  background-color:#ffffff;
+  padding: 0px !important;
 }
 
 ::ng-deep.mat-form-field-underline {
@@ -83,14 +94,14 @@ td {
 
 ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
   border-radius: 6px;
-  padding: 0.55em 0.75em 0 0.75em;
   border: 1.5px solid #DCD7D7;
 }
 .accept{
   font-size: 18px;
+  color: #e1eeea;
 }
 .accept a{
-  color: #0a8a9b;
+  color:#00be99;
   text-decoration: none;
 }
 .login{

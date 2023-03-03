@@ -1,22 +1,22 @@
-<app-main-nav></app-main-nav>
-<div class="container-fluid" fxLayout="row" fxLayout.lt-sm="column">
+
+<div class="container-fluid vh-100" fxLayout="row" fxLayout.lt-sm="column">
 
     <div class="left-part" >
     </div>
 
     <div class="right-part" >
-        <span>
+        <span fxLayout="column" fxLayoutAlign="center center">
+            <a href="" routerLink="/home"><img class="logo" src="../../../../assets/img/logo-dark-background.png"></a>
             <h1 id="title" class="md-display-3">Sign up for doctor account</h1>
         </span>
       <p>{{user | json}}</p>
         <form class="doc-form" fxLayoutAlign="center center" novalidate #signupForm="ngForm" (ngSubmit)="onSubmit()">
             <table class="docform-full-width" >
                 <tr>
-
                     <td>
-                        <p  class="md-title">First Name</p>
+                        <!-- <p  class="md-title">First Name</p> -->
                         <mat-form-field class="docform-full-width" appearance="fill">
-                            <mat-label>Your First Name</mat-label>
+                            <mat-label><mat-icon class="icon">account_circle</mat-icon> First Name</mat-label>
                             <input matInput type="text"
                                    [(ngModel)]="user.firstname"
                                    name="firstname"
@@ -29,8 +29,8 @@
                     </td>
 
                     <td>
-                        <p  class="md-title">Last Name</p>
-                        <mat-form-field class="docform-full-width" appearance="fill">
+                        <!-- <p  class="md-title">Last Name</p> -->
+                        <mat-form-field class="docform-full-width" appearance="fill" style="padding-left: 15px;">
                             <mat-label>Your Last Name </mat-label>
                             <input matInput type="text"
                                    [(ngModel)]="user.lastname"
@@ -42,10 +42,9 @@
                           </mat-error>
                         </mat-form-field>
                     </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <p class="md-title">Email Address</p>
+                <tr >
+                   <td colspan="2">
+                        <!-- <p class="md-title">Email Address</p> -->
                         <mat-form-field class="docform-full-width" appearance="fill">
                             <mat-label>Your Email Address </mat-label>
                             <input matInput placeholder="perera@codeclans.com"
@@ -55,11 +54,12 @@
                                    required>
                             <mat-error *ngIf="email.invalid">{{getErrorEmailMessage()}}</mat-error>
                         </mat-form-field>
-                    </td>
+                   </td>
                 </tr>
-                <tr>
-                    <td>
-                        <p  class="md-title">National ID Number</p>
+       
+                    <tr>
+                      <td colspan="2">
+                        <!-- <p  class="md-title">National ID Number</p> -->
                         <mat-form-field class="docform-full-width" appearance="fill">
                             <mat-label>Your National ID Number</mat-label>
                             <input matInput type="text"
@@ -72,9 +72,11 @@
                           </mat-error>
 
                         </mat-form-field>
-                    </td>
-                    <td>
-                        <p  class="md-title">Telephone Number</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2">
+                        <!-- <p  class="md-title">Telephone Number</p> -->
                         <mat-form-field class="docform-full-width" appearance="fill">
                             <mat-label>Your Telephone Number </mat-label>
                             <input matInput type="text"
@@ -87,11 +89,12 @@
                           </mat-error>
                           <mat-icon matSuffix>phone</mat-icon>
                         </mat-form-field>
-                    </td>
-                </tr>
+                      </td>
+                    </tr>
+                
                 <tr>
-                    <td colspan="2">
-                        <p  class="md-title">Address (Personal)</p>
+                  <td colspan="2">
+                        <!-- <p  class="md-title">Address (Personal)</p> -->
                         <mat-form-field class="docform-full-width" id="address" appearance="fill">
                             <mat-label>Your Personal Address </mat-label>
                             <textarea matInput placeholder="Ex. 100 Main St"
@@ -103,7 +106,7 @@
                             Your Address is required
                           </mat-error>
                         </mat-form-field>
-                    </td>
+                  </td>
                 </tr>
             </table>
         </form>
