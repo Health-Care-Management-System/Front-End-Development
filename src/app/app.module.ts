@@ -85,6 +85,12 @@ import { PatientNavbarComponent } from './Modules/Patient/patient-navbar/patient
 import { PatientProfileDisplayedComponent } from './Modules/Patient/patient profile displayed/patient-profile-displayed/patient-profile-displayed.component';
 import { FavoritesComponent } from './Modules/Patient/favorites/favorites/favorites.component';
 import { PatientSignupPageComponent } from './Modules/Patient/patient-signup-page/patient-signup-page.component';
+import { PharmacySignupPageComponent } from './Modules/Pharmacy/pharmacy-signup-page/pharmacy-signup-page.component';
+import { PharmacySignupNextPageComponent } from './Modules/Pharmacy/pharmacy-signup-next-page/pharmacy-signup-next-page.component';
+import { HospitalSignupPageComponent } from './Modules/Hospital/hospital-signup-page/hospital-signup-page.component';
+import { AmbulanceSignupPageComponent } from './Modules/Ambulance/ambulance-signup-page/ambulance-signup-page.component';
+import { AmbulanceSignupNextPageComponent } from './Modules/Ambulance/ambulance-signup-next-page/ambulance-signup-next-page.component';
+import { HospitalSignupNextPageComponent } from './Modules/Hospital/hospital-signup-next-page/hospital-signup-next-page.component';
 
 
 
@@ -130,6 +136,12 @@ import { PatientSignupPageComponent } from './Modules/Patient/patient-signup-pag
     PatientProfileDisplayedComponent,
     FavoritesComponent,
     PatientSignupPageComponent,
+    PharmacySignupPageComponent,
+    PharmacySignupNextPageComponent,
+    HospitalSignupPageComponent,
+    AmbulanceSignupPageComponent,
+    AmbulanceSignupNextPageComponent,
+    HospitalSignupNextPageComponent,
 
 
   ],
