@@ -39,8 +39,8 @@ import { PatientSignupPageComponent } from './Modules/Patient/patient-signup-pag
 const routes: Routes = [
   {path: 'home', component:HomeComponent},
   {path: 'doctor' , component:DoctorComponent},
-  {path:'signup' ,component:DoctorSignupComponent },
-  {path: 'signupnext' , component:DoctorSignupNextComponent},
+  {path:'doctorsignup' ,component:DoctorSignupComponent },
+  {path: 'doctorsignupnext' , component:DoctorSignupNextComponent},
   {path:'patientsignup' , component:PatientSignupPageComponent},
   {path: 'login' , component:LoginComponent},
   {path:'userselect' , component:UserSelectComponent},
