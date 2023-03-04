@@ -28,6 +28,7 @@ import { PharmacyProfileComponent } from './Modules/Pharmacy/pharmacy-dashboard/
 import { PatientProfileComponent } from './Modules/Patient/patient-profile/patient-profile/patient-profile.component';
 import { PatientProfileDisplayedComponent } from './Modules/Patient/patient profile displayed/patient-profile-displayed/patient-profile-displayed.component';
 import { FavoritesComponent } from './Modules/Patient/favorites/favorites/favorites.component';
+import { PatientSignupPageComponent } from './Modules/Patient/patient-signup-page/patient-signup-page.component';
 
 
 
@@ -40,6 +41,7 @@ const routes: Routes = [
   {path: 'doctor' , component:DoctorComponent},
   {path:'signup' ,component:DoctorSignupComponent },
   {path: 'signupnext' , component:DoctorSignupNextComponent},
+  {path:'patientsignup' , component:PatientSignupPageComponent},
   {path: 'login' , component:LoginComponent},
   {path:'userselect' , component:UserSelectComponent},
 
