@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl , Validators} from '@angular/forms';
+import {FormBuilder, FormControl , FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-patient-signup-page',
@@ -8,21 +8,21 @@ import {FormControl , Validators} from '@angular/forms';
 })
 export class PatientSignupPageComponent implements OnInit {
 
-  user= {username:''  , email:'' , password:'' , accept:false};
-  email = new FormControl('', [Validators.required, Validators.email]);
   
-  constructor() { }
+  constructor(private fb : FormBuilder) { }
+
+  reactiveform !: FormGroup;
+  passwordPtn ='^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,16}$'
+  emailPtn = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+  registerArray:any={};
 
   ngOnInit(): void {
   }
+  
   onSubmit(){
-    console.log('User:' , this.user);
+    console.log(this.reactiveform.value)
+    alert(this.registerArray)
   }
-  getErrorEmailMessage() {
-    if (this.email.hasError('required')) {
-      return 'You must enter a value';
-    }
 
-    return this.email.hasError('email') ? 'Not a valid email' : '';
-  }
+
 }
