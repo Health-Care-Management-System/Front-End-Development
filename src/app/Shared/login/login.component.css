@@ -35,6 +35,7 @@ textarea {
 }
 h4{
   color: #FFFFFF;
+  font-size: 0.4rem;
 }
 p{
   color: #FFFFFF;
@@ -87,6 +88,7 @@ button{
 
 .blob {
   margin-left: 60px;
+  margin-right: 60px;
   width:550px;
   height:550px;
   overflow: hidden;
