@@ -45,11 +45,11 @@
   font-size: 2.4rem;
   font-weight:bold;
   letter-spacing: 2px;
-  color: #e1eeea;
+  color: white;
   text-transform: capitalize;
 }
 .userbutton{
-  background-color:#e1eeea;
+  background-color:white;
   padding-top: 10px;
 }
 .userimage{
@@ -64,5 +64,5 @@
 
 }
 .userbutton:hover{
-  background-color: #b1d6cb;
+  background-color: #c5ede1;
 }
