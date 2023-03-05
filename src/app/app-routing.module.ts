@@ -7,6 +7,7 @@ import { DoctorComponent } from './Modules/Doctor/doctor landing page/doctor.com
 import { DoctorSignupComponent } from './Modules/Doctor/doctor-signup-page-1/doctor-signup.component';
 import { DoctorSignupNextComponent } from './Modules/Doctor/doctor-signup-page-2/doctor-signup-next.component';
 import { LoginComponent } from './Shared/login/login.component';
+import { UserSelectComponent } from './Shared/user-select/user-select.component';
 import { HomeComponent } from './Shared/home/home.component';
 import { HospitalLandingComponent } from './Modules/Hospital/hospital-landing/hospital-landing.component';
 import { AmbulanceLadingComponent } from './Modules/Ambulance/ambulance-lading/ambulance-lading.component';
@@ -27,6 +28,7 @@ import { PharmacyProfileComponent } from './Modules/Pharmacy/pharmacy-dashboard/
 import { PatientProfileComponent } from './Modules/Patient/patient-profile/patient-profile/patient-profile.component';
 import { PatientProfileDisplayedComponent } from './Modules/Patient/patient profile displayed/patient-profile-displayed/patient-profile-displayed.component';
 import { FavoritesComponent } from './Modules/Patient/favorites/favorites/favorites.component';
+import { PatientSignupPageComponent } from './Modules/Patient/patient-signup-page/patient-signup-page.component';
 
 
 
@@ -37,9 +39,11 @@ import { FavoritesComponent } from './Modules/Patient/favorites/favorites/favori
 const routes: Routes = [
   {path: 'home', component:HomeComponent},
   {path: 'doctor' , component:DoctorComponent},
-  {path:'signup' ,component:DoctorSignupComponent },
-  {path: 'signupnext' , component:DoctorSignupNextComponent},
+  {path:'doctorsignup' ,component:DoctorSignupComponent },
+  {path: 'doctorsignupnext' , component:DoctorSignupNextComponent},
+  {path:'patientsignup' , component:PatientSignupPageComponent},
   {path: 'login' , component:LoginComponent},
+  {path:'userselect' , component:UserSelectComponent},
 
   {path:'hospital' , component:HospitalLandingComponent},
   {path:'ambulance' , component:AmbulanceLadingComponent},

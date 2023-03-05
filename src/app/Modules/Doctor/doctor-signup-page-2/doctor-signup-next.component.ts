@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl , FormGroup , FormBuilder, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-doctor-signup-next',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DoctorSignupNextComponent implements OnInit {
 
-  constructor() { }
+  constructor(private fb : FormBuilder) { }
+ reactiveform !: FormGroup;
+  registerArray:any={};
 
   ngOnInit(): void {
+  }
+  onSubmit(){
+    console.log(this.reactiveform.value)
+    alert(this.registerArray)
   }
 
 }
