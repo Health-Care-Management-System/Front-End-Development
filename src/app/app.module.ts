@@ -87,6 +87,7 @@ import { FavoritesComponent } from './Modules/Patient/favorites/favorites/favori
 import { PatientSignupPageComponent } from './Modules/Patient/patient-signup-page/patient-signup-page.component';
 import { AmbulanceSignupPageComponent } from './Modules/Ambulance/ambulance-signup-page/ambulance-signup-page.component';
 import { HospitalSignupPageComponent } from './Modules/Hospital/hospital-signup-page/hospital-signup-page.component';
+import { PharmacySignupPageComponent } from './Modules/Pharmacy/pharmacy-signup-page/pharmacy-signup-page.component';
 
 
 
@@ -134,6 +135,7 @@ import { HospitalSignupPageComponent } from './Modules/Hospital/hospital-signup-
     PatientSignupPageComponent,
     AmbulanceSignupPageComponent,
     HospitalSignupPageComponent,
+    PharmacySignupPageComponent,
 
 
   ],
