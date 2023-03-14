@@ -36,7 +36,7 @@ a{
 .h2{
   font-size: 2.5rem;
   line-height: 3.5rem;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 .my-h1 {
   font-size: 9.0rem;
@@ -50,7 +50,7 @@ a{
   letter-spacing: 0.025em;
   color: #065560;
 }
-.my-4{
+.para-1{
   font-weight: 2rem;
   line-height: 2rem;
   color: #6f706f;
@@ -59,7 +59,13 @@ a{
 .my-about-2{
   color: #065560;
 }
-
+.my-img-1{
+  height: auto;
+  width: 60px;
+}
+.my-text3{
+  color: #065560;
+}
 
 /*-----------------------------------------------------------
   3. Buttons & Links
@@ -101,7 +107,12 @@ a{
   transition: all 0.3s ease;
 } */
 
-
+/*-----------------------------------------------------------
+  2. about
+-------------------------------------------------------------*/
+.box{
+  background: whitesmoke;
+}
 
 /*-----------------------------------------------------------
   2. textarea
