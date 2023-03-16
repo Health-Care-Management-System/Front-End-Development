@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
 
 // import flexLayout
 import {FlexLayoutModule} from '@angular/flex-layout';
@@ -143,6 +145,7 @@ import { PharmacySignupPageComponent } from './Modules/Pharmacy/pharmacy-signup-
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    CarouselModule,
     FlexLayoutModule,
     MaterialModule,
     FormsModule,
