@@ -12,15 +12,14 @@ interface Car {
 export interface PeriodicElement {
   Morning: string;
   Afternoon: string;
-  Evening: string;
-  Night: string;
+   Night: string;
 }
 const ELEMENT_DATA: PeriodicElement[] = [
-  {Morning: '7.00 AM', Afternoon: '7.00 AM', Evening: '7.00 AM',Night:' 7.00 AM'},
-  {Morning: '7.00 AM', Afternoon: '7.00 AM', Evening: '7.00 AM',Night: '7.00 AM'},
-  {Morning: '7.00 AM', Afternoon: '7.00 AM', Evening: '7.00 AM',Night: '7.00 AM'},
-  {Morning: '7.00 AM', Afternoon: '7.00 AM', Evening: '7.00 AM',Night: '7.00 AM'},
-  {Morning: '7.00 AM', Afternoon: '7.00 AM', Evening: '7.00 AM',Night: '7.00 AM'},
+  {Morning: '7.00 AM-8.00 AM', Afternoon: '1.00 AM-2.00 AM', Night:'7.00 AM-8.00 AM'},
+  {Morning: '8.00 AM-9.00 AM', Afternoon: '2.00 AM-3.00 AM', Night: '8.00 AM-9.00 AM'},
+  {Morning: '9.00 AM-10.00 AM', Afternoon: '3.00 AM-3.00 AM', Night: '9.00 AM-10.00 AM'},
+  {Morning: '10.00 AM-12.00 AM', Afternoon: '4.00 AM-5.00 AM', Night: '10.00 AM-11.00 AM'},
+  {Morning: '11.00 AM12.00 AM', Afternoon: '5.00 AM-6.00 AM', Night: '11.00 AM-12.00 AM'},
  
   
 ];
@@ -31,7 +30,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./availability-sheduling.component.css']
 })
 export class AvailabilityShedulingComponent implements OnInit {
-  displayedColumns: string[] = ['Morning', 'Afternoon', 'Evening', 'Night'];
+  displayedColumns: string[] = ['Morning', 'Afternoon',  'Night'];
   dataSource = ELEMENT_DATA;
   
   

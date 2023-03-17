@@ -28,7 +28,15 @@ import { PharmacyProfileComponent } from './Modules/Pharmacy/pharmacy-dashboard/
 import { PatientProfileComponent } from './Modules/Patient/patient-profile/patient-profile/patient-profile.component';
 import { PatientProfileDisplayedComponent } from './Modules/Patient/patient profile displayed/patient-profile-displayed/patient-profile-displayed.component';
 import { FavoritesComponent } from './Modules/Patient/favorites/favorites/favorites.component';
-import { PatientSignupPageComponent } from './Modules/Patient/patient-signup-page/patient-signup-page.component';
+
+import { DoctorsearchFiComponent } from './Modules/searchitems/doctorsearch-fi/doctorsearch-fi.component';
+import { HospitalsearchFiComponent } from './Modules/searchitems/hospitalsearch-fi/hospitalsearch-fi.component';
+import { PharmacysearchComponent } from './Modules/searchitems/pharmacysearch/pharmacysearch.component';
+import { DoctorprofileforpatientComponent } from './Modules/Doctor/doctor_dashboard/doctorprofileforpatient/doctorprofileforpatient.component';
+import { MedicineorderdetailsComponent } from './Modules/Patient/medicineorderdetails/medicineorderdetails.component';
+import { PatientpwchangeComponent } from './Modules/Patient/patientpwchange/patientpwchange.component';
+import { MyappoinmentsComponent } from './Modules/Patient/myappoinments/myappoinments.component';
+
 
 
 
@@ -66,7 +74,14 @@ const routes: Routes = [
  {path:'pharmcyprofile',component:PharmacyProfileComponent},
  {path:'patientprofile',component:PatientProfileComponent},
 {path:'patientprofiledisplayed',component:PatientProfileDisplayedComponent},
-{path:'favorite',component:FavoritesComponent}
+{path:'favorite',component:FavoritesComponent},
+{path:'doctorsearch-fi',component:DoctorsearchFiComponent},
+{path:'hospitalsearch-fi',component:HospitalsearchFiComponent},
+{path:'pharmacysearch',component:PharmacysearchComponent},
+{path:'doctorprofileforpatient',component:DoctorprofileforpatientComponent},
+{path:'medicineorderdetails',component:MedicineorderdetailsComponent},
+{path:'patientpw',component:PatientpwchangeComponent},
+{path:'myappoinments',component:MyappoinmentsComponent}
 
 
 
