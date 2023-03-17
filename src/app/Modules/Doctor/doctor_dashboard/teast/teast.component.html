@@ -1,50 +1,185 @@
-<div>
-    <mat-card class="asiri1" (mouseover)="showimage=true" (mouseout)="showimage=false">
+<!-- <form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Number</mat-label>
+        <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                {{option}}
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+</form> -->
+<!-- <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+      Dropdown button
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+</div> -->
 
-        <div class=image><img class="imageori " src="assets\img\asiri_hospital.png "><br>
-            <br>
 
-            <div class="text1">{{text1}}</div>
+
+
+
+<!-- 
+
+<section class="vh-100" style="background-color: #eee;">
+    <div class="container-fluid">
+     <div fxLayout="row" fxLayoutAlign="center center">
+        <div class="col-lg-12 col-xl-11">
+          <mat-card class="text-black" style="border-radius: 25px; margin-top: 20px;">
+            <mat-card-content class="p-md-5">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+  
+                  <img src="../../../../../assets/img/doc23.png"
+                    class="img-fluid" alt="Sample image">
+  
+                </div>
+                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-2" >
+  
+                  <h1 class="text-center fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</h1>
+  
+                  <form class="mx-1 mx-md-4">
+  
+                    <div fxLayout="row" fxLayoutAlign="start center" class="mb-4">
+                        <mat-icon class="me-3">person</mat-icon>
+                        <mat-form-field fxFlex="100%">
+                          <input matInput type="text" id="form3Example1c" />
+                          <mat-label>Your Name</mat-label>
+                        </mat-form-field>
+                      </div>
+  
+                      <div fxLayout="row" fxLayoutAlign="start center" class="mb-4">
+                        <mat-icon class="me-3">email</mat-icon>
+                        <mat-form-field fxFlex="100%">
+                          <input matInput type="email" id="form3Example3c" />
+                          <mat-label>Your Email</mat-label>
+                        </mat-form-field>
+                      </div>
+  
+                      <div fxLayout="row" fxLayoutAlign="start center" class="mb-4">
+                        <mat-icon class="me-3">lock</mat-icon>
+                        <mat-form-field fxFlex="100%">
+                          <input matInput type="password" id="form3Example4c" />
+                          <mat-label>Password</mat-label>
+                        </mat-form-field>
+                      </div>
+        
+  
+                      <div fxLayout="row" fxLayoutAlign="start center" class="mb-4">
+                        <mat-icon class="me-3">vpn_key</mat-icon>
+                        <mat-form-field fxFlex="100%">
+                          <input matInput type="password" id="form3Example4cd" />
+                          <mat-label>Repeat your password</mat-label>
+                        </mat-form-field>
+                      </div>
+  
+                      <div fxLayout="row" fxLayoutAlign="center center" class="mb-5">
+                        <mat-checkbox class="me-2" id="form2Example3c"></mat-checkbox>
+                        <label for="form2Example3">
+                          I agree all statements in <a href="#!">Terms of service</a>
+                        </label>
+                      </div>
+  
+                      <div fxLayout="row" fxLayoutAlign="center" class="mb-3 mb-lg-4">
+                        <button mat-raised-button color="primary" type="button" class="btn btn-primary btn-lg">Register</button>
+                      </div>
+  
+                  </form>
+  
+                </div>
+               
+              </div>
+            </mat-card-content>
+          </mat-card>
         </div>
-        <div class="text2 ">{{text2}}</div>
-        <div class="text3">{{text3}}</div>
+      </div>
+    </div>
+  </section> -->
 
-        <div class="star">
-            <mat-icon class="star1 ">star</mat-icon>
-            <mat-icon class="star2 ">star</mat-icon>
-            <mat-icon class="star3 ">star</mat-icon>
-            <mat-icon class="star4 ">star</mat-icon>
-            <mat-icon class="star5 ">star</mat-icon>
+
+<app-main-nav></app-main-nav>
+
+
+
+
+
+  <section id="intro">
+    <div class="container-fluid">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-5 text-center text-md-start">
+          <h1>
+            <div class="display-2">We care about</div>
+            <div class="display-5 text-muted">Your Health</div>
+          </h1>
+          <p class="lead my-4 text-muted">Good health is the state of mental, physical and social well being and it does not just mean absence of diseases.</p>
+          <a href="#" class="btn btn-secondary btn-lg"> Book a Appoinment</a>
         </div>
+        <div class="col-md-5 text-center d-md-block">
+          <img class="img-fluid" src="../../../../../assets/img/home.png" alt="home-picture">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- <div class="card mb-41" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="../../../../../assets/img/icon-img1.png" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h1 class="card-title">Card title</h1>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+  </div> -->
 
+  <div class="left-image-decor"></div>
 
-        <mat-card class="mathover" *ngIf="showimage">
-            <div>
-                <button mat-button class="view">View Profile</button> </div>
-            <div class="sec1">
-                <div class="docname">Dr.Amarasekara
-                    <br><span class="dentist">dentist</span></div>
-                <img class=" imagehover " src="assets\img\asiri_hospital.png " alt=" ">
+  <section class="section" id="promotion">
+    <div class="container">
+        <div class="row">
+            <div class="left-image col-lg-5 col-md-12 col-sm-12 mobile-bottom-fix-big"
+                data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                <img src="assets/images/left-image.png" class="rounded img-fluid d-block mx-auto" alt="App">
             </div>
-            <div class="vl2 "></div>
-            <div class="carddetails ">
-                <div class="location ">
-                    <span>Speciality</span>
-                    <span style="opacity: 40%; "><br> Dentist</span></div>
-                <div class=" open ">
-                    <span class=" "><br>Available Districts</span>
-                    <span class=" " style="opacity: 40%; "><br>Colombo,Rathnapura</span>
-                </div>
-                <div class="service ">
-                    <span class=" "><br>Contact Number</span>
-                    <span class=" " style="opacity: 40%; "><br>0774674870</span>
-                </div>
-                <div class="experiance ">
-                    <span class=" "><br>Experiance</span>
-                    <span class=" " style="opacity: 40%; "><br>4 years</span>
-                </div>
+            <div class="right-text offset-lg-1 col-lg-6 col-md-12 col-sm-12 mobile-bottom-fix">
+                <ul>
+                    <li data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                        <img src="assets/images/about-icon-01.png" alt="">
+                        <div class="text">
+                            <h4>Vestibulum pulvinar rhoncus</h4>
+                            <p>Please do not redistribute this template ZIP file for a download purpose. You may <a
+                            rel="nofollow" href="https://templatemo.com/contact" target="_parent">contact</a> us for
+                        additional licensing of our template or to get a PSD file.</p>
+                        </div>
+                    </li>
+                    <li data-scroll-reveal="enter right move 30px over 0.6s after 0.5s">
+                        <img src="assets/images/about-icon-02.png" alt="">
+                        <div class="text">
+                            <h4>Sed blandit quam in velit</h4>
+                            <p>You can <a rel="nofollow"
+                                    href="https://templatemo.com/tm-540-lava-landing-page">download Lava
+                                    Template</a> from our website. Duis viverra, ipsum et scelerisque placerat, orci
+                                magna consequat ligula.</p>
+                        </div>
+                    </li>
+                    <li data-scroll-reveal="enter right move 30px over 0.6s after 0.6s">
+                        <img src="assets/images/about-icon-03.png" alt="">
+                        <div class="text">
+                            <h4>Aenean faucibus venenatis</h4>
+                            <p>Phasellus in imperdiet felis, eget vestibulum nulla. Aliquam nec dui nec augue
+                                maximus porta. Curabitur tristique lacus.</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
-        </mat-card>
-    </mat-card>
-</div>
-
+        </div>
+    </div>
+</section>
