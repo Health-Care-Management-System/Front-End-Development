@@ -1,69 +1,68 @@
 <app-mininavbar (toggleLeftToolBarForMe)="leftToolBarToggler()">
 </app-mininavbar>
 <mat-drawer-container class="example-container">
-    <mat-drawer mode="side" [opened]="sideBarOpen">
-        <app-left-tool-bar></app-left-tool-bar>
-    </mat-drawer>
-    <mat-drawer-content>
-        <div class="container">
-            <mat-card class="example-card">
-                <div class="harry">Dr. Harry </div>
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <app-left-tool-bar></app-left-tool-bar>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class="container">
+      <mat-card class="example-card">
+        <div class="harry">Dr. {{doctor.firstname}}</div>
 
-                <div class="cardio">Cardiologist </div>
+        <div class="cardio">Cardiologist </div>
 
-                <div class="image">
-                    <!-- <img src="..\assets\images\doctor.jpg"></div> -->
-                    <img class="imgradius" mat-card-md-image src=" ..\assets\img\doctor.jpg " alt="Image of a Shiba Inu ">
-                </div>
-                <div class="hr">
-                    <hr>
-                </div>
-
-            </mat-card>
-
-
-            <div class="harry2 ">Dr. Harry</div>
-            <div class="speci ">Specialist of Cardiology</div>
-            <mat-icon class="loc ">support</mat-icon>
-            <div class="location ">Location</div>
-            <div class="add ">Street ,vilage, distract , town </div>
-            <button mat-button class="editadd ">Edit Address
-    </button>
-            <div class="Specialities ">Specialities</div>
-            <button mat-button class="addspe ">Add Specialities</button>
-            <div class="Cardiology ">Cardiology</div>
-            <div class="WorkPlaces ">Work Places</div>
-            <button mat-button class="ABCHospital1 ">ABC Hospital1</button>
-            <button mat-button class="ABCHospital2 ">ABC Hospital2</button>
-            <button mat-button class="ABCHospital3 ">ABC Hospital3</button>
-            <button mat-button class="AddWorkplace ">Add Work place</button>
-            <div class="Qualification ">Qualification</div>
-            <div class="slmc ">SLMC Number: 1952</div>
-            <div class="Experiance ">Experiance</div>
-            <div class="ex ">12 years </div>
-
-            <button mat-button class="AddWorkExperience ">Add Experience</button>
-            <button mat-button class="manage ">Manage My Own Business</button>
-            <div class="are ">Are you have a Own Clinic ?</div>
-            <div class="number ">Mobile Number</div>
-            <div class="nu ">125-8645132</div>
-
-            <button mat-button class="editnum ">Edit Mobile Number</button>
-            <div class="email ">E-Mail</div>
-            <div class="emad ">adsfdghgjhkng@gmail.com</div>
-            <button mat-button class="editemail ">Edit Email Address</button>
-            <div class="location ">Location</div>
-            <div class="ratings ">Ratings</div>
-            <mat-icon class="star1 ">star</mat-icon>
-            <mat-icon class="star2 ">star</mat-icon>
-            <mat-icon class="star3 ">star</mat-icon>
-            <mat-icon class="star4 ">star</mat-icon>
-            <mat-icon class="star5 ">star</mat-icon>
-            <mat-icon class="review ">reviews</mat-icon>
-            <div class="zero ">(0)</div>
-            <mat-icon class="treated ">manage_serach</mat-icon>
-            <div class="treatedhowmuch ">0</div>
-            <div class="treat ">Patients Treated</div>
+        <div class="image">
+          <!-- <img src="..\assets\images\doctor.jpg"></div> -->
+          <img class="imgradius" mat-card-md-image src=" ..\assets\img\doctor.jpg " alt="Image of a Shiba Inu ">
         </div>
-    </mat-drawer-content>
+        <div class="hr">
+          <hr>
+        </div>
+
+      </mat-card>
+
+      <div class="harry2 ">Dr.{{doctor.firstname}}</div>
+      <div class="speci ">Specialist of Cardiology</div>
+      <mat-icon class="loc ">support</mat-icon>
+      <div class="location ">Location</div>
+      <div class="add ">{{doctor.address}} </div>
+      <button mat-button class="editadd ">Edit Address
+      </button>
+      <div class="Specialities ">Specialities</div>
+      <button mat-button class="addspe ">Add Specialities</button>
+      <div class="Cardiology ">Cardiology</div>
+      <div class="WorkPlaces ">Work Places</div>
+      <button mat-button class="ABCHospital1 ">ABC Hospital1</button>
+      <button mat-button class="ABCHospital2 ">ABC Hospital2</button>
+      <button mat-button class="ABCHospital3 ">ABC Hospital3</button>
+      <button mat-button class="AddWorkplace ">Add Work place</button>
+      <div class="Qualification ">Qualification</div>
+      <div class="slmc ">SLMC Number: {{doctor.slmcnumber}}</div>
+      <div class="Experiance ">Experiance</div>
+      <div class="ex ">12 years </div>
+
+      <button mat-button class="AddWorkExperience ">Add Experience</button>
+      <button mat-button class="manage ">Manage My Own Business</button>
+      <div class="are ">Are you have a Own Clinic ?</div>
+      <div class="number ">Mobile Number</div>
+      <div class="nu ">{{doctor.contactnumber}}</div>
+
+      <button mat-button class="editnum ">Edit Mobile Number</button>
+      <div class="email ">E-Mail</div>
+      <div class="emad ">{{doctor.emailID}}</div>
+      <button mat-button class="editemail ">Edit Email Address</button>
+      <div class="location ">Location</div>
+      <div class="ratings ">Ratings</div>
+      <mat-icon class="star1 ">star</mat-icon>
+      <mat-icon class="star2 ">star</mat-icon>
+      <mat-icon class="star3 ">star</mat-icon>
+      <mat-icon class="star4 ">star</mat-icon>
+      <mat-icon class="star5 ">star</mat-icon>
+      <mat-icon class="review ">reviews</mat-icon>
+      <div class="zero ">(0)</div>
+      <mat-icon class="treated ">manage_serach</mat-icon>
+      <div class="treatedhowmuch ">0</div>
+      <div class="treat ">Patients Treated</div>
+    </div>
+  </mat-drawer-content>
 </mat-drawer-container>

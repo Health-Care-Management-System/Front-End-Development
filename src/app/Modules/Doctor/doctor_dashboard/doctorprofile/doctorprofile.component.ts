@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Doctor} from "../../doctor";
+import {ActivatedRoute} from "@angular/router";
+import {DoctorService} from "../../doctor.service";
 
 @Component({
   selector: 'app-doctorprofile',
@@ -7,13 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DoctorprofileComponent implements OnInit {
 
-  constructor() { }
+  id: Number | undefined;
+  // @ts-ignore
+  doctor : Doctor;
 
+  constructor(private route:ActivatedRoute,private doct_service:DoctorService) { }
+
+  ngOnInit(): void{
+    this.id = 1;
+    // @ts-ignore
+    this.doctor = new Doctor();
+    this.doct_service.getDoctorbyID(this.id).subscribe(data =>{
+      this.doctor = data;
+    });
+  }
   title = 'edowzori';
   sideBarOpen=true;
-  ngOnInit(){}
   leftToolBarToggler(){
-   this.sideBarOpen=!this.sideBarOpen;
+    this.sideBarOpen=!this.sideBarOpen;
   }
+
+
 
 }
