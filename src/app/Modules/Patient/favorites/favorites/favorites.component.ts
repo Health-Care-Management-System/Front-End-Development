@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./favorites.component.css']
 })
 export class FavoritesComponent implements OnInit {
+  doctors = [
+    { id: 1, name: 'Dr.Amarasekara', imgSrc: 'assets/img/doc23.png' },
+    { id: 2, name: 'Dr.Smith', imgSrc: 'assets/img/doc23.png' },
+    { id: 3, name: 'Dr.Jones', imgSrc: 'assets/img/doc23.png' },
+    { id: 4, name: 'Dr.Chen', imgSrc: 'assets/img/doc23.png' },
+    { id: 4, name: 'Dr.Chen', imgSrc: 'assets/img/doc23.png' },
+  ];
 
   constructor() { }
 
-  ngOnInit(): void {
+  title = 'edowzori';
+  sideBarOpen=true;
+  ngOnInit(){}
+  leftToolBarToggler(){
+   this.sideBarOpen=!this.sideBarOpen;
   }
 
 }

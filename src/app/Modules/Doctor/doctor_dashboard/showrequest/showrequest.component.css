@@ -102,3 +102,13 @@
     mat-drawer-container {
         height: 100%;
     }
+    
+    .availabilitypic {
+        background-image: ;
+    }
+    
+    .time1 {
+        position: relative;
+        left: 170px;
+        top: -25px;
+    }
