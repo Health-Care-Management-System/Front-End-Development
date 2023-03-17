@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
 
 // import flexLayout
 import {FlexLayoutModule} from '@angular/flex-layout';
@@ -86,7 +88,12 @@ import { PatientProfileDisplayedComponent } from './Modules/Patient/patient prof
 import { FavoritesComponent } from './Modules/Patient/favorites/favorites/favorites.component';
 import { PatientSignupPageComponent } from './Modules/Patient/patient-signup-page/patient-signup-page.component';
 import { AmbulanceSignupPageComponent } from './Modules/Ambulance/ambulance-signup-page/ambulance-signup-page.component';
+
 import {HttpClientModule} from "@angular/common/http";
+
+import { HospitalSignupPageComponent } from './Modules/Hospital/hospital-signup-page/hospital-signup-page.component';
+import { PharmacySignupPageComponent } from './Modules/Pharmacy/pharmacy-signup-page/pharmacy-signup-page.component';
+
 
 
 
@@ -133,6 +140,8 @@ import {HttpClientModule} from "@angular/common/http";
     FavoritesComponent,
     PatientSignupPageComponent,
     AmbulanceSignupPageComponent,
+    HospitalSignupPageComponent,
+    PharmacySignupPageComponent,
 
 
   ],
@@ -141,6 +150,7 @@ import {HttpClientModule} from "@angular/common/http";
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    CarouselModule,
     FlexLayoutModule,
     MaterialModule,
     FormsModule,

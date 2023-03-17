@@ -1,53 +1,88 @@
 <app-main-nav></app-main-nav>
-<header id="home">
-    <!-- HERO SECTION -->
-    <div class="container-fluid hero">
-        <img data-aos="fade-left" src="../../../assets/img/home.png" alt="home">
-        <div class="container">
-            <!-- Hero Title -->
-            <h1>We care about <span> <br>Your Health.</span></h1>
-            <!-- Hero Title Info -->
-            <p>Good health is the state of mental, physical and social well being <br>and it does not just mean absence of diseases.</p>
-            <div class="hero-btns">
-                <a href="#" routerLink="/searchdoctor">Book an Appoinment</a>
-            </div>
-        </div>
+
+<section id="intro">
+  <div class="container-fluid">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-5 text-center text-md-start my-5">
+        <h1>
+          <div class="h1 my-h1">We care about</div>
+          <div class="h6 my-text2">Your Health</div>
+        </h1>
+        <p class="lead my-4 text-muted para-1">Good health is the state of mental, physical and social well being and it does
+          not just mean absence of diseases.</p>
+        <a href="#" routerLink="/searchdoctor" class="btn btn-success btn-lg hero-btns"> Book a Appoinment</a>
+      </div>
+      <div class="col-md-5 text-center d-md-block" data-aos="fade-left">
+        <img class="img-fluid" src="../../../../../assets/img/home.png" alt="home-picture">
+      </div>
     </div>
+  </div>
+</section>
 
 
-    <!--  textarea Section-->
-    <section id="textarea">
-        <div class="container-fluid">
-            <div class="textarea" fxLayout="column" fxLayoutAlign="space-evenly center" fxLayoutGap="none" fxLayout.xs="column">
-                <span><h2>Why you should trust us?</h2></span>
-                <span><h2>Get to know about us</h2></span>
-            </div>
-            <div class="text-cards" fxLayout="row" fxLayoutAlign="space-evenly center" fxLayoutGap="40px" fxLayout.xs="column">
-                <mat-card fxLayout="column" fxLayoutAlign="space-evenly center" fxLayoutGap="17px">
-                    <img src="../../../assets/img/icon-img1.png" alt="image">
-                    <mat-card-title>Especially for You</mat-card-title>
-                    <mat-card-content>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</mat-card-content>
-                </mat-card>
-                <mat-card fxLayout="column" fxLayoutAlign="space-evenly center" fxLayoutGap="17px">
-                    <img src="../../../assets/img/icon-img2%20.png" alt="image">
-                    <mat-card-title>Private & Security</mat-card-title>
-                    <mat-card-content>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</mat-card-content>
-                </mat-card>
-                <mat-card fxLayout="column" fxLayoutAlign="space-evenly center" fxLayoutGap="17px">
-                    <img src="../../../assets/img/icon-img3.png" alt="image">
-                    <mat-card-title>Reliable Customers</mat-card-title>
-                    <mat-card-content>Lorem Ipsum is simply dummy text of the printing and industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</mat-card-content>
-                </mat-card>
-                <mat-card fxLayout="column" fxLayoutAlign="space-evenly center" fxLayoutGap="17px">
-                    <img src="../../../assets/img/icon-img4.png" alt="image">
-                    <mat-card-title>Any Where , Any Time</mat-card-title>
-                    <mat-card-content>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</mat-card-content>
-                </mat-card>
-            </div>
+<section id="about">
+  <div class="container-fluid">
+    
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-5 text-center d-md-block video" data-aos="fade-right">
+        <video class="img-fluid rounded" src="../../../assets/img/about-vdo.mp4" loop muted autoplay></video>
+      </div>
+      <div class="col-md-5 text-center text-md-start content p-5" data-aos="fade-left">
+        <h3>
+          <div class="display-5 my-about-2">We will provide you the best health care which you dreamt for!</div>
+        </h3>
+        <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas et vero mollitia nemo
+          corporis consequatur aspernatur distinctio dignissimos velit nam.</p>
+        <a href="#services" class="btn btn-success btn-lg hero-btns">read more</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row my-3 align-items-center justify-content-center">
+    <div class="col-8 col-lg-2 col-xl-2 mx-4 my-sm-3 mb-5" data-aos="fade-up">
+      <div class="card border-0">
+        <div class="card-body text-center py-4">
+          <div class="text-center mx-4">
+          <img src="../../../assets/img/icon-img1.png" class="card-img-top img-fluid mb-2 my-img-1"></div>
+          <h2 class="card-title text-center mx-4 mb-1 my-text3 ">Especially for You</h2>
+          <p class="card-text text-center mx-4 text-muted d-none d-lg-block" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
         </div>
-    </section>
+      </div>
+    </div>
+    <div class="col-8 col-lg-2 col-xl-2 mx-4 my-sm-3 mb-5" data-aos="fade-up">
+      <div class="card border-0">
+        <div class="card-body text-center py-4">
+          <div class="text-center mx-4">
+          <img src="../../../assets/img/icon-img2 .png" class="card-img-top img-fluid mb-2 my-img-1"></div>
+          <h2 class="card-title text-center mx-4 mb-1 my-text3  ">Private & Security</h2>
+          <p class="card-text text-center mx-4 text-muted d-none d-lg-block" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-8 col-lg-2 col-xl-2 mx-4 my-sm-3 mb-5" data-aos="fade-up">
+      <div class="card border-0">
+        <div class="card-body text-center py-4">
+          <div class="text-center mx-4">
+          <img src="../../../assets/img/icon-img3.png" class="card-img-top img-fluid mb-2 my-img-1"></div>
+          <h2 class="card-title text-center mx-4 mb-1 my-text3 ">Reliable Customers</h2>
+          <p class="card-text text-center mx-4 text-muted d-none d-lg-block" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-8 col-lg-2 col-xl-2 mx-4 my-sm-3 mb-5"data-aos="fade-up">
+      <div class="card border-0">
+        <div class="card-body text-center py-4">
+          <div class="text-center mx-4">
+          <img src="../../../assets/img/icon-img4.png" class="card-img-top img-fluid mb-2 my-img-1"></div>
+          <h2 class="card-title text-center mx-4 mb-1 my-text3 ">Any Where , Any Time</h2>
+          <p class="card-text text-center mx-4 text-muted d-none d-lg-block" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-</header>
+
 
 
 <app-middle></app-middle>
