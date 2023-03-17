@@ -1,6 +1,4 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-/* @import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel.scss';
-@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default.scss'; */
 
 /*@import './_variables.scss';*/
 
@@ -29,5 +27,3 @@ body {
 @import '~@fortawesome/fontawesome-free/scss/solid.scss';
 @import '~@fortawesome/fontawesome-free/scss/regular.scss';
 @import '~@fortawesome/fontawesome-free/scss/brands.scss';
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

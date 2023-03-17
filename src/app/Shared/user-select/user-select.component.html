@@ -1,63 +1,36 @@
-<div class="container-fluid vh-100 " fxLayout="row" >
-    <div class="left-part">
-    </div>
-    <div class="right-part overflow-auto">
-        <div class="topbar">
-            <a href="" routerLink="/home"><img class="logo" src="../../../assets/img/logo-dark-background.png"></a>
-            <a href="" routerLink="/login" class="link">back</a>
+<app-main-nav></app-main-nav>
+<!-- fxLayout="row" fxLayout.lt-sm="column"  -->
+
+<div>
+    <div class="container" id="container1" fxLayout="row" fxLayout.lt-sm="column">
+        <div class="users">
+            <!--  (click)="openLoginForm()" -->
+            <button mat-raised-button class="userbutton">
+        <img src="../../assets/img/user.png" alt="patient">
+        <p>I am patient</p>
+      </button>
         </div>
-        <div class="useritems" fxLayout="column" fxLayoutAlign="center center">
-            <div class="p-5 text">
-                
-                <h1 class="text-center fw-bold mb-2 mx-1 mx-md-4 ">Please select Who you are?</h1>
-
-            </div>
-
-            <div class="userRowFirst" fxLayout="row" fxLayout.lt-sm="column" fxLayout.lt-md="column" fxLayoutGap="50px">
-                <div class="users">
-                    <!--  (click)="openLoginForm()" -->
-                    <button mat-raised-button class="userbutton" routerLink="/patientsignup"><img class="userimage" style="padding-left: 5px; padding-right: 5px;"
-                            src="../../../assets/img/user-patient.png" alt="patient">
-                        <p>I'm patient</p>
-                    </button>
-                </div>
-                <div class="users">
-                    <button mat-raised-button class="userbutton" routerLink="/doctorsignup"> <img class="userimage"
-                            src="../../../assets/img/user-doctor.png" alt="">
-                        <p>I'm doctor</p>
-                    </button>
-                </div>
-               
-            </div>
-
-            <div class="userRowSecond" fxLayout="row" fxLayout.lt-sm="column" fxLayout.lt-md="column"  fxLayoutGap="50px">
-                <div class="users">
-                    <button mat-raised-button class="userbutton"> <img class="userimage" 
-                            src="../../../assets/img/user-ambulance.png" alt="">
-                        <p>I'm ambulance owner</p>
-                    </button>
-                </div>
-                <div class="users">
-                    <button mat-raised-button class="userbutton"> <img class="userimage"
-                            src="../../../assets/img/user-hospital.png" alt="">
-                        <p>I'm hospital owner</p>
-                    </button>
-                </div>
-                <div class="users">
-                    <button mat-raised-button class="userbutton"> <img class="userimage" 
-                            src="../../../assets/img/user-pharmacy.png" alt="">
-                        <p>I'm pharmacy owner</p>
-                    </button>
-                </div>
-            </div>
+        <div class="users">
+            <button mat-raised-button class="userbutton"> <img src="../../assets/img/user.png" alt="">
+        <p>I am doctor</p></button>
         </div>
-
+        <div class="users">
+            <button mat-raised-button class="userbutton"> <img src="../../assets/img/user.png" alt="">
+        <p>I am doctor</p></button>
+        </div>
+        <div class="users">
+            <button mat-raised-button class="userbutton"> <img src="../../assets/img/user.png" alt="">
+        <p>I am doctor</p></button>
+        </div>
+        <div class="users">
+            <button mat-raised-button class="userbutton"> <img src="../../assets/img/user.png" alt="">
+        <p>I am doctor</p></button>
+        </div>
     </div>
+
+    <span class="userselect"><img src="../../assets/img/userselect.png" alt=""></span>
 </div>
 
 
-
-
-
-
+<app-middle></app-middle>
 <app-footer></app-footer>

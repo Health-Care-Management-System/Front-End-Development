@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import {FormBuilder, FormControl , FormGroup, Validators} from '@angular/forms';
-
-
 
 @Component({
   selector: 'app-login',
@@ -11,18 +8,15 @@ import {FormBuilder, FormControl , FormGroup, Validators} from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  
+  user = {username:'', password:'', remember:false};
 
-  constructor(private fb : FormBuilder) { }
-  
-  reactiveform !: FormGroup;
-  registerArray:any={};
+  constructor() { }
 
   ngOnInit(): void {
   }
   onSubmit(){
-    console.log(this.reactiveform.value)
-    alert(this.registerArray)
+    console.log('User: ' , this.user);
   }
+
 
 }

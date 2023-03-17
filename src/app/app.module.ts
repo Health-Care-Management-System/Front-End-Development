@@ -3,8 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { CarouselModule } from 'ngx-owl-carousel-o';
-
 
 // import flexLayout
 import {FlexLayoutModule} from '@angular/flex-layout';
@@ -86,7 +84,6 @@ import { PatientProfileComponent } from './Modules/Patient/patient-profile/patie
 import { PatientNavbarComponent } from './Modules/Patient/patient-navbar/patient-navbar/patient-navbar.component';
 import { PatientProfileDisplayedComponent } from './Modules/Patient/patient profile displayed/patient-profile-displayed/patient-profile-displayed.component';
 import { FavoritesComponent } from './Modules/Patient/favorites/favorites/favorites.component';
-
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { SearchdoctorcontentComponent } from './Modules/Doctor/doctor_dashboard/searchdoctor/searchdoctorcontent/searchdoctorcontent/searchdoctorcontent.component';
 import { FilterComponent } from './Modules/Doctor/doctor_dashboard/searchdoctor/searchdoctorleftfilter/filter/filter.component';
@@ -97,7 +94,6 @@ import { DoctorprofileforpatientComponent } from './Modules/Doctor/doctor_dashbo
 import { MyappoinmentsComponent } from './Modules/Patient/myappoinments/myappoinments.component';
 import { PatientpwchangeComponent } from './Modules/Patient/patientpwchange/patientpwchange.component';
 import { MedicineorderdetailsComponent } from './Modules/Patient/medicineorderdetails/medicineorderdetails.component';
-
 
 
 @NgModule({
@@ -141,7 +137,6 @@ import { MedicineorderdetailsComponent } from './Modules/Patient/medicineorderde
     PatientNavbarComponent,
     PatientProfileDisplayedComponent,
     FavoritesComponent,
-
     SearchdoctorcontentComponent,
     FilterComponent,
     DoctorsearchFiComponent,
@@ -151,7 +146,7 @@ import { MedicineorderdetailsComponent } from './Modules/Patient/medicineorderde
     MyappoinmentsComponent,
     PatientpwchangeComponent,
     MedicineorderdetailsComponent,
-   
+    
 
 
   ],
@@ -159,7 +154,6 @@ import { MedicineorderdetailsComponent } from './Modules/Patient/medicineorderde
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CarouselModule,
     FlexLayoutModule,
     MaterialModule,
     FormsModule,
