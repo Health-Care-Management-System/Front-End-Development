@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import * as AOS from 'aos';
+import * as Aos from 'aos';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 
 @Component({
@@ -8,11 +9,35 @@ import * as AOS from 'aos';
   styleUrls: ['./middle.component.css']
 })
 export class MiddleComponent implements OnInit {
-
-  // constructor() { }
-
   ngOnInit(): void  {
-    AOS.init({disable: 'mobile'});
-    }
+    Aos.init({disable: 'mobile'});
+  }
+
+  customOptions: OwlOptions = {
+      loop: true,
+      mouseDrag: true,
+      touchDrag:true,
+      pullDrag:true,
+      dots:false,
+      navSpeed: 700,
+      navText: ['', ''],
+      responsive: {
+        0: {
+          items: 1
+        },
+        400: {
+          items: 2
+        },
+        740: {
+          items: 3
+        },
+        940: {
+          items: 4
+        }
+      },
+      nav: false
+  }
 
 }
+
+

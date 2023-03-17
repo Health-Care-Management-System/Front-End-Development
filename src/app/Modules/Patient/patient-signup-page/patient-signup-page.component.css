@@ -1,0 +1,17 @@
+
+.logo{
+    height: 51px;
+}
+.login-btn{
+    background-color: #065560;
+}
+.conditions{
+    color:#FE8E3C ;
+}
+.link{
+    text-decoration: none;
+    text-transform: capitalize;
+    color:white;
+    font-size: 1.0rem;
+    background-color: #065560;
+  }
