@@ -70,8 +70,8 @@
                         position: absolute;
                         width: 139px;
                         height: 33px;
-                        left: 1300px;
-                        top: 351px;
+                        left: 1100px;
+                        top: 331px;
                         border-color: #E3E3E7;
                         border-radius: 5px;
                         border-style: hidden;
@@ -124,7 +124,7 @@
                         position: absolute;
                         width: 129px;
                         height: 31px;
-                        left: 1300px;
+                        left: 1100px;
                         top: 240px;
                         border-color: #E3E3E7;
                         border-radius: 5px;
@@ -135,14 +135,14 @@
                         font-weight: 600;
                         font-size: 14px;
                         line-height: 18px;
-                        background: #E3E3E7;
+                        background: gainsboro;
                     }
                     
                     .Specialities {
                         position: absolute;
                         width: 881px;
                         height: 30px;
-                        left: 620px;
+                        left: 640px;
                         top: 294px;
                         font-family: 'Source Sans Pro';
                         font-style: normal;
@@ -156,14 +156,14 @@
                         position: absolute;
                         width: 83.99px;
                         height: 15.5px;
-                        left: 650px;
-                        top: 351px;
+                        left: 621px;
+                        top: 331px;
                         font-family: 'Source Sans Pro';
                         font-style: normal;
                         font-weight: 600;
                         font-size: 14px;
                         line-height: 18px;
-                        color: #4648AE;
+                        color: gray;
                     }
                     
                     .WorkPlaces {
@@ -239,7 +239,7 @@
                         position: absolute;
                         width: 129px;
                         height: 31px;
-                        left: 1300px;
+                        left: 1100px;
                         top: 458px;
                         border-color: #E3E3E7;
                         border-radius: 5px;
@@ -313,7 +313,7 @@
                         position: absolute;
                         width: 139px;
                         height: 33px;
-                        left: 1300px;
+                        left: 1100px;
                         top: 653px;
                         border-color: #E3E3E7;
                         border-radius: 5px;
@@ -619,4 +619,12 @@
                     
                     mat-drawer-container {
                         height: 100%;
+                    }
+                    
+                    .loc2 {
+                        position: absolute;
+                        width: 26px;
+                        height: 26px;
+                        left: 611px;
+                        top: 299px;
                     }

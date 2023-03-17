@@ -1,21 +1,49 @@
-<!-- <form class="example-form">
-    <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Number</mat-label>
-        <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
-        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-                {{option}}
-            </mat-option>
-        </mat-autocomplete>
-    </mat-form-field>
-</form> -->
-<div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
-      Dropdown button
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-    </ul>
+<div>
+    <mat-card class="asiri1" (mouseover)="showimage=true" (mouseout)="showimage=false">
+
+        <div class=image><img class="imageori " src="assets\img\asiri_hospital.png "><br>
+            <br>
+
+            <div class="text1">{{text1}}</div>
+        </div>
+        <div class="text2 ">{{text2}}</div>
+        <div class="text3">{{text3}}</div>
+
+        <div class="star">
+            <mat-icon class="star1 ">star</mat-icon>
+            <mat-icon class="star2 ">star</mat-icon>
+            <mat-icon class="star3 ">star</mat-icon>
+            <mat-icon class="star4 ">star</mat-icon>
+            <mat-icon class="star5 ">star</mat-icon>
+        </div>
+
+
+        <mat-card class="mathover" *ngIf="showimage">
+            <div>
+                <button mat-button class="view">View Profile</button> </div>
+            <div class="sec1">
+                <div class="docname">Dr.Amarasekara
+                    <br><span class="dentist">dentist</span></div>
+                <img class=" imagehover " src="assets\img\asiri_hospital.png " alt=" ">
+            </div>
+            <div class="vl2 "></div>
+            <div class="carddetails ">
+                <div class="location ">
+                    <span>Speciality</span>
+                    <span style="opacity: 40%; "><br> Dentist</span></div>
+                <div class=" open ">
+                    <span class=" "><br>Available Districts</span>
+                    <span class=" " style="opacity: 40%; "><br>Colombo,Rathnapura</span>
+                </div>
+                <div class="service ">
+                    <span class=" "><br>Contact Number</span>
+                    <span class=" " style="opacity: 40%; "><br>0774674870</span>
+                </div>
+                <div class="experiance ">
+                    <span class=" "><br>Experiance</span>
+                    <span class=" " style="opacity: 40%; "><br>4 years</span>
+                </div>
+            </div>
+        </mat-card>
+    </mat-card>
 </div>
