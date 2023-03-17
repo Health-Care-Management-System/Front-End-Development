@@ -1,35 +1,24 @@
     .doctor {
-        top: 30px;
         width: 400px;
-        height: auto;
+        height: 500px;
         position: absolute;
         left: 400px;
-        display: row;
-        border-color: #065560;
-        border-style: solid;
-        border-radius: 30px;
     }
     
     .hospital {
         width: 400px;
-        height: auto;
+        height: 500px;
         position: absolute;
         left: 400px;
-        top: 800px;
-        border-color: #065560;
-        border-style: solid;
-        border-radius: 30px;
+        top: 600px;
     }
     
     .pharmacy {
         width: 400px;
-        height: auto;
+        height: 500px;
         position: absolute;
         left: 400px;
-        top: 1600px;
-        border-color: #065560;
-        border-style: solid;
-        border-radius: 30px;
+        top: 1200px;
     }
     
     .docimage1 {
@@ -40,52 +29,8 @@
     
     .button1 {}
     
-     :host {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
-    
-    mat-drawer {
-        width: 260px;
-        background: #065560;
-    }
-    
-    mat-drawer-container {
-        height: 100%;
-    }
-    
-    .hhhh {
-        top: 100px;
-        width: 1000px;
-        height: 400px;
-    }
-    
-    .picture {
-        height: 200px;
-        width: 160px;
-        /* border-radius: 200px; */
-        position: absolute;
-        left: 90PX;
-        top: 40px;
-    }
-    
-    .name {
-        width: 290px;
-    }
-    
-    .name2 {
-        position: absolute;
-        left: 690px;
-        width: 290px;
-        top: 30px
-    }
-    
-    .address {}
-    
-    .doctorall {
+    .doctor1 {
         position: relative;
-        margin: 30px;
-        border-style: solid;
-        border-color: chocolate;
+        justify-content: center;
+        left: 40px;
     }

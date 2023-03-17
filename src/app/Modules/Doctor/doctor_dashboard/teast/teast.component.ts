@@ -9,24 +9,21 @@ import {map, startWith} from 'rxjs/operators';
   styleUrls: ['./teast.component.css']
 })
 export class TeastComponent implements OnInit {
-  text1="Asiri Hospitals";
-  text2="Kandy";
-  text3="230 Reviews";
   myControl = new FormControl('');
   options: string[] = ['One', 'Two', 'Three'];
   filteredOptions!: Observable<string[]>;
-showimage:boolean;
+  constructor() { }
 
+  ngOnInit(): void {
+    this.filteredOptions = this.myControl.valueChanges.pipe(
+      startWith(''),
+      map(value => this._filter(value || '')),
+    );
+  }
+  private _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
 
-  constructor() {this.showimage=false;
-  
-}ngOnInit(): void {
-  throw new Error('Method not implemented.');
+    return this.options.filter(option => option.toLowerCase().includes(filterValue));
+  }
+
 }
- }
-
- 
-
-
-
-

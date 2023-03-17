@@ -20,9 +20,10 @@
         top: 50.25%;
         bottom: 51.54%;
         height: 150px;
-        background: #00be99;
+        background: #EEEDF4;
         border-radius: 40px;
         width: 800px;
+        color: blue;
     }
     
     .card3 {
@@ -32,9 +33,10 @@
         top: 84.95%;
         bottom: 23.83%;
         height: 150px;
-        background: #00be99;
+        background: #EEEDF4;
         border-radius: 40px;
         width: 800px;
+        color: blue;
     }
     
     .card4 {
@@ -44,9 +46,10 @@
         top: 120.66%;
         bottom: 16.13%;
         height: 150px;
-        background: #00be99;
+        background: #EEEDF4;
         border-radius: 40px;
         width: 800px;
+        color: blue;
     }
     
     .card11 {
@@ -55,11 +58,10 @@
         right: 13.46%;
         top: 28.54%;
         bottom: 77.22%;
-        background: #00be99;
+        background: gray;
         box-shadow: 10.0715px 12.2297px 28.7757px 2.87757px rgba(112, 144, 176, 0.08);
         border-radius: 21.5817px;
-        height: 50px;
-        color: #EEEDF4;
+        height: 20px;
     }
     
     .card12 {
@@ -71,9 +73,8 @@
         background: #FFFFFF;
         box-shadow: 10.0715px 12.2297px 28.7757px 2.87757px rgba(112, 144, 176, 0.08);
         border-radius: 21.5817px;
-        background: #00be99;
-        height: 50px;
-        color: #EEEDF4;
+        background: gray;
+        height: 20px;
     }
     
     .image1 {
@@ -192,7 +193,7 @@
     
     .hr1 {
         position: relative;
-        top: 240px;
+        top: 290px;
         width: 80%;
         left: 180px;
     }
