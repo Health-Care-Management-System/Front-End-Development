@@ -5,45 +5,86 @@
         <app-left-tool-bar></app-left-tool-bar>
     </mat-drawer>
     <mat-drawer-content>
-        <div class="availabilitypic">
-            <table class="table align-middle mb-0 bg-white">
-                <thead class="bg-light">
-                    <tr>
-                        <th>Name</th>
-                        <th>Date</th>
-                        <th>Time</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let item of data">
-                        <td>
-                            <div class="d-flex align-items-center">
-                                <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt="" style="width: 45px; height: 45px" class="rounded-circle" />
-                                <div class="ms-3">
-                                    <p class="fw-bold mb-1">{{item.name}}</p>
-                                    <p class="text-muted mb-0">{{item.email}}</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <p class="fw-normal mb-1">{{item.date}}</p>
-                            <p class="text-muted mb-0 time1">{{item.time}}</p>
-                        </td>
-                        <td>
-                            <span class="badge badge-{{item.status === 'Active' ? 'success' : item.status === 'Onboarding' ? 'primary' : 'warning'}} rounded-pill d-inline">{{item.status}}</span>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-link btn-sm btn-rounded">Accept</button>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-link btn-rounded btn-sm fw-bold" data-mdb-ripple-color="dark">Reject</button>
-                        </td>
-                    </tr>
-                </tbody>
+        <mat-card class="mat1">
+            <div class="head"> Today’s Appointment requests
+            </div>
+
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+
+                <!-- Position Column -->
+                <ng-container matColumnDef="position">
+                    <th mat-header-cell *matHeaderCellDef> name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}}
+
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef> time </th>
+                    <td mat-cell *matCellDef="let element"> {{element.time}} </td>
+                </ng-container>
+
+                <!-- Weight Column -->
+                <ng-container matColumnDef="weight">
+                    <th mat-header-cell *matHeaderCellDef> method </th>
+                    <td mat-cell *matCellDef="let element"> {{element.method}} </td>
+                </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="symbol">
+                    <th mat-header-cell *matHeaderCellDef> approval </th>
+                    <td mat-cell *matCellDef="let element"> {{element.approval}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
             </table>
 
-        </div>
+
+
+        </mat-card>
+        <mat-card class="mat2">
+            <div class="head"> Tomorrow’s Appointment requests
+            </div>
+
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+
+                <!-- Position Column -->
+                <ng-container matColumnDef="position">
+                    <th mat-header-cell *matHeaderCellDef> name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef> time </th>
+                    <td mat-cell *matCellDef="let element"> {{element.time}} </td>
+                </ng-container>
+
+                <!-- Weight Column -->
+                <ng-container matColumnDef="weight">
+                    <th mat-header-cell *matHeaderCellDef> method </th>
+                    <td mat-cell *matCellDef="let element"> {{element.method}} </td>
+                </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="symbol">
+                    <th mat-header-cell *matHeaderCellDef> approval </th>
+                    <td mat-cell *matCellDef="let element"> {{element.approval}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr class="solid" mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+
+
+
+        </mat-card>
     </mat-drawer-content>
 </mat-drawer-container>

@@ -1,0 +1,205 @@
+.example-card1 {
+    position: absolute;
+    width: 613px;
+    height: 425px;
+    left: 553px;
+    top: 105px;
+    background: #FFFFFF;
+    box-shadow: 0px 4.07454px 24.4472px -1.01863px rgba(0, 0, 0, 0.11);
+    backdrop-filter: blur(20.3727px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 20px;
+}
+
+.example-card2 {
+    position: absolute;
+    width: 609px;
+    height: 425px;
+    left: 557px;
+    top: 567px;
+    background: rgba(228, 228, 232, 0.63);
+    box-shadow: 0px 4.07454px 24.4472px -1.01863px rgba(0, 0, 0, 0.11);
+    backdrop-filter: blur(20.3727px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 20px;
+}
+
+.heading1 {
+    position: absolute;
+    width: 390px;
+    height: 29px;
+    left: 613px;
+    top: 137px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+    /* identical to box height, or 115% */
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+    color: #4E4E4E;
+}
+
+.heading2 {
+    position: absolute;
+    width: 435px;
+    height: 29px;
+    left: 617px;
+    top: 599px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+    /* identical to box height, or 115% */
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+    color: #4E4E4E;
+}
+
+.minibar11 {
+    position: absolute;
+    width: 43px;
+    height: 29px;
+    left: 708px;
+    top: 192px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14.0372px;
+    line-height: 29px;
+    /* identical to box height, or 204% */
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+    color: #919191;
+}
+
+.minibar12 {
+    position: absolute;
+    width: 35px;
+    height: 29px;
+    left: 832px;
+    top: 191px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14.0372px;
+    line-height: 29px;
+    /* identical to box height, or 204% */
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+    color: #919191;
+}
+
+.minibar13 {
+    position: absolute;
+    width: 53px;
+    height: 29px;
+    left: 922px;
+    top: 191px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14.0372px;
+    line-height: 29px;
+    /* identical to box height, or 204% */
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+    color: #919191;
+}
+
+.minibar14 {
+    position: absolute;
+    width: 63px;
+    height: 29px;
+    left: 1017px;
+    top: 191px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14.0372px;
+    line-height: 29px;
+    /* identical to box height, or 204% */
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+    color: #919191;
+}
+
+.minibar21 {
+    position: absolute;
+    width: 43px;
+    height: 29px;
+    left: 712px;
+    top: 654px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14.0372px;
+    line-height: 29px;
+    /* identical to box height, or 204% */
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+    color: #919191;
+}
+
+.minibar22 {
+    position: absolute;
+    width: 35px;
+    height: 29px;
+    left: 836px;
+    top: 653px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14.0372px;
+    line-height: 29px;
+    /* identical to box height, or 204% */
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+    color: #919191;
+}
+
+.minibar23 {
+    position: absolute;
+    width: 53px;
+    height: 29px;
+    left: 926px;
+    top: 653px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14.0372px;
+    line-height: 29px;
+    /* identical to box height, or 204% */
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+    color: #919191;
+}
+
+.minibar24 {
+    position: absolute;
+    width: 63px;
+    height: 29px;
+    left: 1021px;
+    top: 653px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14.0372px;
+    line-height: 29px;
+    /* identical to box height, or 204% */
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+    color: #919191;
+}

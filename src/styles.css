@@ -21,9 +21,6 @@ body {
     flex: 1 1 auto;
 }
 
-.active {
-    background-color: #00BE99;
-}
 
 @import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
 @import '~@fortawesome/fontawesome-free/scss/solid.scss';

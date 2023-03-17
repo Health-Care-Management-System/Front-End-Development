@@ -86,17 +86,10 @@ import { PatientProfileComponent } from './Modules/Patient/patient-profile/patie
 import { PatientNavbarComponent } from './Modules/Patient/patient-navbar/patient-navbar/patient-navbar.component';
 import { PatientProfileDisplayedComponent } from './Modules/Patient/patient profile displayed/patient-profile-displayed/patient-profile-displayed.component';
 import { FavoritesComponent } from './Modules/Patient/favorites/favorites/favorites.component';
-
-import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
-import { SearchdoctorcontentComponent } from './Modules/Doctor/doctor_dashboard/searchdoctor/searchdoctorcontent/searchdoctorcontent/searchdoctorcontent.component';
-import { FilterComponent } from './Modules/Doctor/doctor_dashboard/searchdoctor/searchdoctorleftfilter/filter/filter.component';
-import { DoctorsearchFiComponent } from './Modules/searchitems/doctorsearch-fi/doctorsearch-fi.component';
-import { PharmacysearchComponent } from './Modules/searchitems/pharmacysearch/pharmacysearch.component';
-import { HospitalsearchFiComponent } from './Modules/searchitems/hospitalsearch-fi/hospitalsearch-fi.component';
-import { DoctorprofileforpatientComponent } from './Modules/Doctor/doctor_dashboard/doctorprofileforpatient/doctorprofileforpatient.component';
-import { MyappoinmentsComponent } from './Modules/Patient/myappoinments/myappoinments.component';
-import { PatientpwchangeComponent } from './Modules/Patient/patientpwchange/patientpwchange.component';
-import { MedicineorderdetailsComponent } from './Modules/Patient/medicineorderdetails/medicineorderdetails.component';
+import { PatientSignupPageComponent } from './Modules/Patient/patient-signup-page/patient-signup-page.component';
+import { AmbulanceSignupPageComponent } from './Modules/Ambulance/ambulance-signup-page/ambulance-signup-page.component';
+import { HospitalSignupPageComponent } from './Modules/Hospital/hospital-signup-page/hospital-signup-page.component';
+import { PharmacySignupPageComponent } from './Modules/Pharmacy/pharmacy-signup-page/pharmacy-signup-page.component';
 
 
 
@@ -141,17 +134,10 @@ import { MedicineorderdetailsComponent } from './Modules/Patient/medicineorderde
     PatientNavbarComponent,
     PatientProfileDisplayedComponent,
     FavoritesComponent,
-
-    SearchdoctorcontentComponent,
-    FilterComponent,
-    DoctorsearchFiComponent,
-    PharmacysearchComponent,
-    HospitalsearchFiComponent,
-    DoctorprofileforpatientComponent,
-    MyappoinmentsComponent,
-    PatientpwchangeComponent,
-    MedicineorderdetailsComponent,
-   
+    PatientSignupPageComponent,
+    AmbulanceSignupPageComponent,
+    HospitalSignupPageComponent,
+    PharmacySignupPageComponent,
 
 
   ],
@@ -202,8 +188,7 @@ import { MedicineorderdetailsComponent } from './Modules/Patient/medicineorderde
     MatNativeDateModule,
     MatSliderModule,
 
-    NoopAnimationsModule,
-    NgMultiSelectDropDownModule.forRoot()
+    NoopAnimationsModule
 
   ],
   providers: [],
