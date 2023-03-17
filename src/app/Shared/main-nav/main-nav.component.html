@@ -1,4 +1,3 @@
-
 <mat-toolbar color="primary">
   <!-- if want add shadow to navbar -->
   <!-- <mat-toolbar color="primary" class="mat-elevation-za"></mat-toolbar> -->
@@ -22,7 +21,7 @@
 
     <div class="spacer"></div>
     <a class="nav-link" routerLink="/login" mat-stroked-button>Login</a>
-    <a class="nav-link" routerLink="/signup" mat-raised-button>Sign up</a>
+    <a class="nav-link" routerLink="/userselect" mat-raised-button>Sign up</a>
   </div>
 
   <!-- responsive menu part -->
@@ -34,12 +33,12 @@
 
 <mat-menu x-position = "before" #menu>
   <button routerLink="/home" mat-menu-item>Home</button>
-  <button routerLink="" mat-menu-item>Doctor</button>
-  <button routerLink="" mat-menu-item>Hospital</button>
-  <button routerLink="" mat-menu-item>Pharmacy</button>
-  <button routerLink="" mat-menu-item>Ambulance</button>
+  <button routerLink="/doctor" mat-menu-item>Doctor</button>
+  <button routerLink="/hospital" mat-menu-item>Hospital</button>
+  <button routerLink="/pharmacy" mat-menu-item>Pharmacy</button>
+  <button routerLink="/ambulance" mat-menu-item>Ambulance</button>
   <button routerLink="" mat-menu-item>About</button>
   <button routerLink="" mat-menu-item>Contact</button>
-  <button routerLink="" mat-menu-item>Login</button>
-  <button routerLink="" mat-menu-item>Sign up</button>
+  <button routerLink="/login" mat-menu-item>Login</button>
+  <button routerLink="/userselect" mat-menu-item>Sign up</button>
 </mat-menu>

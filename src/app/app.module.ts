@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
 
 // import flexLayout
 import {FlexLayoutModule} from '@angular/flex-layout';
@@ -75,6 +77,21 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatSliderModule} from '@angular/material/slider';
 
+import { HospitalLefttoolbarComponent } from './Modules/Hospital/hospital-dashboard/hospital-lefttoolbar/hospital-lefttoolbar/hospital-lefttoolbar.component';
+import { HospitalProfileComponent } from './Modules/Hospital/hospital-dashboard/hospital-profile/hospital-profile/hospital-profile.component';
+import { PharmacyProfileComponent } from './Modules/Pharmacy/pharmacy-dashboard/pharmacy-profile/pharmacy-profile/pharmacy-profile.component';
+import { PharmacyLeftToolbarComponent } from './Modules/Pharmacy/pharmacy-dashboard/pharmacy-lefttoolbar/pharmacy-left-toolbar/pharmacy-left-toolbar.component';
+import { PatientLeftToolbarComponent } from './Modules/Patient/patient-left-toolbar/patient-left-toolbar/patient-left-toolbar.component';
+import { PatientProfileComponent } from './Modules/Patient/patient-profile/patient-profile/patient-profile.component';
+import { PatientNavbarComponent } from './Modules/Patient/patient-navbar/patient-navbar/patient-navbar.component';
+import { PatientProfileDisplayedComponent } from './Modules/Patient/patient profile displayed/patient-profile-displayed/patient-profile-displayed.component';
+import { FavoritesComponent } from './Modules/Patient/favorites/favorites/favorites.component';
+import { PatientSignupPageComponent } from './Modules/Patient/patient-signup-page/patient-signup-page.component';
+import { AmbulanceSignupPageComponent } from './Modules/Ambulance/ambulance-signup-page/ambulance-signup-page.component';
+import { HospitalSignupPageComponent } from './Modules/Hospital/hospital-signup-page/hospital-signup-page.component';
+import { PharmacySignupPageComponent } from './Modules/Pharmacy/pharmacy-signup-page/pharmacy-signup-page.component';
+
+
 
 @NgModule({
   declarations: [
@@ -108,11 +125,27 @@ import {MatSliderModule} from '@angular/material/slider';
     TeastComponent,
     ShowrequestComponent,
 
+    HospitalLefttoolbarComponent,
+    HospitalProfileComponent,
+    PharmacyProfileComponent,
+    PharmacyLeftToolbarComponent,
+    PatientLeftToolbarComponent,
+    PatientProfileComponent,
+    PatientNavbarComponent,
+    PatientProfileDisplayedComponent,
+    FavoritesComponent,
+    PatientSignupPageComponent,
+    AmbulanceSignupPageComponent,
+    HospitalSignupPageComponent,
+    PharmacySignupPageComponent,
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    CarouselModule,
     FlexLayoutModule,
     MaterialModule,
     FormsModule,
@@ -136,6 +169,7 @@ import {MatSliderModule} from '@angular/material/slider';
 
     NoopAnimationsModule,
     //doctorcharuka
+
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,

@@ -11,3 +11,28 @@
   align-items: center;
 
 }
+.service-icon{
+  width: 70px;
+}
+
+.left-image-decor {
+  background-image: url(../../../assets/img/left-bg-decor.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+  height: 110%;
+  margin-top: -200px;
+}
+
+.right-image-decor {
+  background-image: url(../../../assets/img/right-bg-decor.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+  height: 110%;
+  margin-top: -200px;
+}
+

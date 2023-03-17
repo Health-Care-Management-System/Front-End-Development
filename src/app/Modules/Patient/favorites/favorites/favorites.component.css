@@ -1,0 +1,36 @@
+    .doctor {
+        width: 400px;
+        height: 500px;
+        position: absolute;
+        left: 400px;
+    }
+    
+    .hospital {
+        width: 400px;
+        height: 500px;
+        position: absolute;
+        left: 400px;
+        top: 600px;
+    }
+    
+    .pharmacy {
+        width: 400px;
+        height: 500px;
+        position: absolute;
+        left: 400px;
+        top: 1200px;
+    }
+    
+    .docimage1 {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+    }
+    
+    .button1 {}
+    
+    .doctor1 {
+        position: relative;
+        justify-content: center;
+        left: 40px;
+    }

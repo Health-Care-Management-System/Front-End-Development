@@ -1,73 +1,111 @@
-<div class="container-fluid" fxLayout="row" fxLayout.lt-sm="column">
 
-    <div class="left-part" >
+<section class="" style="background-color: #065560;">
+    <div class="container-fluid">
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <div class="col-lg-12 col-xl-11">
+          <mat-card class="text-black mx-3" style="border-radius: 25px; margin-top: 30px; margin-bottom: 30px;">
+            <mat-card-content class="p-md-3">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-6 col-xl-7 d-flex order-1 order-lg-1 ">
+                  
+                  <img src="../../../../assets/img/doc1.jpg" class="img-fluid" alt="Sample image">
+                </div>
+                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-2">
+                  <div fxLayout="row" fxLayoutAlign="space-between center" >
+                    <a href="" routerLink=""><img class="row center mx-1 mx-md-4 logo"
+                      src="../../../../assets/img/logo-light-background.png"></a>
+                  <a href="" mat-raised-button class="link" routerLink="/doctorsignup"> Back</a>
+                  </div>
+                  
+                  <h1 class="text-center fw-bold mb-3 mx-1 mx-md-4 mt-4">Sign up</h1>
+  
+  
+                  <form class="mx-1 mx-md-4" novalidate #signupForm="ngForm"  (ngSubmit)="onSubmit()">
+  
+                    <div fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                      <mat-icon class="me-3">confirmation_number </mat-icon>
+                      <mat-form-field fxFlex="100%">
+                        <input matInput type="text" 
+                               id="form3Example1c" 
+                               [(ngModel)]="registerArray.username" 
+                               name="username"
+                               #username="ngModel"
+                               required />
+                        <mat-label>Your SLMC registration number</mat-label>
+                        <!--error message displaying-->
+                        <mat-error *ngIf="(username.touched ||signupForm.submitted) && username.errors?.['required']"> Your Name is required</mat-error>
+                        
+                      </mat-form-field>
+                    </div>
+  
+                    <div fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                      <mat-icon class="me-3">person_3</mat-icon>
+                      <mat-form-field fxFlex="100%">
+                        <input matInput type="text" 
+                               id="form3Example1c" 
+                               [(ngModel)]="registerArray.username" 
+                               name="username"
+                               #username="ngModel"
+                               required />
+                        <mat-label>Select SLMC registration type</mat-label>
+                        <!--error message displaying-->
+                        <mat-error *ngIf="(username.touched ||signupForm.submitted) && username.errors?.['required']"> Your Name is required</mat-error>
+                        
+                      </mat-form-field>
+                    </div>
+  
+                    <div fxLayout="row" fxLayoutAlign="start center" class="mb-3">
+                        <mat-icon class="me-3">stars</mat-icon>
+                        <mat-form-field fxFlex="100%">
+                          <input matInput type="text" 
+                                 id="form3Example1c" 
+                                 [(ngModel)]="registerArray.username" 
+                                 name="username"
+                                 #username="ngModel"
+                                 required />
+                          <mat-label>Select Your Specilality</mat-label>
+                          <!--error message displaying-->
+                          <mat-error *ngIf="(username.touched ||signupForm.submitted) && username.errors?.['required']"> Your Name is required</mat-error>
+                          
+                        </mat-form-field>
+                      </div>
+    
+                    <div fxLayout="row" fxLayoutAlign="start start" class="mb-3">
+                      <mat-icon class="me-3">add_a_photo</mat-icon>
+                      <mat-label>Upload Your Recent Photo</mat-label>
+                    </div>
+                    <span > <input type="file" class="form-control mb-4" id="customFile" /></span>
+  
+  
+  
+                
+                    <div fxLayout="row" fxLayoutAlign="center center" class="mb-3">
+                      <mat-checkbox class="me-2" id="form2Example3c"></mat-checkbox>
+                      <label for="form2Example3">
+                        I agree all statements in <a href="#!" class="conditions">Terms of service</a>
+                      </label>
+                    </div>
+  
+                    <div fxLayout="row" fxLayoutAlign="center" class="mb-2 mb-lg-4">
+                      <button mat-raised-button 
+                              color="primary" 
+                              type="button" 
+                              [disabled]="signupForm.form.invalid"
+                        class="btn btn-primary btn-lg next-btn" >Submit</button>
+                    </div>
+  
+                  </form>
+                 
+          
+                </div>
+                
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
     </div>
+  </section>
+  
+  <app-footer></app-footer>
 
-    <div class="right-part" >
-        <span>
-            <h1 id="title" class="md-display-3">Sign up for doctor account</h1>
-        </span>
-        <form class="doc-form" fxLayoutAlign="center center">
-            <table class="docform-full-width" cellspacing="0">
-                <tr>
-                    <td>
-                        <p id="formtitle" class="md-title">SLMC registration number</p>
-                        <mat-form-field class="docform-full-width" appearance="fill">
-                            <mat-label>Your SLMC registration number</mat-label>
-                            <input matInput>
-                        </mat-form-field>
-                    </td>
-                    <td>
-                        <p id="formtitle" class="md-title">Specilality</p>
-                        <mat-form-field class="docform-full-width" appearance="fill">
-                            <mat-label>select Your Specilality </mat-label>
-                            <input type="text"
-                            placeholder="Pick one"
-                            aria-label="Number"
-                            matInput
-
-                            [matAutocomplete]="auto">
-                     <mat-autocomplete #auto="matAutocomplete">
-                       <mat-option *ngFor="let option of " [value]="option">
-                         {{option}}
-                       </mat-option>
-                     </mat-autocomplete>
-
-                        </mat-form-field>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <p id="formtitle" class="md-title">SLMC registration type</p>
-                        <mat-form-field class="docform-full-width" appearance="fill">
-                            <mat-label>select SLMC registration type </mat-label>
-                            <input type="text"
-                            placeholder="Pick one"
-                            aria-label="Number"
-                            matInput
-
-                            [matAutocomplete]="auto">
-                     <mat-autocomplete #auto="matAutocomplete">
-                       <mat-option *ngFor="let option of " [value]="option">
-                         {{option}}
-                       </mat-option>
-                     </mat-autocomplete>
-                        </mat-form-field>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p id="formtitle" class="md-title">upload Your recent image</p>
-
-                    </td>
-                </tr>
-
-
-            </table>
-        </form>
-        <span id="button" class="middle" fxLayoutAlign="center center"><button mat-raised-button color="primary"routerLink="/signupnext">Submit</button></span>
-        <span  class="middle" fxLayoutAlign="center center"><h3 class="login" >Already have an account ? <a routerLink=""> Log in</a></h3></span>
-
-    </div>
-
-</div>

@@ -2,83 +2,93 @@
     1. General Styles
 -------------------------------------------------------------*/
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
 }
-html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+#intro{
+  padding: 60px 0;
 }
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
+#about{
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background: #37ecba;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to bottom, rgba(6, 245, 198 , 0.7), rgba(231, 252, 247, 1));
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to bottom, rgba(6, 245, 198 , 0.7),   rgba(231, 252, 247, 1));
 }
-a {
-  font-weight: 600;
-  text-decoration: none;
-  letter-spacing: 1.5px;
-  position: relative;
-}
-img {
-  max-width: 100%;
-  height: auto;
-}
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-  font-weight: 600;
-  letter-spacing: 1px;
-}
+
 /*-----------------------------------------------------------
   2. Typography
 ------------------------------------------------------------*/
-body {
-  font-size: 14px;
-  font-weight: 400;
-  overflow-x: hidden;
-  transition: opacity 1s;
-  min-width: 330px;
-}
-h1,
-.h1 {
+h1 {
   font-size: 4.0rem;
+  line-height: 70px;
+  color:#00be99;
 }
- h2,
-.h2 {
+h1 span{
+  color: #065560;
+}
+a{
+  font-weight: 1.5rem;
+  text-transform: capitalize;
+}
+.h2{
   font-size: 2.5rem;
+  line-height: 3.5rem;
+  /* margin-bottom: 50px; */
+}
+.my-h1 {
+  font-size: 9.0rem;
+  font-size: 64px;
+  letter-spacing: 1px;
+}
+.my-text2{
+  font-size: 2.8rem;
+  font-weight: 6rem;
   line-height: 2.5rem;
-}
-p {
-  font-size: 1.1rem;
-  line-height: 1.8;
   letter-spacing: 0.025em;
+  color: #065560;
 }
+.para-1{
+  font-weight: 2rem;
+  line-height: 2rem;
+  color: #6f706f;
+}
+
+.my-about-2{
+  color: #065560;
+}
+.my-img-1{
+  height: auto;
+  width: 60px;
+}
+.my-text3{
+  color: #065560;
+}
+
 /*-----------------------------------------------------------
   3. Buttons & Links
 -------------------------------------------------------------*/
-.hero-btns a:first-child {
+.hero-btns{
+  padding: 8px 17px;
+  border-radius: 35px;
+  background-color: #00BE99;
+  border:2px solid #00BE99;
+}
+.hero-btns:hover{
+  background-color:#008C88;
+}
+/* .hero-btns a:first-child {
   background-color: #00BE99;
   border:2px solid #00BE99;
   color: #fff;
   padding: 17px 35px;
   font-size: 1.0rem;
   border-radius: 35px;
-  -webkit-box-shadow:0px 4px 5px 0px rgba(57, 255, 126, 0.15);
-  -moz-box-shadow: 0px 4px 5px 0px rgba(57, 255, 126, 0.15);
-  box-shadow: 0px 4px 5px 0px rgba(57, 255, 126, 0.15);
-}
-.hero-btns a:first-child:hover {
+  
+} */
+/* .hero-btns a:first-child:hover {
   background-color: #fff;
   border:2px solid #00BE99;
   color:  #065560;
@@ -95,44 +105,15 @@ p {
 .hero-btns a:last-child:hover {
   color: #00BE99;
   transition: all 0.3s ease;
-}
+} */
+
 /*-----------------------------------------------------------
-  4. Header
+  2. about
 -------------------------------------------------------------*/
-.container{
-  margin-left: 150px;
+.box{
+  background: whitesmoke;
 }
-.hero-btns {
-  margin-bottom: 350px;
-}
-.hero img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -9;
-  margin-top: 20px;
-  margin-right: 50px;
-  width: 50%;
-  height: 95%;
-}
-.hero h1 {
-  font-size: 4.0rem;
-  margin-bottom: 20px;
-  margin-top: 150px;
-  line-height: 70px;
-  color:#00be99;
-}
-.hero h1 span{
-  color: #065560;
-}
-.hero h2{
-  font-size: 2.5rem;
-  line-height: 3.5rem;
-  margin-bottom: 50px;
-}
-.hero p {
-  margin-bottom: 50px;
-}
+
 /*-----------------------------------------------------------
   2. textarea
 -------------------------------------------------------------*/
@@ -154,9 +135,9 @@ p {
 .textarea h2{
   color: #065560;
 }
-.text-cards{
+/* .text-cards{
   padding:40px 100px 80px 100px ;
-}
+} */
 .text-cards mat-card{
   border-radius: 25px;
   box-shadow: none;
@@ -179,7 +160,7 @@ p {
 /*-----------------------------------------------------------
   11. Responsive
 -------------------------------------------------------------*/
-@media (max-width: 1700px) {
+/* @media (max-width: 1700px) {
   .hero-btns {
     margin-bottom: 200px;
   }
@@ -269,6 +250,6 @@ p {
     width: 70%;
     margin: 0 auto;
   }
-}
+} */
 
 
