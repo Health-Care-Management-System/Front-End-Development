@@ -90,6 +90,7 @@ import { PatientSignupPageComponent } from './Modules/Patient/patient-signup-pag
 import { AmbulanceSignupPageComponent } from './Modules/Ambulance/ambulance-signup-page/ambulance-signup-page.component';
 import { HospitalSignupPageComponent } from './Modules/Hospital/hospital-signup-page/hospital-signup-page.component';
 import { PharmacySignupPageComponent } from './Modules/Pharmacy/pharmacy-signup-page/pharmacy-signup-page.component';
+import {HttpClientModule} from "@angular/common/http";
 
 
 
@@ -143,6 +144,7 @@ import { PharmacySignupPageComponent } from './Modules/Pharmacy/pharmacy-signup-
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     CarouselModule,
