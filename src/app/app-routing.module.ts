@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 // importing routing components
@@ -29,6 +29,9 @@ import { PatientProfileComponent } from './Modules/Patient/patient-profile/patie
 import { PatientProfileDisplayedComponent } from './Modules/Patient/patient profile displayed/patient-profile-displayed/patient-profile-displayed.component';
 import { FavoritesComponent } from './Modules/Patient/favorites/favorites/favorites.component';
 import { PatientSignupPageComponent } from './Modules/Patient/patient-signup-page/patient-signup-page.component';
+import { AmbulanceSignupPageComponent } from './Modules/Ambulance/ambulance-signup-page/ambulance-signup-page.component';
+import { HospitalSignupPageComponent } from './Modules/Hospital/hospital-signup-page/hospital-signup-page.component';
+import { PharmacySignupPageComponent } from './Modules/Pharmacy/pharmacy-signup-page/pharmacy-signup-page.component';
 
 
 
@@ -66,7 +69,11 @@ const routes: Routes = [
  {path:'pharmcyprofile',component:PharmacyProfileComponent},
  {path:'patientprofile',component:PatientProfileComponent},
 {path:'patientprofiledisplayed',component:PatientProfileDisplayedComponent},
-{path:'favorite',component:FavoritesComponent}
+{path:'favorite',component:FavoritesComponent},
+{path:'amubulancesignup' , component:AmbulanceSignupPageComponent},
+{path:'hospitalsignup' , component:HospitalSignupPageComponent},
+{path:'pharmacysignup' , component:PharmacySignupPageComponent}
+
 
 
 
