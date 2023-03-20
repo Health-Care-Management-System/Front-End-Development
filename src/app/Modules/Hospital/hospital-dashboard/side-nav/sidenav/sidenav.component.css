@@ -1,0 +1,42 @@
+.sidenav{
+    background: #065560;
+    transition: all .5s ease;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 16.5625rem;
+    height: 100vh;
+    box-shadow: 0.063rem 0 1.25rem 0 #024049 ;
+}
+.logo-container{
+    display: flex;
+    align-items: center;
+    padding: 0.938rem 0.938rem 0 0.938rem;
+    width: 100%;
+}
+ .logo{
+    background: #065560;
+    width: 50px;
+    max-width: 50px;
+    border-radius: o;
+    padding: 0.313rem;
+    border: none;
+    cursor: pointer;
+}
+.logo-img{
+    height: 57px;
+    margin-left: 1.5rem;
+}
+.btn-close{
+    margin-left: auto;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+}
+.fa-times{
+    color: aliceblue;
+    font-size:24px ;
+}

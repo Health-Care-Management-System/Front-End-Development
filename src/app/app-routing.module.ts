@@ -32,6 +32,11 @@ import { PatientSignupPageComponent } from './Modules/Patient/patient-signup-pag
 import { AmbulanceSignupPageComponent } from './Modules/Ambulance/ambulance-signup-page/ambulance-signup-page.component';
 import { HospitalSignupPageComponent } from './Modules/Hospital/hospital-signup-page/hospital-signup-page.component';
 import { PharmacySignupPageComponent } from './Modules/Pharmacy/pharmacy-signup-page/pharmacy-signup-page.component';
+import { SidenavComponent } from './Modules/Hospital/hospital-dashboard/side-nav/sidenav/sidenav.component';
+
+import { HospitalSignupNextComponent } from './Modules/Hospital/hospital-signup-next/hospital-signup-next.component';
+import { AmbulanceSignupNextComponent } from './Modules/Ambulance/ambulance-signup-next/ambulance-signup-next.component';
+import { PharmacySignupNextComponent } from './Modules/Pharmacy/pharmacy-signup-next/pharmacy-signup-next.component';
 
 
 
@@ -72,7 +77,13 @@ const routes: Routes = [
 {path:'favorite',component:FavoritesComponent},
 {path:'amubulancesignup' , component:AmbulanceSignupPageComponent},
 {path:'hospitalsignup' , component:HospitalSignupPageComponent},
-{path:'pharmacysignup' , component:PharmacySignupPageComponent}
+{path:'pharmacysignup' , component:PharmacySignupPageComponent},
+{path:'sidenav' , component:SidenavComponent},
+{path:'hospitalsignupnext' , component:HospitalSignupNextComponent},
+{path:'amubulancesignupnext' , component:AmbulanceSignupNextComponent},
+{path:'pharmacysignupnext' , component:PharmacySignupNextComponent}
+
+
 
 
 

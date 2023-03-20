@@ -1,151 +1,220 @@
 
 
 <section class="" style="background-color: #065560;">
-    <div class="container-fluid">
-      <div fxLayout="row" fxLayoutAlign="center center">
-        <div class="col-lg-12 col-xl-11">
-          <mat-card class="text-black mx-3" style="border-radius: 25px; margin-top: 30px; margin-bottom: 30px;">
-            <mat-card-content class="p-md-3">
-              <div class="row justify-content-center">
-                <div class="col-md-10 col-lg-6 col-xl-7 d-flex justify-content-center align-items-center order-1 order-lg-1 ">
-                  <img src="../../../../assets/img/ambulance-signup.png" class="img-fluid" alt="Sample image">
+  <div class="container-fluid">
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <div class="col-lg-12 col-xl-11">
+        <mat-card class="text-black mx-3" style="border-radius: 25px; margin-top: 30px; margin-bottom: 30px;">
+          <mat-card-content class="p-md-3">
+            <div class="row justify-content-center">
+              <div class="col-md-10 col-lg-6 col-xl-7 d-flex justify-content-center align-items-center order-1 order-lg-1 ">
+                <img src="../../../../assets/img/ambulance-signup.png" class="img-fluid" alt="Sample image">
+              </div>
+              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-2">
+                <div fxLayout="row" fxLayoutAlign="space-between center" >
+                  <a href="" routerLink=""><img class="row center mx-1 mx-md-4 logo"
+                    src="../../../../assets/img/logo-light-background.png"></a>
+                <a href="" mat-raised-button class="link" routerLink="/userselect"> Back</a>
                 </div>
-                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-2">
-                  <div fxLayout="row" fxLayoutAlign="space-between center" >
-                    <a href="" routerLink=""><img class="row center mx-1 mx-md-4 logo"
-                      src="../../../../assets/img/logo-light-background.png"></a>
-                  <a href="" mat-raised-button class="link" routerLink="/userselect"> Back</a>
+                
+                <h1 class="text-center fw-bold mb-3 mx-1 mx-md-4 mt-4 title">Sign up for ambulance Owners</h1>
+                <h2 class="text-center fw-bold mb-3 mx-1 mx-md-4 mt-4 title">Ambulance's Details</h2>
+
+
+                <form class="mx-1 mx-md-4" novalidate #signupForm="ngForm"  (ngSubmit)="onSubmit()">
+
+                  <div fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <mat-icon class="me-3">person</mat-icon>
+                    <mat-form-field fxFlex="100%">
+                      <input matInput type="text" 
+                             id="form3Example1c" 
+                             [(ngModel)]="registerArray.username" 
+                             name="username"
+                             #username="ngModel"
+                             required />
+                      <mat-label>Ambulance Service Name</mat-label>
+                      <!--error message displaying-->
+                      <mat-error *ngIf="(username.touched ||signupForm.submitted) && username.errors?.['required']">Ambulance Service Name is required</mat-error>                 
+                    </mat-form-field>
+                  </div>
+
+                  <!-- <div fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <mat-icon class="me-3">person</mat-icon>
+                    <mat-form-field fxFlex="100%">
+                      <input matInput type="text" 
+                             id="form3Example1c" 
+                             [(ngModel)]="registerArray.username" 
+                             name="username"
+                             #username="ngModel"
+                             required />
+                      <mat-label>Owner's Name</mat-label> -->
+                      <!-- error message displaying -->
+                      <!-- <mat-error *ngIf="(username.touched ||signupForm.submitted) && username.errors?.['required']">Owner's Name is required</mat-error>           
+                    </mat-form-field>
+                  </div>  -->
+
+                  <div fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <mat-icon class="me-3">email</mat-icon>
+                    <mat-form-field fxFlex="100%">
+                      <input matInput type="email" 
+                             id="form3Example3c" 
+                             [(ngModel)]="registerArray.email" 
+                             name="email" 
+                             #email="ngModel"
+                             [pattern]="emailPtn"
+                             required />
+                      <mat-label>Email of Ambulance Service</mat-label>
+                      <mat-error *ngIf="(email.touched ||signupForm.submitted) && email.errors?.['required']">Email Required</mat-error>
+                      <mat-error *ngIf="(email.touched ||signupForm.submitted) && email.errors?.['pattern']">Enter a valid Email Address</mat-error>                   
+                    </mat-form-field>
+                  </div>
+
+
+                  <div fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <mat-icon class="me-3">call</mat-icon>
+                    <mat-form-field fxFlex="100%">
+                      <input matInput type="mobilenumber" 
+                             id="form3Example3c" 
+                             [(ngModel)]="registerArray.mobilenumber" 
+                             name="mobilenumber" 
+                             #mobilenumber="ngModel"
+                             [pattern]="mobNumberPattern"
+                             required />
+                      <mat-label>Telephone Number(Ambulance Service)</mat-label>
+                      <mat-error *ngIf="(mobilenumber.touched ||signupForm.submitted) && mobilenumber.errors?.['required']">TelePhone Number Required</mat-error>
+                      <mat-error *ngIf="(mobilenumber.touched ||signupForm.submitted) && mobilenumber.errors?.['pattern']">Enter a valid Telephone Number</mat-error>             
+                    </mat-form-field>
+                  </div>
+
+                  <div fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <mat-icon class="me-3">fingerprint</mat-icon>
+                    <mat-form-field fxFlex="100%">
+                      <input matInput type="nationalID" 
+                             id="form3Example3c" 
+                             [(ngModel)]="registerArray.nationalID" 
+                             name="nationalID" 
+                             #nationalID="ngModel"
+                             minlength="10"
+                             required />
+                      <mat-label>Registration Number of Ambulace Service</mat-label>
+                      <mat-error *ngIf="(nationalID.touched ||signupForm.submitted) && nationalID.errors?.['required']">Registration Number of Ambulace Service is Required</mat-error>                    
+                    </mat-form-field>
+                  </div>
+
+                  <h2 class="text-center fw-bold mb-3 mx-1 mx-md-4 mt-4 title">Ambulance Vehicle's Details</h2>
+
+                  <div fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <mat-icon class="me-3">commute</mat-icon>
+                    <mat-form-field fxFlex="100%">
+                      <input matInput type="text" 
+                             id="form3Example1c" 
+                             [(ngModel)]="registerArray.username" 
+                             name="username"
+                             #username="ngModel"
+                             required />
+                      <mat-label>Vehicle Type</mat-label>
+                      <!-- error message displaying -->
+                      <mat-error *ngIf="(username.touched ||signupForm.submitted) && username.errors?.['required']">Vehicle Type is required</mat-error>           
+                    </mat-form-field>
+                  </div> 
+
+                  <div fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <mat-icon class="me-3">fingerprint</mat-icon>
+                    <mat-form-field fxFlex="100%">
+                      <input matInput type="nationalID" 
+                             id="form3Example3c" 
+                             [(ngModel)]="registerArray.nationalID" 
+                             name="nationalID" 
+                             #nationalID="ngModel"
+                             minlength="10"
+                             required />
+                      <mat-label>Registration Number of Vehicle</mat-label>
+                      <mat-error *ngIf="(nationalID.touched ||signupForm.submitted) && nationalID.errors?.['required']">Vehicle's Registration Number Required</mat-error>                    
+                    </mat-form-field>
+                  </div>
+
+                  <div fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <mat-icon class="me-3">fingerprint</mat-icon>
+                    <mat-form-field fxFlex="100%">
+                      <input matInput type="nationalID" 
+                             id="form3Example3c" 
+                             [(ngModel)]="registerArray.nationalID" 
+                             name="nationalID" 
+                             #nationalID="ngModel"
+                             minlength="10"
+                             required />
+                      <mat-label>Plate Number of Vehicle</mat-label>
+                      <mat-error *ngIf="(nationalID.touched ||signupForm.submitted) && nationalID.errors?.['required']">Vehicle's Plate Number Required</mat-error>                    
+                    </mat-form-field>
                   </div>
                   
-                  <h1 class="text-center fw-bold mb-3 mx-1 mx-md-4 mt-4">Sign up for Ambulance Owners</h1>
-  
-  
-                  <form class="mx-1 mx-md-4" novalidate #signupForm="ngForm"  (ngSubmit)="onSubmit()">
-  
-                    <div fxLayout="row" fxLayoutAlign="start center" class="mb-2">
-                      <mat-icon class="me-3">person</mat-icon>
-                      <mat-form-field fxFlex="100%">
-                        <input matInput type="text" 
-                               id="form3Example1c" 
-                               [(ngModel)]="registerArray.username" 
-                               name="username"
-                               #username="ngModel"
-                               required />
-                        <mat-label>Your First Name</mat-label>
-                        <!--error message displaying-->
-                        <mat-error *ngIf="(username.touched ||signupForm.submitted) && username.errors?.['required']"> Your First Name is required</mat-error>                 
-                      </mat-form-field>
-                    </div>
-  
-                    <div fxLayout="row" fxLayoutAlign="start center" class="mb-2">
-                      <mat-icon class="me-3">person</mat-icon>
-                      <mat-form-field fxFlex="100%">
-                        <input matInput type="text" 
-                               id="form3Example1c" 
-                               [(ngModel)]="registerArray.username" 
-                               name="username"
-                               #username="ngModel"
-                               required />
-                        <mat-label>Your Last Name</mat-label>
-                        <!--error message displaying-->
-                        <mat-error *ngIf="(username.touched ||signupForm.submitted) && username.errors?.['required']"> Your Last Name is required</mat-error>           
-                      </mat-form-field>
-                    </div>
-  
-                    <div fxLayout="row" fxLayoutAlign="start center" class="mb-2">
-                      <mat-icon class="me-3">email</mat-icon>
-                      <mat-form-field fxFlex="100%">
-                        <input matInput type="email" 
-                               id="form3Example3c" 
-                               [(ngModel)]="registerArray.email" 
-                               name="email" 
-                               #email="ngModel"
-                               [pattern]="emailPtn"
-                               required />
-                        <mat-label>Your Email</mat-label>
-                        <mat-error *ngIf="(email.touched ||signupForm.submitted) && email.errors?.['required']">Email Required</mat-error>
-                        <mat-error *ngIf="(email.touched ||signupForm.submitted) && email.errors?.['pattern']">Enter a valid Email Address</mat-error>                   
-                      </mat-form-field>
-                    </div>
-  
-  
-                    <div fxLayout="row" fxLayoutAlign="start center" class="mb-2">
-                      <mat-icon class="me-3">call</mat-icon>
-                      <mat-form-field fxFlex="100%">
-                        <input matInput type="mobilenumber" 
-                               id="form3Example3c" 
-                               [(ngModel)]="registerArray.mobilenumber" 
-                               name="mobilenumber" 
-                               #mobilenumber="ngModel"
-                               [pattern]="mobNumberPattern"
-                               required />
-                        <mat-label>Your Telephone Number</mat-label>
-                        <mat-error *ngIf="(mobilenumber.touched ||signupForm.submitted) && mobilenumber.errors?.['required']">TelePhone Number Required</mat-error>
-                        <mat-error *ngIf="(mobilenumber.touched ||signupForm.submitted) && mobilenumber.errors?.['pattern']">Enter a valid Telephone Number</mat-error>             
-                      </mat-form-field>
-                    </div>
-  
-                    <div fxLayout="row" fxLayoutAlign="start center" class="mb-2">
-                      <mat-icon class="me-3">fingerprint</mat-icon>
-                      <mat-form-field fxFlex="100%">
-                        <input matInput type="nationalID" 
-                               id="form3Example3c" 
-                               [(ngModel)]="registerArray.nationalID" 
-                               name="nationalID" 
-                               #nationalID="ngModel"
-                               minlength="10"
-                               required />
-                        <mat-label>Your National ID Number</mat-label>
-                        <mat-error *ngIf="(nationalID.touched ||signupForm.submitted) && nationalID.errors?.['required']">National ID Number Required</mat-error>                    
-                      </mat-form-field>
-                    </div>
-  
-                    <div fxLayout="row" fxLayoutAlign="start center" class="mb-4">
-                      <mat-icon class="me-3">pin_drop</mat-icon>
-                      <mat-form-field fxFlex="100%">
-                        <input matInput type="address" 
-                               id="form3Example3c" 
-                               [(ngModel)]="registerArray.address" 
-                               name="address" 
-                               #address="ngModel"
-                               minlength="10"
-                               required />
-                        <mat-label>Your Personal Address</mat-label>
-                        <mat-error *ngIf="(address.touched ||signupForm.submitted) && address.errors?.['required']">Your Address Required</mat-error>                    
-                      </mat-form-field>
-                    </div>
-  
+                  <div fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <mat-icon class="me-3">person</mat-icon>
+                    <mat-form-field fxFlex="100%">
+                      <input matInput type="text" 
+                             id="form3Example1c" 
+                             [(ngModel)]="registerArray.username" 
+                             name="username"
+                             #username="ngModel"
+                             required />
+                      <mat-label>Vehicle Owner's Name</mat-label>
+                      <!-- error message displaying -->
+                      <mat-error *ngIf="(username.touched ||signupForm.submitted) && username.errors?.['required']"> Vehicle Owner's Name is required</mat-error>           
+                    </mat-form-field>
+                  </div>
+
+                  <div fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <mat-icon class="me-3">fingerprint</mat-icon>
+                    <mat-form-field fxFlex="100%">
+                      <input matInput type="nationalID" 
+                             id="form3Example3c" 
+                             [(ngModel)]="registerArray.nationalID" 
+                             name="nationalID" 
+                             #nationalID="ngModel"
+                             minlength="10"
+                             required />
+                      <mat-label>Vehicle Owner's National ID Number</mat-label>
+                      <mat-error *ngIf="(nationalID.touched ||signupForm.submitted) && nationalID.errors?.['required']">National ID Number Required</mat-error>                    
+                    </mat-form-field>
+                  </div> 
+
+                  <div fxLayout="row" fxLayoutAlign="start start" class="mb-3">
+                    <mat-icon class="me-3">add_a_photo</mat-icon>
+                    <mat-label>Upload Recent Photo of the Vehicle</mat-label>
+                  </div>
+                  <span > <input type="file" class="form-control mb-4" id="customFile" /></span>
                   
-  
-                
-                    <div fxLayout="row" fxLayoutAlign="center center" class="mb-3">
-                      <mat-checkbox class="me-2" id="form2Example3c"></mat-checkbox>
-                      <label for="form2Example3">
-                        I agree all statements in <a href="#!" class="conditions">Terms of service</a>
-                      </label>
-                    </div>
-  
-                    <div fxLayout="row" fxLayoutAlign="center" class="mb-2 mb-lg-4">
-                      <button mat-raised-button 
-                              color="primary" 
-                              type="button" 
-                              [disabled]="signupForm.form.invalid"
-                        class="btn btn-primary btn-lg next-btn" routerLink="">Next</button>
-                    </div>
-  
-                  </form>
-                  <span  class="middle" fxLayoutAlign="center center">
-                    <label >Already have an account ? <a routerLink="/login" class="login"> Log in</a></label>
-                  </span>
-          
-                </div>
-                
+
+              
+                  <div fxLayout="row" fxLayoutAlign="center center" class="mb-3">
+                    <mat-checkbox class="me-2" id="form2Example3c"></mat-checkbox>
+                    <label for="form2Example3">
+                      I agree all statements in <a href="#!" class="conditions">Terms of service</a>
+                    </label>
+                  </div>
+
+                  <div fxLayout="row" fxLayoutAlign="center" class="mb-2 mb-lg-4">
+                    <button mat-raised-button 
+                            color="primary" 
+                            type="button" 
+                            [disabled]="signupForm.form.invalid"
+                      class="btn btn-primary btn-lg next-btn" routerLink="">Next</button>
+                  </div>
+
+                </form>
+                <span  class="middle" fxLayoutAlign="center center">
+                  <label >Already have an account ? <a routerLink="/login" class="login"> Log in</a></label>
+                </span>
+        
               </div>
-            </mat-card-content>
-          </mat-card>
-        </div>
+              
+            </div>
+          </mat-card-content>
+        </mat-card>
       </div>
     </div>
-  </section>
-  
-  <app-footer></app-footer>
+  </div>
+</section>
+
+<app-footer></app-footer>
+
