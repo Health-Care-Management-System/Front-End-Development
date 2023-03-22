@@ -1,4 +1,12 @@
-button{
+
+.mat-button{
     background-color: #00BE99;
     color: azure;
+}
+.action-button{
+    color: rgb(77, 165, 242);
+}
+.reject-button{
+    color: #fe8e3c;
+    border: none;
 }

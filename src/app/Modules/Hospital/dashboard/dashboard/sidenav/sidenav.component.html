@@ -15,12 +15,21 @@
         </li>
     </ul>
 </div> -->
+
 <mat-sidenav-container autosize>
     <mat-sidenav #sidenav mode="side" [opened]="true">
         <mat-nav-list (click)="toggleCollapse()">
-            <mat-list-item>
+            <mat-list-item >
                 <mat-icon mat-list-icon class="chevron-button sidenav-button" [ngClass]="{'rotated' : collapsed}"><i
                         class="fa fa-chevron-right" aria-hidden="true"></i></mat-icon>
+            </mat-list-item>
+        </mat-nav-list>
+
+        <mat-nav-list  (click)="toggleCollapse()">
+            <img mat-card-avatar class="image mb-3" src="../../../../../../assets/img/doc23.png">
+            <span class="sidenav-link-text text-center h5" *ngIf="collapsed">Hospital Admin</span>
+            <mat-list-item class="name text-center">
+                <span *ngIf="collapsed"> hospital Name</span>
             </mat-list-item>
         </mat-nav-list>
 
@@ -28,7 +37,8 @@
         <mat-nav-list *ngFor="let data of navData" (click)="toggleCollapse()">
             <mat-list-item [routerLink]="data.routeLink" routerLinkActive="active"
                 [routerLinkActiveOptions]="{exact: true}">
-                <mat-icon mat-list-icon><i [class]="data.icon"></i></mat-icon>
+              
+                <mat-icon mat-list-icon class="mt-2">{{data.icon}}</mat-icon>
                 <span class="sidenav-link-text" *ngIf="collapsed">{{data.label}}</span>
             </mat-list-item>
         </mat-nav-list>
