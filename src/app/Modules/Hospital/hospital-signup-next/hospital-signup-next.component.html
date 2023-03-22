@@ -18,7 +18,7 @@
                   </div>
                   
                   <h1 class="text-center fw-bold mb-3 mx-1 mx-md-4 mt-4 title">Sign up for Hospital Owners</h1>
-                  <h2 class="text-center fw-bold mb-3 mx-1 mx-md-4 mt-4 title">Hospital/Clinic's Details</h2>
+                  <h2 class="text-center fw-bold mb-3 mx-1 mx-md-4 mt-4 title">Hospital/Clinic Owner's Details</h2>
   
   
                   <form class="mx-1 mx-md-4" novalidate #signupForm="ngForm"  (ngSubmit)="onSubmit()">
@@ -32,13 +32,13 @@
                                name="username"
                                #username="ngModel"
                                required />
-                        <mat-label>Hospital/Clinic Name</mat-label>
+                        <mat-label>Your First Name</mat-label>
                         <!--error message displaying-->
-                        <mat-error *ngIf="(username.touched ||signupForm.submitted) && username.errors?.['required']">Hospital/Clinic Name is required</mat-error>                 
+                        <mat-error *ngIf="(username.touched ||signupForm.submitted) && username.errors?.['required']"> Your First Name is required</mat-error>                 
                       </mat-form-field>
                     </div>
   
-                    <!-- <div fxLayout="row" fxLayoutAlign="start center" class="mb-2">
+                    <div fxLayout="row" fxLayoutAlign="start center" class="mb-2">
                       <mat-icon class="me-3">person</mat-icon>
                       <mat-form-field fxFlex="100%">
                         <input matInput type="text" 
@@ -48,10 +48,10 @@
                                #username="ngModel"
                                required />
                         <mat-label>Your Last Name</mat-label>
-                        error message displaying-->
-                        <!-- <mat-error *ngIf="(username.touched ||signupForm.submitted) && username.errors?.['required']"> Your Last Name is required</mat-error>           
+                        <!-- error message displaying -->
+                        <mat-error *ngIf="(username.touched ||signupForm.submitted) && username.errors?.['required']"> Your Last Name is required</mat-error>           
                       </mat-form-field>
-                    </div> --> 
+                    </div> 
   
                     <div fxLayout="row" fxLayoutAlign="start center" class="mb-2">
                       <mat-icon class="me-3">email</mat-icon>
@@ -63,7 +63,7 @@
                                #email="ngModel"
                                [pattern]="emailPtn"
                                required />
-                        <mat-label>Hospital Email</mat-label>
+                        <mat-label>Your Email Address</mat-label>
                         <mat-error *ngIf="(email.touched ||signupForm.submitted) && email.errors?.['required']">Email Required</mat-error>
                         <mat-error *ngIf="(email.touched ||signupForm.submitted) && email.errors?.['pattern']">Enter a valid Email Address</mat-error>                   
                       </mat-form-field>
@@ -80,7 +80,7 @@
                                #mobilenumber="ngModel"
                                [pattern]="mobNumberPattern"
                                required />
-                        <mat-label>Hospital's Telephone Number</mat-label>
+                        <mat-label>Your Telephone Number</mat-label>
                         <mat-error *ngIf="(mobilenumber.touched ||signupForm.submitted) && mobilenumber.errors?.['required']">TelePhone Number Required</mat-error>
                         <mat-error *ngIf="(mobilenumber.touched ||signupForm.submitted) && mobilenumber.errors?.['pattern']">Enter a valid Telephone Number</mat-error>             
                       </mat-form-field>
@@ -96,8 +96,8 @@
                                #nationalID="ngModel"
                                minlength="10"
                                required />
-                        <mat-label>Hospital's Registration Number</mat-label>
-                        <mat-error *ngIf="(nationalID.touched ||signupForm.submitted) && nationalID.errors?.['required']">Hospital's Registration Number Required</mat-error>                    
+                        <mat-label>Your National ID Number</mat-label>
+                        <mat-error *ngIf="(nationalID.touched ||signupForm.submitted) && nationalID.errors?.['required']">National ID Number Required</mat-error>                    
                       </mat-form-field>
                     </div>
   
@@ -111,8 +111,8 @@
                                #address="ngModel"
                                minlength="10"
                                required />
-                        <mat-label>Address of the Hospital</mat-label>
-                        <mat-error *ngIf="(address.touched ||signupForm.submitted) && address.errors?.['required']">Address of the Hospital is Required</mat-error>                    
+                        <mat-label>Your Address</mat-label>
+                        <mat-error *ngIf="(address.touched ||signupForm.submitted) && address.errors?.['required']">Your Address Required</mat-error>                    
                       </mat-form-field>
                     </div>
   
@@ -131,7 +131,7 @@
                               color="primary" 
                               type="button" 
                               [disabled]="signupForm.form.invalid"
-                        class="btn btn-primary btn-lg next-btn" routerLink="">Next</button>
+                        class="btn btn-primary btn-lg next-btn" routerLink="">Submit</button>
                     </div>
   
                   </form>
@@ -150,4 +150,5 @@
   </section>
   
   <app-footer></app-footer>
+
 

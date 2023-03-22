@@ -93,6 +93,14 @@ import { PharmacySignupPageComponent } from './Modules/Pharmacy/pharmacy-signup-
 import {HttpClientModule} from "@angular/common/http";
 
 
+import { SidenavComponent } from './Modules/Hospital/dashboard/dashboard/sidenav/sidenav.component';
+import { DashboardComponent } from './Modules/Hospital/dashboard/dashboard/dashboard/dashboard.component';
+import { HospitalSignupNextComponent } from './Modules/Hospital/hospital-signup-next/hospital-signup-next.component';
+import { AmbulanceSignupNextComponent } from './Modules/Ambulance/ambulance-signup-next/ambulance-signup-next.component';
+import { PharmacySignupNextComponent } from './Modules/Pharmacy/pharmacy-signup-next/pharmacy-signup-next.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -139,6 +147,13 @@ import {HttpClientModule} from "@angular/common/http";
     AmbulanceSignupPageComponent,
     HospitalSignupPageComponent,
     PharmacySignupPageComponent,
+
+    SidenavComponent,
+    DashboardComponent,
+    HospitalSignupNextComponent,
+    AmbulanceSignupNextComponent,
+    PharmacySignupNextComponent
+  
 
 
   ],

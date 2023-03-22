@@ -19,3 +19,6 @@
     text-decoration: none;
     color: #FE8E3C;
   }
+  .title{
+    text-transform: capitalize;
+  }
