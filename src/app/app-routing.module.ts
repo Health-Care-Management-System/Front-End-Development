@@ -32,13 +32,14 @@ import { PatientSignupPageComponent } from './Modules/Patient/patient-signup-pag
 import { AmbulanceSignupPageComponent } from './Modules/Ambulance/ambulance-signup-page/ambulance-signup-page.component';
 import { HospitalSignupPageComponent } from './Modules/Hospital/hospital-signup-page/hospital-signup-page.component';
 import { PharmacySignupPageComponent } from './Modules/Pharmacy/pharmacy-signup-page/pharmacy-signup-page.component';
-import { SidenavComponent } from './Modules/Hospital/hospital-dashboard/side-nav/sidenav/sidenav.component';
+import { SidenavComponent } from './Modules/Hospital/dashboard/dashboard/sidenav/sidenav.component';
 
 import { HospitalSignupNextComponent } from './Modules/Hospital/hospital-signup-next/hospital-signup-next.component';
 import { AmbulanceSignupNextComponent } from './Modules/Ambulance/ambulance-signup-next/ambulance-signup-next.component';
 import { PharmacySignupNextComponent } from './Modules/Pharmacy/pharmacy-signup-next/pharmacy-signup-next.component';
 
 
+import { DashboardComponent } from './Modules/Hospital/dashboard/dashboard/dashboard/dashboard.component';
 
 
 
@@ -81,7 +82,12 @@ const routes: Routes = [
 {path:'sidenav' , component:SidenavComponent},
 {path:'hospitalsignupnext' , component:HospitalSignupNextComponent},
 {path:'amubulancesignupnext' , component:AmbulanceSignupNextComponent},
-{path:'pharmacysignupnext' , component:PharmacySignupNextComponent}
+{path:'pharmacysignupnext' , component:PharmacySignupNextComponent},
+
+{path: '', loadChildren:() =>import('./Modules/Hospital/dashboard/dashboard/dashboard.module'). then(m => m.DashboardModule)}
+
+
+
 
 
 
