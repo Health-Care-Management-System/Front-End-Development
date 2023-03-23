@@ -22,17 +22,17 @@ ul li{
 .name{
     background-color: #f0f8ff;
     color: #065560;
-    
 }
 .logo{
     height: 3rem;
 }
 
 .image{
-    margin-left: 1rem;
-    margin-right: 1rem;
+  margin-top: 1rem;
+  margin-right: 10px;
+  
+
 }
- 
 
 .logo-text{
     font-size: 24px;
@@ -41,12 +41,14 @@ ul li{
     color: #bfe2e7;
 }
 
-
-
 .sidenav-link-text{
     margin-top: 0.70rem;
  margin-left: 1rem;   
  margin-right: 2rem;
 }
 
-
+.hospital-admin{
+    padding-top: 5px;
+    color: aquamarine;
+    text-align: center;
+}

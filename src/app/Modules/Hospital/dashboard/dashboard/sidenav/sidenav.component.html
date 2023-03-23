@@ -26,11 +26,12 @@
         </mat-nav-list>
 
         <mat-nav-list  (click)="toggleCollapse()">
-            <img mat-card-avatar class="image mb-3" src="../../../../../../assets/img/doc23.png">
-            <span class="sidenav-link-text text-center h5" *ngIf="collapsed">Hospital Admin</span>
-            <mat-list-item class="name text-center">
-                <span *ngIf="collapsed"> hospital Name</span>
-            </mat-list-item>
+           <mat-list-item class="name">
+            <img mat-list-avatar class="image mb-3 mr-3" src="../../../../../../assets/img/doc23.png">
+            <span *ngIf="collapsed" class="h6 mt-2"> Admin Name</span>
+        </mat-list-item> 
+            <span class="h5 hospital-admin px-5" *ngIf="collapsed">Hospital Admin</span>
+           
         </mat-nav-list>
 
 

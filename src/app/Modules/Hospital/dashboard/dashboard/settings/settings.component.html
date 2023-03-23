@@ -1,19 +1,144 @@
-<p>settings works!</p>
+<div class="col-12 col-lg-10 col-xl-10">
+  <div>
+    <h2 class="my-text3 pt-4 mx-4 h-1">Manage Account Settings</h2>
+  </div>
 
-<!-- <mat-drawer-container class="example-container" autosize>
-    <mat-drawer #drawer class="example-sidenav" mode="side">
-      <p>Auto-resizing sidenav</p>
-      <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
-      <button (click)="showFiller = !showFiller" mat-raised-button>
-        Toggle extra text
-      </button>
-    </mat-drawer>
-  
-    <div class="example-sidenav-content">
-      <button type="button" mat-button (click)="drawer.toggle()">
-        Toggle sidenav
-      </button>
-    </div>
-  
-  </mat-drawer-container> -->
-  
+  <div class="container-fluid mx-5" style="background-color:#f1f1e6;">
+    <mat-tab-group class="p-5" mat-align-tabs="center" animationDuration="20ms">
+      <mat-tab label="Password "> Password
+        <ng-template matTabContent>
+          <div class="py-3 topic">Change your password</div>
+          <form class="">
+            <mat-form-field class="">
+              <mat-label>Hospital</mat-label>
+              <input matInput disabled value="Hospital name">
+            </mat-form-field>
+
+            <div class=" justify-content-center"></div>
+            <table class="" cellspacing="0">
+              <tr>
+                <mat-form-field class="px-3" appearance="outline">
+                  <mat-label>Last Remember password</mat-label>
+                  <input matInput>
+                </mat-form-field>
+              </tr>
+              <tr class="">
+                <td><mat-form-field class="px-3" appearance="outline">
+                    <mat-label>New Password </mat-label>
+                    <input matInput>
+                  </mat-form-field></td>
+                <td><mat-form-field class="px-3" appearance="outline">
+                    <mat-label>Confirm Password</mat-label>
+                    <input matInput>
+                  </mat-form-field></td>
+              </tr>
+            </table>
+          </form>
+          <div class="col-12 col-lg-8 col-xl-8 my-sm-3 mb-3 mt-8 mx-4">
+            <mat-card>
+              <mat-card-header>
+                <mat-card-content>Update all the latest changes made by you, by just clicking on Save & Update
+                  button</mat-card-content>
+              </mat-card-header>
+              <mat-card-actions align="end">
+                <button mat-stroked-button class="save-button">Save & Update Service</button>
+
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </ng-template>
+      </mat-tab>
+
+
+      <mat-tab label="Email Notification"> Email Notification
+        <ng-template matTabContent>
+          <div class="py-3 topic">Change your Email</div>
+          <form action="" class="">
+            <table class="" cellspacing="0">
+              <h4>All the emails will be sent to the below email address</h4>
+              <tr>
+                <mat-form-field class="px-3 email" appearance="outline">
+                  <mat-label>Enter New Email</mat-label>
+                  <input matInput>
+                </mat-form-field>
+              </tr>
+            </table>
+          </form>
+          <div class="col-12 col-lg-8 col-xl-8 my-sm-3 mb-3 mt-8 mx-4">
+            <mat-card>
+              <mat-card-header>
+                <mat-card-content>Update all the latest changes made by you, by just clicking on Save & Update
+                  button</mat-card-content>
+              </mat-card-header>
+              <mat-card-actions align="end">
+                <button mat-stroked-button class="save-button">Save & Update Service</button>
+
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </ng-template>
+      </mat-tab>
+
+
+      <mat-tab label="Delete Account"> Delete Account
+        <ng-template matTabContent>
+          <div class="py-3 topic">Delete your Account</div>
+          <form class="delete-form">
+
+            <mat-form-field class="full-width">
+              <mat-label>Hospital</mat-label>
+              <input matInput disabled value="Hospital name">
+            </mat-form-field>
+
+            <table class="full-width" cellspacing="0">
+              <tr class="">
+                <td class="password">
+                  <mat-form-field class="px-3 full-width" appearance="outline">
+                    <mat-label>New Password </mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field class="px-3 full-width" appearance="outline">
+                    <mat-label>Retype Password</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+                </td>
+              </tr>   
+            </table>
+            <p>
+              <mat-form-field class="px-3 full-width field-full" appearance="outline">
+                <mat-label>Select reasons to Leave</mat-label>
+                <mat-select>
+                  <mat-option value="one">Not satisfied with the system</mat-option>
+                  <mat-option value="two">Support is not good</mat-option>
+                  <mat-option value="three">Others</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field class="px-3 full-width field-full" appearance="outline">
+                <mat-label>Description</mat-label>
+                <textarea matInput></textarea>
+              </mat-form-field>
+            </p>
+          </form>
+          <div class="col-12 col-lg-8 col-xl-8 my-sm-3 mb-3 mt-8 mx-4">
+            <mat-card>
+              <mat-card-header>
+                <mat-card-content>Update all the latest changes made by you, by just clicking on Save & Update
+                  button</mat-card-content>
+              </mat-card-header>
+              <mat-card-actions align="end">
+                <button mat-stroked-button class="save-button">Save & Update Service</button>
+      
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </ng-template>
+      </mat-tab>
+    </mat-tab-group>
+   
+  </div>
+
+</div>
