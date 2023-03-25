@@ -27,6 +27,25 @@ export class AboutusComponent implements OnInit {
     description:'Amet consectetur adipisicing eliteiuim sete eiuode tempor  incididunt.',
   } 
 ];
+
+team_members = [
+  {
+  image:'../../../assets/img/team3.jpeg',
+  profession:'Founder, C.E.O',
+  name:'Maryland Nicolosi'
+  },
+  {
+  image:'../../../assets/img/team1.jpg',
+  profession:'Web designer',
+  name:'Thomsan V Lan'
+  },
+  {
+  image:'../../../assets/img/team2.jpeg',
+  profession:'Marketing Manager',
+  name:'Orella Berners'
+  },
+
+];
   constructor() { }
 
   ngOnInit(): void {

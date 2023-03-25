@@ -60,36 +60,31 @@
                 <div class="card-body text-center py-4"> -->
 
         <div class="row my-5 align-items-center justify-content-center dc-ourteamholder mb-5">
-            <div class="col-12 col-sm-12 col-md-6 col-lg-3 float-left mb-3" *ngFor="let edowzservice of edowzservices">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 float-left mb-3" *ngFor="let team_member of team_members">
                 <div class="card border-1 teamcards">
                     <div class="dc-ourteam text-center">
                         <div class="hover-overlay hover-zoom hover-shadow ripple">
-                            <img src="../../../assets/img/doc23.png" class="img-fluid team-img mb-3" alt="">
+                            <img src="{{team_member.image}}" class="img-fluid team-img mb-3" alt="">
                             <a href="#">
                                 <div class="mask" style="background-color: hsla(195, 83%, 58%, 0.2)"></div>
                             </a>
                         </div>
                         <div class="ourteamcontent">
                             <div class="team-title">
-                                <a href="#">Founder, C.E.O</a>
-                                <h3><a href="#" style="color: rgb(33, 33, 33); " class="name">Maryland Nicolosi</a></h3>
+                                <a href="#">{{team_member.profession}}</a>
+                                <h3><a href="#" style="color: rgb(33, 33, 33); " class="name">{{team_member.name}}</a></h3>
                             </div>
 
                             <ul class="simplesocialicons list-inline">
-                                <li class="dc-facebook list-inline-item socialitem"><a href="#"><i
-                                            class="fab fa-facebook-f"></i></a></li>
+                                <li class="dc-facebook list-inline-item m"><a href="#"><i class="fab fa-facebook-f socialitem"></i></a></li>
 
-                                <li class="dc-twitter list-inline-item socialitem"><a href="#"><i class="fab fa-twitter"></i></a>
-                                </li>
+                                <li class="dc-twitter list-inline-item  "><a href="#"><i class="fab fa-twitter socialitem"></i></a> </li>
 
-                                <li class="dc-linkedin list-inline-item socialitem"><a href="#"><i
-                                            class="fab fa-linkedin-in"></i></a></li>
+                                <li class="dc-linkedin list-inline-item "><a href="#"><i class="fab fa-linkedin-in socialitem"></i></a></li>
 
-                                <li class="dc-youtube list-inline-item socialitem"><a href="#"><i class="fab fa-youtube"></i></a>
-                                </li>
+                                <li class="dc-youtube list-inline-item "><a href="#"><i class="fab fa-youtube socialitem"></i></a> </li>
 
-                                <li class="dc-instagram list-inline-item socialitem"><a href="#"><i
-                                            class="fab fa-instagram"></i></a>
+                                <li class="dc-instagram list-inline-item"><a href="#"><i class="fab fa-instagram socialitem"></i></a>
                                 </li>
                             </ul>
                         </div>
