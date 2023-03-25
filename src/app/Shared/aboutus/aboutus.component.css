@@ -1,0 +1,49 @@
+.sectiontitle,h2{
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 32px;
+}
+.sectiontitle ,span{
+    font-size: 100px;
+    font-weight: 100;
+}
+.dc-spc{
+    color: #FE8E3C;
+    font-style: normal;
+}
+.dc-description{
+    font-size: 16px;
+    color: #383839;
+}
+.abt-img{
+    width: 100px;
+}
+.title , h3{
+    font-size: 25px;
+    font-weight: 550;
+
+}
+.title , span{
+    font-size: 16px;
+}
+.name{
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+.team-img{
+    height: 250px;
+    width: auto;
+
+}
+.dc-simplesocialicons{
+    list-style: none;
+    
+}
+.team-title , a{
+    text-decoration: none;
+}
+.team-title , h3{
+    color: black;
+
+}

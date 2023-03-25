@@ -98,6 +98,7 @@ import { DashboardComponent } from './Modules/Hospital/dashboard/dashboard/dashb
 import { HospitalSignupNextComponent } from './Modules/Hospital/hospital-signup-next/hospital-signup-next.component';
 import { AmbulanceSignupNextComponent } from './Modules/Ambulance/ambulance-signup-next/ambulance-signup-next.component';
 import { PharmacySignupNextComponent } from './Modules/Pharmacy/pharmacy-signup-next/pharmacy-signup-next.component';
+import { AboutusComponent } from './Shared/aboutus/aboutus.component';
 
 
 
@@ -152,7 +153,8 @@ import { PharmacySignupNextComponent } from './Modules/Pharmacy/pharmacy-signup-
     DashboardComponent,
     HospitalSignupNextComponent,
     AmbulanceSignupNextComponent,
-    PharmacySignupNextComponent
+    PharmacySignupNextComponent,
+    AboutusComponent
   
 
 
