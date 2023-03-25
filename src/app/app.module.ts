@@ -99,6 +99,7 @@ import { HospitalSignupNextComponent } from './Modules/Hospital/hospital-signup-
 import { AmbulanceSignupNextComponent } from './Modules/Ambulance/ambulance-signup-next/ambulance-signup-next.component';
 import { PharmacySignupNextComponent } from './Modules/Pharmacy/pharmacy-signup-next/pharmacy-signup-next.component';
 import { AboutusComponent } from './Shared/aboutus/aboutus.component';
+import { ContactusComponent } from './Shared/contactus/contactus.component';
 
 
 
@@ -154,7 +155,8 @@ import { AboutusComponent } from './Shared/aboutus/aboutus.component';
     HospitalSignupNextComponent,
     AmbulanceSignupNextComponent,
     PharmacySignupNextComponent,
-    AboutusComponent
+    AboutusComponent,
+    ContactusComponent
   
 
 

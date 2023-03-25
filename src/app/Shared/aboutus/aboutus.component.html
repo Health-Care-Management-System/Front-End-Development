@@ -1,107 +1,103 @@
 <app-main-nav></app-main-nav>
 <div class="container-fluid">
-<section id="aboutservice">
-    <div class="col-lg-10 offset-lg-1 mt-3">
-        <div class="dc-sectionhead dc-text-center center-heading text-center">
-            <div class="sectiontitle">
-                <h2>
-                    <span>Make A Smart Choice</span> <br>
-                    Take A Right Step <em class="dc-spc">For Your Life</em>
-                </h2>
-            </div>
-            <div class="col-lg-12 text-center d-block dc-description">
-                <p>Lorem ipsum dolor amet consectetur adipisicing eliteiuim sete eiusmod
-                    tempor incididunt ut labore <br> etnalom dolore magna aliqua udiminimate
-                    veniam quis norud.</p>
+    <section id="aboutservice">
+        <div class="col-lg-10 offset-lg-1 mt-3">
+            <div class="dc-sectionhead dc-text-center center-heading text-center">
+                <div class="sectiontitle">
+                    <h2>
+                        <span>Make A Smart Choice</span> <br>
+                        Take A Right Step <em class="dc-spc">For Your Life</em>
+                    </h2>
+                </div>
+                <div class="col-lg-12 text-center d-block dc-description">
+                    <p>Lorem ipsum dolor amet consectetur adipisicing eliteiuim sete eiusmod
+                        tempor incididunt ut labore <br> etnalom dolore magna aliqua udiminimate
+                        veniam quis norud.</p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="row my-3 align-items-center justify-content-center">
-        <div class="col-8 col-lg-3 col-xl-3 mx-4 my-sm-3 mb-3"  *ngFor="let edowzservice of edowzservices">
-            <div class="card border-1">
-                <div class="card-body text-center py-4">
-                    <div class="text-center mx-2">
-                        <img src="{{edowzservice.image}}" alt="" class="img-fluid abt-img">
-                        <div class="title">
-                            <h3><span>{{edowzservice.titlespan}}</span><br>{{edowzservice.title}}</h3>
-                          </div>
-                          <div class="dc-description">
-                            <p>{{edowzservice.description}} </p>
-                          </div>
+        <div class="row my-3 align-items-center justify-content-center">
+            <div class="col-8 col-lg-3 col-xl-3 mx-4 my-sm-3 mb-3" *ngFor="let edowzservice of edowzservices">
+                <div class="card border-1">
+                    <div class="card-body text-center py-4">
+                        <div class="text-center mx-2">
+                            <img src="{{edowzservice.image}}" alt="" class="img-fluid abt-img">
+                            <div class="title">
+                                <h3><span>{{edowzservice.titlespan}}</span><br>{{edowzservice.title}}</h3>
+                            </div>
+                            <div class="dc-description">
+                                <p>{{edowzservice.description}} </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
-<section id="aboutservice">
-    <div class="col-lg-10 offset-lg-1 mt-3">
-        <div class="dc-sectionhead dc-text-center center-heading text-center">
-            <div class="sectiontitle">
-                <h2>
-                    <span>Talent Behind Curtain </span> <br>
-                    Meet <em class="dc-spc">Our Team</em>
-                </h2>
-            </div>
-            <div class="col-lg-12 text-center d-block dc-description">
-                <p>Lorem ipsum dolor amet consectetur adipisicing eliteiuim sete eiusmod
-                    tempor incididunt ut labore <br> etnalom dolore magna aliqua udiminimate
-                    veniam quis norud.</p>
+    <section id="aboutservice">
+        <div class="col-lg-10 offset-lg-1 mt-3">
+            <div class="dc-sectionhead dc-text-center center-heading text-center">
+                <div class="sectiontitle">
+                    <h2>
+                        <span>Talent Behind Curtain </span> <br>
+                        Meet <em class="dc-spc">Our Team</em>
+                    </h2>
+                </div>
+                <div class="col-lg-12 text-center d-block dc-description">
+                    <p>Lorem ipsum dolor amet consectetur adipisicing eliteiuim sete eiusmod
+                        tempor incididunt ut labore <br> etnalom dolore magna aliqua udiminimate
+                        veniam quis norud.</p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- <div class="row my-3 align-items-center justify-content-center">
+        <!-- <div class="row my-3 align-items-center justify-content-center">
         <div class="col-8 col-lg-4 col-xl-4 mx-4 my-sm-3 mb-3"  *ngFor="let edowzservice of edowzservices">
             <div class="card border-1">
                 <div class="card-body text-center py-4"> -->
-                    
-                    <div class="row my-5 align-items-center justify-content-center dc-ourteamholder mb-5">
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 float-left mb-3"  *ngFor="let edowzservice of edowzservices">
-                        <div class="card border-1 teamcards">
-                        <div class="dc-ourteam text-center">
-                            <div class="hover-overlay hover-zoom hover-shadow ripple">
-                                <img  
-                                src="../../../assets/img/doc23.png" class="img-fluid team-img mb-3"
-                                alt="">
-                                <a href="#">
-                                    <div class="mask" style="background-color: hsla(195, 83%, 58%, 0.2)"></div>
-                                </a>
-                            </div>
-                            <div class="ourteamcontent">
-                              <div class="team-title">
+
+        <div class="row my-5 align-items-center justify-content-center dc-ourteamholder mb-5">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-3 float-left mb-3" *ngFor="let edowzservice of edowzservices">
+                <div class="card border-1 teamcards">
+                    <div class="dc-ourteam text-center">
+                        <div class="hover-overlay hover-zoom hover-shadow ripple">
+                            <img src="../../../assets/img/doc23.png" class="img-fluid team-img mb-3" alt="">
+                            <a href="#">
+                                <div class="mask" style="background-color: hsla(195, 83%, 58%, 0.2)"></div>
+                            </a>
+                        </div>
+                        <div class="ourteamcontent">
+                            <div class="team-title">
                                 <a href="#">Founder, C.E.O</a>
-                                <h3 ><a href="#" style="color: rgb(33, 33, 33); " class="name">Maryland Nicolosi</a></h3>
-                              </div>
-
-                              <ul class="simplesocialicons list-inline">
-                                <li class="dc-facebook list-inline-item"><a href="#"><i
-                                      class="fab fa-facebook-f"></i></a></li>
-
-                                <li class="dc-twitter list-inline-item"><a href="#"><i
-                                      class="fab fa-twitter"></i></a></li>
-
-                                <li class="dc-linkedin list-inline-item"><a href="#"><i
-                                      class="fab fa-linkedin-in"></i></a></li>
-
-                                <li class="dc-youtube list-inline-item"><a href="#"><i
-                                      class="fab fa-youtube"></i></a></li>
-
-                                <li class="dc-instagram list-inline-item"><a href="#"><i
-                                      class="fab fa-instagram"></i></a></li>
-
-
-                              </ul>
-
+                                <h3><a href="#" style="color: rgb(33, 33, 33); " class="name">Maryland Nicolosi</a></h3>
                             </div>
-                          </div>
+
+                            <ul class="simplesocialicons list-inline">
+                                <li class="dc-facebook list-inline-item socialitem"><a href="#"><i
+                                            class="fab fa-facebook-f"></i></a></li>
+
+                                <li class="dc-twitter list-inline-item socialitem"><a href="#"><i class="fab fa-twitter"></i></a>
+                                </li>
+
+                                <li class="dc-linkedin list-inline-item socialitem"><a href="#"><i
+                                            class="fab fa-linkedin-in"></i></a></li>
+
+                                <li class="dc-youtube list-inline-item socialitem"><a href="#"><i class="fab fa-youtube"></i></a>
+                                </li>
+
+                                <li class="dc-instagram list-inline-item socialitem"><a href="#"><i
+                                            class="fab fa-instagram"></i></a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-              
-                    </div>
-</section>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
+<app-contactus></app-contactus>
 <app-footer></app-footer>
