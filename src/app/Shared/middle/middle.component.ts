@@ -15,6 +15,8 @@ export class MiddleComponent implements OnInit {
     this.activeSlides = data;
     console.log(this.activeSlides);
   }
+
+
   UserTesmonials = [
     {
       id: '1',
@@ -52,6 +54,38 @@ export class MiddleComponent implements OnInit {
     }
   ];
 
+  blogSections = [
+    {
+      id:'1',
+      blogImage:'../../../assets/img/blog-1.jpg',
+      blogTitle:'Teating for the people',
+      blogText:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas et vero mollitia nemo corporis consequatur aspernatur distinctio dignissimos velit nam.'
+    }
+     , 
+     {
+      id:'1',
+      blogImage:'../../../assets/img/blog-2.jpeg',
+      blogTitle:'Teating for the people',
+      blogText:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas et vero mollitia nemo corporis consequatur aspernatur distinctio dignissimos velit nam.'
+    },
+    {
+      id:'1',
+      blogImage:'../../../assets/img/blog-3.jpeg',
+      blogTitle:'Teating for the people',
+      blogText:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas et vero mollitia nemo corporis consequatur aspernatur distinctio dignissimos velit nam.'
+    },
+    {
+      id:'1',
+      blogImage:'../../../assets/img/blog-4.jpeg',
+      blogTitle:'Teating for the people',
+      blogText:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas et vero mollitia nemo corporis consequatur aspernatur distinctio dignissimos velit nam.'
+    },  {
+      id:'1',
+      blogImage:'../../../assets/img/blog-5.jpg',
+      blogTitle:'Teating for the people',
+      blogText:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas et vero mollitia nemo corporis consequatur aspernatur distinctio dignissimos velit nam.'
+    }
+  ];
 
   ngOnInit(): void  {
     Aos.init({disable: 'mobile'});
