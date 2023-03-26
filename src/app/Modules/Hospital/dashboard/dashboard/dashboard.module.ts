@@ -5,13 +5,17 @@ import { NotificationsComponent } from './notifications/notifications.component'
 import { SettingsComponent } from './settings/settings.component';
 import { ManageTeamComponent } from './manage-team/manage-team.component';
 import { MaterialModule } from '../../../../material/material.module';
+import { NewAppoinmentComponent } from './new-appoinment/new-appoinment.component';
+import { ManageServiceComponent } from './manage-service/manage-service.component';
 
 @NgModule({
   declarations: [
 
     NotificationsComponent,
     SettingsComponent,
-    ManageTeamComponent
+    ManageTeamComponent,
+    NewAppoinmentComponent,
+    ManageServiceComponent
   ],
   imports: [
     CommonModule,

@@ -40,6 +40,8 @@ import { PharmacySignupNextComponent } from './Modules/Pharmacy/pharmacy-signup-
 
 
 import { DashboardComponent } from './Modules/Hospital/dashboard/dashboard/dashboard/dashboard.component';
+import { AboutusComponent } from './Shared/aboutus/aboutus.component';
+import { ContactusComponent } from './Shared/contactus/contactus.component';
 
 
 
@@ -84,9 +86,9 @@ const routes: Routes = [
 {path:'amubulancesignupnext' , component:AmbulanceSignupNextComponent},
 {path:'pharmacysignupnext' , component:PharmacySignupNextComponent},
 
-{path: '', loadChildren:() =>import('./Modules/Hospital/dashboard/dashboard/dashboard.module'). then(m => m.DashboardModule)}
-
-
+{path: '', loadChildren:() =>import('./Modules/Hospital/dashboard/dashboard/dashboard.module'). then(m => m.DashboardModule)},
+{path:'aboutus' , component:AboutusComponent},
+{path:'contactus' , component:ContactusComponent}
 
 
 

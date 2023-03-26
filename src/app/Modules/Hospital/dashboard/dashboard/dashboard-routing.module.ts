@@ -1,7 +1,9 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ManageServiceComponent } from './manage-service/manage-service.component';
 import { ManageTeamComponent } from './manage-team/manage-team.component';
+import { NewAppoinmentComponent } from './new-appoinment/new-appoinment.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { SettingsComponent } from './settings/settings.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
@@ -14,6 +16,9 @@ const routes: Routes = [
                 path:'dashboardbody' , component:DashboardComponent
             },
             {
+                path:'new-appoinment' , component:NewAppoinmentComponent
+            },
+            {
                 path:'notifications' , component:NotificationsComponent
             },
             {
@@ -21,7 +26,11 @@ const routes: Routes = [
             },
             {
                 path:'manage-team' , component:ManageTeamComponent
+            },
+            {
+                path:'manage-service' , component:ManageServiceComponent
             }
+            
         ] 
     },
     {

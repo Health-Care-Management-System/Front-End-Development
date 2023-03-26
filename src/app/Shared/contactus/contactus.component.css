@@ -1,0 +1,21 @@
+.logo{
+    height: 51px;
+  }
+  .link{
+    text-decoration: none;
+    text-transform: capitalize;
+    color:white;
+    font-size: 1.0rem;
+    background-color: #065560;
+  }
+  .conditions{
+    text-decoration: none;
+    color:#00BE99 ;
+  }
+  .next-btn{
+    background-color: #065560;
+  }
+
+  .title{
+    text-transform: capitalize;
+  }

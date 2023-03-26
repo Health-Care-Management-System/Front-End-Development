@@ -1,23 +1,32 @@
 export const navbarData = [
     {
         routeLink:'/dashboardbody',
-        icon: 'fal fa-home',
-        label:'Dashboard',
-        avatar:''
+        icon: 'home',
+        label:'Dashboard'
+    },
+    {
+        routeLink:'/new-appoinment',
+        icon: 'event',
+        label:'New Appoinment'
     },
     {
         routeLink:'/notifications',
-        icon: 'fa fa-calendar-plus-o',
+        icon: 'mail',
         label:'Notifications'
     },
     {
-        routeLink:'/settings',
-        icon: 'fal fa-cog',
-        label:'Settings'
+        routeLink:'/manage-team',
+        icon: 'groups',
+        label:'Manage Team'
     },
     {
-        routeLink:'/manage-team',
-        icon: 'fal fa-person',
-        label:'Manage Team'
+        routeLink:'/manage-service',
+        icon: 'medical_services',
+        label:'Manage Servicers'
+    },
+    {
+        routeLink:'/settings',
+        icon: 'settings',
+        label:'Account Settings'
     }
 ]
