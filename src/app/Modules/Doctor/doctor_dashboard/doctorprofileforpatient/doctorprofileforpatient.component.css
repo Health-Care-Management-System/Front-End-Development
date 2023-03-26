@@ -45,18 +45,18 @@
     line-height: 50px;
     color: #383993;
     position: absolute;
-    width: 881px;
+    width: 300px;
     height: 50px;
-    left: 608px;
-    top: 110px;
+    left: 788px;
+    top: 100px;
 }
 
 .speci {
     position: absolute;
-    width: 881px;
+    width: 300px;
     height: 28px;
-    left: 608px;
-    top: 160px;
+    left: 768px;
+    top: 150px;
     font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: 600;
@@ -94,7 +94,7 @@
 
 .location {
     position: absolute;
-    width: 881px;
+    width: 300px;
     height: 30px;
     left: 642px;
     top: 212px;
@@ -108,7 +108,7 @@
 
 .add {
     position: absolute;
-    width: 493px;
+    width: 293px;
     height: 20px;
     left: 620px;
     top: 246px;
@@ -140,7 +140,7 @@
 
 .Specialities {
     position: absolute;
-    width: 881px;
+    width: 300px;
     height: 30px;
     left: 640px;
     top: 294px;
@@ -168,9 +168,9 @@
 
 .WorkPlaces {
     position: absolute;
-    width: 881px;
+    width: 300px;
     height: 30px;
-    left: 620px;
+    left: 640px;
     top: 406px;
     font-family: 'Source Sans Pro';
     font-style: normal;
@@ -255,9 +255,9 @@
 
 .Qualification {
     position: absolute;
-    width: 881px;
+    width: 300px;
     height: 30px;
-    left: 620px;
+    left: 640px;
     top: 534px;
     font-family: 'Source Sans Pro';
     font-style: normal;
@@ -269,7 +269,7 @@
 
 .slmc {
     position: absolute;
-    width: 493px;
+    width: 293px;
     height: 40px;
     left: 621px;
     top: 572px;
@@ -283,9 +283,9 @@
 
 .Experiance {
     position: absolute;
-    width: 881px;
+    width: 300px;
     height: 30px;
-    left: 620px;
+    left: 640px;
     top: 620px;
     font-family: 'Source Sans Pro';
     font-style: normal;
@@ -297,7 +297,7 @@
 
 .ex {
     position: absolute;
-    width: 493px;
+    width: 193px;
     height: 20px;
     left: 621px;
     top: 658px;
@@ -360,7 +360,7 @@
 
 .number {
     position: absolute;
-    width: 881px;
+    width: 300px;
     height: 28px;
     left: 692px;
     top: 751px;
@@ -375,7 +375,7 @@
 
 .nu {
     position: absolute;
-    width: 493px;
+    width: 193px;
     height: 20px;
     left: 713px;
     top: 791px;
@@ -407,7 +407,7 @@
 
 .email {
     position: absolute;
-    width: 881px;
+    width: 100px;
     height: 28px;
     left: 975px;
     top: 751px;
@@ -422,7 +422,7 @@
 
 .emad {
     position: absolute;
-    width: 493px;
+    width: 103px;
     height: 20px;
     left: 929px;
     top: 791px;
@@ -599,7 +599,8 @@
 
 .container {
     position: absolute;
-    top: -30px;
+    top: 10px;
+    left: 120px;
 }
 
 .imgradius {
@@ -627,4 +628,139 @@ mat-drawer-container {
     height: 26px;
     left: 611px;
     top: 299px;
+}
+
+.vl {
+    border-left: 6px solid #00be99;
+    height: 800px;
+    position: absolute;
+    left: 535px;
+    margin-left: -3px;
+    top: 130px;
+}
+
+.loc3 {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left: 611px;
+    top: 410px;
+}
+
+.loc4 {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left: 611px;
+    top: 540px;
+}
+
+.loc5 {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left: 611px;
+    top: 625px;
+}
+
+.loc6 {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left: 661px;
+    top: 755px;
+}
+
+.loc7 {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left: 950px;
+    top: 750px;
+}
+
+.hrq1 {
+    width: 650px;
+    color: #00be99;
+    position: absolute;
+    top: 180px;
+    left: 600px;
+    border-top-width: 2px;
+}
+
+.hrq2 {
+    width: 650px;
+    height: 125px;
+    color: #00be99;
+    position: absolute;
+    top: 260px;
+    left: 600px;
+    line-height: 30px;
+    border-top-width: 2px;
+}
+
+.hrq3 {
+    width: 650px;
+    height: 125px;
+    color: #00be99;
+    position: absolute;
+    top: 350px;
+    left: 600px;
+    line-height: 30px;
+    border-top-width: 2px;
+}
+
+.hrq4 {
+    width: 650px;
+    height: 125px;
+    color: #00be99;
+    position: absolute;
+    top: 490px;
+    left: 600px;
+    line-height: 30px;
+    border-top-width: 2px;
+}
+
+.hrq5 {
+    width: 650px;
+    height: 125px;
+    color: #00be99;
+    position: absolute;
+    top: 580px;
+    left: 600px;
+    line-height: 30px;
+    border-top-width: 2px;
+}
+
+.hrq6 {
+    width: 650px;
+    height: 125px;
+    color: #00be99;
+    position: absolute;
+    top: 670px;
+    left: 600px;
+    line-height: 30px;
+    border-top-width: 2px;
+}
+
+.hrq7 {
+    width: 650px;
+    height: 125px;
+    color: #00be99;
+    position: absolute;
+    top: 550px;
+    left: 600px;
+    line-height: 30px;
+    border-top-width: 2px;
+}
+
+.hrq8 {
+    width: 650px;
+    height: 125px;
+    color: #00be99;
+    position: absolute;
+    top: 150px;
+    left: 600px;
+    line-height: 30px;
+    border-top-width: 2px;
 }

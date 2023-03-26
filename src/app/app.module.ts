@@ -4,6 +4,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 
+import * as moment from 'moment';
+
+
+
+
+
+
+
+
+
+
 // import flexLayout
 import {FlexLayoutModule} from '@angular/flex-layout';
 
@@ -94,7 +105,8 @@ import { DoctorprofileforpatientComponent } from './Modules/Doctor/doctor_dashbo
 import { MyappoinmentsComponent } from './Modules/Patient/myappoinments/myappoinments.component';
 import { PatientpwchangeComponent } from './Modules/Patient/patientpwchange/patientpwchange.component';
 import { MedicineorderdetailsComponent } from './Modules/Patient/medicineorderdetails/medicineorderdetails.component';
-
+import { MakeAnApppoinmentComponent } from './Modules/Patient/make-an-apppoinment/make-an-apppoinment.component';
+import { A11yModule } from '@angular/cdk/a11y';
 
 @NgModule({
   declarations: [
@@ -127,6 +139,7 @@ import { MedicineorderdetailsComponent } from './Modules/Patient/medicineorderde
     WhoAreYouComponent,
     TeastComponent,
     ShowrequestComponent,
+    
 
     HospitalLefttoolbarComponent,
     HospitalProfileComponent,
@@ -146,6 +159,7 @@ import { MedicineorderdetailsComponent } from './Modules/Patient/medicineorderde
     MyappoinmentsComponent,
     PatientpwchangeComponent,
     MedicineorderdetailsComponent,
+    MakeAnApppoinmentComponent,
     
 
 
@@ -174,6 +188,9 @@ import { MedicineorderdetailsComponent } from './Modules/Patient/medicineorderde
     MdbTabsModule,
     MdbTooltipModule,
     MdbValidationModule,
+    A11yModule,
+    
+    
 
     NoopAnimationsModule,
     //doctorcharuka

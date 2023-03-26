@@ -87,15 +87,15 @@
 
                     <div class="text2 ">{{ card.text2 }}</div>
                     <div class="text3 ">{{ card.text3 }}</div>
-
+                    <!-- 
                     <div class="star ">
                         <mat-icon class="star1 ">star</mat-icon>
                         <mat-icon class="star2 ">star</mat-icon>
                         <mat-icon class="star3 ">star</mat-icon>
                         <mat-icon class="star4 ">star</mat-icon>
                         <mat-icon class="star5 ">star</mat-icon>
-                    </div>
-                </mat-card>
+                    </div> -->
+                    <button mat-button class="viewprofile" routerLink="/doctorprofileforpatient">View Profile</button> </mat-card>
             </div>
             <button mat-button class="showmore2" *ngIf="showMore" (click)="showMore = false">Show less</button>
         </div>

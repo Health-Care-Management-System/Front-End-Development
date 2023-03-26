@@ -34,6 +34,7 @@ import { DoctorprofileforpatientComponent } from './Modules/Doctor/doctor_dashbo
 import { MedicineorderdetailsComponent } from './Modules/Patient/medicineorderdetails/medicineorderdetails.component';
 import { PatientpwchangeComponent } from './Modules/Patient/patientpwchange/patientpwchange.component';
 import { MyappoinmentsComponent } from './Modules/Patient/myappoinments/myappoinments.component';
+import { MakeAnApppoinmentComponent } from './Modules/Patient/make-an-apppoinment/make-an-apppoinment.component';
 
 
 
@@ -76,7 +77,8 @@ const routes: Routes = [
 {path:'doctorprofileforpatient',component:DoctorprofileforpatientComponent},
 {path:'medicineorderdetails',component:MedicineorderdetailsComponent},
 {path:'patientpw',component:PatientpwchangeComponent},
-{path:'myappoinments',component:MyappoinmentsComponent}
+{path:'myappoinments',component:MyappoinmentsComponent},
+{path:'makeanappoinment',component:MakeAnApppoinmentComponent}
 
 
 
