@@ -16,6 +16,8 @@ export class LoginComponent implements OnInit {
   constructor(private fb : FormBuilder) { }
   
   reactiveform !: FormGroup;
+  passwordPtn ='^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,16}$'
+  
   registerArray:any={};
 
   ngOnInit(): void {
