@@ -4,6 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+// import { IDropdownSettings } from 'ng-multiselect-dropdown';
 
 
 // import flexLayout
@@ -101,17 +103,39 @@ import { PharmacySignupNextComponent } from './Modules/Pharmacy/pharmacy-signup-
 import { AboutusComponent } from './Shared/aboutus/aboutus.component';
 import { ContactusComponent } from './Shared/contactus/contactus.component';
 
+import { SearchdoctorcontentComponent } from './Modules/Doctor/doctor_dashboard/searchdoctor/searchdoctorcontent/searchdoctorcontent/searchdoctorcontent.component';
+import { FilterComponent } from './Modules/Doctor/doctor_dashboard/searchdoctor/searchdoctorleftfilter/filter/filter.component';
+import { DoctorsearchFiComponent } from './Modules/searchitems/doctorsearch-fi/doctorsearch-fi.component';
+import { PharmacysearchComponent } from './Modules/searchitems/pharmacysearch/pharmacysearch.component';
+import { HospitalsearchFiComponent } from './Modules/searchitems/hospitalsearch-fi/hospitalsearch-fi.component';
+import { DoctorprofileforpatientComponent } from './Modules/Doctor/doctor_dashboard/doctorprofileforpatient/doctorprofileforpatient.component';
+import { MyappoinmentsComponent } from './Modules/Patient/myappoinments/myappoinments.component';
+import { PatientpwchangeComponent } from './Modules/Patient/patientpwchange/patientpwchange.component';
+import { MedicineorderdetailsComponent } from './Modules/Patient/medicineorderdetails/medicineorderdetails.component';
+import { MakeAnApppoinmentComponent } from './Modules/Patient/make-an-apppoinment/make-an-apppoinment.component';
+// import { A11yModule } from '@angular/cdk/a11y';
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    PatientpwchangeComponent,
+    MedicineorderdetailsComponent,
+    // A11yModule,
+    PharmacysearchComponent,
+    MakeAnApppoinmentComponent,
+    HospitalsearchFiComponent,
+    MyappoinmentsComponent,
+    DoctorsearchFiComponent,
     MainNavComponent,
+    DoctorprofileforpatientComponent,
     DoctorComponent,
     DoctorSignupComponent,
     DoctorSignupNextComponent,
     LoginComponent,
+    FilterComponent,
 
     HomeComponent,
     FooterComponent,
@@ -156,18 +180,21 @@ import { ContactusComponent } from './Shared/contactus/contactus.component';
     AmbulanceSignupNextComponent,
     PharmacySignupNextComponent,
     AboutusComponent,
-    ContactusComponent
+    ContactusComponent,
+    SearchdoctorcontentComponent
   
 
 
   ],
   imports: [
     BrowserModule,
+   
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     CarouselModule,
     FlexLayoutModule,
+    MatInputModule,
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
@@ -187,6 +214,7 @@ import { ContactusComponent } from './Shared/contactus/contactus.component';
     MdbTabsModule,
     MdbTooltipModule,
     MdbValidationModule,
+   
 
     NoopAnimationsModule,
     //doctorcharuka
@@ -208,8 +236,9 @@ import { ContactusComponent } from './Shared/contactus/contactus.component';
     MatFormFieldModule,
     MatNativeDateModule,
     MatSliderModule,
-
-    NoopAnimationsModule
+    NgMultiSelectDropDownModule,
+    NoopAnimationsModule,
+    
 
   ],
   providers: [],

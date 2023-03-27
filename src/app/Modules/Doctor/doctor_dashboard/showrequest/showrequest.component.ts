@@ -26,6 +26,51 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class ShowrequestComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
+
+
+  data = [
+    {
+      name: 'John Doe',
+      email: 'john.doe@gmail.com',
+      date: '2023-2-11',
+      time: '08.30 p.m',
+      status: 'Active'
+    },
+    {
+      name: 'Alex Ray',
+      email: 'alex.ray@gmail.com',
+      date: '2023-2-11',
+      time: '08.30 p.m',
+      status: 'Onboarding'
+    },
+    {
+      name: 'Kate Hunington',
+      email: 'kate.hunington@gmail.com',
+      date: '2023-2-11',
+      time: '08.30 p.m',
+      status: 'Awaiting'
+    },{
+      name: 'John Doe',
+      email: 'john.doe@gmail.com',
+      date: '2023-2-11',
+      time: '08.30 p.m',
+      status: 'Active'
+    },
+    {
+      name: 'Alex Ray',
+      email: 'alex.ray@gmail.com',
+      date: '2023-2-11',
+      time: '08.30 p.m',
+      status: 'Onboarding'
+    },
+    {
+      name: 'Kate Hunington',
+      email: 'kate.hunington@gmail.com',
+      date: '2023-2-11',
+      time: '08.30 p.m',
+      status: 'Awaiting'
+    }
+  ];
   constructor() { }
 
   title = 'edowzori';
