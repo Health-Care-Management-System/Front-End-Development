@@ -221,3 +221,9 @@ mat-drawer-container {
     z-index: 2;
     opacity: 70%;
 }
+
+.img1 {
+    height: 160%;
+    width: 100%;
+    opacity: 70%;
+}
