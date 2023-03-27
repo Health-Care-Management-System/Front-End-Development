@@ -7,94 +7,445 @@
     <mat-drawer-content> -->
 <app-main-nav></app-main-nav>
 <div class="all">
-    <div class="search1">
-        Search for Hospital </div>
-    <div class="search2">Discover the best clinic, hospitals, nearest cities that suits your calender </div>
-    <form>
-        <mat-form-field class="full" appearance="outline">
+    <div class="container-flud">
+        <div class="searchfordoctors">
+            <span class="search1">
+                Search&#160;</span>
+            <span class="fordoctors">
+                for doctors </span>
+        </div>
+        <span class="search2">Search
+            <span style="color: orangered;">5500+</span> Dotors from any speciality in island wide
 
-            <mat-label class="lable1">Search Hospitals</mat-label>
-            <input type="text" class="placeholder" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
-            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-                    {{option}}
-                </mat-option>
-            </mat-autocomplete>
-            <mat-icon class="icon" matSuffix>search</mat-icon>
-        </mat-form-field>
-    </form>
+        </span>
+    </div>
+    <div class="sec11">
+        <div>
+            <form>
+                <mat-form-field class="full" appearance="outline">
 
-
-
-
-
-    <!-- <form class="example-form">
-    <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Number</mat-label>
-        <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
-        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-                {{option}}
-            </mat-option>
-        </mat-autocomplete>
-    </mat-form-field>
-</form> -->
-    <form>
-        <mat-form-field class="full3" appearance="outline">
-
-            <mat-label class="lable3">Search District </mat-label>
-            <input type="text" class="placeholder3" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
-            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-                    {{option}}
-                </mat-option>
-            </mat-autocomplete>
-            <mat-icon class="icon3" matSuffix>search</mat-icon>
-
-        </mat-form-field>
-    </form>
+                    <mat-label class="lable1">Search Name</mat-label>
+                    <input type="text" class="placeholder" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+                    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                            {{option}}
+                        </mat-option>
+                    </mat-autocomplete>
+                    <mat-icon class="icon" matSuffix>search</mat-icon>
+                </mat-form-field>
+            </form>
+        </div>
 
 
 
 
-    <form>
-        <mat-form-field class="full2" appearance="outline">
 
-            <mat-label class="lable2">Search City</mat-label>
-            <input type="text" class="placeholder2" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
-            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-                    {{option}}
-                </mat-option>
-            </mat-autocomplete>
+        <!-- <form class="example-form">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Number</mat-label>
+                <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+                <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                        {{option}}
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+        </form> -->
+        <div>
+            <div>
+                <form>
+                    <mat-form-field class="full3" appearance="outline">
 
-            <mat-icon class="icon2" matSuffix>search</mat-icon>
+                        <mat-label class="lable3">Search District </mat-label>
+                        <input type="text" class="placeholder3" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+                        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                                {{option}}
+                            </mat-option>
+                        </mat-autocomplete>
+                        <mat-icon class="icon3" matSuffix>search</mat-icon>
+
+                    </mat-form-field>
+                </form>
+            </div>
 
 
 
-        </mat-form-field>
-    </form>
-    <button class="button" mat-raised-button color="primary">show hospital</button>
-    <button class="asiri1" mat-raised-button>
-    <div class="text1"><img src="assets\img\asiri_hospital.png"><br>{{text1}}</div><div class="text2">{{text2}}</div></button>
-    <button class="asiri2" mat-raised-button>
-        <div class="text1"><img src="assets\img\asiri_hospital.png"><br>{{text1}}</div><div class="text2">{{text2}}</div></button>
-    <button class="asiri3" mat-raised-button>
-            <div class="text1"><img src="assets\img\asiri_hospital.png"><br>{{text1}}</div><div class="text2">{{text2}}</div></button>
-    <button class="asiri4" mat-raised-button>
-                <div class="text1"><img src="assets\img\asiri_hospital.png"><br>{{text1}}</div><div class="text2">{{text2}}</div></button>
-    <button class="asiri5" mat-raised-button>
-                    <div class="text1"><img src="assets\img\asiri_hospital.png"><br>{{text1}}</div><div class="text2">{{text2}}</div></button>
-    <button class="asiri6" mat-raised-button>
-                        <div class="text1"><img src="assets\img\asiri_hospital.png"><br>{{text1}}</div><div class="text2">{{text2}}</div></button>
-    <button class="asiri4" mat-raised-button>
-<div class="text1"><img src="assets\img\asiri_hospital.png"><br>{{text1}}</div>
-<div class="text2">{{text2}}</div>
-</button>
-    <button class="asiri5" mat-raised-button>
-                    <div class="text1"><img src="assets\img\asiri_hospital.png"><br>{{text1}}</div><div class="text2">{{text2}}</div></button>
-    <button class="asiri6" mat-raised-button>
-                        <div class="text1"><img src="assets\img\asiri_hospital.png"><br>{{text1}}</div><div class="text2">{{text2}}</div></button>
-</div>
-<!-- </mat-drawer-content>
-</mat-drawer-container> -->
+            <div>
+
+                <form>
+                    <mat-form-field class="full2" appearance="outline">
+
+                        <mat-label class="lable2">Search City</mat-label>
+                        <input type="text" class="placeholder2" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+                        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                                {{option}}
+                            </mat-option>
+                        </mat-autocomplete>
+
+                        <mat-icon class="icon2" matSuffix>search</mat-icon>
+
+
+
+                    </mat-form-field>
+                </form>
+            </div>
+            <div>
+
+                <form>
+                    <mat-form-field class="full4" appearance="outline">
+
+                        <mat-label class="lable4">Enter Hospital</mat-label>
+                        <input type="text" class="placeholder4" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+                        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                                {{option}}
+                            </mat-option>
+                        </mat-autocomplete>
+
+                        <mat-icon class="icon2" matSuffix>search</mat-icon>
+
+
+
+                    </mat-form-field>
+                </form>
+            </div>
+            <div> <button class="button" mat-raised-button>Show Doctors</button></div>
+        </div>
+    </div>
+
+
+    <!-- <div class="overflow-auto qqq">
+                    <ul class="list-group allbox">
+        
+                        <li class="list-group-item selectbox">
+                            <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                            <label class="form-check-label" for="firstCheckbox">First checkbox</label>
+                        </li>
+                        <li class="list-group-item selectbox">
+                            <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+                            <label class="form-check-label" for="secondCheckbox">Second checkbox</label>
+                        </li>
+                        <li class="list-group-item selectbox">
+                            <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                            <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
+                        </li>
+                        <li class="list-group-item selectbox">
+                            <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                            <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
+                        </li>
+                        <li class="list-group-item selectbox">
+                            <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                            <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
+                        </li>
+        
+        
+        
+        
+        
+        
+                    </ul>
+            </div> -->
+    <div class="overflow-auto qqq">
+        <div class="headding">Select Speciality</div>
+        <p>
+            <mat-checkbox formControlName="pepperoni">Physiatrists</mat-checkbox>
+        </p>
+        <p>
+            <mat-checkbox formControlName="Podiatrists">Extra Cheese</mat-checkbox>
+        </p>
+        <p>
+            <mat-checkbox formControlName=" Hyperbaric Physicians">Mushroom</mat-checkbox>
+        </p>
+        <p>
+            <mat-checkbox formControlName="Neonatologists">Pepperoni</mat-checkbox>
+        </p>
+        <p>
+            <mat-checkbox formControlName="Perinatologists">Extra Cheese</mat-checkbox>
+        </p>
+        <p>
+            <mat-checkbox formControlName="Naturopathic Doctors">Mushroom</mat-checkbox>
+        </p>
+        <p>
+            <mat-checkbox formControlName="Neonatologists">Pepperoni</mat-checkbox>
+        </p>
+        <p>
+            <mat-checkbox formControlName="Perinatologists">Extra Cheese</mat-checkbox>
+        </p>
+        <p>
+            <mat-checkbox formControlName="Naturopathic Doctors">Mushroom</mat-checkbox>
+        </p>
+        <p>
+            <mat-checkbox formControlName="Neonatologists">Pepperoni</mat-checkbox>
+        </p>
+        <p>
+            <mat-checkbox formControlName="Perinatologists">Extra Cheese</mat-checkbox>
+        </p>
+        <p>
+            <mat-checkbox formControlName="Naturopathic Doctors">Mushroom</mat-checkbox>
+        </p>
+    </div>
+    <div class="vl"></div>
+    <div class="allbutton" fxLayout="row" fxLayout.lt-sm="column">
+
+        <div class="allcards">
+            <div>
+                <mat-card class="asiri1" (mouseover)="showimage=true" (mouseout)="showimage=false">
+
+                    <div class=image><img class="imageori " src="assets\img\asiri_hospital.png "><br>
+                        <br>
+
+                        <div class="text1">{{text1}}</div>
+                    </div>
+                    <div class="text2 ">{{text2}}</div>
+                    <div class="text3">{{text3}}</div>
+
+                    <div class="star">
+                        <mat-icon class="star1 ">star</mat-icon>
+                        <mat-icon class="star2 ">star</mat-icon>
+                        <mat-icon class="star3 ">star</mat-icon>
+                        <mat-icon class="star4 ">star</mat-icon>
+                        <mat-icon class="star5 ">star</mat-icon>
+                    </div>
+
+
+                    <mat-card class="mathover" *ngIf="showimage">
+                        <div>
+                            <button mat-button class="view">View Profile</button>
+                        </div>
+                        <div class="sec1">
+                            <div class="docname">Dr.Amarasekara
+                                <br><span class="dentist">dentist</span>
+                            </div>
+                            <img class=" imagehover " src="assets\img\asiri_hospital.png " alt=" ">
+                        </div>
+                        <div class="vl2 "></div>
+                        <div class="carddetails ">
+                            <div class="location ">
+                                <span>Speciality</span>
+                                <span style="opacity: 40%; "><br> Dentist</span>
+                            </div>
+                            <div class=" open ">
+                                <span class=" "><br>Available Districts</span>
+                                <span class=" " style="opacity: 40%; "><br>Colombo,Rathnapura</span>
+                            </div>
+                            <div class="service ">
+                                <span class=" "><br>Contact Number</span>
+                                <span class=" " style="opacity: 40%; "><br>0774674870</span>
+                            </div>
+                            <div class="experiance ">
+                                <span class=" "><br>Experiance</span>
+                                <span class=" " style="opacity: 40%; "><br>4 years</span>
+                            </div>
+                        </div>
+                    </mat-card>
+                </mat-card>
+            </div>
+
+            <div>
+                <mat-card class="asiri2 " (mouseover)="showimage2=true " (mouseout)="showimage2=false ">
+
+                    <div class=image><img class="imageori " src="assets\img\asiri_hospital.png "><br>
+                        <br>
+
+                        <div class="text1 ">{{text1}}</div>
+                    </div>
+                    <div class="text2 ">{{text2}}</div>
+                    <div class="text3 ">{{text3}}</div>
+
+                    <div class="star ">
+                        <mat-icon class="star1 ">star</mat-icon>
+                        <mat-icon class="star2 ">star</mat-icon>
+                        <mat-icon class="star3 ">star</mat-icon>
+                        <mat-icon class="star4 ">star</mat-icon>
+                        <mat-icon class="star5 ">star</mat-icon>
+                    </div>
+
+
+                    <mat-card class="mathover2 " *ngIf="showimage2 ">
+                        <div>
+
+                            <button mat-raised-button class="view ">View Profile</button>
+                        </div>
+                        <div class="location ">
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="open ">
+                            <span class=" "></span>
+                            <span class=" "></span>
+                        </div>
+                        <div class="service ">
+                            <span class=" "></span>
+                            <span class=" "></span>
+                        </div>
+                    </mat-card>
+                </mat-card>
+            </div>
+
+            <div>
+                <mat-card class="asiri3 " (mouseover)="showimage3=true " (mouseout)="showimage3=false ">
+
+                    <div class=image><img class="imageori " src="assets\img\asiri_hospital.png "><br>
+                        <br>
+
+                        <div class="text1 ">{{text1}}</div>
+                    </div>
+                    <div class="text2 ">{{text2}}</div>
+                    <div class="text3 ">{{text3}}</div>
+
+                    <div class="star ">
+                        <mat-icon class="star1 ">star</mat-icon>
+                        <mat-icon class="star2 ">star</mat-icon>
+                        <mat-icon class="star3 ">star</mat-icon>
+                        <mat-icon class="star4 ">star</mat-icon>
+                        <mat-icon class="star5 ">star</mat-icon>
+                    </div>
+
+
+                    <mat-card class="mathover3 " *ngIf="showimage3 ">
+                        <div>
+                            <button mat-raised-button class="view ">View Profile</button>
+                        </div>
+                        <div class="location ">
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="open ">
+                            <span class=" "></span>
+                            <span class=" "></span>
+                        </div>
+                        <div class="service ">
+                            <span class=" "></span>
+                            <span class=" "></span>
+                        </div>
+                    </mat-card>
+                </mat-card>
+            </div>
+
+            <div>
+                <mat-card class="asiri4 " (mouseover)="showimage4=true " (mouseout)="showimage4=false ">
+
+                    <div class=image><img class="imageori " src="assets\img\asiri_hospital.png "><br>
+                        <br>
+
+                        <div class="text1 ">{{text1}}</div>
+                    </div>
+                    <div class="text2 ">{{text2}}</div>
+                    <div class="text3 ">{{text3}}</div>
+
+                    <div class="star ">
+                        <mat-icon class="star1 ">star</mat-icon>
+                        <mat-icon class="star2 ">star</mat-icon>
+                        <mat-icon class="star3 ">star</mat-icon>
+                        <mat-icon class="star4 ">star</mat-icon>
+                        <mat-icon class="star5 ">star</mat-icon>
+                    </div>
+
+
+                    <mat-card class="mathover4 " *ngIf="showimage4 ">
+                        <div>
+                            <button mat-raised-button class="view ">View Profile</button>
+                        </div>
+                        <div class="location ">
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="open ">
+                            <span class=" "></span>
+                            <span class=" "></span>
+                        </div>
+                        <div class="service ">
+                            <span class=" "></span>
+                            <span class=" "></span>
+                        </div>
+                    </mat-card>
+                </mat-card>
+            </div>
+
+            <div>
+                <mat-card class="asiri5 " (mouseover)="showimage5=true " (mouseout)="showimage5=false ">
+
+                    <div class=image><img class="imageori " src="assets\img\asiri_hospital.png "><br>
+                        <br>
+
+                        <div class="text1 ">{{text1}}</div>
+                    </div>
+                    <div class="text2 ">{{text2}}</div>
+                    <div class="text3 ">{{text3}}</div>
+
+                    <div class="star ">
+                        <mat-icon class="star1 ">star</mat-icon>
+                        <mat-icon class="star2 ">star</mat-icon>
+                        <mat-icon class="star3 ">star</mat-icon>
+                        <mat-icon class="star4 ">star</mat-icon>
+                        <mat-icon class="star5 ">star</mat-icon>
+                    </div>
+
+
+                    <mat-card class="mathover5 " *ngIf="showimage5 ">
+                        <div>
+                            <button mat-raised-button class="view ">View Profile</button>
+                        </div>
+                        <div class="location ">
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="open ">
+                            <span class=" "></span>
+                            <span class=" "></span>
+                        </div>
+                        <div class="service ">
+                            <span class=" "></span>
+                            <span class=" "></span>
+                        </div>
+                    </mat-card>
+                </mat-card>
+            </div>
+
+            <div>
+                <mat-card class="asiri6 " (mouseover)="showimage6=true " (mouseout)="showimage6=false ">
+
+                    <div class=image><img class="imageori " src="assets\img\asiri_hospital.png "><br>
+                        <br>
+
+                        <div class="text1 ">{{text1}}</div>
+                    </div>
+                    <div class="text2 ">{{text2}}</div>
+                    <div class="text3 ">{{text3}}</div>
+
+                    <div class="star ">
+                        <mat-icon class="star1 ">star</mat-icon>
+                        <mat-icon class="star2 ">star</mat-icon>
+                        <mat-icon class="star3 ">star</mat-icon>
+                        <mat-icon class="star4 ">star</mat-icon>
+                        <mat-icon class="star5 ">star</mat-icon>
+                    </div>
+
+
+                    <mat-card class="mathover6 " *ngIf="showimage6 ">
+                        <div>
+                            <button mat-raised-button class="view ">View Profile</button>
+                        </div>
+                        <div class="location ">
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="open ">
+                            <span class=" "></span>
+                            <span class=" "></span>
+                        </div>
+                        <div class="service ">
+                            <span class=" "></span>
+                            <span class=" "></span>
+                        </div>
+                    </mat-card>
+                </mat-card>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- </mat-drawer-content>
+        </mat-drawer-container> -->
