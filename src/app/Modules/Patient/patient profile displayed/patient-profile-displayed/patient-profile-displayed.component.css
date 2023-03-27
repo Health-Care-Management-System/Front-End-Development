@@ -1,0 +1,52 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+mat-drawer {
+    width: 260px;
+    background: #065560;
+}
+
+mat-drawer-container {
+    height: 100%;
+}
+
+.hhhh {
+    top: 100px;
+    width: 1000px;
+    height: 400px;
+}
+
+.picture {
+    height: 200px;
+    width: 160px;
+    /* border-radius: 200px; */
+    position: absolute;
+    left: 90PX;
+    top: 40px;
+}
+
+.name {
+    width: 290px;
+}
+
+.name2 {
+    position: absolute;
+    left: 690px;
+    width: 290px;
+    top: 30px
+}
+
+.address {}
+
+.editemail {
+    position: relative;
+    left: 550px;
+}
+
+.editlastname {
+    position: relative;
+    left: 210px;
+}

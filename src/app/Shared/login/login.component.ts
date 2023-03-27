@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import {FormBuilder, FormControl , FormGroup, Validators} from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-login',
@@ -8,15 +11,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  user = {username:'', password:'', remember:false};
+  
 
-  constructor() { }
+  constructor(private fb : FormBuilder) { }
+  
+  reactiveform !: FormGroup;
+  passwordPtn ='^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,16}$'
+  
+  registerArray:any={};
 
   ngOnInit(): void {
   }
   onSubmit(){
-    console.log('User: ' , this.user);
+    console.log(this.reactiveform.value)
+    alert(this.registerArray)
   }
-
 
 }

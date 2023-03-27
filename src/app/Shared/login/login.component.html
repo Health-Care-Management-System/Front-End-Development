@@ -1,3 +1,4 @@
+<!-- 
 <div id="loginsection" class="container-fluid" fxLayoutAlign="center center">
   <div class="login" fxLayout="row" fxLayout.lt-sm="column"  >
     <div  class="card1">
@@ -22,7 +23,7 @@
                            [(ngModel)]="user.username"
                            name="username"
                            #username="ngModel" required >
-                    <!--error message displaying-->
+                   
                     <mat-error *ngIf="username.errors?.['required']">
                       Username is required
                     </mat-error>
@@ -36,7 +37,7 @@
                          [(ngModel)]="user.password"
                          name="password"
                          #password="ngModel" required >
-                  <!--error message displaying-->
+              
                   <mat-error *ngIf="password.errors?.['required']">
                     Password is required
                   </mat-error>
@@ -58,6 +59,152 @@
 
     </div>
   </div>
+</div> -->
 
 
+
+<!-- 
+
+<div class="container-fluid">
+  <div class="row vh-100">
+      
+      <div class="col-lg-6 p-4 text-center right-part">
+        
+         <h4 class="text-center fw-bolder fs-2">Register</h4>
+         <p class="mb-4 fs-7">Register Now and Fell the New Digital World</p>
+         <div class="mb-4 hero-btns">
+          <a href="#" routerLink="/userselect">Sign Up</a>
+        </div>
+         <div class="img-cover p-4 blob col-md-10 col-lg-6 col-xl-7 d-flex  order-1 order-lg-1">
+         </div>
+      </div>
+      <div class="col-lg-6 p  vh-100">
+         <div class="row d-flex vh-100">
+             <div class="col-md-8 p-4 ikigui m-auto text-center align-items-center">
+               <div class="center mb-2 fs-2">
+                <a href="" routerLink="/home">
+                  <img class="logo" src="../../../assets/img/logo-light-background.png">
+                </a>
+               
+               </div>
+                 <h4 class="text-center fw-bolder mb-4 fs-2 login">
+                  <br>Login</h4>
+                 <div class="mb-3 ">
+                  <form novalidate #loginForm="ngForm" class="myclass" (ngSubmit)="onSubmit()">
+                    <mat-form-field appearance="fill" >
+                      <mat-label>Your User Name</mat-label>
+                      <input matInput placeholder="Type Your Username" type="text"
+                             [(ngModel)]="user.username"
+                             name="username"
+                             #username="ngModel" required >
+                
+                      <mat-error *ngIf="username.errors?.['required']">
+                        Username is required
+                      </mat-error>
+                    </mat-form-field>
+                  </form>
+                 </div>
+                 <div class="mb-3">
+                  <mat-form-field appearance="fill">
+                    <mat-label>Your Password Name</mat-label>
+                    <input matInput placeholder="Enter Your Password" type="text"
+                           [(ngModel)]="user.password"
+                           name="password"
+                           #password="ngModel" required >
+                  
+                    <mat-error *ngIf="password.errors?.['required']">
+                      Password is required
+                    </mat-error>
+                  </mat-form-field>
+                 </div>
+                <div class="mb-3">
+                  <mat-checkbox [(ngModel)]="user.remember" name="remember" >Remember me</mat-checkbox>
+                </div>
+                       
+                 <span  class="middle" fxLayoutAlign="center center">
+                  <button mat-raised-button
+                          type="submit"
+                          [disabled]="loginForm.form.invalid"
+                          class="btn btn-lg fw-bold fs-7 btn-success w-100 loginbtn">Login</button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+<app-footer></app-footer>
+ -->
+
+
+
+
+<div class="container-fluid">
+  <div class="row ">
+    <div class="col-lg-6 p-4 text-center right-part">
+      <h4 class="text-center fw-bolder fs-2">Register</h4>
+      <p class="mb-4 fs-7">Register Now and Fell the New Digital World</p>
+      <div class="mb-4 hero-btns">
+        <a href="#" routerLink="/userselect">Sign Up</a>
+      </div>
+      <div class="img-cover p-4 blob col-md-10 col-lg-6 col-xl-7 d-flex order-1 order-lg-1"></div>
+    </div>
+    <div class="col-lg-6 p ">
+      <div class="row d-flex mb-5 justify-content-center">
+        <div class="col-md-8 p-4 ikigui m-auto text-center align-items-center">
+          <div class="center mb-2 fs-2">
+            <a href="" routerLink="/home">
+              <img class="logo mt-5 mb-3" src="../../../assets/img/logo-light-background.png">
+            </a>
+          </div>
+          <h4 class="text-center fw-bolder mb-4 fs-2 login"><br>Login</h4>
+          <div class="mb-3">
+            <form novalidate #loginForm="ngForm" class="myclass" (ngSubmit)="onSubmit()">
+              <div fxLayout="row" fxLayoutAlign="start center" class="mb-4">
+                <mat-icon class="me-3">person</mat-icon>
+                <mat-form-field fxFlex="100%">
+                  <input matInput type="text" 
+                         id="form3Example1c"
+                         [(ngModel)]="registerArray.username" 
+                          name="username"
+                          #username="ngModel"
+                          required />
+                  <mat-label>Your Name</mat-label>
+                   <!--error message displaying-->
+                   <mat-error *ngIf="(username.touched ||loginForm.submitted) && username.errors?.['required']"> Your Name is required</mat-error>
+                      
+                </mat-form-field>
+              </div>
+
+              <div fxLayout="row" fxLayoutAlign="start center" class="mb-4">
+                <mat-icon class="me-3">lock</mat-icon>
+                <mat-form-field fxFlex="100%">
+                  <input matInput type="password" 
+                         id="form3Example4c"
+                         name="password"
+                         [(ngModel)]="registerArray.password"
+                         #password="ngModel"
+                         [pattern]="passwordPtn"            
+                         required />
+                  <mat-label>Password</mat-label>
+                  <mat-error *ngIf="(password.touched ||loginForm.submitted) && password.errors?.['required']">Password Required</mat-error>
+                  <mat-error *ngIf="(password.touched ||loginForm.submitted) && password.errors?.['pattern']">Your password must be at least 8 characters long, contain at least one number and have a mixture of uppercase and lowercase letters.</mat-error>
+
+                </mat-form-field>
+              </div>
+            </form>
+          </div>
+         
+          <!-- <div class="mb-4">
+            <mat-checkbox  name="remember">Remember me</mat-checkbox>
+          </div> -->
+          <span class="middle" fxLayoutAlign="center center">
+            <button mat-raised-button type="submit" [disabled]="loginForm.form.invalid"
+              class="btn btn-lg fw-bold fs-7 btn-success w-100 loginbtn">Login</button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+<app-footer></app-footer>

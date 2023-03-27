@@ -1,0 +1,49 @@
+/* Styles for tab labels */
+.mat-tab-label {
+    min-width: 250px !important;
+    padding: 5px;
+    background-color:rgb(172, 244, 226);
+    color:#096e5a;
+    font-weight: 700;
+}
+
+/* Styles for the active tab label */
+.mat-tab-label.mat-tab-label-active {
+    min-width: 150px !important;
+    padding: 5px;
+    background-color:rgb(255, 255, 255);
+    color: #e9711b;
+    font-weight: 700;
+}
+
+/* Styles for the ink bar */
+.mat-ink-bar {
+    background-color: green;
+}
+
+.topic{
+    font-size: 19px;
+    color: #096e5a;
+}
+.save-button{
+    color: #00BE99;
+}
+.email{
+    width: 50rem;
+}
+.delete-form{
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+
+}
+.field-full{
+    width: 35rem !important;
+}
+
+.full-width{
+    width: 100%;
+}
+td{
+    padding-right: 8px;
+}

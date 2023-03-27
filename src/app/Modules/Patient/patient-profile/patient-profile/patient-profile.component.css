@@ -1,0 +1,223 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+mat-drawer {
+    width: 260px;
+    background: #065560;
+}
+
+mat-drawer-container {
+    height: 100%;
+}
+
+.hhhh {
+    top: 100px;
+    width: 1000px;
+    height: 400px;
+}
+
+.picture {
+    height: 200px;
+    width: 160px;
+    /* border-radius: 200px; */
+    position: absolute;
+    left: 90PX;
+    top: 40px;
+}
+
+.name {
+    width: 290px;
+}
+
+.name2 {
+    position: absolute;
+    left: 690px;
+    width: 290px;
+    top: 30px
+}
+
+.address {}
+
+.text {
+    position: absolute;
+    left: 190px;
+    top: 15px;
+}
+
+.editbut {
+    position: absolute;
+    left: 430px;
+    top: 7px;
+}
+
+.savebut {
+    position: absolute;
+    left: 350px;
+    top: 10px;
+}
+
+.bigcard {
+    position: absolute;
+    left: 590px;
+    width: 500px;
+    top: 140px;
+    height: 200px;
+    background-color: transparent;
+    /* background-color: ; */
+}
+
+.fullname {
+    font-size: 20px;
+}
+
+.text2 {
+    position: absolute;
+    left: 180px;
+    width: 150px;
+    top: -5px;
+}
+
+.editbut2 {
+    position: absolute;
+    left: 410px;
+    top: -10px;
+}
+
+.savebut2 {
+    position: absolute;
+    left: 340px;
+    top: -5px;
+}
+
+.Email {
+    position: absolute;
+    font-size: 20px;
+    top: 60px;
+    margin-top: 10px;
+}
+
+.text3 {
+    position: absolute;
+    left: 180px;
+    width: 150px;
+    top: -3px;
+}
+
+.editbut3 {
+    position: absolute;
+    left: 410px;
+    top: -14px;
+}
+
+.savebut3 {
+    position: absolute;
+    left: 340px;
+    top: -5px;
+}
+
+.text4 {
+    position: absolute;
+    left: 180px;
+    width: 150px;
+    top: 1px;
+}
+
+.editbut4 {
+    position: absolute;
+    left: 410px;
+    top: -17px;
+}
+
+.savebut4 {
+    position: absolute;
+    left: 340px;
+    top: -5px;
+}
+
+.phone {
+    position: absolute;
+    top: 120px;
+    font-size: 20px;
+}
+
+.address {
+    position: absolute;
+    top: 155px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.hr2 {
+    position: relative;
+    top: 30px;
+}
+
+.hr3 {
+    position: relative;
+    top: 64px;
+}
+
+.card2 {
+    position: absolute;
+    width: 350px;
+    left: -460px;
+    top: -35px;
+    border-color: #00be99;
+    background-color: transparent;
+    border: none;
+}
+
+.title {
+    text-align: center;
+}
+
+.buttonpro {
+    position: relative;
+    left: 120px;
+    height: 30px;
+    width: 90px;
+}
+
+.eee {
+    position: absolute;
+    width: 770px;
+    top: 480px;
+    left: 290px;
+}
+
+.uu {
+    border-radius: 50%;
+    width: 220px;
+    height: 200px;
+    left: 65px;
+    position: relative;
+}
+
+.vl {
+    border-left: 6px solid #00be99;
+    height: 380px;
+    position: absolute;
+    left: -50px;
+    margin-left: -3px;
+    top: -60px;
+}
+
+.card1 {
+    border-color: #00be99;
+}
+
+.ttt {
+    position: relative;
+    left: 70px;
+    visibility: hidden;
+}
+
+.backimg1 {
+    height: 1000px;
+    width: 1300px;
+    z-index: 2;
+    opacity: 70%;
+}

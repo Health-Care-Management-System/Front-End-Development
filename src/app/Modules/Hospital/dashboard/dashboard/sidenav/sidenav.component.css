@@ -1,0 +1,61 @@
+mat-sidenav-container{
+    height: 100%;
+}
+mat-toolbar{
+    background-color: #065560;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+mat-icon{ 
+    color: aliceblue;
+}
+
+mat-sidenav{
+    background-color: #065560;
+}
+ul li{
+    list-style: none;
+}
+.sidenav-link-text{
+    color: aliceblue;
+}
+.name{
+    background-color: #f0f8ff;
+    color: #065560;
+}
+.logo{
+    height: 3rem;
+}
+
+.image{
+  margin-top: 1rem;
+  margin-right: 10px;
+  
+
+}
+
+.logo-text{
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 1.5rem;
+    color: #bfe2e7;
+}
+
+.sidenav-link-text{
+    margin-top: 0.70rem;
+ margin-left: 1rem;   
+ margin-right: 2rem;
+}
+
+.hospital-admin{
+    padding-top: 5px;
+    color: aquamarine;
+    text-align: center;
+}
+.profileimg{
+    margin-top: 5px;
+  width: 40px;
+  height:40px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
