@@ -21,6 +21,21 @@
     <div class="spacer"></div>
     <a class="nav-link" routerLink="/login" mat-stroked-button>Login</a>
     <a class="nav-link" routerLink="/userselect" mat-raised-button>Sign up</a>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button">
+      <!-- <mat-icon>person</mat-icon> -->
+      <img class="profileimg" src="../../../../../../assets/img/team1.jpg" alt="Avatar">
+    </button>
+  <!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button">
+      <mat-icon>person_outline</mat-icon> -->
+      <!-- <mat-icon >account_circle</mat-icon>
+      <img  src="../../../../../../assets/img/doc23.png" />                        
+  </button> -->
+  <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+          <mat-icon><i class="fa fa-sign-out" aria-hidden="true"></i></mat-icon>
+          <span>Signout</span>
+      </button>
+  </mat-menu>
   </div>
 
   <!-- responsive menu part -->
