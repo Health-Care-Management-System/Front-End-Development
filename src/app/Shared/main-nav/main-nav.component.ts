@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import *as AOS from 'aos';
 
 @Component({
   selector: 'app-main-nav',
@@ -21,6 +22,7 @@ export class MainNavComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
   }
 
 }
