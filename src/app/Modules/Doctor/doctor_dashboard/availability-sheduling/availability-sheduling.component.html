@@ -9,18 +9,26 @@
         <div class="container">
 
             <div class="hospital">
-                <h4>Select a Hospital</h4>
-                <mat-form-field appearance="fill">
-                    <mat-label>Select a Hospital</mat-label>
-                    <mat-select>
-                        <mat-option *ngFor="let food of foods" [value]="food.value">
-                            {{food.viewValue}}
+
+
+                <mat-label>Select a Hospital</mat-label>
+
+                <form class="example-form">
+                    <input type="text" placeholder="Search for a street" [formControl]="streetControl" [matAutocomplete]="streetAuto" class="example-input">
+                    <mat-autocomplete #streetAuto="matAutocomplete">
+                        <mat-option *ngFor="let street of filteredStreets | async" [value]="street">
+                            {{street}}
+
                         </mat-option>
-                    </mat-select>
-                </mat-form-field>
+
+                    </mat-autocomplete>
+                    <mat-icon class="icon3" matSuffix>search</mat-icon>
+
+                </form>
             </div>
+
             <div class="patient">
-                <h4>Select number of Patient</h4>
+                <!-- <h4>Select number of Patient</h4>
                 <mat-form-field appearance="fill">
                     <mat-label> number of Patients</mat-label>
                     <mat-select>
@@ -28,7 +36,9 @@
                             {{food.viewValue}}
                         </mat-option>
                     </mat-select>
-                </mat-form-field>
+                </mat-form-field> -->
+                <mat-label>Select a Hospital</mat-label>
+                <input type="text">
             </div>
 
             <mat-card class="times">

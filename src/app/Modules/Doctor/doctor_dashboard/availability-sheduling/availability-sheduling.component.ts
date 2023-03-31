@@ -1,5 +1,7 @@
 import { Time } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { Observable, startWith, map } from 'rxjs';
 interface Food {
   value: string;
   viewValue: string;
@@ -32,6 +34,9 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class AvailabilityShedulingComponent implements OnInit {
   displayedColumns: string[] = ['Morning', 'Afternoon',  'Night'];
   dataSource = ELEMENT_DATA;
+  streetControl = new FormControl('');
+  streets: string[] = ['Champs-Élysées', 'Lombard Street', 'Abbey Road', 'Fifth Avenue'];
+  filteredStreets: Observable<string[]> | undefined;
   
   
   foods: Food[] = [
@@ -46,9 +51,21 @@ export class AvailabilityShedulingComponent implements OnInit {
 
   title = 'edowzori';
   sideBarOpen=true;
-  ngOnInit(){}
+  ngOnInit(){this.filteredStreets = this.streetControl.valueChanges.pipe(
+    startWith(''),
+    map(value => this._filter(value || '', this.streets)),
+  );
+}
   leftToolBarToggler(){
    this.sideBarOpen=!this.sideBarOpen;
   }
+  private _filter(value: string, options: string[]): string[] {
+    const filterValue = this._normalizeValue(value);
+    return options.filter(option => this._normalizeValue(option).includes(filterValue));
+  }
 
+  private _normalizeValue(value: string): string {
+    return value.toLowerCase().replace(/\s/g, '');
+  }
+  
 }
