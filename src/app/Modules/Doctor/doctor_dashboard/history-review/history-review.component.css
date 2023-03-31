@@ -216,3 +216,7 @@
     mat-drawer-container {
         height: 100%;
     }
+    
+    .matcontent {
+        background-color: #E9F5E8;
+    }

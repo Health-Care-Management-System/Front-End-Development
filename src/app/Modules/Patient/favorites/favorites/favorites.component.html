@@ -4,9 +4,13 @@
     <mat-drawer mode="side" [opened]="sideBarOpen">
         <app-patient-left-toolbar></app-patient-left-toolbar>
     </mat-drawer>
-    <mat-drawer-content>
-        <div><img class="bigimg" src="\assets\img\appoinment.png" alt=""></div>
+    <mat-drawer-content class="matcontent">
+        <img src="">
         <mat-card class="doctor">
+            <div>
+                <img class="img1" src="\assets\img\11111.jpg"> </div>
+
+
             <div style="text-align: center;">
                 Doctors</div>
             <mat-card *ngFor="let doctor of doctors" class="doctorall">
@@ -16,6 +20,8 @@
             <button mat-button>Add More</button>
         </mat-card>
         <mat-card class="hospital">
+            <div>
+                <img class="img1" src="\assets\img\11111.jpg"> </div>
             <div style="text-align: center;">
                 hospitals</div>
             <mat-card *ngFor="let doctor of doctors" class="doctorall">
@@ -27,6 +33,8 @@
 
 
         <mat-card class="pharmacy">
+            <div>
+                <img class="img1" src="\assets\img\11111.jpg"> </div>
             <div style="text-align: center;">
                 pharmacies</div>
             <mat-card *ngFor="let doctor of doctors" class="doctorall">
