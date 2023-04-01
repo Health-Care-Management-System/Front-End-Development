@@ -7,6 +7,8 @@ import { ManageTeamComponent } from './manage-team/manage-team.component';
 import { MaterialModule } from '../../../../material/material.module';
 import { NewAppoinmentComponent } from './new-appoinment/new-appoinment.component';
 import { ManageServiceComponent } from './manage-service/manage-service.component';
+import { AddServiceDialogComponent } from './add-service-dialog/add-service-dialog.component';
+import { InviteDoctorDialogComponent } from './invite-doctor-dialog/invite-doctor-dialog.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,15 @@ import { ManageServiceComponent } from './manage-service/manage-service.componen
     SettingsComponent,
     ManageTeamComponent,
     NewAppoinmentComponent,
-    ManageServiceComponent
+    ManageServiceComponent,
+    AddServiceDialogComponent,
+    InviteDoctorDialogComponent
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     MaterialModule
-  ]
+  ],
+  entryComponents:[AddServiceDialogComponent],
 })
 export class DashboardModule { }

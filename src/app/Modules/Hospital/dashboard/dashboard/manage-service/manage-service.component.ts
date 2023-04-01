@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { AddServiceDialogComponent } from '../add-service-dialog/add-service-dialog.component';
 
 @Component({
   selector: 'app-manage-service',
@@ -11,5 +13,7 @@ export class ManageServiceComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  // openAddServiceDialog(){
+  //   this.dialog.open(AddServiceDialogComponent);
+  // }
 }

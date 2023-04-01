@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { hospitalProfileData } from '../hospital-profile';
 
 @Component({
   selector: 'app-hospital-profile',
@@ -9,13 +10,9 @@ export class HospitalProfileComponent implements OnInit {
 
   constructor() { }
 
-  title = 'edowzori';
-  sideBarOpen=true;
-  ngOnInit(){}
-  leftToolBarToggler(){
-   this.sideBarOpen=!this.sideBarOpen;
+  ngOnInit(): void {
   }
 
+  hospitalData = hospitalProfileData ;
 
 }
-
