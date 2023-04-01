@@ -106,6 +106,7 @@ const routes: Routes = [
 {path:'myappoinments',component:MyappoinmentsComponent},
 {path:'makeanappoinment',component:MakeAnApppoinmentComponent},
 
+
 {path: '', loadChildren:() =>import('./Modules/Hospital/dashboard/dashboard/dashboard.module'). then(m => m.DashboardModule)},
 {path:'aboutus' , component:AboutusComponent},
 {path:'contactus' , component:ContactusComponent},

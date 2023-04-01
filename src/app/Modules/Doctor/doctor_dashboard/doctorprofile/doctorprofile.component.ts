@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 
 
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./doctorprofile.component.css']
 })
 export class DoctorprofileComponent implements OnInit {
+  files:any;
   imageSource: string = " ../assets/img/doctor.jpg ";
   mobilenumber='123888982';
 
@@ -64,11 +66,12 @@ address="Street ,vilage, distract , town";
 speciality3="Cardiology";
 email="www.charukacnadungamuwa@gmail.com";
 experiance='12';
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   title = 'edowzori';
   sideBarOpen=true;
-  ngOnInit(){}
+  ngOnInit(){  let response2= this.http.get("http://localhost:8070/api1/all");
+  response2.subscribe((data)=>this.files=data);}
   changeImage() {
     const inputField = document.querySelector('input[type="file"]') as HTMLInputElement;
     inputField.click();

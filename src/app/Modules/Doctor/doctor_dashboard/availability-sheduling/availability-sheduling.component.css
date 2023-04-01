@@ -77,3 +77,10 @@
             mat-drawer-container {
                 height: 100%;
             }
+            
+            .img1 {
+                height: 160%;
+                width: 100%;
+                opacity: 70%;
+                position: absolute;
+            }
