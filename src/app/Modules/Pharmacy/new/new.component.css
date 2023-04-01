@@ -1,0 +1,152 @@
+.card1{
+    width: 100%;
+    height:100px;
+    background-color:#065560;
+    
+}
+
+
+  
+  .image{
+     
+      margin-top: -2px;
+      margin-left: 20px;
+    width: 65px;
+    height:65px;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+   
+     
+      
+  }
+  
+  .name1{
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 600;
+      font-size: xx-large;
+      color: #FE8E3C;
+     
+      left: 115px;
+      top: 10px;
+  } 
+
+  .name2{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: xx-large;
+    color:grey;
+    margin-top: 10px;
+    left: 115px;
+    top: 22px;
+} 
+
+
+.pharmacyname{
+padding-top: 7px;
+padding-left: 10px;
+}
+
+
+
+
+.editbutton{
+    
+   
+    border-radius:20px;
+   
+    border: none;
+    color: white;
+    left: 1000px;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px 2px;
+   
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .editbutton {
+    background-color:#75E6DA; 
+    color:black; 
+    border: 2px solid#75E6DA;
+  }
+  
+  .editbutton:hover {
+    background-color: white;
+    color:#21B6A8;
+  }
+
+
+.header1{
+    position: relative;
+    left: 240px;
+    top: 50px;
+}
+.header2{
+    position: relative;
+    left:415px;
+    top: 7px;
+    
+}
+
+
+
+
+
+.table{
+    position: relative;
+    left: 10px;
+    top: 5%;
+    width: 70%;
+    height: 60%;
+    border:5px;
+    border-color: black;
+    margin: auto;
+   
+    
+}
+
+.thead{
+    height: 20%;
+   
+}
+
+.thead1{
+     left:120px;
+     position: relative;
+}
+
+
+
+.thead3{
+    position: relative;
+    left: 100px;
+}
+
+
+.thead1,.thead2,.thead3,.thead4,.thead5{
+    font-size: large;
+}
+
+
+
+.button1{
+    position: relative;
+    left: 40px;
+}
+
+
+.button2{
+    position:relative;
+    left: 50px;
+    width:90px;
+    
+}
+
+.id1,.id2,.id3{
+    color:#00FFFF;
+  
+}

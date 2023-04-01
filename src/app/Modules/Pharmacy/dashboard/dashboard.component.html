@@ -1,0 +1,111 @@
+<app-mininavbar (toggleLeftToolBarForMe)="leftToolBarToggler()">
+</app-mininavbar>
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" [opened]="sideBarOpen">
+        <app-left-tool-bar></app-left-tool-bar>
+    </mat-drawer>
+    <mat-drawer-content class="main">
+      
+      
+        <div >
+        <mat-card class="cardheader">
+            <mat-card-content > 
+              <div class="pharmacyname">
+                <div class="name1">
+                    Apothecare
+                </div>
+                <div class="name2">
+                    Pharmacy
+                </div>
+              </div>
+                <img class="image" src="\assets\img\34bc20ba-3ade-d40e-9316-0d9e71cef5b2.png">
+                <div fxFlex fxlayout="row" fxLayoutAlign="flex-end">
+                    <button class="editbutton">Edit Profile</button>
+                </div>
+            </mat-card-content>
+        </mat-card>
+            </div>
+
+
+            
+       
+        
+      
+        <div class="container-lg">
+          <div class="row justify-content-center row1">
+            <div class="col-sm-4 col-lg-6  mx-5 shadow card1">
+              
+            <h3 class="new" >New</h3>
+          
+            <p class="crd1txt2">Have a look at your new orders</p>
+            <a href="#" routerLink="/new">
+            <div class="go-corner" >
+
+              <div class="go-arrow" >
+               →
+              
+              </div>
+            </div>
+          </a>
+            </div>
+          
+      
+        
+
+             <div class="col-sm-4 col-lg-6  mx-5 shadow card2">
+               <h3 class="approved">Approved</h3>
+                 <p class="crd2txt2">Here you have your approved orders</p>
+                 <a href="#" routerLink="/approved">
+                    <div class="go-corner" >
+                  <div class="go-arrow" >
+                      →
+                 </div>
+              </div>
+            </a>
+            </div>
+          </div>
+
+
+
+          <div class="row justify-content-center row2">
+            <div class="col-sm-4 col-lg-6  mx-5 shadow card3">
+              
+            <h3 class="rejected">Rejected</h3>
+            <p class="crd3txt2">Your rejected orders are here</p>
+            <a href="#" routerLink="/rejected">
+            <div class="go-corner" >
+
+              <div class="go-arrow">
+                  →
+              
+              </div>
+            </div>
+          </a>
+            </div>
+      
+        
+
+             <div class="col-sm-4 col-lg-6  mx-5 shadow card4">
+               <h3 class="canceled">Canceled</h3>
+                 <p class="crd4txt2">User canceled orders</p>
+                 <a href="#" routerLink="/canceled">
+                    <div class="go-corner"  >
+                  <div class="go-arrow">
+                      →
+                 </div>
+              </div>
+            </a>
+            </div>
+          </div>
+         </div>
+        
+       
+       
+              
+
+    
+      
+      
+        
+     </mat-drawer-content> 
+</mat-drawer-container>

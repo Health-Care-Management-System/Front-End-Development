@@ -91,6 +91,12 @@ import { AmbulanceSignupPageComponent } from './Modules/Ambulance/ambulance-sign
 import { HospitalSignupPageComponent } from './Modules/Hospital/hospital-signup-page/hospital-signup-page.component';
 import { PharmacySignupPageComponent } from './Modules/Pharmacy/pharmacy-signup-page/pharmacy-signup-page.component';
 import {HttpClientModule} from "@angular/common/http";
+import { CanceledComponent } from './Modules/Pharmacy/canceled/canceled.component';
+import { NewComponent } from './Modules/Pharmacy/new/new.component';
+import { RejectedComponent } from './Modules/Pharmacy/rejected/rejected.component';
+import { ApprovedComponent } from './Modules/Pharmacy/approved/approved.component';
+import { DashboardComponent } from './Modules/Pharmacy/dashboard/dashboard.component';
+import { PatientviewComponent } from './Modules/Pharmacy/patientview/patientview.component';
 
 
 
@@ -139,6 +145,12 @@ import {HttpClientModule} from "@angular/common/http";
     AmbulanceSignupPageComponent,
     HospitalSignupPageComponent,
     PharmacySignupPageComponent,
+    CanceledComponent,
+    NewComponent,
+    RejectedComponent,
+    ApprovedComponent,
+    DashboardComponent,
+    PatientviewComponent,
 
 
   ],

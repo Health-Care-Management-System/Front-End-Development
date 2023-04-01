@@ -32,6 +32,13 @@ import { PatientSignupPageComponent } from './Modules/Patient/patient-signup-pag
 import { AmbulanceSignupPageComponent } from './Modules/Ambulance/ambulance-signup-page/ambulance-signup-page.component';
 import { HospitalSignupPageComponent } from './Modules/Hospital/hospital-signup-page/hospital-signup-page.component';
 import { PharmacySignupPageComponent } from './Modules/Pharmacy/pharmacy-signup-page/pharmacy-signup-page.component';
+import { CanceledComponent } from './Modules/Pharmacy/canceled/canceled.component';
+import { NewComponent } from './Modules/Pharmacy/new/new.component';
+import { RejectedComponent } from './Modules/Pharmacy/rejected/rejected.component';
+import { ApprovedComponent } from './Modules/Pharmacy/approved/approved.component';
+import { DashboardComponent } from './Modules/Pharmacy/dashboard/dashboard.component';
+import { PatientviewComponent } from './Modules/Pharmacy/patientview/patientview.component';
+
 
 
 
@@ -72,7 +79,14 @@ const routes: Routes = [
 {path:'favorite',component:FavoritesComponent},
 {path:'amubulancesignup' , component:AmbulanceSignupPageComponent},
 {path:'hospitalsignup' , component:HospitalSignupPageComponent},
-{path:'pharmacysignup' , component:PharmacySignupPageComponent}
+{path:'pharmacysignup' , component:PharmacySignupPageComponent},
+{path:'canceled' , component:CanceledComponent},
+{path:'new' , component:NewComponent},
+{path:'rejected' , component:RejectedComponent},
+ {path:'approved' , component:ApprovedComponent},
+ {path:'pharmacydashboard' , component:DashboardComponent },
+ {path:'patientview' , component:PatientviewComponent}
+
 
 
 
