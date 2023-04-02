@@ -67,7 +67,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatSelectModule} from '@angular/material/select';
-import {MatCardModule} from '@angular/material/card';
+import {MatCardContent, MatCardModule} from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDividerModule } from '@angular/material/divider';
@@ -114,6 +114,16 @@ import { PatientpwchangeComponent } from './Modules/Patient/patientpwchange/pati
 import { MedicineorderdetailsComponent } from './Modules/Patient/medicineorderdetails/medicineorderdetails.component';
 import { MakeAnApppoinmentComponent } from './Modules/Patient/make-an-apppoinment/make-an-apppoinment.component';
 // import { A11yModule } from '@angular/cdk/a11y';
+
+import { CanceledComponent } from './Modules/Pharmacy/canceled/canceled.component';
+import { NewComponent } from './Modules/Pharmacy/new/new.component';
+import { RejectedComponent } from './Modules/Pharmacy/rejected/rejected.component';
+import { ApprovedComponent } from './Modules/Pharmacy/approved/approved.component';
+import { PatientviewComponent } from './Modules/Pharmacy/patientview/patientview.component';
+import { PharmacydashboardComponent } from './Modules/Pharmacy/pharmacydashboard/pharmacydashboard.component';
+
+
+
 
 
 
@@ -181,7 +191,17 @@ import { MakeAnApppoinmentComponent } from './Modules/Patient/make-an-apppoinmen
     PharmacySignupNextComponent,
     AboutusComponent,
     ContactusComponent,
-    SearchdoctorcontentComponent
+    SearchdoctorcontentComponent,
+
+    CanceledComponent,
+    NewComponent,
+    RejectedComponent,
+    ApprovedComponent,
+    PatientviewComponent,
+    DashboardComponent,
+    PharmacydashboardComponent,
+
+
   
 
 
