@@ -26,9 +26,7 @@
  
 
 
-/* .threecards{
-    display: block;
-} */
+
 
 .card1, .card2, .card3{
     top: 60px;
@@ -40,27 +38,12 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 } 
-/* 
-.card2{
-    left: 340px;
-    top: -100px;
-    height: 100px;
-    width: 310px;
-    background-color: #57C5B6;
-}
 
-.card3{
-    
-    left: 690px;
-    top: -200px;
-    height: 100px;
-    width: 290px;
-    background-color: #57C5B6;
-} */
 .threecards{
     display: flex;
     flex-direction: row;
 }
+
 .card1text1{
     position: absolute;
     left: 60px;
@@ -115,8 +98,7 @@
     width: 670px;
     height: 80px;
     
-    /* background-color:#F8F8FF; */
-
+  
 }
 
 .statcard1text3{
@@ -140,8 +122,7 @@
     width: 670px;
     height: 80px;
     
-    /* background-color:#F8F8FF; */
-
+  
 
 }
 
@@ -166,8 +147,7 @@
     width: 670px;
     height: 80px;
     
-    /* background-color:#F8F8FF; */
-
+   
 }
 
 .statcard3text3{
@@ -189,8 +169,7 @@
     width: 670px;
     height: 80px;
     
-    /* background-color:#F8F8FF; */
-
+   
 }
 
 .statcard4text3{
@@ -206,27 +185,7 @@
 }
 
 
-/* .pdfuploader{
-    position:absolute;
-    width: 290px;
-    height: 10px;
-    left: 690px;
-    top: 190px;
-} */
 
-/* .qwe{
-    background-color:#E1EEEA;
-    height:280px;
-    width: 280px;
-    position: relative;
-    left: 690px;
-    margin: 2px;
-}
-.ttt{
-    height: 140px;
-    width: 170px;
-    position: relative;
-left: 70px;} */
 
 .card3button{
     position: relative;

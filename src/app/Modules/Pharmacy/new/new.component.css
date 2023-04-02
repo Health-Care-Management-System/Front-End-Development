@@ -6,8 +6,15 @@
 }
 
 
-  
-  .image{
+/* .backgroundimage{
+    background-image: url(src\assets\img\abstract-blur-defocused-pharmacy-drug-store.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}   */
+
+
+
+.image{
      
       margin-top: -2px;
       margin-left: 20px;
@@ -15,8 +22,6 @@
     height:65px;
     border-radius: 50%;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-   
-     
       
   }
   
@@ -26,7 +31,7 @@
       font-size: xx-large;
       color: #FE8E3C;
      
-      left: 115px;
+      
       top: 10px;
   } 
 
@@ -36,7 +41,7 @@
     font-size: xx-large;
     color:grey;
     margin-top: 10px;
-    left: 115px;
+   
     top: 22px;
 } 
 
@@ -50,22 +55,20 @@ padding-left: 10px;
 
 
 .editbutton{
-    
-   
     border-radius:20px;
-   
     border: none;
     color: white;
-    left: 1000px;
+   
     padding: 5px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 5px 2px;
-   
+    margin: 10px;
     transition-duration: 0.4s;
     cursor: pointer;
+   
+    
   }
   
   .editbutton {
@@ -82,18 +85,16 @@ padding-left: 10px;
 
 .header1{
     position: relative;
-    left: 240px;
+    padding-left:220px;
     top: 50px;
 }
+
 .header2{
     position: relative;
-    left:415px;
+   padding-left:400px;
     top: 7px;
     
 }
-
-
-
 
 
 .table{

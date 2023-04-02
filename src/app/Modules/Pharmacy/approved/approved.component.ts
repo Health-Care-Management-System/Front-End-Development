@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { newcomponentdata } from '../new/newdata';
 
 @Component({
   selector: 'app-approved',
@@ -6,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./approved.component.css']
 })
 export class ApprovedComponent implements OnInit {
-
+ 
   constructor() { }
-
+  approveddata=newcomponentdata;
   ngOnInit(): void {
   }
 

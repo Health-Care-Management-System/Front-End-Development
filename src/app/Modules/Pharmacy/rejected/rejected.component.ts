@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { newcomponentdata } from '../new/newdata';
 
 @Component({
   selector: 'app-rejected',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class RejectedComponent implements OnInit {
 
   constructor() { }
-
+  rejecteddata=newcomponentdata;
   ngOnInit(): void {
   }
 

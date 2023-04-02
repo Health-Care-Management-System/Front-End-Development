@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { newcomponentdata } from '../new/newdata';
 
 @Component({
   selector: 'app-canceled',
@@ -6,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./canceled.component.css']
 })
 export class CanceledComponent implements OnInit {
-
+  
   constructor() { }
-
+  canceleddata=newcomponentdata;
   ngOnInit(): void {
   }
 
