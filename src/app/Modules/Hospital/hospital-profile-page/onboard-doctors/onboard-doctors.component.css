@@ -1,0 +1,10 @@
+.image{
+    width: auto;
+    height: 130px;
+    border-width: 1px;
+}
+
+.card1:hover {
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+  }

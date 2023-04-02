@@ -1,0 +1,56 @@
+<div class="h6 m-4" style="font-size: 22px; color: rgb(5, 77, 83)">
+  Onboard Doctors
+</div>
+<div class="card shadow ">
+  <div class="card-body card1">
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="card border-0">
+          <div class="card-body">
+            <div class="row" *ngFor="let data of docData">
+              <div class="col-lg-4 text-center d-block border-1">
+                <img
+                  src="{{ data.image }}"
+                  class="card-img img-fluid image"
+                  alt=""
+                />
+              </div>
+              <div class="card col-lg-7 border-0">
+                <div class="title col-lg-12">
+                  <h2>
+                    <a href="index.html">{{ data.name }}</a>
+                  </h2>
+                  <ul class="docinfo">
+                    <li>
+                      <em>{{ data.degree }}</em>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <p class="card-text">
+              This is the content of the another inner card.
+            </p>
+            <p class="card-text">
+              This is the content of the another inner card.
+            </p>
+            <p class="card-text">
+              This is the content of the another inner card.
+            </p>
+            <div class="btn">
+              <a href="../../doctors/isobel-jones/index.html" class="dc-btn"
+                >View Full Profile</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
