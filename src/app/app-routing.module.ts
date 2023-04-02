@@ -22,8 +22,8 @@ import { HistoryReviewComponent } from './Modules/Doctor/doctor_dashboard/histor
 import { HospitalSearchComponent } from './Modules/Doctor/doctor_dashboard/hospital-search/hospital-search.component';
 import { TeastComponent } from './Modules/Doctor/doctor_dashboard/teast/teast.component';
 import { SearchdoctorComponent } from './Modules/Doctor/doctor_dashboard/searchdoctor/searchdoctor.component';
-import { SelecthositalSelectdoctorComponent } from './Modules/Doctor/doctor_dashboard/selecthosital-selectdoctor/selecthosital-selectdoctor.component';
-import { HospitalProfileComponent } from './Modules/Hospital/hospital-dashboard/hospital-profile/hospital-profile/hospital-profile.component';
+
+
 import { PharmacyProfileComponent } from './Modules/Pharmacy/pharmacy-dashboard/pharmacy-profile/pharmacy-profile/pharmacy-profile.component';
 import { PatientProfileComponent } from './Modules/Patient/patient-profile/patient-profile/patient-profile.component';
 import { PatientProfileDisplayedComponent } from './Modules/Patient/patient profile displayed/patient-profile-displayed/patient-profile-displayed.component';
@@ -50,8 +50,7 @@ import { MakeAnApppoinmentComponent } from './Modules/Patient/make-an-apppoinmen
 import { MedicineorderdetailsComponent } from './Modules/Patient/medicineorderdetails/medicineorderdetails.component';
 import { MyappoinmentsComponent } from './Modules/Patient/myappoinments/myappoinments.component';
 import { PatientpwchangeComponent } from './Modules/Patient/patientpwchange/patientpwchange.component';
-
-
+import {HospitalProfileComponent} from "./Modules/Hospital/hospital-profile-page/hospital-profile/hospital-profile.component";
 
 
 // routes for the components
@@ -110,7 +109,8 @@ const routes: Routes = [
 
 {path: '', loadChildren:() =>import('./Modules/Hospital/dashboard/dashboard/dashboard.module'). then(m => m.DashboardModule)},
 {path:'aboutus' , component:AboutusComponent},
-{path:'contactus' , component:ContactusComponent}
+{path:'contactus' , component:ContactusComponent},
+  {path:'hospital-profile' , component:HospitalProfileComponent}
 
 
 

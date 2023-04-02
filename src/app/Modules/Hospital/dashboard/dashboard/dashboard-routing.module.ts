@@ -7,6 +7,7 @@ import { NewAppoinmentComponent } from './new-appoinment/new-appoinment.componen
 import { NotificationsComponent } from './notifications/notifications.component';
 import { SettingsComponent } from './settings/settings.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { AddServiceDialogComponent } from './add-service-dialog/add-service-dialog.component';
 
 const routes: Routes = [
     {
@@ -29,6 +30,9 @@ const routes: Routes = [
             },
             {
                 path:'manage-service' , component:ManageServiceComponent
+            },
+            {
+                path:'add-service',component:AddServiceDialogComponent
             }
             
         ] 
