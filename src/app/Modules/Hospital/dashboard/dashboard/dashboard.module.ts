@@ -9,6 +9,7 @@ import { NewAppoinmentComponent } from './new-appoinment/new-appoinment.componen
 import { ManageServiceComponent } from './manage-service/manage-service.component';
 import { AddServiceDialogComponent } from './add-service-dialog/add-service-dialog.component';
 import { InviteDoctorDialogComponent } from './invite-doctor-dialog/invite-doctor-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { InviteDoctorDialogComponent } from './invite-doctor-dialog/invite-docto
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    MaterialModule
+    MaterialModule,
+    MatDialogModule
   ],
   entryComponents:[AddServiceDialogComponent],
 })

@@ -10,7 +10,7 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 // import flexLayout
 import {FlexLayoutModule} from '@angular/flex-layout';
-
+import { MatDialogModule } from '@angular/material/dialog';
 
 import 'hammerjs';
 
@@ -116,6 +116,7 @@ import { MakeAnApppoinmentComponent } from './Modules/Patient/make-an-apppoinmen
 import { HospitalProfileComponent } from './Modules/Hospital/hospital-profile-page/hospital-profile/hospital-profile.component';
 import { OnboardDoctorsComponent } from './Modules/Hospital/hospital-profile-page/onboard-doctors/onboard-doctors.component';
 import { HospitalDetailsComponent } from './Modules/Hospital/hospital-profile-page/hospital-details/hospital-details.component';
+import { MatDialog } from '@angular/material/dialog';
 
 // import { A11yModule } from '@angular/cdk/a11y';
 
@@ -243,6 +244,7 @@ import { HospitalDetailsComponent } from './Modules/Hospital/hospital-profile-pa
     MatSliderModule,
     NgMultiSelectDropDownModule,
     NoopAnimationsModule,
+    MatDialogModule
 
 
   ],
