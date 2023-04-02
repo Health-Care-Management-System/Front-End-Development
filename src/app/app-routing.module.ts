@@ -127,7 +127,7 @@ const routes: Routes = [
 {path: '', loadChildren:() =>import('./Modules/Hospital/dashboard/dashboard/dashboard.module'). then(m => m.DashboardModule)},
 {path:'aboutus' , component:AboutusComponent},
 
-{path:'contactus' , component:ContactusComponent}
+{path:'contactus' , component:ContactusComponent},
 
 {path:'contactus' , component:ContactusComponent},
   {path:'hospital-profile' , component:HospitalProfileComponent}
