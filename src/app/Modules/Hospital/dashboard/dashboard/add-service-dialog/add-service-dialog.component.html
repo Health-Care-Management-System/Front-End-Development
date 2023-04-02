@@ -1,35 +1,26 @@
-<mat-toolbar color="primary">
-  Login
-  <span class="flex-spacer"></span>
-  <button mat-button mat-dialog-close>&times;</button>
+<mat-toolbar>
+  Add New Service
+ <div class="spacer" align="end">
+   <button mat-button mat-dialog-close class=".spacer">&times;</button>
+ </div>
 </mat-toolbar>
+<p class="my-3 text-center">
+<mat-form-field appearance="outline" style="width:430px; height:10px">
+ <input matInput placeholder="Type Emails of the doctors">
+ <mat-hint>dsfd
+ </mat-hint>
+</mat-form-field>
+</p>
 
-<form novalidate>
-  <mat-dialog-content>
-    <p>
-      <mat-form-field>
-        <input matInput placeholder="Username" type="text" name="username" />
-      </mat-form-field>
-      <mat-form-field>
-        <input
-          matInput
-          placeholder="Password"
-          type="password"
-          name="password"
-        />
-      </mat-form-field>
-      <mat-checkbox name="remember">Remember Me</mat-checkbox>
-    </p>
-  </mat-dialog-content>
-  <mat-dialog-actions>
-    <span class="flex-spacer"></span>
-    <button mat-button mat-dialog-close>Cancel</button>
-    <button
-      type="submit"
-      mat-button
-      class="background-primary text-floral-white"
-    >
-      Login
-    </button>
-  </mat-dialog-actions>
-</form>
+<p class="mt-5 text-center">
+<mat-form-field style="width:430px; height:10px">
+<mat-label>Type a Message</mat-label>
+<textarea matInput style="height: 150px;"></textarea>
+</mat-form-field>
+</p>
+
+<div class="spacer mt-3">
+<button mat-stroked-button class="py-1 px-5" class="sendClass" >Send</button>
+</div>
+
+

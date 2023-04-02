@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
-import { Observable } from 'rxjs';
-import { map, startWith } from 'rxjs/operators';
-import { MatDialogActions , MatDialogContent } from '@angular/material/dialog';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { MatStepper } from '@angular/material/stepper';
+
 
 
 @Component({
@@ -13,13 +11,16 @@ import { MatDialogActions , MatDialogContent } from '@angular/material/dialog';
 })
 export class AddServiceDialogComponent implements OnInit {
 
-  constructor() {
+  firstFormGroup!: FormGroup;
+  secondFormGroup!: FormGroup;
+  constructor(private _formBuilder: FormBuilder) {
     
    }
 
   ngOnInit(): void {
+ 
   }
-  
+
 
   
 }
