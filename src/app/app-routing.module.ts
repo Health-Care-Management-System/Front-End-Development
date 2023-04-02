@@ -50,7 +50,18 @@ import { MakeAnApppoinmentComponent } from './Modules/Patient/make-an-apppoinmen
 import { MedicineorderdetailsComponent } from './Modules/Patient/medicineorderdetails/medicineorderdetails.component';
 import { MyappoinmentsComponent } from './Modules/Patient/myappoinments/myappoinments.component';
 import { PatientpwchangeComponent } from './Modules/Patient/patientpwchange/patientpwchange.component';
+
+import { CanceledComponent } from './Modules/Pharmacy/canceled/canceled.component';
+import { NewComponent } from './Modules/Pharmacy/new/new.component';
+import { RejectedComponent } from './Modules/Pharmacy/rejected/rejected.component';
+import { ApprovedComponent } from './Modules/Pharmacy/approved/approved.component';
+import { PatientviewComponent } from './Modules/Pharmacy/patientview/patientview.component';
+import { PharmacydashboardComponent } from './Modules/Pharmacy/pharmacydashboard/pharmacydashboard.component';
+
+
+
 import {HospitalProfileComponent} from "./Modules/Hospital/hospital-profile-page/hospital-profile/hospital-profile.component";
+
 
 
 // routes for the components
@@ -106,18 +117,20 @@ const routes: Routes = [
 {path:'myappoinments',component:MyappoinmentsComponent},
 {path:'makeanappoinment',component:MakeAnApppoinmentComponent},
 
+{path:'canceled',component:CanceledComponent},
+{path:'new',component:NewComponent},
+{path:'rejected',component:RejectedComponent},
+{path:'approved',component:ApprovedComponent},
+{path:'pharmacydashboard',component:PharmacydashboardComponent},
+{path:'patientview',component:PatientviewComponent},
 
 {path: '', loadChildren:() =>import('./Modules/Hospital/dashboard/dashboard/dashboard.module'). then(m => m.DashboardModule)},
 {path:'aboutus' , component:AboutusComponent},
+
+{path:'contactus' , component:ContactusComponent},
+
 {path:'contactus' , component:ContactusComponent},
   {path:'hospital-profile' , component:HospitalProfileComponent}
-
-
-
-
-
-
-
 
 ];
 

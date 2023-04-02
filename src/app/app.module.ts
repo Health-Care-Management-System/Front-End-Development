@@ -68,7 +68,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatSelectModule} from '@angular/material/select';
-import {MatCardModule} from '@angular/material/card';
+import {MatCardContent, MatCardModule} from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDividerModule } from '@angular/material/divider';
@@ -119,6 +119,16 @@ import { HospitalDetailsComponent } from './Modules/Hospital/hospital-profile-pa
 import { MatDialog } from '@angular/material/dialog';
 
 // import { A11yModule } from '@angular/cdk/a11y';
+
+import { CanceledComponent } from './Modules/Pharmacy/canceled/canceled.component';
+import { NewComponent } from './Modules/Pharmacy/new/new.component';
+import { RejectedComponent } from './Modules/Pharmacy/rejected/rejected.component';
+import { ApprovedComponent } from './Modules/Pharmacy/approved/approved.component';
+import { PatientviewComponent } from './Modules/Pharmacy/patientview/patientview.component';
+import { PharmacydashboardComponent } from './Modules/Pharmacy/pharmacydashboard/pharmacydashboard.component';
+
+
+
 
 
 
@@ -185,10 +195,19 @@ import { MatDialog } from '@angular/material/dialog';
     AboutusComponent,
     ContactusComponent,
     SearchdoctorcontentComponent,
+
+
+    CanceledComponent,
+    NewComponent,
+    RejectedComponent,
+    ApprovedComponent,
+    PatientviewComponent,
+    DashboardComponent,
+    PharmacydashboardComponent,
+
     HospitalProfileComponent,
     OnboardDoctorsComponent,
     HospitalDetailsComponent
-
 
 
   ],
