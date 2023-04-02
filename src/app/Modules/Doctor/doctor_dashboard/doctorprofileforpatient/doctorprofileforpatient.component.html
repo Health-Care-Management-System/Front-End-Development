@@ -1,5 +1,6 @@
 <app-main-nav></app-main-nav>
 <div class="container">
+    <img class="img1" src="\assets\img\docprofback.jpg">
     <mat-card class="example-card">
         <div class="harry">{{name}} </div>
 
@@ -37,20 +38,20 @@
 
     <div class="slmc ">SLMC Number: 1952</div>
     <div class="Experiance ">Experiance</div>
-    <div class="ex ">12 years </div>
+    <div class="ex ">{{experiance}} </div>
 
 
-    <button mat-button class="manage ">Make an Appoinment</button>
+    <button mat-button class="manage " routerLink="/makeanappoinment">Make an Appoinment</button>
     <div class="are ">Do you want to channel ?</div>
     <mat-icon class="loc5 ">support</mat-icon>
     <div class="number ">Mobile Number</div>
     <mat-icon class="loc6 ">support</mat-icon>
-    <div class="nu ">125-8645132</div>
+    <div class="nu ">{{mobile}}</div>
 
 
     <mat-icon class="loc7 ">support</mat-icon>
     <div class="email ">E-Mail</div>
-    <div class="emad ">adsfdghgjhkng@gmail.com</div>
+    <div class="emad ">{{email}}</div>
 
     <div class="location ">Location</div>
 

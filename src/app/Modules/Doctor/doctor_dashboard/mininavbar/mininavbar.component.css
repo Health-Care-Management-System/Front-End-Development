@@ -114,3 +114,9 @@
         margin-left: 20px;
         margin-bottom: 20px;
     }
+    
+    .profileimg {
+        height: 40px;
+        border-radius: 70%;
+        width: 40px;
+    }
