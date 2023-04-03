@@ -10,6 +10,7 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 // import flexLayout
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import 'hammerjs';
 
@@ -67,7 +68,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatSelectModule} from '@angular/material/select';
-import {MatCardModule} from '@angular/material/card';
+import {MatCardContent, MatCardModule} from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDividerModule } from '@angular/material/divider';
@@ -79,8 +80,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatSliderModule} from '@angular/material/slider';
 
-import { HospitalLefttoolbarComponent } from './Modules/Hospital/hospital-dashboard/hospital-lefttoolbar/hospital-lefttoolbar/hospital-lefttoolbar.component';
-import { HospitalProfileComponent } from './Modules/Hospital/hospital-dashboard/hospital-profile/hospital-profile/hospital-profile.component';
+
 import { PharmacyProfileComponent } from './Modules/Pharmacy/pharmacy-dashboard/pharmacy-profile/pharmacy-profile/pharmacy-profile.component';
 import { PharmacyLeftToolbarComponent } from './Modules/Pharmacy/pharmacy-dashboard/pharmacy-lefttoolbar/pharmacy-left-toolbar/pharmacy-left-toolbar.component';
 import { PatientLeftToolbarComponent } from './Modules/Patient/patient-left-toolbar/patient-left-toolbar/patient-left-toolbar.component';
@@ -113,7 +113,22 @@ import { MyappoinmentsComponent } from './Modules/Patient/myappoinments/myappoin
 import { PatientpwchangeComponent } from './Modules/Patient/patientpwchange/patientpwchange.component';
 import { MedicineorderdetailsComponent } from './Modules/Patient/medicineorderdetails/medicineorderdetails.component';
 import { MakeAnApppoinmentComponent } from './Modules/Patient/make-an-apppoinment/make-an-apppoinment.component';
+import { HospitalProfileComponent } from './Modules/Hospital/hospital-profile-page/hospital-profile/hospital-profile.component';
+import { OnboardDoctorsComponent } from './Modules/Hospital/hospital-profile-page/onboard-doctors/onboard-doctors.component';
+import { HospitalDetailsComponent } from './Modules/Hospital/hospital-profile-page/hospital-details/hospital-details.component';
+import { MatDialog } from '@angular/material/dialog';
+
 // import { A11yModule } from '@angular/cdk/a11y';
+
+import { CanceledComponent } from './Modules/Pharmacy/canceled/canceled.component';
+import { NewComponent } from './Modules/Pharmacy/new/new.component';
+import { RejectedComponent } from './Modules/Pharmacy/rejected/rejected.component';
+import { ApprovedComponent } from './Modules/Pharmacy/approved/approved.component';
+import { PatientviewComponent } from './Modules/Pharmacy/patientview/patientview.component';
+import { PharmacydashboardComponent } from './Modules/Pharmacy/pharmacydashboard/pharmacydashboard.component';
+
+
+
 
 
 
@@ -160,8 +175,6 @@ import { MakeAnApppoinmentComponent } from './Modules/Patient/make-an-apppoinmen
     TeastComponent,
     ShowrequestComponent,
 
-    HospitalLefttoolbarComponent,
-    HospitalProfileComponent,
     PharmacyProfileComponent,
     PharmacyLeftToolbarComponent,
     PatientLeftToolbarComponent,
@@ -181,14 +194,26 @@ import { MakeAnApppoinmentComponent } from './Modules/Patient/make-an-apppoinmen
     PharmacySignupNextComponent,
     AboutusComponent,
     ContactusComponent,
-    SearchdoctorcontentComponent
-  
+    SearchdoctorcontentComponent,
+
+
+    CanceledComponent,
+    NewComponent,
+    RejectedComponent,
+    ApprovedComponent,
+    PatientviewComponent,
+    DashboardComponent,
+    PharmacydashboardComponent,
+
+    HospitalProfileComponent,
+    OnboardDoctorsComponent,
+    HospitalDetailsComponent
 
 
   ],
   imports: [
     BrowserModule,
-   
+
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -214,7 +239,7 @@ import { MakeAnApppoinmentComponent } from './Modules/Patient/make-an-apppoinmen
     MdbTabsModule,
     MdbTooltipModule,
     MdbValidationModule,
-   
+
 
     NoopAnimationsModule,
     //doctorcharuka
@@ -238,7 +263,8 @@ import { MakeAnApppoinmentComponent } from './Modules/Patient/make-an-apppoinmen
     MatSliderModule,
     NgMultiSelectDropDownModule,
     NoopAnimationsModule,
-    
+    MatDialogModule
+
 
   ],
   providers: [],

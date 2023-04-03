@@ -88,9 +88,24 @@
         margin: 30px;
         border-style: solid;
         border-color: chocolate;
+        background-color: transparent;
     }
     
     .bigimg {
         height: 100%px;
         width: 1700px;
+    }
+    
+    .img1 {
+        position: absolute;
+        /* background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; */
+        width: 90%;
+        height: 90%;
+        opacity: 40%;
+    }
+    
+    .matcontent {
+        background-color: #E9F5E8;
     }

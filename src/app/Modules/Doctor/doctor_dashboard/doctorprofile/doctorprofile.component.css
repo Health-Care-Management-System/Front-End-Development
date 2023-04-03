@@ -4,11 +4,12 @@
                             height: 479px;
                             left: 111px;
                             top: 121px;
-                            background: rgba(232, 234, 255, 0.88);
+                            /* background: rgba(232, 234, 255, 0.88); */
                             box-shadow: 0px 4.07454px 24.4472px -1.01863px rgba(0, 0, 0, 0.11);
                             backdrop-filter: blur(20.3727px);
                             /* Note: backdrop-filter has minimal browser support */
                             border-radius: 20px;
+                            background-color: #E3E3E7;
                         }
                         
                         .harry {
@@ -582,7 +583,7 @@
                             width: 112px;
                             height: 29px;
                             left: 260px;
-                            top: 582px;
+                            top: 576px;
                             font-family: 'Poppins';
                             font-style: normal;
                             font-weight: 500;
@@ -603,7 +604,7 @@
                         
                         .hr {
                             position: relative;
-                            top: 100px;
+                            top: 40px;
                         }
                         
                         .container {
@@ -841,4 +842,10 @@
                         .aa {
                             height: 60px;
                             width: 70px;
+                        }
+                        
+                        .img1 {
+                            height: 160%;
+                            width: 100%;
+                            opacity: 70%;
                         }
