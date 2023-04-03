@@ -56,8 +56,8 @@ import { HistoryReviewComponent } from './Modules/Doctor/doctor_dashboard/histor
 import { HospitalSearchComponent } from './Modules/Doctor/doctor_dashboard/hospital-search/hospital-search.component';
 import { LeftToolBarComponent } from './Modules/Doctor/doctor_dashboard/left-tool-bar/left-tool-bar.component';
 import { MininavbarComponent } from './Modules/Doctor/doctor_dashboard/mininavbar/mininavbar.component';
-import { SearchdoctorComponent } from './Modules/Doctor/doctor_dashboard/searchdoctor/searchdoctor.component';
-import { SelecthositalSelectdoctorComponent } from './Modules/Doctor/doctor_dashboard/selecthosital-selectdoctor/selecthosital-selectdoctor.component';
+// import { SearchdoctorComponent } from './Modules/Doctor/doctor_dashboard/searchdoctor/searchdoctor.component';
+// import { SelecthositalSelectdoctorComponent } from './Modules/Doctor/doctor_dashboard/selecthosital-selectdoctor/selecthosital-selectdoctor.component';
 import { ShowappoinmentrequestsComponent } from './Modules/Doctor/doctor_dashboard/showappoinmentrequests/showappoinmentrequests.component';
 import { WhoAreYouComponent } from './Modules/Doctor/doctor_dashboard/who-are-you/who-are-you.component';
 import { TeastComponent } from './Modules/Doctor/doctor_dashboard/teast/teast.component';
@@ -103,8 +103,8 @@ import { PharmacySignupNextComponent } from './Modules/Pharmacy/pharmacy-signup-
 import { AboutusComponent } from './Shared/aboutus/aboutus.component';
 import { ContactusComponent } from './Shared/contactus/contactus.component';
 
-import { SearchdoctorcontentComponent } from './Modules/Doctor/doctor_dashboard/searchdoctor/searchdoctorcontent/searchdoctorcontent/searchdoctorcontent.component';
-import { FilterComponent } from './Modules/Doctor/doctor_dashboard/searchdoctor/searchdoctorleftfilter/filter/filter.component';
+// import { SearchdoctorcontentComponent } from './Modules/Doctor/doctor_dashboard/searchdoctor/searchdoctorcontent/searchdoctorcontent/searchdoctorcontent.component';
+// import { FilterComponent } from './Modules/Doctor/doctor_dashboard/searchdoctor/searchdoctorleftfilter/filter/filter.component';
 import { DoctorsearchFiComponent } from './Modules/searchitems/doctorsearch-fi/doctorsearch-fi.component';
 import { PharmacysearchComponent } from './Modules/searchitems/pharmacysearch/pharmacysearch.component';
 import { HospitalsearchFiComponent } from './Modules/searchitems/hospitalsearch-fi/hospitalsearch-fi.component';
@@ -135,7 +135,7 @@ import { MakeAnApppoinmentComponent } from './Modules/Patient/make-an-apppoinmen
     DoctorSignupComponent,
     DoctorSignupNextComponent,
     LoginComponent,
-    FilterComponent,
+    // FilterComponent,
 
     HomeComponent,
     FooterComponent,
@@ -153,8 +153,8 @@ import { MakeAnApppoinmentComponent } from './Modules/Patient/make-an-apppoinmen
     HospitalSearchComponent,
     LeftToolBarComponent,
     MininavbarComponent,
-    SearchdoctorComponent,
-    SelecthositalSelectdoctorComponent,
+    // SearchdoctorComponent,
+    // SelecthositalSelectdoctorComponent,
     ShowappoinmentrequestsComponent,
     WhoAreYouComponent,
     TeastComponent,
@@ -181,7 +181,7 @@ import { MakeAnApppoinmentComponent } from './Modules/Patient/make-an-apppoinmen
     PharmacySignupNextComponent,
     AboutusComponent,
     ContactusComponent,
-    SearchdoctorcontentComponent
+    // SearchdoctorcontentComponent
   
 
 
