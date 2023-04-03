@@ -1,0 +1,59 @@
+<app-main-nav></app-main-nav>
+<div class="container mt-5">
+    <section>
+        <div class="row g-0 ">
+            <div class="col-lg-9">
+                <div class="row g-0 col-lg-12 m-2" *ngFor="let data of hospitalData" >
+                    <div class="card col-lg-4 text-center p-3 ">
+                        <img src="{{data.image}}" class="card-img img-fluid" alt="">
+                    </div>
+                    <div class="card col-lg-7 p-3 border-0">
+                        <div class="title">
+                            <h2>
+                                <a href="index.html">{{data.name}}</a>
+                                <i class="far fa-check-circle awardtooltip tipso"
+                                    data-tipso="Verified user"></i>
+                            </h2>
+                            <ul class="docinfo">
+                                <li><em>{{data.sologan}}</em></li>
+                            </ul>
+                        </div>
+                        <div class="description">
+                            <p>{{data.description}}</p>
+                        </div>
+                        <div class="btnarea">
+                            <a href="" class="like add-wishlist btn btn-primary col-lg-3 col-sm-12 col-md-12 text-center"><i
+                                    class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-0 col-lg-12 mt-5 pl-5">
+                    <mat-tab-group>
+                        <mat-tab >
+                          <ng-template mat-tab-label class="tab">
+                            Onboard Doctors
+                          </ng-template>
+                        <app-onboard-doctors></app-onboard-doctors>
+                        </mat-tab>
+                      
+                        <mat-tab class="tab">
+                          <ng-template mat-tab-label>
+                            Hospital Details
+                          </ng-template>
+                      <app-hospital-details></app-hospital-details>
+                        </mat-tab>               
+                      </mat-tab-group>
+                      
+                </div>
+              
+            </div>
+            <div class="col-lg-3">
+                <div class="card col-lg-12 " *ngFor="let data of hospitalData">
+                    <img src="{{data.image}}" class="card-img img-fluid" alt="">
+                </div>
+            </div>
+            
+        </div>
+    </section>
+</div>
+

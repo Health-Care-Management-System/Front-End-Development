@@ -21,9 +21,11 @@ import { ChangePasswordComponent } from './Modules/Doctor/doctor_dashboard/chang
 import { HistoryReviewComponent } from './Modules/Doctor/doctor_dashboard/history-review/history-review.component';
 import { HospitalSearchComponent } from './Modules/Doctor/doctor_dashboard/hospital-search/hospital-search.component';
 import { TeastComponent } from './Modules/Doctor/doctor_dashboard/teast/teast.component';
+
 // import { SearchdoctorComponent } from './Modules/Doctor/doctor_dashboard/searchdoctor/searchdoctor.component';
 // import { SelecthositalSelectdoctorComponent } from './Modules/Doctor/doctor_dashboard/selecthosital-selectdoctor/selecthosital-selectdoctor.component';
 import { HospitalProfileComponent } from './Modules/Hospital/hospital-dashboard/hospital-profile/hospital-profile/hospital-profile.component';
+
 import { PharmacyProfileComponent } from './Modules/Pharmacy/pharmacy-dashboard/pharmacy-profile/pharmacy-profile/pharmacy-profile.component';
 import { PatientProfileComponent } from './Modules/Patient/patient-profile/patient-profile/patient-profile.component';
 import { PatientProfileDisplayedComponent } from './Modules/Patient/patient profile displayed/patient-profile-displayed/patient-profile-displayed.component';
@@ -51,6 +53,16 @@ import { MedicineorderdetailsComponent } from './Modules/Patient/medicineorderde
 import { MyappoinmentsComponent } from './Modules/Patient/myappoinments/myappoinments.component';
 import { PatientpwchangeComponent } from './Modules/Patient/patientpwchange/patientpwchange.component';
 
+import { CanceledComponent } from './Modules/Pharmacy/canceled/canceled.component';
+import { NewComponent } from './Modules/Pharmacy/new/new.component';
+import { RejectedComponent } from './Modules/Pharmacy/rejected/rejected.component';
+import { ApprovedComponent } from './Modules/Pharmacy/approved/approved.component';
+import { PatientviewComponent } from './Modules/Pharmacy/patientview/patientview.component';
+import { PharmacydashboardComponent } from './Modules/Pharmacy/pharmacydashboard/pharmacydashboard.component';
+
+
+
+import {HospitalProfileComponent} from "./Modules/Hospital/hospital-profile-page/hospital-profile/hospital-profile.component";
 
 
 
@@ -107,17 +119,20 @@ const routes: Routes = [
 {path:'myappoinments',component:MyappoinmentsComponent},
 {path:'makeanappoinment',component:MakeAnApppoinmentComponent},
 
+{path:'canceled',component:CanceledComponent},
+{path:'new',component:NewComponent},
+{path:'rejected',component:RejectedComponent},
+{path:'approved',component:ApprovedComponent},
+{path:'pharmacydashboard',component:PharmacydashboardComponent},
+{path:'patientview',component:PatientviewComponent},
 
 {path: '', loadChildren:() =>import('./Modules/Hospital/dashboard/dashboard/dashboard.module'). then(m => m.DashboardModule)},
 {path:'aboutus' , component:AboutusComponent},
-{path:'contactus' , component:ContactusComponent}
 
+{path:'contactus' , component:ContactusComponent},
 
-
-
-
-
-
+{path:'contactus' , component:ContactusComponent},
+  {path:'hospital-profile' , component:HospitalProfileComponent}
 
 ];
 

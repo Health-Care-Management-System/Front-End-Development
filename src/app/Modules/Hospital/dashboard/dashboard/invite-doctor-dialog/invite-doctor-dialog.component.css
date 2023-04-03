@@ -1,0 +1,11 @@
+.spacer {
+    flex: 1 1 auto;
+  }
+
+.sendClass{
+    color: #00be99 !important;
+}
+mat-toolbar{
+    background-color: #00be99;
+    color: aliceblue;
+}
