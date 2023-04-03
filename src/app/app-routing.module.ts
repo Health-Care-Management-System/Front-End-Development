@@ -21,8 +21,10 @@ import { ChangePasswordComponent } from './Modules/Doctor/doctor_dashboard/chang
 import { HistoryReviewComponent } from './Modules/Doctor/doctor_dashboard/history-review/history-review.component';
 import { HospitalSearchComponent } from './Modules/Doctor/doctor_dashboard/hospital-search/hospital-search.component';
 import { TeastComponent } from './Modules/Doctor/doctor_dashboard/teast/teast.component';
-import { SearchdoctorComponent } from './Modules/Doctor/doctor_dashboard/searchdoctor/searchdoctor.component';
 
+// import { SearchdoctorComponent } from './Modules/Doctor/doctor_dashboard/searchdoctor/searchdoctor.component';
+// import { SelecthositalSelectdoctorComponent } from './Modules/Doctor/doctor_dashboard/selecthosital-selectdoctor/selecthosital-selectdoctor.component';
+// import { HospitalProfileComponent } from './Modules/Hospital/hospital-dashboard/hospital-profile/hospital-profile/hospital-profile.component';
 
 import { PharmacyProfileComponent } from './Modules/Pharmacy/pharmacy-dashboard/pharmacy-profile/pharmacy-profile/pharmacy-profile.component';
 import { PatientProfileComponent } from './Modules/Patient/patient-profile/patient-profile/patient-profile.component';
@@ -87,8 +89,8 @@ const routes: Routes = [
   {path:'history',component:HistoryReviewComponent},
   {path:'searchhospital',component:HospitalSearchComponent},
   {path:'test',component:TeastComponent},
-  {path:'searchdoctor',component:SearchdoctorComponent},
-  // {path:'selecthospitalselectdoctor',component:SelecthositalSelectdoctorComponent},
+  // {path:'searchdoctor',component:SearchdoctorComponent},
+  //  {path:'selecthospitalselectdoctor',component:SelecthositalSelectdoctorComponent},
 
  {path:'', redirectTo:'home' , pathMatch:'full'},
  {path:'hospitalprofile',component:HospitalProfileComponent},
