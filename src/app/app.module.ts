@@ -4,10 +4,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+// import { IDropdownSettings } from 'ng-multiselect-dropdown';
 
 
 // import flexLayout
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import 'hammerjs';
 
@@ -54,8 +57,8 @@ import { HistoryReviewComponent } from './Modules/Doctor/doctor_dashboard/histor
 import { HospitalSearchComponent } from './Modules/Doctor/doctor_dashboard/hospital-search/hospital-search.component';
 import { LeftToolBarComponent } from './Modules/Doctor/doctor_dashboard/left-tool-bar/left-tool-bar.component';
 import { MininavbarComponent } from './Modules/Doctor/doctor_dashboard/mininavbar/mininavbar.component';
-import { SearchdoctorComponent } from './Modules/Doctor/doctor_dashboard/searchdoctor/searchdoctor.component';
-import { SelecthositalSelectdoctorComponent } from './Modules/Doctor/doctor_dashboard/selecthosital-selectdoctor/selecthosital-selectdoctor.component';
+// import { SearchdoctorComponent } from './Modules/Doctor/doctor_dashboard/searchdoctor/searchdoctor.component';
+// import { SelecthositalSelectdoctorComponent } from './Modules/Doctor/doctor_dashboard/selecthosital-selectdoctor/selecthosital-selectdoctor.component';
 import { ShowappoinmentrequestsComponent } from './Modules/Doctor/doctor_dashboard/showappoinmentrequests/showappoinmentrequests.component';
 import { WhoAreYouComponent } from './Modules/Doctor/doctor_dashboard/who-are-you/who-are-you.component';
 import { TeastComponent } from './Modules/Doctor/doctor_dashboard/teast/teast.component';
@@ -65,7 +68,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatSelectModule} from '@angular/material/select';
-import {MatCardModule} from '@angular/material/card';
+import {MatCardContent, MatCardModule} from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDividerModule } from '@angular/material/divider';
@@ -77,8 +80,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatSliderModule} from '@angular/material/slider';
 
-import { HospitalLefttoolbarComponent } from './Modules/Hospital/hospital-dashboard/hospital-lefttoolbar/hospital-lefttoolbar/hospital-lefttoolbar.component';
-import { HospitalProfileComponent } from './Modules/Hospital/hospital-dashboard/hospital-profile/hospital-profile/hospital-profile.component';
+
 import { PharmacyProfileComponent } from './Modules/Pharmacy/pharmacy-dashboard/pharmacy-profile/pharmacy-profile/pharmacy-profile.component';
 import { PharmacyLeftToolbarComponent } from './Modules/Pharmacy/pharmacy-dashboard/pharmacy-lefttoolbar/pharmacy-left-toolbar/pharmacy-left-toolbar.component';
 import { PatientLeftToolbarComponent } from './Modules/Patient/patient-left-toolbar/patient-left-toolbar/patient-left-toolbar.component';
@@ -93,6 +95,44 @@ import {HttpClientModule} from "@angular/common/http";
 
 import { HospitalSignupPageComponent } from './Modules/Hospital/hospital-signup-page/hospital-signup-page.component';
 import { PharmacySignupPageComponent } from './Modules/Pharmacy/pharmacy-signup-page/pharmacy-signup-page.component';
+import {HttpClientModule} from "@angular/common/http";
+
+
+import { SidenavComponent } from './Modules/Hospital/dashboard/dashboard/sidenav/sidenav.component';
+import { DashboardComponent } from './Modules/Hospital/dashboard/dashboard/dashboard/dashboard.component';
+import { HospitalSignupNextComponent } from './Modules/Hospital/hospital-signup-next/hospital-signup-next.component';
+import { AmbulanceSignupNextComponent } from './Modules/Ambulance/ambulance-signup-next/ambulance-signup-next.component';
+import { PharmacySignupNextComponent } from './Modules/Pharmacy/pharmacy-signup-next/pharmacy-signup-next.component';
+import { AboutusComponent } from './Shared/aboutus/aboutus.component';
+import { ContactusComponent } from './Shared/contactus/contactus.component';
+
+// import { SearchdoctorcontentComponent } from './Modules/Doctor/doctor_dashboard/searchdoctor/searchdoctorcontent/searchdoctorcontent/searchdoctorcontent.component';
+// import { FilterComponent } from './Modules/Doctor/doctor_dashboard/searchdoctor/searchdoctorleftfilter/filter/filter.component';
+import { DoctorsearchFiComponent } from './Modules/searchitems/doctorsearch-fi/doctorsearch-fi.component';
+import { PharmacysearchComponent } from './Modules/searchitems/pharmacysearch/pharmacysearch.component';
+import { HospitalsearchFiComponent } from './Modules/searchitems/hospitalsearch-fi/hospitalsearch-fi.component';
+import { DoctorprofileforpatientComponent } from './Modules/Doctor/doctor_dashboard/doctorprofileforpatient/doctorprofileforpatient.component';
+import { MyappoinmentsComponent } from './Modules/Patient/myappoinments/myappoinments.component';
+import { PatientpwchangeComponent } from './Modules/Patient/patientpwchange/patientpwchange.component';
+import { MedicineorderdetailsComponent } from './Modules/Patient/medicineorderdetails/medicineorderdetails.component';
+import { MakeAnApppoinmentComponent } from './Modules/Patient/make-an-apppoinment/make-an-apppoinment.component';
+import { HospitalProfileComponent } from './Modules/Hospital/hospital-profile-page/hospital-profile/hospital-profile.component';
+import { OnboardDoctorsComponent } from './Modules/Hospital/hospital-profile-page/onboard-doctors/onboard-doctors.component';
+import { HospitalDetailsComponent } from './Modules/Hospital/hospital-profile-page/hospital-details/hospital-details.component';
+import { MatDialog } from '@angular/material/dialog';
+
+// import { A11yModule } from '@angular/cdk/a11y';
+
+import { CanceledComponent } from './Modules/Pharmacy/canceled/canceled.component';
+import { NewComponent } from './Modules/Pharmacy/new/new.component';
+import { RejectedComponent } from './Modules/Pharmacy/rejected/rejected.component';
+import { ApprovedComponent } from './Modules/Pharmacy/approved/approved.component';
+import { PatientviewComponent } from './Modules/Pharmacy/patientview/patientview.component';
+import { PharmacydashboardComponent } from './Modules/Pharmacy/pharmacydashboard/pharmacydashboard.component';
+
+
+
+
 
 
 
@@ -100,11 +140,21 @@ import { PharmacySignupPageComponent } from './Modules/Pharmacy/pharmacy-signup-
 @NgModule({
   declarations: [
     AppComponent,
+    PatientpwchangeComponent,
+    MedicineorderdetailsComponent,
+    // A11yModule,
+    PharmacysearchComponent,
+    MakeAnApppoinmentComponent,
+    HospitalsearchFiComponent,
+    MyappoinmentsComponent,
+    DoctorsearchFiComponent,
     MainNavComponent,
+    DoctorprofileforpatientComponent,
     DoctorComponent,
     DoctorSignupComponent,
     DoctorSignupNextComponent,
     LoginComponent,
+    // FilterComponent,
 
     HomeComponent,
     FooterComponent,
@@ -122,15 +172,13 @@ import { PharmacySignupPageComponent } from './Modules/Pharmacy/pharmacy-signup-
     HospitalSearchComponent,
     LeftToolBarComponent,
     MininavbarComponent,
-    SearchdoctorComponent,
-    SelecthositalSelectdoctorComponent,
+    // SearchdoctorComponent,
+    // SelecthositalSelectdoctorComponent,
     ShowappoinmentrequestsComponent,
     WhoAreYouComponent,
     TeastComponent,
     ShowrequestComponent,
 
-    HospitalLefttoolbarComponent,
-    HospitalProfileComponent,
     PharmacyProfileComponent,
     PharmacyLeftToolbarComponent,
     PatientLeftToolbarComponent,
@@ -143,6 +191,28 @@ import { PharmacySignupPageComponent } from './Modules/Pharmacy/pharmacy-signup-
     HospitalSignupPageComponent,
     PharmacySignupPageComponent,
 
+    SidenavComponent,
+    DashboardComponent,
+    HospitalSignupNextComponent,
+    AmbulanceSignupNextComponent,
+    PharmacySignupNextComponent,
+    AboutusComponent,
+    ContactusComponent,
+
+    // SearchdoctorcontentComponent
+  
+    CanceledComponent,
+    NewComponent,
+    RejectedComponent,
+    ApprovedComponent,
+    PatientviewComponent,
+    DashboardComponent,
+    PharmacydashboardComponent,
+
+    HospitalProfileComponent,
+    OnboardDoctorsComponent,
+    HospitalDetailsComponent
+
 
   ],
   imports: [
@@ -152,6 +222,7 @@ import { PharmacySignupPageComponent } from './Modules/Pharmacy/pharmacy-signup-
     BrowserAnimationsModule,
     CarouselModule,
     FlexLayoutModule,
+    MatInputModule,
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
@@ -171,6 +242,7 @@ import { PharmacySignupPageComponent } from './Modules/Pharmacy/pharmacy-signup-
     MdbTabsModule,
     MdbTooltipModule,
     MdbValidationModule,
+
 
     NoopAnimationsModule,
     //doctorcharuka
@@ -192,8 +264,10 @@ import { PharmacySignupPageComponent } from './Modules/Pharmacy/pharmacy-signup-
     MatFormFieldModule,
     MatNativeDateModule,
     MatSliderModule,
+    NgMultiSelectDropDownModule,
+    NoopAnimationsModule,
+    MatDialogModule
 
-    NoopAnimationsModule
 
   ],
   providers: [],

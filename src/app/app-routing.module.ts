@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 // importing routing components
@@ -21,17 +21,48 @@ import { ChangePasswordComponent } from './Modules/Doctor/doctor_dashboard/chang
 import { HistoryReviewComponent } from './Modules/Doctor/doctor_dashboard/history-review/history-review.component';
 import { HospitalSearchComponent } from './Modules/Doctor/doctor_dashboard/hospital-search/hospital-search.component';
 import { TeastComponent } from './Modules/Doctor/doctor_dashboard/teast/teast.component';
-import { SearchdoctorComponent } from './Modules/Doctor/doctor_dashboard/searchdoctor/searchdoctor.component';
-import { SelecthositalSelectdoctorComponent } from './Modules/Doctor/doctor_dashboard/selecthosital-selectdoctor/selecthosital-selectdoctor.component';
-import { HospitalProfileComponent } from './Modules/Hospital/hospital-dashboard/hospital-profile/hospital-profile/hospital-profile.component';
+
+// import { SearchdoctorComponent } from './Modules/Doctor/doctor_dashboard/searchdoctor/searchdoctor.component';
+// import { SelecthositalSelectdoctorComponent } from './Modules/Doctor/doctor_dashboard/selecthosital-selectdoctor/selecthosital-selectdoctor.component';
+// import { HospitalProfileComponent } from './Modules/Hospital/hospital-dashboard/hospital-profile/hospital-profile/hospital-profile.component';
+
 import { PharmacyProfileComponent } from './Modules/Pharmacy/pharmacy-dashboard/pharmacy-profile/pharmacy-profile/pharmacy-profile.component';
 import { PatientProfileComponent } from './Modules/Patient/patient-profile/patient-profile/patient-profile.component';
 import { PatientProfileDisplayedComponent } from './Modules/Patient/patient profile displayed/patient-profile-displayed/patient-profile-displayed.component';
 import { FavoritesComponent } from './Modules/Patient/favorites/favorites/favorites.component';
 import { PatientSignupPageComponent } from './Modules/Patient/patient-signup-page/patient-signup-page.component';
+import { AmbulanceSignupPageComponent } from './Modules/Ambulance/ambulance-signup-page/ambulance-signup-page.component';
+import { HospitalSignupPageComponent } from './Modules/Hospital/hospital-signup-page/hospital-signup-page.component';
+import { PharmacySignupPageComponent } from './Modules/Pharmacy/pharmacy-signup-page/pharmacy-signup-page.component';
+import { SidenavComponent } from './Modules/Hospital/dashboard/dashboard/sidenav/sidenav.component';
+
+import { HospitalSignupNextComponent } from './Modules/Hospital/hospital-signup-next/hospital-signup-next.component';
+import { AmbulanceSignupNextComponent } from './Modules/Ambulance/ambulance-signup-next/ambulance-signup-next.component';
+import { PharmacySignupNextComponent } from './Modules/Pharmacy/pharmacy-signup-next/pharmacy-signup-next.component';
+
+
+import { DashboardComponent } from './Modules/Hospital/dashboard/dashboard/dashboard/dashboard.component';
+import { AboutusComponent } from './Shared/aboutus/aboutus.component';
+import { ContactusComponent } from './Shared/contactus/contactus.component';
+import { DoctorsearchFiComponent } from './Modules/searchitems/doctorsearch-fi/doctorsearch-fi.component';
+import { HospitalsearchFiComponent } from './Modules/searchitems/hospitalsearch-fi/hospitalsearch-fi.component';
+import { PharmacysearchComponent } from './Modules/searchitems/pharmacysearch/pharmacysearch.component';
+import { DoctorprofileforpatientComponent } from './Modules/Doctor/doctor_dashboard/doctorprofileforpatient/doctorprofileforpatient.component';
+import { MakeAnApppoinmentComponent } from './Modules/Patient/make-an-apppoinment/make-an-apppoinment.component';
+import { MedicineorderdetailsComponent } from './Modules/Patient/medicineorderdetails/medicineorderdetails.component';
+import { MyappoinmentsComponent } from './Modules/Patient/myappoinments/myappoinments.component';
+import { PatientpwchangeComponent } from './Modules/Patient/patientpwchange/patientpwchange.component';
+
+import { CanceledComponent } from './Modules/Pharmacy/canceled/canceled.component';
+import { NewComponent } from './Modules/Pharmacy/new/new.component';
+import { RejectedComponent } from './Modules/Pharmacy/rejected/rejected.component';
+import { ApprovedComponent } from './Modules/Pharmacy/approved/approved.component';
+import { PatientviewComponent } from './Modules/Pharmacy/patientview/patientview.component';
+import { PharmacydashboardComponent } from './Modules/Pharmacy/pharmacydashboard/pharmacydashboard.component';
 
 
 
+import {HospitalProfileComponent} from "./Modules/Hospital/hospital-profile-page/hospital-profile/hospital-profile.component";
 
 
 
@@ -58,18 +89,50 @@ const routes: Routes = [
   {path:'history',component:HistoryReviewComponent},
   {path:'searchhospital',component:HospitalSearchComponent},
   {path:'test',component:TeastComponent},
-  {path:'searchdoctor',component:SearchdoctorComponent},
-  {path:'selecthospitalselectdoctor',component:SelecthositalSelectdoctorComponent},
+  // {path:'searchdoctor',component:SearchdoctorComponent},
+  //  {path:'selecthospitalselectdoctor',component:SelecthositalSelectdoctorComponent},
 
  {path:'', redirectTo:'home' , pathMatch:'full'},
  {path:'hospitalprofile',component:HospitalProfileComponent},
  {path:'pharmcyprofile',component:PharmacyProfileComponent},
  {path:'patientprofile',component:PatientProfileComponent},
 {path:'patientprofiledisplayed',component:PatientProfileDisplayedComponent},
-{path:'favorite',component:FavoritesComponent}
+{path:'favorite',component:FavoritesComponent},
+{path:'amubulancesignup' , component:AmbulanceSignupPageComponent},
+{path:'hospitalsignup' , component:HospitalSignupPageComponent},
+{path:'pharmacysignup' , component:PharmacySignupPageComponent},
+{path:'sidenav' , component:SidenavComponent},
+{path:'hospitalsignupnext' , component:HospitalSignupNextComponent},
+{path:'amubulancesignupnext' , component:AmbulanceSignupNextComponent},
+{path:'pharmacysignupnext' , component:PharmacySignupNextComponent},
+{path:'hospitalprofile',component:HospitalProfileComponent},
+ {path:'pharmcyprofile',component:PharmacyProfileComponent},
+ {path:'patientprofile',component:PatientProfileComponent},
+{path:'patientprofiledisplayed',component:PatientProfileDisplayedComponent},
+{path:'favorite',component:FavoritesComponent},
+{path:'doctorsearch-fi',component:DoctorsearchFiComponent},
+{path:'hospitalsearch-fi',component:HospitalsearchFiComponent},
+{path:'pharmacysearch',component:PharmacysearchComponent},
+{path:'doctorprofileforpatient',component:DoctorprofileforpatientComponent},
+{path:'medicineorderdetails',component:MedicineorderdetailsComponent},
+{path:'patientpw',component:PatientpwchangeComponent},
+{path:'myappoinments',component:MyappoinmentsComponent},
+{path:'makeanappoinment',component:MakeAnApppoinmentComponent},
 
+{path:'canceled',component:CanceledComponent},
+{path:'new',component:NewComponent},
+{path:'rejected',component:RejectedComponent},
+{path:'approved',component:ApprovedComponent},
+{path:'pharmacydashboard',component:PharmacydashboardComponent},
+{path:'patientview',component:PatientviewComponent},
 
+{path: '', loadChildren:() =>import('./Modules/Hospital/dashboard/dashboard/dashboard.module'). then(m => m.DashboardModule)},
+{path:'aboutus' , component:AboutusComponent},
 
+{path:'contactus' , component:ContactusComponent},
+
+{path:'contactus' , component:ContactusComponent},
+  {path:'hospital-profile' , component:HospitalProfileComponent}
 
 ];
 

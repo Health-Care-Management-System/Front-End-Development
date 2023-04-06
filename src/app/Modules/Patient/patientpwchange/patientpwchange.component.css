@@ -1,0 +1,89 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card {
+    width: 500px;
+    height: 400px;
+    position: relative;
+    left: 100px;
+    top: 100px;
+}
+
+.button1 {
+    color: white;
+    background-color: #00BE99;
+    position: relative;
+    top: 60px;
+    left: 170px;
+}
+
+.field {
+    width: 400px;
+}
+
+.carddiv {
+    width: 60%;
+}
+
+.pidiv {
+    z-index: 1;
+}
+
+.container1 {
+    display: flex;
+}
+
+.enterpassword {
+    position: relative;
+}
+
+.changebig {
+    position: relative;
+    font-size: 50px;
+    font-weight: 500;
+    left: 40px;
+    top: 20px;
+}
+
+.content {
+    position: relative;
+    top: 60px;
+}
+
+.confirmpassword {
+    position: relative;
+    top: 45px;
+    left: 35px;
+}
+
+.enterpassword {
+    position: relative;
+    top: 30px;
+    left: 35px;
+}
+
+ :host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+mat-drawer {
+    width: 260px;
+    background: #065560;
+}
+
+mat-drawer-container {
+    height: 100%;
+}
+
+.image11 {
+    height: 550px;
+}
+
+.placeholder1 {
+    width: 100px;
+}

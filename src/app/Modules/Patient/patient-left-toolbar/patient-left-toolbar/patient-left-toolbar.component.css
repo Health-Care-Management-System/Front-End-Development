@@ -32,3 +32,8 @@ line-height: 48px; */
 }
 
 .navori {}
+
+.active {
+    background-color: chocolate;
+    color: #fff;
+}

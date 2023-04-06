@@ -16,12 +16,26 @@
     <a class="nav-link" routerLink="/hospital" mat-button>Hospitals</a>
     <a class="nav-link" routerLink="/pharmacy" mat-button>Pharmacy</a>
     <a class="nav-link" routerLink="/ambulance" mat-button>Ambulance</a>
-    <a class="nav-link" routerLink="" mat-button>About</a>
-    <a class="nav-link" routerLink="" mat-button>Contact</a>
+    <a class="nav-link" routerLink="/aboutus" mat-button>About</a>
 
     <div class="spacer"></div>
     <a class="nav-link" routerLink="/login" mat-stroked-button>Login</a>
     <a class="nav-link" routerLink="/userselect" mat-raised-button>Sign up</a>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button">
+      <!-- <mat-icon>person</mat-icon> -->
+      <img class="profileimg" src="../../../../../../assets/img/team1.jpg" alt="Avatar">
+    </button>
+  <!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button">
+      <mat-icon>person_outline</mat-icon> -->
+      <!-- <mat-icon >account_circle</mat-icon>
+      <img  src="../../../../../../assets/img/doc23.png" />                        
+  </button> -->
+  <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+          <mat-icon><i class="fa fa-sign-out" aria-hidden="true"></i></mat-icon>
+          <span>Signout</span>
+      </button>
+  </mat-menu>
   </div>
 
   <!-- responsive menu part -->
@@ -37,8 +51,7 @@
   <button routerLink="/hospital" mat-menu-item>Hospital</button>
   <button routerLink="/pharmacy" mat-menu-item>Pharmacy</button>
   <button routerLink="/ambulance" mat-menu-item>Ambulance</button>
-  <button routerLink="" mat-menu-item>About</button>
-  <button routerLink="" mat-menu-item>Contact</button>
+  <button routerLink="/aboutus" mat-menu-item>About</button>
   <button routerLink="/login" mat-menu-item>Login</button>
   <button routerLink="/userselect" mat-menu-item>Sign up</button>
 </mat-menu>

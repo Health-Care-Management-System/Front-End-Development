@@ -1,24 +1,35 @@
     .doctor {
+        top: 30px;
         width: 400px;
-        height: 500px;
+        height: auto;
         position: absolute;
         left: 400px;
+        display: row;
+        border-color: #065560;
+        border-style: solid;
+        border-radius: 30px;
     }
     
     .hospital {
         width: 400px;
-        height: 500px;
+        height: auto;
         position: absolute;
         left: 400px;
-        top: 600px;
+        top: 800px;
+        border-color: #065560;
+        border-style: solid;
+        border-radius: 30px;
     }
     
     .pharmacy {
         width: 400px;
-        height: 500px;
+        height: auto;
         position: absolute;
         left: 400px;
-        top: 1200px;
+        top: 1600px;
+        border-color: #065560;
+        border-style: solid;
+        border-radius: 30px;
     }
     
     .docimage1 {
@@ -29,8 +40,72 @@
     
     .button1 {}
     
-    .doctor1 {
+     :host {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    mat-drawer {
+        width: 260px;
+        background: #065560;
+    }
+    
+    mat-drawer-container {
+        height: 100%;
+    }
+    
+    .hhhh {
+        top: 100px;
+        width: 1000px;
+        height: 400px;
+    }
+    
+    .picture {
+        height: 200px;
+        width: 160px;
+        /* border-radius: 200px; */
+        position: absolute;
+        left: 90PX;
+        top: 40px;
+    }
+    
+    .name {
+        width: 290px;
+    }
+    
+    .name2 {
+        position: absolute;
+        left: 690px;
+        width: 290px;
+        top: 30px
+    }
+    
+    .address {}
+    
+    .doctorall {
         position: relative;
-        justify-content: center;
-        left: 40px;
+        margin: 30px;
+        border-style: solid;
+        border-color: chocolate;
+        background-color: transparent;
+    }
+    
+    .bigimg {
+        height: 100%px;
+        width: 1700px;
+    }
+    
+    .img1 {
+        position: absolute;
+        /* background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; */
+        width: 90%;
+        height: 90%;
+        opacity: 40%;
+    }
+    
+    .matcontent {
+        background-color: #E9F5E8;
     }

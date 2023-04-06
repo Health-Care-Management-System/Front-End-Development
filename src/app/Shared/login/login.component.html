@@ -183,10 +183,13 @@
                          id="form3Example4c"
                          name="password"
                          [(ngModel)]="registerArray.password"
-                         #password="ngModel"             
+                         #password="ngModel"
+                         [pattern]="passwordPtn"            
                          required />
                   <mat-label>Password</mat-label>
                   <mat-error *ngIf="(password.touched ||loginForm.submitted) && password.errors?.['required']">Password Required</mat-error>
+                  <mat-error *ngIf="(password.touched ||loginForm.submitted) && password.errors?.['pattern']">Your password must be at least 8 characters long, contain at least one number and have a mixture of uppercase and lowercase letters.</mat-error>
+
                 </mat-form-field>
               </div>
             </form>

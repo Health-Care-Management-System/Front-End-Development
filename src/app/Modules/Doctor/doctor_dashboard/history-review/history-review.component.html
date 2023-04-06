@@ -4,22 +4,27 @@
     <mat-drawer mode="side" [opened]="sideBarOpen">
         <app-left-tool-bar></app-left-tool-bar>
     </mat-drawer>
-    <mat-drawer-content>
-        <mat-card class="card1">
-            <mat-card-title>Announcements</mat-card-title>
-            <mat-card class="card11">
-                <mat-card-content>
+    <mat-drawer-content class="matcontent">
 
-                    <img class="annimage1" mat-card-sm-image src={{image}}> {{longText2}}
-                </mat-card-content>
-            </mat-card>
-            <mat-card class="card12">
-                <mat-card-content class="card12c">
-                    <img class="annimage2" mat-card-sm-image src={{image}}> {{longText2}}
-                </mat-card-content>
-            </mat-card>
 
-        </mat-card>
+        <div>
+            <mat-card class="card1">
+                <mat-card-title>Announcements</mat-card-title>
+                <mat-card class="card11">
+                    <mat-card-content>
+
+                        <img class="annimage1" mat-card-sm-image src={{image}}> {{longText2}}
+                    </mat-card-content>
+                </mat-card>
+                <mat-card class="card12">
+                    <mat-card-content class="card12c">
+                        <img class="annimage2" mat-card-sm-image src={{image}}> {{longText2}}
+                    </mat-card-content>
+                </mat-card>
+
+
+            </mat-card>
+        </div>
         <div class="hr1">
             <hr>
         </div>

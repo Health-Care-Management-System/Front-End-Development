@@ -1,0 +1,56 @@
+<div class="col-10 col-lg-8 col-xl-8" fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+    <div>
+        <h2 class="my-text3 pt-4 mx-4 h-1">New Appoinment</h2>
+        <!-- <div align="end" class="mb-3 ">
+            <button mat-stroked-button class="mx-2 action-button" >Invite Doctors</button>
+            <button mat-stroked-button class="mx-2 action-button" >Add New Doctors</button>
+        </div> -->
+    </div>
+<div class="container-fluid">
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="pat_ID">
+      <th mat-header-cell *matHeaderCellDef> Patient ID</th>
+      <td mat-cell *matCellDef="let element"> {{element.pat_ID}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="pat_name">
+      <th mat-header-cell *matHeaderCellDef>Patient Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.pat_name}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="doc_name">
+      <th mat-header-cell *matHeaderCellDef> Doctor Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.doc_name}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="time">
+      <th mat-header-cell *matHeaderCellDef> Time Slot </th>
+      <td mat-cell *matCellDef="let element"> {{element.time}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions1">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-button class="actions1">{{element.actions1}}</button>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions2">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-button class="actions2">{{element.actions2}}</button>
+        </td>
+      </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

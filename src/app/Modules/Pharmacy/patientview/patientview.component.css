@@ -1,0 +1,295 @@
+.www{
+    position: absolute;
+}
+
+
+.header1{
+    position: relative;
+    font-size: xx-large;
+    font-family: serif;
+    top: 80px;
+    left: 50px;
+   font-weight: bold;
+   color:#FE8E3C;
+}
+
+.header2{
+    position: relative;
+    font-size: xx-large;
+    font-family: serif;
+    top: 48px;
+    left: 198px;
+    color: grey;
+    font-weight: bold;
+}
+ 
+ 
+
+
+
+
+.card1, .card2, .card3{
+    top: 60px;
+    height: 120px;
+    left: 50px;
+    width: 350px; 
+    background-color:#21B6A8;
+    margin-right: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+} 
+
+.threecards{
+    display: flex;
+    flex-direction: row;
+}
+
+.card1text1{
+    position: absolute;
+    left: 60px;
+    top:17px;
+    font-size: large;
+}
+
+.card1text2{
+    color:whitesmoke;
+    font-size: medium;
+    
+}
+
+.card2text1{
+    position: absolute;
+    left: 60px;
+    top:17px;
+    font-size: large;
+}
+
+.card2text2{
+    color:whitesmoke;
+    font-size: medium;
+}
+
+.card3text1{
+    position: absolute;
+    left: 60px;
+    top:17px;
+    font-size: large;
+}
+
+.card3text2{
+    color:whitesmoke;
+    font-size: medium;
+}
+
+
+
+.statustext{
+    position: absolute;
+  top: 400px;
+  left: 50px;
+  font-size: x-large;
+  color:#C5C5C5;
+  font-weight: bold;
+}
+
+.statuscard1{
+    position: relative;
+    top: 240px;
+    width: 670px;
+    height: 80px;
+    
+  
+}
+
+.statcard1text3{
+    position:relative;
+    left: 260px;
+    top: -40px;
+}
+
+.statcard1text4{
+    position:relative;
+    left: 440px;
+    top: -60px;
+}
+
+
+
+
+.statuscard2{
+    position: relative;
+    top: 285px;
+    width: 670px;
+    height: 80px;
+    
+  
+
+}
+
+
+
+.statcard2text3{
+    position:relative;
+    left: 260px;
+    top: -40px;
+}
+
+.statcard2text4{
+    position:relative;
+    left: 440px;
+    top: -60px;
+}
+
+
+.statuscard3{
+    position: relative;
+    top: 330px;
+    width: 670px;
+    height: 80px;
+    
+   
+}
+
+.statcard3text3{
+    position:relative;
+    left: 350px;
+    top: -40px;
+}
+
+.card3button{
+    position: absolute;
+    left: 100px;
+}
+
+
+
+.statuscard4{
+    position: relative;
+    top: 380px;
+    width: 670px;
+    height: 80px;
+    
+   
+}
+
+.statcard4text3{
+    position:relative;
+    left: 260px;
+    top: -40px;
+}
+
+.statcard4text4{
+    position:relative;
+    left: 440px;
+    top: -60px;
+}
+
+
+
+
+.card3button{
+    position: relative;
+    left: 340px;
+    top:-35px;
+}
+
+.card1button1{
+    position: relative;
+    left: 270px;
+    top:-60px;
+}
+
+.card1button2{
+    position: relative;
+    left: 400px;
+    top:-60px;
+}
+
+.card2button1{
+    position: relative;
+    left: 275px;
+    top:-60px;
+}
+
+.card2button2{
+    position: relative;
+    left: 410px;
+    top:-60px;
+}
+
+.card4button1{
+    position: relative;
+    left: 275px;
+    top:-60px;
+}
+
+.card4button2{
+    position: relative;
+    left: 410px;
+    top:-60px;
+}
+
+.statuscard1,.statuscard2,.statuscard3,.statuscard4{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    background-color:#E5E4E2;
+    left: 50px;
+}
+
+.statcard1text1,.statcard2text1,.statcard3text1,.statcard4text1{
+    color:	#00008B;
+    font-weight: bold;
+}
+
+.statcard1text3,.statcard1text4,.statcard2text3,.statcard2text4,.statcard4text3,.statcard4text4{
+    font-weight: bold;
+}
+
+.statcard1text2,.statcard2text2,.statcard3text2,.statcard4text2{
+    color:grey;
+}
+
+
+.pdfuploader{
+       width:345px;
+       height:205px;
+       left: 780px;
+       top: -80px;
+       background-color:#065560;
+       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.imgcard{
+    position: relative;
+       width: fit-content;
+       top:40px;
+       left: 10px;
+}
+
+.pdftitle{
+      position: relative;
+      font-size: x-large;
+      font-weight: bold;
+      left: 140px;
+      top: -120px;
+      color:#FE8E3C;
+}
+
+.pdftext{
+    position: relative;
+    left: 140px;
+    top: -120px;
+    font-size: large;
+    width: 150px;
+    color:	#E5E4E2;
+    
+}
+
+.pdfbutton{
+    position: relative;
+    top: -110px;
+    left: 210px;
+    background-color:#FE8E3C;
+    border-color:#FE8E3C;
+    color:black;
+}
