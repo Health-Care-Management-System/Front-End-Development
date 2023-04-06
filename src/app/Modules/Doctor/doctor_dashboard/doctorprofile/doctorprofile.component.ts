@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -20,6 +20,7 @@ export class DoctorprofileComponent implements OnInit {
   
 
   
+
 
   newText1 = '';
 
@@ -68,8 +69,20 @@ email="www.charukacnadungamuwa@gmail.com";
 experiance='12';
   constructor(private http: HttpClient) { }
 
+
+  constructor(private route:ActivatedRoute,private doct_service:DoctorService) { }
+
+  ngOnInit(): void{
+    this.id = 1;
+    // @ts-ignore
+    this.doctor = new Doctor();
+    this.doct_service.getDoctorbyID(this.id).subscribe(data =>{
+      this.doctor = data;
+    });
+  }
   title = 'edowzori';
   sideBarOpen=true;
+
   ngOnInit(){  let response2= this.http.get("http://localhost:8070/api1/all");
   response2.subscribe((data)=>this.files=data);}
   changeImage() {
@@ -85,8 +98,11 @@ experiance='12';
       
     };
   }
+
   leftToolBarToggler(){
-   this.sideBarOpen=!this.sideBarOpen;
+    this.sideBarOpen=!this.sideBarOpen;
   }
+
+
 
 }
