@@ -26,7 +26,6 @@ export class DoctorprofileComponent implements OnInit {
     });
   }
 
-  editing3 = false;
 
   editLocation = false;
   newLocation = '';
@@ -35,6 +34,7 @@ export class DoctorprofileComponent implements OnInit {
       this.doc_service.updateDoctorColumn(this.id, 'address', this.newLocation);
     }
     this.editLocation = false;
+    location.reload();
   }
 
   editMobilenumber = false;
@@ -48,6 +48,7 @@ export class DoctorprofileComponent implements OnInit {
       );
     }
     this.editMobilenumber = false;
+    location.reload();
   }
 
   editExperience = false;
@@ -57,15 +58,26 @@ export class DoctorprofileComponent implements OnInit {
       this.doc_service.updateDoctorColumn(
         this.id,
         'experiences',
-        this.newExperience
+        this.newEmail
       );
     }
     this.editExperience = false;
+    location.reload();
   }
 
-  save4() {
-    // this.experiance = this.newText4;
-    // this.editing4 = false;
+
+  editEmail = false;
+  newEmail = "";
+  saveEmai() {
+    if (this.newEmail.length > 0) {
+      this.doc_service.updateDoctorColumn(
+        this.id,
+        'emailid',
+        this.newEmail
+      );
+    }
+    this.editEmail = false;
+    location.reload();
   }
 
   title = 'edowzori';
