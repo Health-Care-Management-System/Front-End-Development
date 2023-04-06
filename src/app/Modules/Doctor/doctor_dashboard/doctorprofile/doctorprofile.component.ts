@@ -1,97 +1,101 @@
 import { Component, OnInit } from '@angular/core';
-
-import { HttpClient } from '@angular/common/http';
-
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { DoctorService } from '../../doctor.service';
+import { Doctor } from '../../doctor';
 
 @Component({
   selector: 'app-doctorprofile',
   templateUrl: './doctorprofile.component.html',
-  styleUrls: ['./doctorprofile.component.css']
+  styleUrls: ['./doctorprofile.component.css'],
 })
 export class DoctorprofileComponent implements OnInit {
-  files:any;
-  imageSource: string = " ../assets/img/doctor.jpg ";
-  mobilenumber='123888982';
+  constructor(private http: HttpClient, private doc_service: DoctorService) {}
 
-  editing1 = false;
-  editing2 = false;
+  id = 1;
+  // @ts-ignore
+  selectedFile: File;
+
+  // @ts-ignore
+  doc: Doctor;
+
+
+
+  ngOnInit() {
+    this.doc_service.getDoctorbyID(this.id).subscribe((data) => {
+      this.doc = data;
+    });
+  }
+
   editing3 = false;
-  editing4 = false;
-  
 
-  
-
-
-  newText1 = '';
-
-  newText2 = '';
- 
-  newText3 = '';
-  
-  newText4 = '';
-  toggleEditing1() {
-    this.editing1 = !this.editing1;
-  }
-  toggleEditing2() {
-    this.editing2 = !this.editing2;
-  }
-  toggleEditing3() {
-    this.editing3 = !this.editing3;
-  }
-  toggleEditing4() {
-    this.editing4 = !this.editing4;
+  editLocation = false;
+  newLocation = '';
+  saveLocation() {
+    if (this.newLocation.length > 0) {
+      this.doc_service.updateDoctorColumn(this.id, 'address', this.newLocation);
+    }
+    this.editLocation = false;
   }
 
-  save1() {
-    this.address = this.newText1;
-    this.editing1 = false;
+  editMobilenumber = false;
+  newMobilenumber = '';
+  saveMobilenumber() {
+    if (this.newMobilenumber.length > 0) {
+      this.doc_service.updateDoctorColumn(
+        this.id,
+        'contactnumber',
+        this.newMobilenumber
+      );
+    }
+    this.editMobilenumber = false;
   }
-  save2() {
-    this.mobilenumber = this.newText2;
-    this.editing2 = false;
+
+  editExperience = false;
+  newExperience = '';
+  saveExperience() {
+    if (this.newExperience.length > 0) {
+      this.doc_service.updateDoctorColumn(
+        this.id,
+        'experiences',
+        this.newExperience
+      );
+    }
+    this.editExperience = false;
   }
-  save3() {
-    this.email = this.newText3;
-    this.editing3 = false;
-  }
+
   save4() {
-    this.experiance = this.newText4;
-    this.editing4 = false;
-  } 
-name='Dr. Harry';
-speciality='Cardiologist';
-img1=" ../assets/img/doctor.jpg ";
-name2="Dr. Harry";
-speciality2="Specialist of Cardiology";
-address="Street ,vilage, distract , town";
-speciality3="Cardiology";
-email="www.charukacnadungamuwa@gmail.com";
-experiance='12';
-  constructor(private http: HttpClient) { }
+    // this.experiance = this.newText4;
+    // this.editing4 = false;
+  }
 
   title = 'edowzori';
-  sideBarOpen=true;
+  sideBarOpen = true;
 
-  ngOnInit(){  let response2= this.http.get("http://localhost:8070/api1/all");
-  response2.subscribe((data)=>this.files=data);}
-  changeImage() {
-    const inputField = document.querySelector('input[type="file"]') as HTMLInputElement;
-    inputField.click();
-  }
-  onFileSelected(event: any) {
-    const file = event.target.files[0];
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => {
-      this.imageSource = reader.result as string;
-      
-    };
+  leftToolBarToggler() {
+    this.sideBarOpen = !this.sideBarOpen;
   }
 
-  leftToolBarToggler(){
-    this.sideBarOpen=!this.sideBarOpen;
+  
+
+  onFileSelected(event:any) {
+    this.selectedFile = event.target.files[0];
   }
 
+  onUpload() {
+    const fd = new FormData();
+    fd.append('file', this.selectedFile, this.selectedFile.name);
 
+    this.doc_service.uploadPhoto(this.id, fd).subscribe(
+      res => {
+        console.log(res);
+        alert('Photo added successfully');
+      },
+      error => {
+        console.log(error);
+        alert('Error occurred while uploading photo');
+      }
+    );
+    location.reload();
+  }
 
 }
