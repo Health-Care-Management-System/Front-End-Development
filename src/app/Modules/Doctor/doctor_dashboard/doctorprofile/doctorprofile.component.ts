@@ -69,17 +69,6 @@ email="www.charukacnadungamuwa@gmail.com";
 experiance='12';
   constructor(private http: HttpClient) { }
 
-
-  constructor(private route:ActivatedRoute,private doct_service:DoctorService) { }
-
-  ngOnInit(): void{
-    this.id = 1;
-    // @ts-ignore
-    this.doctor = new Doctor();
-    this.doct_service.getDoctorbyID(this.id).subscribe(data =>{
-      this.doctor = data;
-    });
-  }
   title = 'edowzori';
   sideBarOpen=true;
 
