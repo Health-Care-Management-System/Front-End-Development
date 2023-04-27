@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
@@ -42,7 +43,7 @@ export class PatientProfileComponent implements OnInit {
 
   // Define the methods for increasing and decreasing each progress bar
 
-  imageSource: string = 'https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp';
+  imageSource: string =  "/assets/img/sinna2.jpg";
  
 
   editing = false;
@@ -73,28 +74,55 @@ export class PatientProfileComponent implements OnInit {
     this.editing4 = !this.editing4;
   }
 
-  save() {
-    this.text = this.newText;
-    this.editing = false;
-  }
-  save2() {
-    this.text2 = this.newText2;
-    this.editing2 = false;
-  }
-  save3() {
-    this.text3 = this.newText3;
-    this.editing3 = false;
-  }
-  save4() {
-    this.text4 = this.newText4;
-    this.editing4 = false;
-  }
   
-  constructor() { }
+  save(index: number) {
+    const id = this.cards[index].empId; // use the ID of the card you want to update
+    const updatedData = { ...this.cards[index], empName: this.newText }; // include all existing data and replace the name field with the new value
+  
+    this.http.put(`http://localhost:8070/api/${id}`, updatedData).subscribe(() => {
+      
+      this.cards[index] = updatedData;
+      this.editing = false;
+    });
+  }
+  save2(index: number) {
+    const id = this.cards[index].empId; 
+    const updatedData = { ...this.cards[index], email: this.newText2 }; 
+    this.http.put(`http://localhost:8070/api/${id}`, updatedData).subscribe(() => {
+ 
+      this.cards[index] = updatedData;
+      this.editing2 = false;
+    });
+  }
+  save3(index: number) {
+    const id = this.cards[index].empId; // use the ID of the card you want to update
+    const updatedData = { ...this.cards[index], empNumber: this.newText3 }; // include all existing data and replace the name field with the new value
+  
+    this.http.put(`http://localhost:8070/api/${id}`, updatedData).subscribe(() => {
+      
+      this.cards[index] = updatedData;
+      this.editing3 = false;
+    });
+  }
+  save4(index: number) {
+    const id = this.cards[index].empId; 
+    const updatedData = { ...this.cards[index], empAddress: this.newText4 }; 
+  
+    this.http.put(`http://localhost:8070/api/${id}`, updatedData).subscribe(() => {
+     
+      this.cards[index] = updatedData;
+      this.editing4 = false;
+    });
+  }
+  cards:any;
+  constructor(private http: HttpClient) { }
 
   title = 'edowzori';
   sideBarOpen=true;
-  ngOnInit(){}
+  ngOnInit(){
+    let response2= this.http.get("http://localhost:8070/api/all");
+    response2.subscribe((data)=>this.cards=data);
+  }
   changeImage() {
     const inputField = document.querySelector('input[type="file"]') as HTMLInputElement;
     inputField.click();
@@ -108,9 +136,16 @@ export class PatientProfileComponent implements OnInit {
       
     };
   }
-  // changeImage() {
-  //   this.imageSource = 'https://example.com/new-image.jpg'; // Replace with the URL of the new image
-  // }
+ 
+
+
+
+
+
+
+
+
+  
   leftToolBarToggler(){
    this.sideBarOpen=!this.sideBarOpen;
   }

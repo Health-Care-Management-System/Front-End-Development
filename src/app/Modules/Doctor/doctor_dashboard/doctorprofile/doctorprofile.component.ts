@@ -70,8 +70,11 @@ experiance='12';
 
   title = 'edowzori';
   sideBarOpen=true;
-  ngOnInit(){  let response2= this.http.get("http://localhost:8070/api1/all");
+  ngOnInit(){ 
+    let response2= this.http.get("http://localhost:8070/api1/all");
   response2.subscribe((data)=>this.files=data);}
+
+  
   changeImage() {
     const inputField = document.querySelector('input[type="file"]') as HTMLInputElement;
     inputField.click();

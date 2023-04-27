@@ -2,31 +2,33 @@
 <div class="container">
     <img class="img1" src="\assets\img\docprofback.jpg">
     <mat-card class="example-card">
-        <div class="harry">{{name}} </div>
-
-        <div class="cardio">{{speciality}} </div>
 
         <div class="image">
             <!-- <img src="..\assets\images\doctor.jpg"></div> -->
-            <img class="imgradius" mat-card-md-image [src]='img1'>
+            <img class="imgradius" mat-card-md-image [src]='doctor.empImage'>
         </div>
+        <div class="harry">{{doctor.name}} </div>
+
+        <div class="cardio">{{doctor.spciality}} </div>
+
         <div class="hr">
             <hr>
         </div>
 
     </mat-card>
 
-
-    <div class="harry2 ">{{name2}}</div>
-    <div class="speci ">{{speciality2}}</div>
+    <div class="namespeci">
+        <div class=" harry2 ">{{doctor.name}}</div>
+        <div class="speci ">{{doctor.spciality}}</div>
+    </div>
     <mat-icon class="loc ">support</mat-icon>
     <div class="location ">Location</div>
-    <div class="add ">{{address}} </div>
+    <div class="add ">{{doctor.city}} </div>
 
     <div class="Specialities ">Specialities</div>
     <mat-icon class="loc2 ">support</mat-icon>
 
-    <div class="Cardiology ">{{speciality3}}</div>
+    <div class="Cardiology ">{{doctor.spciality}}</div>
     <div class="WorkPlaces ">Work Places</div>
     <mat-icon class="loc3 ">support</mat-icon>
     <button mat-button class="ABCHospital1 ">ABC Hospital1</button>
@@ -38,20 +40,20 @@
 
     <div class="slmc ">SLMC Number: 1952</div>
     <div class="Experiance ">Experiance</div>
-    <div class="ex ">{{experiance}} </div>
+    <div class="ex ">{{doctor.hospital}} </div>
 
 
-    <button mat-button class="manage " routerLink="/makeanappoinment">Make an Appoinment</button>
+    <button mat-button class="manage " [routerLink]="[ '/makeanappoinment', doctor.id] ">Make an Appoinment</button>
     <div class="are ">Do you want to channel ?</div>
     <mat-icon class="loc5 ">support</mat-icon>
     <div class="number ">Mobile Number</div>
     <mat-icon class="loc6 ">support</mat-icon>
-    <div class="nu ">{{mobile}}</div>
+    <div class="nu ">{{doctor.city}}</div>
 
 
     <mat-icon class="loc7 ">support</mat-icon>
     <div class="email ">E-Mail</div>
-    <div class="emad ">{{email}}</div>
+    <div class="emad ">{{doctor.city}}</div>
 
     <div class="location ">Location</div>
 
@@ -59,13 +61,13 @@
     <mat-icon class="treated ">manage_serach</mat-icon>
     <div class="treatedhowmuch ">0</div>
     <div class="treat ">Patients Treated</div>
-    <div class="vl"></div>
+    <div class="vl "></div>
 
-    <hr class="hrq1">
-    <hr class="hrq2">
-    <hr class="hrq3">
-    <hr class="hrq4">
-    <hr class="hrq5">
-    <hr class="hrq6">
+    <hr class="hrq1 ">
+    <hr class="hrq2 ">
+    <hr class="hrq3 ">
+    <hr class="hrq4 ">
+    <hr class="hrq5 ">
+    <hr class="hrq6 ">
 
 </div>

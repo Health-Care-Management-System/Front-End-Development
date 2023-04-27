@@ -20,18 +20,16 @@
                                     Enter New Password
                                 </div>
                                 <div>
-                                    <!-- <mat-form-field class="field" appearance="outline">
-                                            <mat-label>Enter Password</mat-label>
-                                            <input matInput class="placeholder1" laceholder="Enter Password">
-                                            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-        
-                                        </mat-form-field> -->
+
                                     <mat-form-field class="field" appearance="outline">
                                         <mat-label>Password</mat-label>
-                                        <input matInput class="placeholder1" laceholder="Enter Password" [type]="hide ? 'text' : 'password'" formControlName="password">
+                                        <input matInput class="placeholder1" placeholder="Enter Password" [type]="hide ? 'text' : 'password'" formControlName="password">
                                         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                                               <mat-icon>{{hide ? 'visibility' :'visibility_off'}}</mat-icon>
                                             </button>
+                                        <mat-error *ngIf="passwordForm.get('password')?.hasError('notStrongEnough')">
+                                            "Password must contain at least one digit, one lowercase letter, one uppercase letter, and one special character.
+                                        </mat-error>
                                     </mat-form-field>
                                 </div>
                             </div>
@@ -42,12 +40,7 @@
                                 </div>
                                 <div>
 
-                                    <!-- <mat-form-field class="field" appearance="outline">
-                                            <mat-label>Enter Password</mat-label>
-                                            <input matInput placeholder="Enter Password">
-                                            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-        
-                                        </mat-form-field> -->
+
                                     <mat-form-field class="field" appearance="outline">
                                         <mat-label>Password</mat-label>
                                         <input matInput class="placeholder" laceholder="Enter Password" [type]="hide2 ? 'text' : 'password'" formControlName="confirmPassword">

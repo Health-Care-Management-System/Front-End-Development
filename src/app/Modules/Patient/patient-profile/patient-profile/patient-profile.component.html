@@ -12,11 +12,11 @@
                 <div class="fullname">Full Name
 
                     <div *ngIf="!editing">
-                        <span class="text">{{ text }}</span>
+                        <span class="text">{{ cards[1].empName }}</span>
                     </div>
                     <div *ngIf="editing">
                         <p><input type="text" class="text" placeholder="Enter text here" [(ngModel)]="newText"></p>
-                        <button mat-button class="savebut" (click)="save()">Save</button>
+                        <button mat-button class="savebut" (click)="save(1)">Save</button>
                     </div> <button mat-icon-button class="editbut" (click)="toggleEditing()">
                     <mat-icon >edit</mat-icon>
                   </button>
@@ -25,11 +25,11 @@
                 <div class="Email">E-Mail
 
                     <div *ngIf="!editing2">
-                        <span class="text2">{{ text2 }}</span>
+                        <span class="text2">{{ cards[1].email }}</span>
                     </div>
                     <div *ngIf="editing2">
-                        <p><input type="text" class="text2" placeholder="Enter text here" [(ngModel)]="newText2"></p>
-                        <button mat-button class="savebut2" (click)="save2()">Save</button>
+                        <p><input type="email" class="text2" placeholder="Enter text here" [(ngModel)]="newText2"></p>
+                        <button mat-button class="savebut2" (click)="save2(1)">Save</button>
                     </div> <button mat-icon-button class="editbut2" (click)="toggleEditing2()">
                     <mat-icon >edit</mat-icon>
                   </button>
@@ -39,11 +39,11 @@
                 <div class="phone">Phone
 
                     <div *ngIf="!editing3">
-                        <span class="text3">{{ text3 }}</span>
+                        <span class="text3">{{ cards[1].empNumber }}</span>
                     </div>
                     <div *ngIf="editing3">
                         <p><input type="text" class="text3" placeholder="Enter text here" [(ngModel)]="newText3"></p>
-                        <button mat-button class="savebut3" (click)="save3()">Save</button>
+                        <button mat-button class="savebut3" (click)="save3(1)">Save</button>
                     </div> <button mat-icon-button class="editbut3" (click)="toggleEditing3()">
                     <mat-icon >edit</mat-icon>
                   </button>
@@ -54,11 +54,11 @@
                 <div class="address">Address
 
                     <div *ngIf="!editing4">
-                        <span class="text4">{{ text4 }}</span>
+                        <span class="text4">{{ cards[1].empAddress }}</span>
                     </div>
                     <div *ngIf="editing4">
                         <p><input type="text" class="text4" placeholder="Enter text here" [(ngModel)]="newText4"></p>
-                        <button mat-button class="savebut4" (click)="save4()">Save</button>
+                        <button mat-button class="savebut4" (click)="save4(1)">Save</button>
                     </div> <button mat-icon-button class="editbut4" (click)="toggleEditing4()">
                     <mat-icon >edit</mat-icon>
                   </button>
@@ -67,20 +67,7 @@
             </div>
             <div class="vl"></div>
 
-            <!-- <div class="card card2">
-                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
 
-                    <img [src]="imageSource" class="img-fluid uu" />
-                    <a href="#!">
-                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                    </a>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title title">Card title</h5>
-
-                    <button class="btn btn-primary buttonpro" (click)="changeImage()">edit </button>
-                </div>
-            </div> -->
             <div class="card card2">
                 <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                     <img [src]="imageSource" class="img-fluid uu" />
@@ -99,64 +86,36 @@
 
         </mat-card>
 
-        <!-- <div class="row">
-            <div class="col-sm-12">
-                <div class="card eee">
-                    <div class="card-body">
-                        <h5 class="d-flex align-items-center mb-3">Project Status</h5>
-                        <p>Web Design</p>
-                        <div class="progress mb-3" style="height: 5px">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+
+        <div class="row ">
+            <div class="col-sm-12 ">
+                <div class="card eee ">
+                    <div class="card-body ">
+                        <h5 class="d-flex align-items-center mb-3 ">Health Status</h5>
+                        <p>Suger Level</p>
+                        <div class="progress mb-3 " style="height: 5px ">
+                            <div class="progress-bar bg-primary " role="progressbar " [style.width.%]="webDesignProgress " [attr.aria-valuenow]="webDesignProgress " aria-valuemin="0 " aria-valuemax="100 "></div>
                         </div>
-                        <p>Website Markup</p>
-                        <div class="progress mb-3" style="height: 5px">
-                            <div class="progress-bar bg-danger" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <p>One Page</p>
-                        <div class="progress mb-3" style="height: 5px">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <p>Mobile Template</p>
-                        <div class="progress mb-3" style="height: 5px">
-                            <div class="progress-bar bg-warning" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <p>Backend API</p>
-                        <div class="progress" style="height: 5px">
-                            <div class="progress-bar bg-info" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card eee">
-                    <div class="card-body">
-                        <h5 class="d-flex align-items-center mb-3">Project Status</h5>
-                        <p>Web Design</p>
-                        <div class="progress mb-3" style="height: 5px">
-                            <div class="progress-bar bg-primary" role="progressbar" [style.width.%]="webDesignProgress" [attr.aria-valuenow]="webDesignProgress" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <button type="button" class="btn btn-sm btn-success" (click)="increaseWebDesignProgress()">More</button>
-                            <button type="button" class="btn btn-sm btn-danger" (click)="decreaseWebDesignProgress()">Less</button>
+                        <div class="d-flex justify-content-between align-items-center ">
+                            <button type="button " class="btn btn-sm btn-success " (click)="increaseWebDesignProgress() ">More</button>
+                            <button type="button " class="btn btn-sm btn-danger " (click)="decreaseWebDesignProgress() ">Less</button>
                         </div>
 
-                        <p>Website Markup</p>
-                        <div class="progress mb-3" style="height: 5px">
-                            <div class="progress-bar bg-danger" role="progressbar" [style.width.%]="suger" [attr.aria-valuenow]="suger" aria-valuemin="0" aria-valuemax="100"></div>
+                        <p>Blood Pressure</p>
+                        <div class="progress mb-3 " style="height: 5px ">
+                            <div class="progress-bar bg-danger " role="progressbar " [style.width.%]="suger " [attr.aria-valuenow]="suger " aria-valuemin="0 " aria-valuemax="100 "></div>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <button type="button" class="btn btn-sm btn-success" (click)="increaseWebsiteMarkupProgress()">More</button>
-                            <button type="button" class="btn btn-sm btn-danger" (click)="decreaseWebsiteMarkupProgress()">Less</button>
+                        <div class="d-flex justify-content-between align-items-center ">
+                            <button type="button " class="btn btn-sm btn-success " (click)="increaseWebsiteMarkupProgress() ">More</button>
+                            <button type="button " class="btn btn-sm btn-danger " (click)="decreaseWebsiteMarkupProgress() ">Less</button>
                         </div>
-                        <p>Website Markup</p>
-                        <div class="progress mb-3" style="height: 5px">
-                            <div class="progress-bar bg-danger" role="progressbar" [style.width.%]="websiteMarkupProgress" [attr.aria-valuenow]="websiteMarkupProgress" aria-valuemin="0" aria-valuemax="100"></div>
+                        <p>Colesterol Level</p>
+                        <div class="progress mb-3 " style="height: 5px ">
+                            <div class="progress-bar bg-danger " role="progressbar " [style.width.%]="websiteMarkupProgress " [attr.aria-valuenow]="websiteMarkupProgress " aria-valuemin="0 " aria-valuemax="100 "></div>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <button type="button" class="btn btn-sm btn-success" (click)="increaseWebsiteMarkupProgress()">More</button>
-                            <button type="button" class="btn btn-sm btn-danger" (click)="decreaseWebsiteMarkupProgress()">Less</button>
+                        <div class="d-flex justify-content-between align-items-center ">
+                            <button type="button " class="btn btn-sm btn-success " (click)="increaseWebsiteMarkupProgress() ">More</button>
+                            <button type="button " class="btn btn-sm btn-danger " (click)="decreaseWebsiteMarkupProgress() ">Less</button>
                         </div>
 
                     </div>

@@ -1,851 +1,861 @@
-                        .example-card {
-                            position: absolute;
-                            width: 360px;
-                            height: 479px;
-                            left: 111px;
-                            top: 121px;
-                            /* background: rgba(232, 234, 255, 0.88); */
-                            box-shadow: 0px 4.07454px 24.4472px -1.01863px rgba(0, 0, 0, 0.11);
-                            backdrop-filter: blur(20.3727px);
-                            /* Note: backdrop-filter has minimal browser support */
-                            border-radius: 20px;
-                            background-color: #E3E3E7;
-                        }
-                        
-                        .harry {
-                            position: absolute;
-                            width: 164px;
-                            height: 58px;
-                            left: 110px;
-                            top: 370px;
-                            font-family: 'Inter';
-                            font-style: normal;
-                            font-weight: 700;
-                            font-size: 30px;
-                            line-height: 36px;
-                            text-align: center;
-                            color: #13100B;
-                        }
-                        
-                        .cardio {
-                            position: absolute;
-                            font-style: normal;
-                            font-weight: 500;
-                            font-size: 20px;
-                            line-height: 24px;
-                            left: 134px;
-                            top: 400px;
-                            color: rgba(64, 64, 64, 0.72);
-                        }
-                        
-                        .harry2 {
-                            font-family: 'Source Sans Pro';
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 40px;
-                            line-height: 50px;
-                            color: #383993;
-                            position: absolute;
-                            width: 881px;
-                            height: 50px;
-                            left: 808px;
-                            top: 70px;
-                        }
-                        
-                        .speci {
-                            position: absolute;
-                            width: 881px;
-                            height: 28px;
-                            left: 780px;
-                            top: 130px;
-                            font-family: 'Source Sans Pro';
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 22px;
-                            line-height: 28px;
-                            /* identical to box height */
-                            color: #979797;
-                        }
-                        
-                        .addspe {
-                            position: absolute;
-                            width: 139px;
-                            height: 33px;
-                            left: 1100px;
-                            top: 331px;
-                            border-color: #E3E3E7;
-                            border-radius: 5px;
-                            border-style: hidden;
-                            color: #383993;
-                            font-family: 'Source Sans Pro';
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 14px;
-                            line-height: 18px;
-                            background: #E3E3E7;
-                            z-index: 1;
-                        }
-                        
-                        .loc {
-                            position: absolute;
-                            width: 26px;
-                            height: 26px;
-                            left: 611px;
-                            top: 216px;
-                        }
-                        
-                        .location {
-                            position: absolute;
-                            width: 881px;
-                            height: 30px;
-                            left: 642px;
-                            top: 212px;
-                            font-family: 'Source Sans Pro';
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 24px;
-                            line-height: 30px;
-                            color: #383993;
-                        }
-                        
-                        .add {
-                            position: absolute;
-                            width: 493px;
-                            height: 20px;
-                            left: -20px;
-                            top: 36px;
-                            font-family: 'Source Sans Pro';
-                            font-style: normal;
-                            font-weight: 400;
-                            font-size: 16px;
-                            line-height: 20px;
-                            color: #979797;
-                        }
-                        
-                        .editadd {
-                            position: absolute;
-                            width: 129px;
-                            height: 31px;
-                            left: 460px;
-                            top: 38px;
-                            border-color: #E3E3E7;
-                            border-radius: 5px;
-                            border-style: hidden;
-                            color: #383993;
-                            font-family: 'Source Sans Pro';
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 14px;
-                            line-height: 18px;
-                            background: gainsboro;
-                            z-index: 1;
-                        }
-                        
-                        .Specialities {
-                            position: absolute;
-                            width: 881px;
-                            height: 30px;
-                            left: 640px;
-                            top: 294px;
-                            font-family: 'Source Sans Pro';
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 24px;
-                            line-height: 30px;
-                            color: #383993;
-                        }
-                        
-                        .Cardiology {
-                            position: absolute;
-                            width: 83.99px;
-                            height: 15.5px;
-                            left: 621px;
-                            top: 331px;
-                            font-family: 'Source Sans Pro';
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 14px;
-                            line-height: 18px;
-                            color: gray;
-                        }
-                        
-                        .WorkPlaces {
-                            position: absolute;
-                            width: 881px;
-                            height: 30px;
-                            left: 640px;
-                            top: 406px;
-                            font-family: 'Source Sans Pro';
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 24px;
-                            line-height: 30px;
-                            color: #383993;
-                        }
-                        
-                        .ABCHospital1 {
-                            position: absolute;
-                            width: 129px;
-                            height: 31px;
-                            left: 620px;
-                            top: 459px;
-                            background: rgba(215, 215, 252, 0.8);
-                            border-radius: 5px;
-                            border-color: rgba(215, 215, 252, 0.8);
-                            font-family: 'Source Sans Pro';
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 14px;
-                            line-height: 18px;
-                            color: #4648AE;
-                            border-style: hidden;
-                        }
-                        
-                        .ABCHospital2 {
-                            position: absolute;
-                            width: 129px;
-                            height: 31px;
-                            left: 766px;
-                            top: 459px;
-                            background: rgba(215, 215, 252, 0.8);
-                            border-radius: 5px;
-                            background: rgba(215, 215, 252, 0.8);
-                            border-radius: 5px;
-                            border-color: rgba(215, 215, 252, 0.8);
-                            font-family: 'Source Sans Pro';
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 14px;
-                            line-height: 18px;
-                            color: #4648AE;
-                            border-style: hidden;
-                        }
-                        
-                        .ABCHospital3 {
-                            position: absolute;
-                            width: 129px;
-                            height: 31px;
-                            left: 915px;
-                            top: 458px;
-                            background: rgba(215, 215, 252, 0.8);
-                            border-radius: 5px;
-                            border-color: rgba(215, 215, 252, 0.8);
-                            font-family: 'Source Sans Pro';
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 14px;
-                            line-height: 18px;
-                            color: #4648AE;
-                            border-style: hidden;
-                        }
-                        
-                        .AddWorkplace {
-                            position: absolute;
-                            width: 129px;
-                            height: 31px;
-                            left: 1100px;
-                            top: 458px;
-                            border-color: #E3E3E7;
-                            border-radius: 5px;
-                            border-style: hidden;
-                            color: #383993;
-                            font-family: 'Source Sans Pro';
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 14px;
-                            line-height: 18px;
-                            background: #E3E3E7;
-                            z-index: 1;
-                        }
-                        
-                        .Qualification {
-                            position: absolute;
-                            width: 881px;
-                            height: 30px;
-                            left: 640px;
-                            top: 534px;
-                            font-family: 'Source Sans Pro';
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 24px;
-                            line-height: 30px;
-                            color: #383993;
-                        }
-                        
-                        .slmc {
-                            position: absolute;
-                            width: 493px;
-                            height: 40px;
-                            left: 621px;
-                            top: 572px;
-                            font-family: 'Source Sans Pro';
-                            font-style: normal;
-                            font-weight: 400;
-                            font-size: 16px;
-                            line-height: 20px;
-                            color: #02010D;
-                        }
-                        
-                        .Experiance {
-                            position: absolute;
-                            width: 181px;
-                            height: 30px;
-                            left: 640px;
-                            top: 620px;
-                            font-family: 'Source Sans Pro';
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 24px;
-                            line-height: 30px;
-                            color: #383993;
-                        }
-                        
-                        .ex {
-                            position: absolute;
-                            width: 133px;
-                            height: 20px;
-                            left: 481px;
-                            top: 40px;
-                            font-family: 'Source Sans Pro';
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 14px;
-                            line-height: 20px;
-                            color: #383993;
-                            border-style: hidden;
-                            background: #E3E3E7;
-                            border-color: #E3E3E7;
-                            border-radius: 5px;
-                            z-index: 1;
-                        }
-                        
-                        .AddWorkExperience {
-                            position: absolute;
-                            width: 139px;
-                            height: 33px;
-                            left: 1100px;
-                            top: 653px;
-                            border-color: #E3E3E7;
-                            border-radius: 5px;
-                            border-style: hidden;
-                            color: #383993;
-                            font-family: 'Source Sans Pro';
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 14px;
-                            line-height: 18px;
-                            background: #E3E3E7;
-                        }
-                        
-                        .manage {
-                            position: absolute;
-                            width: 245px;
-                            height: 100px;
-                            left: 156px;
-                            top: 774px;
-                            background: #D72B4A;
-                            border-radius: 13.0291px;
-                            font-family: 'Poppins';
-                            font-style: normal;
-                            font-weight: 700;
-                            font-size: 20px;
-                            line-height: 30px;
-                            color: #FFFFFF;
-                        }
-                        
-                        .are {
-                            position: absolute;
-                            width: 422px;
-                            height: 106px;
-                            left: 139px;
-                            top: 725px;
-                            font-family: 'Poppins';
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 20px;
-                            line-height: 109%;
-                            /* or 22px */
-                            color: #404040;
-                        }
-                        
-                        .number {
-                            position: absolute;
-                            width: 881px;
-                            height: 28px;
-                            left: 638px;
-                            top: 751px;
-                            font-family: 'Source Sans Pro';
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 22px;
-                            line-height: 28px;
-                            /* identical to box height */
-                            color: #383993;
-                        }
-                        
-                        .nu {
-                            position: absolute;
-                            width: 493px;
-                            height: 20px;
-                            left: 4px;
-                            top: 43px;
-                            font-family: 'Source Sans Pro';
-                            font-style: normal;
-                            font-weight: 400;
-                            font-size: 16px;
-                            line-height: 20px;
-                            color: #979797;
-                        }
-                        
-                        .editnum {
-                            position: absolute;
-                            width: 140px;
-                            height: 25px;
-                            left: 5px;
-                            top: 83px;
-                            border-color: #E3E3E7;
-                            border-radius: 5px;
-                            border-style: hidden;
-                            color: #383993;
-                            font-family: 'Source Sans Pro';
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 14px;
-                            line-height: 18px;
-                            background: #E3E3E7;
-                        }
-                        
-                        .email {
-                            position: absolute;
-                            width: 881px;
-                            height: 28px;
-                            left: 975px;
-                            top: 751px;
-                            font-family: 'Source Sans Pro';
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 22px;
-                            line-height: 28px;
-                            /* identical to box height */
-                            color: #383993;
-                        }
-                        
-                        .emad {
-                            position: absolute;
-                            width: 3px;
-                            height: 20px;
-                            left: 6px;
-                            top: 43px;
-                            font-family: 'Source Sans Pro';
-                            font-style: normal;
-                            font-weight: 400;
-                            font-size: 16px;
-                            line-height: 20px;
-                            color: #979797;
-                        }
-                        
-                        .editemail {
-                            position: absolute;
-                            width: 140px;
-                            height: 25px;
-                            left: 4px;
-                            top: 83px;
-                            border-color: #E3E3E7;
-                            border-radius: 5px;
-                            border-style: hidden;
-                            color: #383993;
-                            font-family: 'Source Sans Pro';
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 14px;
-                            line-height: 18px;
-                            background: #E3E3E7;
-                        }
-                        
-                        .ratings {
-                            position: absolute;
-                            width: 96px;
-                            height: 29px;
-                            left: 257px;
-                            top: 444px;
-                            font-family: 'Poppins';
-                            font-style: normal;
-                            font-weight: 700;
-                            font-size: 25px;
-                            line-height: 29px;
-                            /* identical to box height, or 115% */
-                            display: flex;
-                            align-items: center;
-                            letter-spacing: -0.02em;
-                            color: rgba(64, 64, 64, 0.72);
-                        }
-                        
-                        .star1 {
-                            position: absolute;
-                            width: 96px;
-                            height: 29px;
-                            left: 240px;
-                            top: 480px;
-                            color: rgba(57, 56, 147, 0.42);
-                        }
-                        
-                        .star2 {
-                            position: absolute;
-                            width: 96px;
-                            height: 29px;
-                            left: 260px;
-                            top: 480px;
-                            color: rgba(57, 56, 147, 0.42);
-                        }
-                        
-                        .star3 {
-                            position: absolute;
-                            width: 96px;
-                            height: 29px;
-                            left: 280px;
-                            top: 480px;
-                            color: rgba(57, 56, 147, 0.42);
-                        }
-                        
-                        .star4 {
-                            position: absolute;
-                            width: 96px;
-                            height: 29px;
-                            left: 300px;
-                            top: 480px;
-                            color: rgba(57, 56, 147, 0.42);
-                        }
-                        
-                        .star5 {
-                            position: absolute;
-                            width: 96px;
-                            height: 29px;
-                            left: 320px;
-                            top: 480px;
-                            color: rgba(57, 56, 147, 0.42);
-                        }
-                        
-                        .review {
-                            position: absolute;
-                            width: 31.03px;
-                            height: 41.37px;
-                            left: 187px;
-                            top: 450px;
-                            color: #393893;
-                            ;
-                        }
-                        
-                        .zero {
-                            position: absolute;
-                            width: 25px;
-                            height: 23px;
-                            left: 358px;
-                            top: 469px;
-                            font-family: 'Poppins';
-                            font-style: normal;
-                            font-weight: 500;
-                            font-size: 15.2727px;
-                            line-height: 23px;
-                            /* identical to box height */
-                            text-align: center;
-                            color: #404040;
-                        }
-                        
-                        .treated {
-                            position: absolute;
-                            width: 38.79px;
-                            height: 38.79px;
-                            left: 296px;
-                            top: 560px;
-                            color: #393893;
-                        }
-                        
-                        .treatedhowmuch {
-                            position: absolute;
-                            width: 17px;
-                            height: 29px;
-                            left: 289px;
-                            top: 560px;
-                            font-family: 'Poppins';
-                            font-style: normal;
-                            font-weight: 700;
-                            font-size: 25px;
-                            line-height: 29px;
-                            /* identical to box height, or 115% */
-                            display: flex;
-                            align-items: center;
-                            letter-spacing: -0.02em;
-                            color: rgba(64, 64, 64, 0.78);
-                        }
-                        
-                        .treat {
-                            position: absolute;
-                            width: 112px;
-                            height: 29px;
-                            left: 260px;
-                            top: 576px;
-                            font-family: 'Poppins';
-                            font-style: normal;
-                            font-weight: 500;
-                            font-size: 14.0372px;
-                            line-height: 29px;
-                            /* identical to box height, or 204% */
-                            display: flex;
-                            align-items: center;
-                            letter-spacing: -0.02em;
-                            color: #676767;
-                        }
-                        
-                        .image {
-                            position: relative;
-                            border-radius: 50px;
-                            left: 123px;
-                        }
-                        
-                        .hr {
-                            position: relative;
-                            top: 40px;
-                        }
-                        
-                        .container {
-                            position: absolute;
-                            top: -30px;
-                        }
-                        
-                        .imgradius {
-                            position: relative;
-                            border-radius: 80%;
-                            height: 300px;
-                            width: 250px;
-                            left: 40px;
-                        }
-                        
-                         :host {
-                            display: flex;
-                            flex-direction: column;
-                            height: 100%;
-                        }
-                        
-                        mat-drawer {
-                            width: 260px;
-                            background: #065560;
-                        }
-                        
-                        mat-drawer-container {
-                            height: 100%;
-                        }
-                        
-                        .loc2 {
-                            position: absolute;
-                            width: 26px;
-                            height: 26px;
-                            left: 611px;
-                            top: 299px;
-                        }
-                        
-                        .savebut1 {
-                            position: absolute;
-                            left: 290px;
-                            top: 30px;
-                            z-index: 1;
-                        }
-                        
-                        .savebut2 {
-                            position: absolute;
-                            left: 140px;
-                            z-index: 1;
-                        }
-                        
-                        .savebut3 {
-                            position: absolute;
-                            left: 140px;
-                            z-index: 1;
-                        }
-                        
-                        .savebut4 {
-                            position: absolute;
-                            left: 290px;
-                            top: 30px;
-                            z-index: 1;
-                        }
-                        
-                        .vl {
-                            border-left: 6px solid #00be99;
-                            height: 800px;
-                            position: absolute;
-                            left: 550px;
-                            margin-left: -3px;
-                            top: 60px;
-                        }
-                        
-                        .loc3 {
-                            position: absolute;
-                            width: 26px;
-                            height: 26px;
-                            left: 611px;
-                            top: 410px;
-                        }
-                        
-                        .loc4 {
-                            position: absolute;
-                            width: 26px;
-                            height: 26px;
-                            left: 611px;
-                            top: 540px;
-                        }
-                        
-                        .loc5 {
-                            position: absolute;
-                            width: 26px;
-                            height: 26px;
-                            left: 611px;
-                            top: 625px;
-                        }
-                        
-                        .loc6 {
-                            position: absolute;
-                            width: 26px;
-                            height: 26px;
-                            left: 611px;
-                            top: 750px;
-                        }
-                        
-                        .loc7 {
-                            position: absolute;
-                            width: 26px;
-                            height: 26px;
-                            left: 950px;
-                            top: 750px;
-                        }
-                        
-                        .hrq1 {
-                            width: 650px;
-                            height: 125px;
-                            color: #00be99;
-                            position: absolute;
-                            top: 150px;
-                            left: 600px;
-                            line-height: 30px;
-                        }
-                        
-                        .hrq2 {
-                            width: 650px;
-                            height: 125px;
-                            color: #00be99;
-                            position: absolute;
-                            top: 240px;
-                            left: 600px;
-                            line-height: 30px;
-                        }
-                        
-                        .hrq3 {
-                            width: 650px;
-                            height: 125px;
-                            color: #00be99;
-                            position: absolute;
-                            top: 330px;
-                            left: 600px;
-                            line-height: 30px;
-                        }
-                        
-                        .hrq4 {
-                            width: 650px;
-                            height: 125px;
-                            color: #00be99;
-                            position: absolute;
-                            top: 470px;
-                            left: 600px;
-                            line-height: 30px;
-                        }
-                        
-                        .hrq5 {
-                            width: 650px;
-                            height: 125px;
-                            color: #00be99;
-                            position: absolute;
-                            top: 560px;
-                            left: 600px;
-                            line-height: 30px;
-                        }
-                        
-                        .hrq6 {
-                            width: 650px;
-                            height: 125px;
-                            color: #00be99;
-                            position: absolute;
-                            top: 650px;
-                            left: 600px;
-                            line-height: 30px;
-                        }
-                        
-                        .hrq7 {
-                            width: 650px;
-                            height: 125px;
-                            color: #00be99;
-                            position: absolute;
-                            top: 150px;
-                            left: 600px;
-                            line-height: 30px;
-                        }
-                        
-                        .hrq8 {
-                            width: 650px;
-                            height: 125px;
-                            color: #00be99;
-                            position: absolute;
-                            top: 150px;
-                            left: 600px;
-                            line-height: 30px;
-                        }
-                        
-                        .qwe {
-                            z-index: 1;
-                            position: relative;
-                        }
-                        
-                        .text1 {
-                            position: relative;
-                            z-index: 1;
-                        }
-                        
-                        .text2 {
-                            position: relative;
-                            z-index: 1;
-                        }
-                        
-                        .text3 {
-                            position: relative;
-                            z-index: 1;
-                        }
-                        
-                        .text4 {
-                            position: relative;
-                            z-index: 1;
-                        }
-                        
-                        .editpic {
-                            position: relative;
-                            top: 180px;
-                            left: -230px;
-                        }
-                        
-                        .ttt {
-                            visibility: hidden;
-                        }
-                        
-                        .buttonpro {
-                            position: relative;
-                            left: 135px;
-                            top: -20px;
-                        }
-                        
-                        .aa {
-                            height: 60px;
-                            width: 70px;
-                        }
-                        
-                        .img1 {
-                            height: 160%;
-                            width: 100%;
-                            opacity: 70%;
-                        }
+                    .example-card {
+                        position: absolute;
+                        width: 360px;
+                        height: 539px;
+                        left: 111px;
+                        top: 121px;
+                        /* background: rgba(232, 234, 255, 0.88); */
+                        box-shadow: 0px 4.07454px 24.4472px -1.01863px rgba(0, 0, 0, 0.11);
+                        backdrop-filter: blur(20.3727px);
+                        /* Note: backdrop-filter has minimal browser support */
+                        border-radius: 20px;
+                        background-color: #E3E3E7;
+                    }
+                    
+                    .harry {
+                        position: relative;
+                        /* width: 164px; */
+                        /* height: 58px; */
+                        /* left: 110px; */
+                        /* top: 370px; */
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 30px;
+                        text-align: center;
+                        color: #13100B;
+                        padding: 17px;
+                    }
+                    
+                    .group {
+                        position: relative;
+                        top: -550px;
+                        left: -140px;
+                    }
+                    
+                    .cardio {
+                        position: relative;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 20px;
+                        /* left: 134px;
+                            top: 400px; */
+                        color: rgba(64, 64, 64, 0.72);
+                        text-align: center;
+                    }
+                    
+                    .harry2 {
+                        font-family: 'Source Sans Pro';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 40px;
+                        color: #383993;
+                        position: relative;
+                        text-align: center;
+                        /* width: 401px; */
+                        /* left: 808px;
+                        top: 70px; */
+                    }
+                    
+                    .speci {
+                        position: relative;
+                        font-family: 'Source Sans Pro';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 22px;
+                        margin: 20px;
+                        /* identical to box height */
+                        color: #979797;
+                        text-align: center;
+                    }
+                    
+                    .bignameandsp {
+                        position: relative;
+                        width: 549px;
+                        top: 100px;
+                        left: 640px;
+                    }
+                    
+                    .addspe {
+                        position: absolute;
+                        width: 139px;
+                        height: 33px;
+                        left: 1100px;
+                        top: 331px;
+                        border-color: #E3E3E7;
+                        border-radius: 5px;
+                        border-style: hidden;
+                        color: #383993;
+                        font-family: 'Source Sans Pro';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 18px;
+                        background: #E3E3E7;
+                        z-index: 1;
+                    }
+                    
+                    .loc {
+                        position: absolute;
+                        width: 26px;
+                        height: 26px;
+                        left: 611px;
+                        top: 216px;
+                    }
+                    
+                    .location {
+                        position: absolute;
+                        width: 881px;
+                        height: 30px;
+                        left: 642px;
+                        top: 212px;
+                        font-family: 'Source Sans Pro';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 24px;
+                        line-height: 30px;
+                        color: #383993;
+                    }
+                    
+                    .add {
+                        position: absolute;
+                        width: 493px;
+                        height: 20px;
+                        left: -20px;
+                        top: 36px;
+                        font-family: 'Source Sans Pro';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 20px;
+                        color: #979797;
+                    }
+                    
+                    .editadd {
+                        position: absolute;
+                        width: 129px;
+                        height: 31px;
+                        left: 460px;
+                        top: 38px;
+                        border-color: #E3E3E7;
+                        border-radius: 5px;
+                        border-style: hidden;
+                        color: #383993;
+                        font-family: 'Source Sans Pro';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 18px;
+                        background: gainsboro;
+                        z-index: 1;
+                    }
+                    
+                    .Specialities {
+                        position: absolute;
+                        width: 881px;
+                        height: 30px;
+                        left: 640px;
+                        top: 294px;
+                        font-family: 'Source Sans Pro';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 24px;
+                        line-height: 30px;
+                        color: #383993;
+                    }
+                    
+                    .Cardiology {
+                        position: absolute;
+                        width: 83.99px;
+                        height: 15.5px;
+                        left: 621px;
+                        top: 331px;
+                        font-family: 'Source Sans Pro';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 18px;
+                        color: gray;
+                    }
+                    
+                    .WorkPlaces {
+                        position: absolute;
+                        width: 881px;
+                        height: 30px;
+                        left: 640px;
+                        top: 406px;
+                        font-family: 'Source Sans Pro';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 24px;
+                        line-height: 30px;
+                        color: #383993;
+                    }
+                    
+                    .ABCHospital1 {
+                        position: absolute;
+                        width: 129px;
+                        height: 31px;
+                        left: 620px;
+                        top: 459px;
+                        background: rgba(215, 215, 252, 0.8);
+                        border-radius: 5px;
+                        border-color: rgba(215, 215, 252, 0.8);
+                        font-family: 'Source Sans Pro';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 18px;
+                        color: #4648AE;
+                        border-style: hidden;
+                    }
+                    
+                    .ABCHospital2 {
+                        position: absolute;
+                        width: 129px;
+                        height: 31px;
+                        left: 766px;
+                        top: 459px;
+                        background: rgba(215, 215, 252, 0.8);
+                        border-radius: 5px;
+                        background: rgba(215, 215, 252, 0.8);
+                        border-radius: 5px;
+                        border-color: rgba(215, 215, 252, 0.8);
+                        font-family: 'Source Sans Pro';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 18px;
+                        color: #4648AE;
+                        border-style: hidden;
+                    }
+                    
+                    .ABCHospital3 {
+                        position: absolute;
+                        width: 129px;
+                        height: 31px;
+                        left: 915px;
+                        top: 458px;
+                        background: rgba(215, 215, 252, 0.8);
+                        border-radius: 5px;
+                        border-color: rgba(215, 215, 252, 0.8);
+                        font-family: 'Source Sans Pro';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 18px;
+                        color: #4648AE;
+                        border-style: hidden;
+                    }
+                    
+                    .AddWorkplace {
+                        position: absolute;
+                        width: 129px;
+                        height: 31px;
+                        left: 1100px;
+                        top: 458px;
+                        border-color: #E3E3E7;
+                        border-radius: 5px;
+                        border-style: hidden;
+                        color: #383993;
+                        font-family: 'Source Sans Pro';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 18px;
+                        background: #E3E3E7;
+                        z-index: 1;
+                    }
+                    
+                    .Qualification {
+                        position: absolute;
+                        width: 881px;
+                        height: 30px;
+                        left: 640px;
+                        top: 534px;
+                        font-family: 'Source Sans Pro';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 24px;
+                        line-height: 30px;
+                        color: #383993;
+                    }
+                    
+                    .slmc {
+                        position: absolute;
+                        width: 493px;
+                        height: 40px;
+                        left: 621px;
+                        top: 572px;
+                        font-family: 'Source Sans Pro';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 20px;
+                        color: #02010D;
+                    }
+                    
+                    .Experiance {
+                        position: absolute;
+                        width: 181px;
+                        height: 30px;
+                        left: 640px;
+                        top: 620px;
+                        font-family: 'Source Sans Pro';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 24px;
+                        line-height: 30px;
+                        color: #383993;
+                    }
+                    
+                    .ex {
+                        position: absolute;
+                        width: 133px;
+                        height: 20px;
+                        left: 481px;
+                        top: 40px;
+                        font-family: 'Source Sans Pro';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: #383993;
+                        border-style: hidden;
+                        background: #E3E3E7;
+                        border-color: #E3E3E7;
+                        border-radius: 5px;
+                        z-index: 1;
+                    }
+                    
+                    .AddWorkExperience {
+                        position: absolute;
+                        width: 139px;
+                        height: 33px;
+                        left: 1100px;
+                        top: 653px;
+                        border-color: #E3E3E7;
+                        border-radius: 5px;
+                        border-style: hidden;
+                        color: #383993;
+                        font-family: 'Source Sans Pro';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 18px;
+                        background: #E3E3E7;
+                    }
+                    
+                    .manage {
+                        position: absolute;
+                        width: 245px;
+                        height: 100px;
+                        left: 156px;
+                        top: 774px;
+                        background: #D72B4A;
+                        border-radius: 13.0291px;
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 20px;
+                        line-height: 30px;
+                        color: #FFFFFF;
+                    }
+                    
+                    .are {
+                        position: absolute;
+                        width: 422px;
+                        height: 106px;
+                        left: 139px;
+                        top: 725px;
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 20px;
+                        line-height: 109%;
+                        /* or 22px */
+                        color: #404040;
+                    }
+                    
+                    .number {
+                        position: absolute;
+                        width: 881px;
+                        height: 28px;
+                        left: 638px;
+                        top: 751px;
+                        font-family: 'Source Sans Pro';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 22px;
+                        line-height: 28px;
+                        /* identical to box height */
+                        color: #383993;
+                    }
+                    
+                    .nu {
+                        position: absolute;
+                        width: 493px;
+                        height: 20px;
+                        left: 4px;
+                        top: 43px;
+                        font-family: 'Source Sans Pro';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 20px;
+                        color: #979797;
+                    }
+                    
+                    .editnum {
+                        position: absolute;
+                        width: 140px;
+                        height: 25px;
+                        left: 5px;
+                        top: 83px;
+                        border-color: #E3E3E7;
+                        border-radius: 5px;
+                        border-style: hidden;
+                        color: #383993;
+                        font-family: 'Source Sans Pro';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 18px;
+                        background: #E3E3E7;
+                    }
+                    
+                    .email {
+                        position: absolute;
+                        width: 881px;
+                        height: 28px;
+                        left: 975px;
+                        top: 751px;
+                        font-family: 'Source Sans Pro';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 22px;
+                        line-height: 28px;
+                        /* identical to box height */
+                        color: #383993;
+                    }
+                    
+                    .emad {
+                        position: absolute;
+                        width: 3px;
+                        height: 20px;
+                        left: 6px;
+                        top: 43px;
+                        font-family: 'Source Sans Pro';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 20px;
+                        color: #979797;
+                    }
+                    
+                    .editemail {
+                        position: absolute;
+                        width: 140px;
+                        height: 25px;
+                        left: 4px;
+                        top: 83px;
+                        border-color: #E3E3E7;
+                        border-radius: 5px;
+                        border-style: hidden;
+                        color: #383993;
+                        font-family: 'Source Sans Pro';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 18px;
+                        background: #E3E3E7;
+                    }
+                    
+                    .ratings {
+                        position: absolute;
+                        width: 96px;
+                        height: 29px;
+                        left: 257px;
+                        top: 444px;
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 25px;
+                        line-height: 29px;
+                        /* identical to box height, or 115% */
+                        display: flex;
+                        align-items: center;
+                        letter-spacing: -0.02em;
+                        color: rgba(64, 64, 64, 0.72);
+                    }
+                    
+                    .star1 {
+                        position: absolute;
+                        width: 96px;
+                        height: 29px;
+                        left: 240px;
+                        top: 480px;
+                        color: rgba(57, 56, 147, 0.42);
+                    }
+                    
+                    .star2 {
+                        position: absolute;
+                        width: 96px;
+                        height: 29px;
+                        left: 260px;
+                        top: 480px;
+                        color: rgba(57, 56, 147, 0.42);
+                    }
+                    
+                    .star3 {
+                        position: absolute;
+                        width: 96px;
+                        height: 29px;
+                        left: 280px;
+                        top: 480px;
+                        color: rgba(57, 56, 147, 0.42);
+                    }
+                    
+                    .star4 {
+                        position: absolute;
+                        width: 96px;
+                        height: 29px;
+                        left: 300px;
+                        top: 480px;
+                        color: rgba(57, 56, 147, 0.42);
+                    }
+                    
+                    .star5 {
+                        position: absolute;
+                        width: 96px;
+                        height: 29px;
+                        left: 320px;
+                        top: 480px;
+                        color: rgba(57, 56, 147, 0.42);
+                    }
+                    
+                    .review {
+                        position: absolute;
+                        width: 31.03px;
+                        height: 41.37px;
+                        left: 187px;
+                        top: 450px;
+                        color: #393893;
+                        ;
+                    }
+                    
+                    .zero {
+                        position: absolute;
+                        width: 25px;
+                        height: 23px;
+                        left: 358px;
+                        top: 469px;
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 15.2727px;
+                        line-height: 23px;
+                        /* identical to box height */
+                        text-align: center;
+                        color: #404040;
+                    }
+                    
+                    .treated {
+                        position: absolute;
+                        width: 38.79px;
+                        height: 38.79px;
+                        left: 296px;
+                        top: 560px;
+                        color: #393893;
+                    }
+                    
+                    .treatedhowmuch {
+                        position: absolute;
+                        width: 17px;
+                        height: 29px;
+                        left: 289px;
+                        top: 560px;
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 25px;
+                        line-height: 29px;
+                        /* identical to box height, or 115% */
+                        display: flex;
+                        align-items: center;
+                        letter-spacing: -0.02em;
+                        color: rgba(64, 64, 64, 0.78);
+                    }
+                    
+                    .treat {
+                        position: absolute;
+                        width: 112px;
+                        height: 29px;
+                        left: 260px;
+                        top: 576px;
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 14.0372px;
+                        line-height: 29px;
+                        /* identical to box height, or 204% */
+                        display: flex;
+                        align-items: center;
+                        letter-spacing: -0.02em;
+                        color: #676767;
+                    }
+                    
+                    .image {
+                        position: relative;
+                        border-radius: 50px;
+                        left: 123px;
+                    }
+                    
+                    .hr {
+                        position: relative;
+                    }
+                    
+                    .container {
+                        position: absolute;
+                        top: -30px;
+                    }
+                    
+                    .imgradius {
+                        position: relative;
+                        border-radius: 80%;
+                        height: 300px;
+                        width: 250px;
+                        left: 40px;
+                    }
+                    
+                     :host {
+                        display: flex;
+                        flex-direction: column;
+                        height: 100%;
+                    }
+                    
+                    mat-drawer {
+                        width: 260px;
+                        background: #065560;
+                    }
+                    
+                    mat-drawer-container {
+                        height: 100%;
+                    }
+                    
+                    .loc2 {
+                        position: absolute;
+                        width: 26px;
+                        height: 26px;
+                        left: 611px;
+                        top: 299px;
+                    }
+                    
+                    .savebut1 {
+                        position: absolute;
+                        left: 290px;
+                        top: 30px;
+                        z-index: 1;
+                    }
+                    
+                    .savebut2 {
+                        position: absolute;
+                        left: 140px;
+                        z-index: 1;
+                    }
+                    
+                    .savebut3 {
+                        position: absolute;
+                        left: 140px;
+                        z-index: 1;
+                    }
+                    
+                    .savebut4 {
+                        position: absolute;
+                        left: 290px;
+                        top: 30px;
+                        z-index: 1;
+                    }
+                    
+                    .vl {
+                        border-left: 6px solid #00be99;
+                        height: 800px;
+                        position: absolute;
+                        left: 550px;
+                        margin-left: -3px;
+                        top: 60px;
+                    }
+                    
+                    .loc3 {
+                        position: absolute;
+                        width: 26px;
+                        height: 26px;
+                        left: 611px;
+                        top: 410px;
+                    }
+                    
+                    .loc4 {
+                        position: absolute;
+                        width: 26px;
+                        height: 26px;
+                        left: 611px;
+                        top: 540px;
+                    }
+                    
+                    .loc5 {
+                        position: absolute;
+                        width: 26px;
+                        height: 26px;
+                        left: 611px;
+                        top: 625px;
+                    }
+                    
+                    .loc6 {
+                        position: absolute;
+                        width: 26px;
+                        height: 26px;
+                        left: 611px;
+                        top: 750px;
+                    }
+                    
+                    .loc7 {
+                        position: absolute;
+                        width: 26px;
+                        height: 26px;
+                        left: 950px;
+                        top: 750px;
+                    }
+                    
+                    .hrq1 {
+                        width: 650px;
+                        height: 125px;
+                        color: #00be99;
+                        position: absolute;
+                        top: 150px;
+                        left: 600px;
+                        line-height: 30px;
+                    }
+                    
+                    .hrq2 {
+                        width: 650px;
+                        height: 125px;
+                        color: #00be99;
+                        position: absolute;
+                        top: 240px;
+                        left: 600px;
+                        line-height: 30px;
+                    }
+                    
+                    .hrq3 {
+                        width: 650px;
+                        height: 125px;
+                        color: #00be99;
+                        position: absolute;
+                        top: 330px;
+                        left: 600px;
+                        line-height: 30px;
+                    }
+                    
+                    .hrq4 {
+                        width: 650px;
+                        height: 125px;
+                        color: #00be99;
+                        position: absolute;
+                        top: 470px;
+                        left: 600px;
+                        line-height: 30px;
+                    }
+                    
+                    .hrq5 {
+                        width: 650px;
+                        height: 125px;
+                        color: #00be99;
+                        position: absolute;
+                        top: 560px;
+                        left: 600px;
+                        line-height: 30px;
+                    }
+                    
+                    .hrq6 {
+                        width: 650px;
+                        height: 125px;
+                        color: #00be99;
+                        position: absolute;
+                        top: 650px;
+                        left: 600px;
+                        line-height: 30px;
+                    }
+                    
+                    .hrq7 {
+                        width: 650px;
+                        height: 125px;
+                        color: #00be99;
+                        position: absolute;
+                        top: 150px;
+                        left: 600px;
+                        line-height: 30px;
+                    }
+                    
+                    .hrq8 {
+                        width: 650px;
+                        height: 125px;
+                        color: #00be99;
+                        position: absolute;
+                        top: 150px;
+                        left: 600px;
+                        line-height: 30px;
+                    }
+                    
+                    .qwe {
+                        z-index: 1;
+                        position: relative;
+                    }
+                    
+                    .text1 {
+                        position: relative;
+                        z-index: 1;
+                    }
+                    
+                    .text2 {
+                        position: relative;
+                        z-index: 1;
+                    }
+                    
+                    .text3 {
+                        position: relative;
+                        z-index: 1;
+                    }
+                    
+                    .text4 {
+                        position: relative;
+                        z-index: 1;
+                    }
+                    
+                    .editpic {
+                        position: relative;
+                        top: 180px;
+                        left: -230px;
+                    }
+                    
+                    .ttt {
+                        visibility: hidden;
+                    }
+                    
+                    .buttonpro {
+                        position: relative;
+                        text-align: center;
+                    }
+                    
+                    .aa {
+                        height: 60px;
+                        width: 70px;
+                    }
+                    
+                    .img1 {
+                        height: 160%;
+                        width: 100%;
+                        opacity: 70%;
+                    }
+                    /* .cardpro {
+                            height: auto;
+                        } */
