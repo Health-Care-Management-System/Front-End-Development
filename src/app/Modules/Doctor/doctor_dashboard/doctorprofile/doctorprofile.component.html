@@ -1,149 +1,182 @@
 <app-mininavbar (toggleLeftToolBarForMe)="leftToolBarToggler()">
 </app-mininavbar>
 <mat-drawer-container class="example-container">
-    <mat-drawer mode="side" [opened]="sideBarOpen">
-        <app-left-tool-bar></app-left-tool-bar>
-    </mat-drawer>
-    <mat-drawer-content>
-        <img class="img1" src="\assets\img\docprofback.jpg">
-        <div class="container">
-            <mat-card class="example-card cardpro">
-                <div class="12">
-                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                        <img [src]="imageSource" class="img-fluid imgradius">
-                        <input type="file" class="ttt" (change)="onFileSelected($event)">
-                        <a href="#!">
-                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                        </a>
-                    </div>
-                    <div class="card-body buttonpro">
 
-                        <button class="btn btn-primary " (click)="changeImage()">Edit</button>
-                    </div>
-                </div>
-                <div class="harry">{{files[1].name}} </div>
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <app-left-tool-bar></app-left-tool-bar>
+  </mat-drawer>
 
-                <div class="cardio">{{files[1].spciality}} </div>
+  <mat-drawer-content>
+    <img class="img1" src="\assets\img\docprofback.jpg" />
 
+    <div class="container">
+      <mat-card class="example-card">
+        <div class="harry">{{ doc.firstname }}</div>
 
+        <div class="cardio">Cardiology</div>
 
+        <div class="12">
+          <div
+            class="bg-image hover-overlay ripple"
+            data-mdb-ripple-color="light"
+          >
+            <img [src]="doc.imageapi" class="img-fluid imgradius" />
 
-
-
-
-                <div class="hr">
-                    <hr>
-                    <div class="group">
-                        <mat-icon class="treated ">manage_serach</mat-icon>
-                        <div class="treatedhowmuch ">0</div>
-                        <div class="treat ">Patients Treated</div>
-                    </div>
-                </div>
-
-
-            </mat-card>
-
-
-            <div class="bignameandsp">
-                <div class=" harry2 ">{{files[1].name}}</div>
-                <div class="speci ">{{files[1].spciality}}</div>
-
-            </div>
-            <mat-icon class="loc ">support</mat-icon>
-
-
-            <div class="location ">Location
-                <div *ngIf="!editing1 ">
-                    <div class="add ">{{files[1].district}} </div>
-                </div>
-                <div *ngIf="editing1 ">
-                    <p><input type="text " class="text1 " placeholder="Enter text here " [(ngModel)]="newText1 "></p>
-                    <button mat-button class="savebut1 " (click)="save1() ">Save</button>
-                </div> <button mat-button class="editadd " (click)="toggleEditing1() ">
-                    <!-- <mat-icon >edit</mat-icon> -->
-                    Edit Address
-                </button>
-            </div>
-
-            <div class="Specialities ">Specialities</div>
-            <mat-icon class="loc2 ">support</mat-icon>
-            <button mat-button class="addspe ">Add Specialities</button>
-            <div class="Cardiology ">{{files[1].spciality}}</div>
-            <mat-icon class="loc3 ">support</mat-icon>
-            <div class="WorkPlaces ">Work Places</div>
-            <button mat-button class="ABCHospital1 ">ABC Hospital1</button>
-            <button mat-button class="ABCHospital2 ">ABC Hospital2</button>
-            <button mat-button class="ABCHospital3 ">ABC Hospital3</button>
-            <!-- <button mat-button class="AddWorkplace ">Add Work place</button> -->
-
-
-
-            <div class="Qualification ">Qualification</div>
-            <mat-icon class="loc4 ">support</mat-icon>
-
-            <div class="slmc ">SLMC Number: 1952</div>
-            <mat-icon class="loc5 ">support</mat-icon>
-            <div class="Experiance ">Experiance
-
-                <div *ngIf="!editing4 ">
-                    <div class="emad ">{{experiance}} </div>
-                </div>
-                <div *ngIf="editing4 ">
-                    <p><input type="text " class="text4 " placeholder="Enter text here " [(ngModel)]="newText4 "></p>
-                    <button mat-button class="savebut4 " (click)="save4() ">Save</button>
-                </div> <button mat-button class="ex " (click)="toggleEditing4() ">
-        <!-- <mat-icon >edit</mat-icon> -->
-        Edit Experiance
-    
-     </button>
-            </div>
-
-
-            <button mat-button class="manage ">Manage My Own Business</button>
-            <div class="are ">Are you have a Own Clinic ?</div>
-            <mat-icon class="loc6 ">support</mat-icon>
-            <div class="number ">Mobile Number
-                <!-- <div class="nu ">{{mobilenumber}} -->
-
-                <!-- <button mat-button class=" ">Edit Mobile Number</button> -->
-                <div *ngIf="!editing2 ">
-                    <div class="nu ">{{mobilenumber}} </div>
-                </div>
-                <div *ngIf="editing2 ">
-                    <p><input type="text " class="text2 " placeholder="Enter text here " [(ngModel)]="newText2 "></p>
-                    <button mat-button class="savebut2 " (click)="save2() ">Save</button>
-                </div> <button mat-button class="editnum " (click)="toggleEditing2() ">
-                <!-- <mat-icon >edit</mat-icon> -->
-                Edit Mobile Number
-            
-             </button>
-            </div>
-            <mat-icon class="loc7 ">support</mat-icon>
-            <div class="email ">E-Mail
-                <div *ngIf="!editing3 ">
-                    <div class="emad ">{{email}} </div>
-                </div>
-                <div *ngIf="editing3 ">
-                    <p><input type="text " class="text3 " placeholder="Enter text here " [(ngModel)]="newText3 "></p>
-                    <button mat-button class="savebut3 " (click)="save3() ">Save</button>
-                </div> <button mat-button class="editemail " (click)="toggleEditing3() ">
-     
-            Edit Email
-        
-         </button></div>
-
-            <div class="location ">Location</div>
-
-
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.15)"
+              ></div>
+            </a>
+          </div>
+          <div>
+            <form>
+              <div>
+                <input type="file" (change)="onFileSelected($event)" />
+              </div>
+              <div>
+                <button type="button" (click)="onUpload()">Upload</button>
+              </div>
+            </form>
+          </div>
         </div>
-        <div class="vl "></div>
-        <hr class="hrq1 ">
-        <hr class="hrq2 ">
-        <hr class="hrq3 ">
-        <hr class="hrq4 ">
-        <hr class="hrq5 ">
-        <hr class="hrq6 ">
 
 
-    </mat-drawer-content>
+        <div class="hr">
+          <hr />
+        </div>
+      </mat-card>
+
+      <div class="harry2">{{ doc.firstname }}</div>
+
+      <div class="speci">Cardiology</div>
+      <mat-icon class="loc">support</mat-icon>
+
+      <div class="location">
+        Location
+        <div *ngIf="!editLocation">
+          <div class="add">{{ doc.address }}</div>
+        </div>
+        <div *ngIf="editLocation">
+          <p>
+            <input
+              type="text"
+              class="text1"
+              placeholder="Enter text here"
+              [(ngModel)]="newLocation"
+            />
+          </p>
+
+          <button mat-button class="savebut1" (click)="saveLocation()">
+            Save
+          </button>
+        </div>
+
+        <button mat-button class="editadd" (click)="editLocation = true">
+          Edit Address
+        </button>
+      </div>
+
+      <div class="Specialities">Specialities</div>
+      <mat-icon class="loc2">support</mat-icon>
+      <div class="Cardiology">speciality</div>
+      <mat-icon class="loc3">support</mat-icon>
+      <div class="WorkPlaces">Work Places</div>
+
+      <button mat-button class="ABCHospital1">ABC Hospital1</button>
+      <button mat-button class="ABCHospital2">ABC Hospital2</button>
+      <button mat-button class="ABCHospital3">ABC Hospital3</button>
+
+      <div class="Qualification">Qualification</div>
+      <mat-icon class="loc4">support</mat-icon>
+
+      <div class="slmc">SLMC Number: {{ doc.slmcnumber }}</div>
+      <mat-icon class="loc5">support</mat-icon>
+
+      <div class="Experiance">
+        Experiance
+        <div *ngIf="!editExperience">
+          <div class="emad">{{ doc.experience }}</div>
+        </div>
+        <div *ngIf="editExperience">
+          <p>
+            <input
+              type="text"
+              class="text4"
+              placeholder="Enter text here"
+              [(ngModel)]="newExperience"
+            />
+          </p>
+          <button mat-button class="savebut4" (click)="saveExperience()">
+            Save
+          </button>
+        </div>
+        <button mat-button class="ex" (click)="editExperience = true">
+          Edit Experiance
+        </button>
+      </div>
+
+      <button mat-button class="manage">Manage My Own Business</button>
+      <div class="are">Are you have a Own Clinic ?</div>
+
+      <mat-icon class="loc6">support</mat-icon>
+
+      <div class="number">
+        Mobile Number
+        <div *ngIf="!editMobilenumber">
+          <div class="nu">{{ doc.contactnumber }}</div>
+        </div>
+        <div *ngIf="editMobilenumber">
+          <p>
+            <input
+              type="text"
+              class="text2"
+              placeholder="Enter text here"
+              [(ngModel)]="newMobilenumber"
+            />
+          </p>
+          <button mat-button class="savebut2" (click)="saveMobilenumber()">
+            Save
+          </button>
+        </div>
+        <button mat-button class="editnum" (click)="editMobilenumber = true">
+          Edit Mobile Number
+        </button>
+      </div>
+
+      <mat-icon class="loc7">support</mat-icon>
+
+      <div class="email">
+        E-Mail
+        <div *ngIf="!editEmail">
+          <div class="emad">{{ doc.emailID }}</div>
+        </div>
+        <div *ngIf="editEmail">
+          <p>
+            <input
+              type="text"
+              class="text3"
+              placeholder="Enter text here"
+              [(ngModel)]="newEmail"
+            />
+          </p>
+          <button mat-button class="savebut3" (click)="saveEmai()">Save</button>
+        </div>
+        <button mat-button class="editemail" (click)="editEmail=true">Edit Email</button>
+      </div>
+
+      <div class="location">Location</div>
+
+      <mat-icon class="treated">manage_serach</mat-icon>
+      <div class="treatedhowmuch">0</div>
+      <div class="treat">Patients Treated</div>
+    </div>
+    <div class="vl"></div>
+    <hr class="hrq1" />
+    <hr class="hrq2" />
+    <hr class="hrq3" />
+    <hr class="hrq4" />
+    <hr class="hrq5" />
+    <hr class="hrq6" />
+  </mat-drawer-content>
 </mat-drawer-container>
