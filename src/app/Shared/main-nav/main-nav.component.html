@@ -17,6 +17,7 @@
     <a class="nav-link" routerLink="/pharmacy" mat-button>Pharmacy</a>
     <a class="nav-link" routerLink="/ambulance" mat-button>Ambulance</a>
     <a class="nav-link" routerLink="/aboutus" mat-button>About</a>
+  </div>
 
 
         <div class="spacer"></div>
@@ -29,28 +30,27 @@
         <!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button">
       <mat-icon>person_outline</mat-icon> -->
         <!-- <mat-icon >account_circle</mat-icon>
-      <img  src="../../../../../../assets/img/doc23.png" />                        
+      <img  src="../../../../../../assets/img/doc23.png" />
   </button> -->
         <mat-menu #menu="matMenu">
             <button mat-menu-item routerLink="/patientprofile">
             <mat-icon><i class="fa fa-sign-out"  aria-hidden="true"  routerLink="/patientprofile"></i></mat-icon>
             <span  routerLink="/patientprofile">Login Patient</span>
-            
-      
+
+
         </button>
             <button mat-menu-item routerLink="/dashboard">
           <mat-icon><i class="fa fa-sign-out"  aria-hidden="true"  routerLink="/dashboard"></i></mat-icon>
           <span  routerLink="/dashboard">Login Doctor</span>
-          
-    
       </button>
-
+        </mat-menu>
   <!-- responsive menu part -->
   <button mat-button [mat-menu-trigger-for]="menu" fxShow fxHide.gt-sm>
-
     <mat-icon>menu</mat-icon>
   </button>
 </mat-toolbar>
+
+
 
 <mat-menu x-position="before" #menu>
     <button routerLink="/home" mat-menu-item>Home</button>
