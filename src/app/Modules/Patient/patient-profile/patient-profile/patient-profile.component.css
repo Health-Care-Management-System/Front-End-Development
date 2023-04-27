@@ -102,7 +102,7 @@ mat-drawer-container {
 .text3 {
     position: absolute;
     left: 180px;
-    width: 150px;
+    width: auto;
     top: -3px;
 }
 

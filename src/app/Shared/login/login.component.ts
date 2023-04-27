@@ -10,7 +10,8 @@ import {FormBuilder, FormControl , FormGroup, Validators} from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  
+
+
 
   constructor(private fb : FormBuilder) { }
   
@@ -18,8 +19,10 @@ export class LoginComponent implements OnInit {
   passwordPtn ='^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,16}$'
   
   registerArray:any={};
+  
 
-  ngOnInit(): void {
+  ngOnInit(): void {  this.registerArray.username="sd";
+  this.registerArray.password="wwww";
   }
   onSubmit(){
     console.log(this.reactiveform.value)

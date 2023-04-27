@@ -1,7 +1,7 @@
             .hospital {
                 position: absolute;
                 height: 64px;
-                left: 124px;
+                left: 4px;
                 right: 200px;
                 top: 171px;
             }
@@ -52,9 +52,15 @@
             .example-full-width {
                 position: absolute;
                 height: 64px;
-                left: 424px;
+                left: 380px;
                 right: 500px;
                 top: 171px;
+            }
+            
+            .icon3 {
+                position: relative;
+                top: 30px;
+                left: -35px;
             }
             
             .container {
@@ -83,4 +89,18 @@
                 width: 100%;
                 opacity: 70%;
                 position: absolute;
+            }
+            
+            .abc {
+                position: relative;
+                width: 220px;
+                height: -34px;
+                text-align: center;
+            }
+            
+            .example-input {
+                height: 50px;
+                width: 250px;
+                position: relative;
+                top: 20px;
             }

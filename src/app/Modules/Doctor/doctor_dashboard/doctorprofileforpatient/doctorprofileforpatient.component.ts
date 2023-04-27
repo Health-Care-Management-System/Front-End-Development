@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-doctorprofileforpatient',
@@ -6,20 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./doctorprofileforpatient.component.css']
 })
 export class DoctorprofileforpatientComponent implements OnInit {
-  name='Dr. Harry';
-  speciality='Cardiologist';
-  img1=" ../assets/img/doctor.jpg ";
-  name2="Dr. Harry";
-  speciality2="Specialist of Cardiology";
-  address="Street ,vilage, distract , town";
-  speciality3="Cardiology";
-  mobile='0776787889';
+  doctor: any;
 
-email="www.charukacnadungamuwa@gmail.com";
-experiance='12';
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private http: HttpClient
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    const id = this.route.snapshot.paramMap.get('id');
+    this.http.get(`http://localhost:8070/api1/${id}`).subscribe((data) => {
+      this.doctor = data;
+    });
   }
 
 }

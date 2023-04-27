@@ -35,7 +35,7 @@ export class AvailabilityShedulingComponent implements OnInit {
   displayedColumns: string[] = ['Morning', 'Afternoon',  'Night'];
   dataSource = ELEMENT_DATA;
   streetControl = new FormControl('');
-  streets: string[] = ['Champs-Élysées', 'Lombard Street', 'Abbey Road', 'Fifth Avenue'];
+  streets: string[] = ['asiri hospital', 'Nawaloka Hospital', 'Lanka Hospitals', 'Hemas hospitals'];
   filteredStreets: Observable<string[]> | undefined;
   
   

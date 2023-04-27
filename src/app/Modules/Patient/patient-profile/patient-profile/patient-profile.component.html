@@ -1,172 +1,121 @@
 <app-patient-navbar (toggleLeftToolBarForMe)="leftToolBarToggler()">
 </app-patient-navbar>
 <mat-drawer-container class="example-container">
-    <mat-drawer mode="side" [opened]="sideBarOpen">
-        <app-patient-left-toolbar></app-patient-left-toolbar>
-    </mat-drawer>
-    <mat-drawer-content>
-        <img class="img1" src="\assets\img\docprofback.jpg">
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <app-patient-left-toolbar></app-patient-left-toolbar>
+  </mat-drawer>
+  <mat-drawer-content>
+    <img class="img1" src="\assets\img\docprofback.jpg" />
 
-        <mat-card class="bigcard">
-            <div class="card1">
-                <div class="fullname">Full Name
-
-                    <div *ngIf="!editing">
-                        <span class="text">{{ text }}</span>
-                    </div>
-                    <div *ngIf="editing">
-                        <p><input type="text" class="text" placeholder="Enter text here" [(ngModel)]="newText"></p>
-                        <button mat-button class="savebut" (click)="save()">Save</button>
-                    </div> <button mat-icon-button class="editbut" (click)="toggleEditing()">
-                    <mat-icon >edit</mat-icon>
-                  </button>
-                </div>
-                <hr>
-                <div class="Email">E-Mail
-
-                    <div *ngIf="!editing2">
-                        <span class="text2">{{ text2 }}</span>
-                    </div>
-                    <div *ngIf="editing2">
-                        <p><input type="text" class="text2" placeholder="Enter text here" [(ngModel)]="newText2"></p>
-                        <button mat-button class="savebut2" (click)="save2()">Save</button>
-                    </div> <button mat-icon-button class="editbut2" (click)="toggleEditing2()">
-                    <mat-icon >edit</mat-icon>
-                  </button>
-                </div>
-
-                <hr class="hr2">
-                <div class="phone">Phone
-
-                    <div *ngIf="!editing3">
-                        <span class="text3">{{ text3 }}</span>
-                    </div>
-                    <div *ngIf="editing3">
-                        <p><input type="text" class="text3" placeholder="Enter text here" [(ngModel)]="newText3"></p>
-                        <button mat-button class="savebut3" (click)="save3()">Save</button>
-                    </div> <button mat-icon-button class="editbut3" (click)="toggleEditing3()">
-                    <mat-icon >edit</mat-icon>
-                  </button>
-                </div>
-
-                <hr class="hr3">
-
-                <div class="address">Address
-
-                    <div *ngIf="!editing4">
-                        <span class="text4">{{ text4 }}</span>
-                    </div>
-                    <div *ngIf="editing4">
-                        <p><input type="text" class="text4" placeholder="Enter text here" [(ngModel)]="newText4"></p>
-                        <button mat-button class="savebut4" (click)="save4()">Save</button>
-                    </div> <button mat-icon-button class="editbut4" (click)="toggleEditing4()">
-                    <mat-icon >edit</mat-icon>
-                  </button>
-                </div>
-
-            </div>
-            <div class="vl"></div>
-
-            <!-- <div class="card card2">
-                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-
-                    <img [src]="imageSource" class="img-fluid uu" />
-                    <a href="#!">
-                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                    </a>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title title">Card title</h5>
-
-                    <button class="btn btn-primary buttonpro" (click)="changeImage()">edit </button>
-                </div>
-            </div> -->
-            <div class="card card2">
-                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                    <img [src]="imageSource" class="img-fluid uu" />
-                    <input type="file" class="ttt" (change)="onFileSelected($event)">
-                    <a href="#!">
-                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                    </a>
-                </div>
-                <div class="card-body">
-                    <!-- <h5 class="card-title title">Card title</h5> -->
-                    <button class="btn btn-primary buttonpro" (click)="changeImage()">Edit</button>
-                </div>
-            </div>
+    <mat-card class="bigcard">
 
 
+      <div class="card1">
 
-        </mat-card>
-
-        <!-- <div class="row">
-            <div class="col-sm-12">
-                <div class="card eee">
-                    <div class="card-body">
-                        <h5 class="d-flex align-items-center mb-3">Project Status</h5>
-                        <p>Web Design</p>
-                        <div class="progress mb-3" style="height: 5px">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <p>Website Markup</p>
-                        <div class="progress mb-3" style="height: 5px">
-                            <div class="progress-bar bg-danger" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <p>One Page</p>
-                        <div class="progress mb-3" style="height: 5px">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <p>Mobile Template</p>
-                        <div class="progress mb-3" style="height: 5px">
-                            <div class="progress-bar bg-warning" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <p>Backend API</p>
-                        <div class="progress" style="height: 5px">
-                            <div class="progress-bar bg-info" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card eee">
-                    <div class="card-body">
-                        <h5 class="d-flex align-items-center mb-3">Project Status</h5>
-                        <p>Web Design</p>
-                        <div class="progress mb-3" style="height: 5px">
-                            <div class="progress-bar bg-primary" role="progressbar" [style.width.%]="webDesignProgress" [attr.aria-valuenow]="webDesignProgress" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <button type="button" class="btn btn-sm btn-success" (click)="increaseWebDesignProgress()">More</button>
-                            <button type="button" class="btn btn-sm btn-danger" (click)="decreaseWebDesignProgress()">Less</button>
-                        </div>
-
-                        <p>Website Markup</p>
-                        <div class="progress mb-3" style="height: 5px">
-                            <div class="progress-bar bg-danger" role="progressbar" [style.width.%]="suger" [attr.aria-valuenow]="suger" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <button type="button" class="btn btn-sm btn-success" (click)="increaseWebsiteMarkupProgress()">More</button>
-                            <button type="button" class="btn btn-sm btn-danger" (click)="decreaseWebsiteMarkupProgress()">Less</button>
-                        </div>
-                        <p>Website Markup</p>
-                        <div class="progress mb-3" style="height: 5px">
-                            <div class="progress-bar bg-danger" role="progressbar" [style.width.%]="websiteMarkupProgress" [attr.aria-valuenow]="websiteMarkupProgress" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <button type="button" class="btn btn-sm btn-success" (click)="increaseWebsiteMarkupProgress()">More</button>
-                            <button type="button" class="btn btn-sm btn-danger" (click)="decreaseWebsiteMarkupProgress()">Less</button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+        <div class="fullname">
+          Full Name
+          <span class="text">{{ patient.firstname }} {{patient.lastname}}</span>
         </div>
 
+        <hr />
 
+        <div class="Email">
+          E-Mail
+          <div *ngIf="!editEmail">
+            <span class="text2">{{ patient.emailID }}</span>
+          </div>
+          <div *ngIf="editEmail">
+            <p>
+              <input
+                type="text"
+                class="text2"
+                placeholder="Enter text here"
+                [(ngModel)]="newEmail"
+              />
+            </p>
+            <button mat-button class="savebut2" (click)="saveEmai()">Save</button>
+          </div>
+          <button mat-icon-button class="editbut2" (click)="editEmail=true">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </div>
 
+        <hr class="hr2" />
 
+        <div class="phone">
+          Phone
+          <div *ngIf="!editMobilenumber">
+            <span class="text3">{{ patient.contactnumber }}</span>
+          </div>
+          <div *ngIf="editMobilenumber">
+            <p>
+              <input
+                type="text"
+                class="text3"
+                placeholder="Enter text here"
+                [(ngModel)]="newMobilenumber"
+              />
+            </p>
+            <button mat-button class="savebut3" (click)="saveMobilenumber()">Save</button>
+          </div>
+          <button mat-icon-button class="editbut3" (click)="editMobilenumber=true">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </div>
 
-    </mat-drawer-content>
+        <hr class="hr3" />
+
+        <div class="address">
+          Address
+
+          <div *ngIf="!editLocation">
+            <span class="text4">{{ patient.address }}</span>
+          </div>
+          <div *ngIf="editLocation">
+            <p>
+              <input
+                type="text"
+                class="text4"
+                placeholder="Enter text here"
+                [(ngModel)]="newLocation"
+              />
+            </p>
+            <button mat-button class="savebut4" (click)="saveLocation()">Save</button>
+          </div>
+          <button mat-icon-button class="editbut4" (click)="editLocation=true">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </div>
+      </div>
+      <div class="vl"></div>
+
+      <div class="card card2">
+        <div
+          class="bg-image hover-overlay ripple"
+          data-mdb-ripple-color="light"
+        >
+          <img [src]="patient.imageapi" class="img-fluid uu" />
+
+          <div>
+            <form>
+              <div>
+                <input type="file" (change)="onFileSelected($event)" />
+              </div>
+              <div>
+                <button type="button" (click)="onUpload()">Upload</button>
+              </div>
+            </form>
+          </div>
+
+          <a href="#!">
+            <div
+              class="mask"
+              style="background-color: rgba(251, 251, 251, 0.15)"
+            ></div>
+          </a>
+        </div>
+      </div>
+    </mat-card>
+
+  </mat-drawer-content>
 </mat-drawer-container>
