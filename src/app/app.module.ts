@@ -95,7 +95,6 @@ import {HttpClientModule} from "@angular/common/http";
 
 import { HospitalSignupPageComponent } from './Modules/Hospital/hospital-signup-page/hospital-signup-page.component';
 import { PharmacySignupPageComponent } from './Modules/Pharmacy/pharmacy-signup-page/pharmacy-signup-page.component';
-import {HttpClientModule} from "@angular/common/http";
 
 
 import { SidenavComponent } from './Modules/Hospital/dashboard/dashboard/sidenav/sidenav.component';
