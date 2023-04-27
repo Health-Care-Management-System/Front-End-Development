@@ -1,7 +1,7 @@
 <div class="h6 m-4" style="font-size: 22px; color: rgb(5, 77, 83)">
   Onboard Doctors
 </div>
-<div class="card shadow ">
+<div class="card shadow">
   <div class="card-body card1">
     <div class="row">
       <div class="col-sm-8">
@@ -18,7 +18,7 @@
               <div class="card col-lg-7 border-0">
                 <div class="title col-lg-12">
                   <h2>
-                    <a href="index.html">{{ data.name }}</a>
+                    <a href="">{{ data.name }}</a>
                   </h2>
                   <ul class="docinfo">
                     <li>
@@ -33,20 +33,15 @@
       </div>
       <div class="col-sm-4">
         <div class="card">
-          <div class="card-body">
-            <p class="card-text">
-              This is the content of the another inner card.
-            </p>
-            <p class="card-text">
-              This is the content of the another inner card.
-            </p>
-            <p class="card-text">
-              This is the content of the another inner card.
-            </p>
-            <div class="btn">
-              <a href="../../doctors/isobel-jones/index.html" class="dc-btn"
-                >View Full Profile</a
-              >
+          <div class="card-body" *ngFor="let data of docData">
+            <span ><i class="fas fa-location mx-2"></i>{{data.city}}</span><br>
+            <span>
+             <i class="fas fa-clock mx-2  "></i>{{data.workdays}} </span><br>
+            <span><i class="fas fa-thumbs-up mx-2   "></i> {{data.votes}}</span><br>
+            <span><i class="fas fa-wallet mx-2  "></i>{{data.price}} </span><br>
+            <span class="available" style="color: green;">{{data.availability}} </span><br>
+  
+            <div class="btn btn-outline-primary" type="button">View Full Profile
             </div>
           </div>
         </div>

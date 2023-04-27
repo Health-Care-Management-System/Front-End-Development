@@ -34,3 +34,8 @@
 .logo{
   width: 200px;
 }
+a{
+  text-decoration: none;
+  font-size: 13px;
+  text-align: left;
+}
