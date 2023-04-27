@@ -64,7 +64,7 @@
                         <th>Date</th>
                         <th>Time</th>
                         <th>Status</th>
-                        <th>Action</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -86,11 +86,9 @@
                             <span class="badge badge-{{item.status === 'Active' ? 'success' : item.status === 'Onboarding' ? 'primary' : 'warning'}} rounded-pill d-inline">{{item.status}}</span>
                         </td>
                         <td>
-                            <button type="button" class="btn btn-link btn-sm btn-rounded">Change</button>
+                            <button type="button" class="btn btn-link btn-sm btn-rounded">Successfull</button>
                         </td>
-                        <td>
-                            <button type="button" class="btn btn-link btn-rounded btn-sm fw-bold" data-mdb-ripple-color="dark">Reject</button>
-                        </td>
+
                     </tr>
                 </tbody>
             </table>

@@ -11,37 +11,37 @@
                 <img class="img1" src="\assets\img\11111.jpg"> </div>
 
             <!-- lllll -->
-            <div style="text-align: center;">
+            <div class="doctor1" style="text-align: center;">
                 Doctors</div>
             <mat-card *ngFor="let doctor of doctors" class="doctorall">
                 <img src="{{doctor.imgSrc}}" class="docimage1"> {{doctor.name}}
                 <button mat-button color="primary" class="button1">view profile</button>
             </mat-card>
-            <button mat-button>Add More</button>
+            <button mat-button class="addmore">Add More</button>
         </mat-card>
         <mat-card class="hospital">
             <div>
                 <img class="img1" src="\assets\img\11111.jpg"> </div>
-            <div style="text-align: center;">
+            <div class="hospital1" style="text-align: center;">
                 hospitals</div>
             <mat-card *ngFor="let doctor of doctors" class="doctorall">
                 <img src="{{doctor.imgSrc}}" class="docimage1"> {{doctor.name}}
                 <button mat-button color="primary" class="button1">view profile</button>
             </mat-card>
-            <button mat-button>Add More</button>
+            <button mat-button class="addmore">Add More</button>
         </mat-card>
 
 
         <mat-card class="pharmacy">
             <div>
                 <img class="img1" src="\assets\img\11111.jpg"> </div>
-            <div style="text-align: center;">
+            <div class="pharmacy1" style="text-align: center;">
                 pharmacies</div>
             <mat-card *ngFor="let doctor of doctors" class="doctorall">
                 <img src="{{doctor.imgSrc}}" class="docimage1"> {{doctor.name}}
                 <button mat-button color="primary" class="button1">view profile</button>
             </mat-card>
-            <button mat-button>Add More</button>
+            <button mat-button class="addmore">Add More</button>
         </mat-card>
 
     </mat-drawer-content>

@@ -114,10 +114,12 @@ const routes: Routes = [
 {path:'hospitalsearch-fi',component:HospitalsearchFiComponent},
 {path:'pharmacysearch',component:PharmacysearchComponent},
 {path:'doctorprofileforpatient',component:DoctorprofileforpatientComponent},
+{path:'doctorprofileforpatient/:id',component:DoctorprofileforpatientComponent},
 {path:'medicineorderdetails',component:MedicineorderdetailsComponent},
 {path:'patientpw',component:PatientpwchangeComponent},
 {path:'myappoinments',component:MyappoinmentsComponent},
 {path:'makeanappoinment',component:MakeAnApppoinmentComponent},
+{path:'makeanappoinment/:id',component:MakeAnApppoinmentComponent},
 
 {path:'canceled',component:CanceledComponent},
 {path:'new',component:NewComponent},

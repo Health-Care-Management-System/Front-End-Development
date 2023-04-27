@@ -32,26 +32,6 @@
         <div class="help">Help & contact</div>
         </button>
 
-        <!-- <ul class="navbar-nav">
-            <li class="nav-item dropdown me-3 me-lg-1">
-                <a class="nav-link dropdown-toggle hidden-arrow" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-bell"></i>
-                    <span class="badge rounded-pill badge-notification bg-danger">12</span>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                    <li>
-                        <a class="dropdown-item" href="#">Some news</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">Another news</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </li>
-                </ul>
-
-            </li>
-        </ul> -->
 
 
         <button mat-icon-button class="example-icon " aria-label="Example icon-button with share icon " matBadge="11" matBadgePosition="after" matBadgeColor="warn">
@@ -64,23 +44,12 @@
     </span>
         </button>
 
-        <!-- <mat-form-field class="formfield" appearance="outline" width="1px">
-            <mat-label class="lable">My Account</mat-label>
-            <mat-select disableRipple>
-                <mat-option value="1 ">Option 1</mat-option>
-                <mat-option value="2 ">Option 2</mat-option>
-                <mat-option value="3 ">Option 3</mat-option>
-            </mat-select>
-        </mat-form-field> -->
+
         <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button">
             <!-- <mat-icon>person</mat-icon> -->
             <img class="profileimg" src="\assets\img\doctor.jpg" alt="Avatar">
           </button>
-        <!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button">
-            <mat-icon>person_outline</mat-icon> -->
-        <!-- <mat-icon >account_circle</mat-icon>
-            <img  src="../../../../../../assets/img/doc23.png" />                        
-        </button> -->
+
         <mat-menu #menu="matMenu">
             <button mat-menu-item routerLink="/home">
                 <mat-icon><i class="fa fa-sign-out" aria-hidden="true"></i></mat-icon>

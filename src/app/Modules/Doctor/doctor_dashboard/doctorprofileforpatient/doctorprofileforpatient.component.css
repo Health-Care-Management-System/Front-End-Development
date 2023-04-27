@@ -12,17 +12,17 @@
 }
 
 .harry {
-    position: absolute;
-    width: 164px;
-    height: 58px;
-    left: 110px;
-    top: 300px;
+    /* position: absolute; */
+    position: relative;
+    /* left: 110px; */
+    /* top: 300px; */
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
     text-align: center;
+    padding: 5px;
     color: #13100B;
 }
 
@@ -32,9 +32,8 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
-    left: 120px;
-    top: 320px;
     color: rgba(64, 64, 64, 0.72);
+    text-align: center;
 }
 
 .harry2 {
@@ -44,19 +43,18 @@
     font-size: 40px;
     line-height: 50px;
     color: #383993;
-    position: absolute;
-    width: 300px;
-    height: 50px;
-    left: 788px;
-    top: 100px;
+    position: relative;
+    text-align: center;
+    /* left: 788px;
+    top: 100px; */
 }
 
 .speci {
-    position: absolute;
+    position: relative;
     width: 300px;
     height: 28px;
-    left: 768px;
-    top: 150px;
+    /* left: 768px;
+    top: 150px; */
     font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: 600;
@@ -64,6 +62,7 @@
     line-height: 28px;
     /* identical to box height */
     color: #979797;
+    text-align: center;
 }
 
 .addspe {
@@ -82,6 +81,13 @@
     font-size: 14px;
     line-height: 18px;
     background: #E3E3E7;
+}
+
+.namespeci {
+    position: absolute;
+    left: 768px;
+    top: 90px;
+    width: auto;
 }
 
 .loc {
@@ -594,7 +600,6 @@
 
 .hr {
     position: relative;
-    top: 100px;
 }
 
 .container {
