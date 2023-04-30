@@ -1,20 +1,3 @@
-<!-- <div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed':''">
-    <div class="logo-container">
-        <button class="logo" (click)="toggleCollapse()" >A</button>
-        <div class="logo-text" *ngIf="collapsed">E-dowz</div>
-        <button class="btn-close" *ngIf="collapsed" (click)="closeSidenav()">
-            <i class="fal fa-times close-icon"></i>
-        </button>
-    </div>
-    <ul class="sidenav-nav">
-        <li class="sidenav-nav-item" *ngFor="let data of navData">
-            <a href="" class="sidenav-nav-link" [routerLink]="data.routeLink">
-                <i class="sidenav-link-icon" [class]="data.icon"></i>
-                <span class="sidenav-link-text" *ngIf="collapsed">{{data.label}}</span>
-            </a>
-        </li>
-    </ul>
-</div> -->
 
 <mat-sidenav-container autosize>
     <mat-sidenav #sidenav mode="side" [opened]="true">
@@ -44,6 +27,7 @@
         </mat-nav-list>
     </mat-sidenav>
 
+    <!-- This is tool-bar -->
     <div class="content">
         <mat-toolbar >
             <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
@@ -57,8 +41,7 @@
             <div fxFlex fxLayout="row" fxLayoutAlign="flex-start" >
                 <a href="" routerLink=""><img class="logo" src="../../../../../../assets/img/logo-dark-background.png"></a>
             </div>
-            <!-- <span> <img src="assets/profile.jpg"
-                    style="height:50px; width:50px; border-radius:50%;margin-right: 10px;"></span> -->
+        
             <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
                 <ul fxLayout="row" fxLayoutGap="row">
                     <li>
@@ -67,6 +50,7 @@
                         </button>
                     </li>
 
+                    <!-- if user not login shown default avatar -->
                     <li>
                         <!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button with a menu">
                      
@@ -77,35 +61,12 @@
                             <!-- <mat-icon>person</mat-icon> -->
                             <img class="profileimg" src="../../../../../../assets/img/team1.jpg" alt="Avatar">
                           </button>
-                        <!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button">
-                            <mat-icon>person_outline</mat-icon> -->
-                            <!-- <mat-icon >account_circle</mat-icon>
-                            <img  src="../../../../../../assets/img/doc23.png" />                        
-                        </button> -->
                         <mat-menu #menu="matMenu">
                             <button mat-menu-item>
                                 <mat-icon><i class="fa fa-sign-out" aria-hidden="true"></i></mat-icon>
                                 <span>Signout</span>
                             </button>
                         </mat-menu>
-                        <!-- <mat-menu #menu="matMenu">
-                            <button mat-menu-item>
-                                <mat-icon>dialpad</mat-icon>
-                                <span>Redial</span>
-                            </button>
-                            <button mat-menu-item disabled>
-                                <mat-icon>voicemail</mat-icon>
-                                <span>Check voice mail</span>
-                            </button>
-                            <button mat-menu-item>
-                                <mat-icon>notifications_off</mat-icon>
-                                <span>Disable alerts</span>
-                            </button>
-                            <button mat-menu-item>
-                                <mat-icon><i class="fa fa-sign-out" aria-hidden="true"></i></mat-icon>
-                                <span>Signout</span>
-                            </button>
-                        </mat-menu> -->
                     </li>
                 </ul>
             </div>

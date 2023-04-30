@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import * as Aos from 'aos';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { SlidesOutputData } from 'ngx-owl-carousel-o';
+import { Features } from './middlepagedata'; 
 
 @Component({
   selector: 'app-middle',
@@ -10,6 +11,8 @@ import { SlidesOutputData } from 'ngx-owl-carousel-o';
 })
 export class MiddleComponent implements OnInit {
 
+  Website_features= Features;
+  
   activeSlides?: SlidesOutputData;
   getPassedData(data: SlidesOutputData) {
     this.activeSlides = data;

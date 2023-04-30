@@ -1,15 +1,15 @@
 <mat-toolbar color="primary">
-    <!-- if want add shadow to navbar -->
-    <!-- <mat-toolbar color="primary" class="mat-elevation-za"></mat-toolbar> -->
 
+    <!-- <mat-toolbar color="primary" class="mat-elevation-za"></mat-toolbar> -->
     <span>
+
         <a routerLink="/home" >
         <img src="../../../assets/img/logo-light-background.png" class="logo" alt="logo" >
         </a>
     </span>
     <div class="spacer"></div>
 
-    <!-- fxHide fxShow.gt-sm - means the the above element will be hidden by default and ONLY shown on viewport sizes greater than mobile. -->
+
     <div fxLayout="row" fxHide fxShow.gt-sm>
         <a class="nav-link" routerLink="/home" mat-button>Home</a>
         <a class="nav-link" routerLink="/doctor" mat-button>Doctor</a>
@@ -17,31 +17,31 @@
         <a class="nav-link" routerLink="/pharmacy" mat-button>Pharmacy</a>
         <a class="nav-link" routerLink="/ambulance" mat-button>Ambulance</a>
         <a class="nav-link" routerLink="/aboutus" mat-button>About</a>
+    </div>
 
-        <div class="spacer"></div>
-        <a class="nav-link" routerLink="/login" mat-stroked-button>Login</a>
-        <a class="nav-link" routerLink="/userselect" mat-raised-button>Sign up</a>
-        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button">
+
+    <div class="spacer"></div>
+    <a class="nav-link" routerLink="/login" mat-stroked-button>Login</a>
+    <a class="nav-link" routerLink="/userselect" mat-raised-button>Sign up</a>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button">
    
       
     </button>
-        <!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button">
+    <!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button">
       <mat-icon>person_outline</mat-icon> -->
-        <!-- <mat-icon >account_circle</mat-icon>
-      <img  src="../../../../../../assets/img/doc23.png" />                        
+    <!-- <mat-icon >account_circle</mat-icon>
+      <img  src="../../../../../../assets/img/doc23.png" />
   </button> -->
-        <!-- <mat-menu #menu="matMenu">
+    <!-- <mat-menu #menu="matMenu">
             <button mat-menu-item routerLink="/patientprofile">
             <mat-icon><i class="fa fa-sign-out"  aria-hidden="true"  routerLink="/patientprofile"></i></mat-icon>
             <span  routerLink="/patientprofile">Login Patient</span>
-            
-      
+
+
         </button>
             <button mat-menu-item routerLink="/dashboard">
           <mat-icon><i class="fa fa-sign-out"  aria-hidden="true"  routerLink="/dashboard"></i></mat-icon>
           <span  routerLink="/dashboard">Login Doctor</span>
-          
-    
       </button>
 
         </mat-menu> -->
@@ -53,6 +53,8 @@
     <mat-icon>menu</mat-icon>
   </button>
 </mat-toolbar>
+
+
 
 <mat-menu x-position="before" #menu>
     <button routerLink="/home" mat-menu-item>Home</button>

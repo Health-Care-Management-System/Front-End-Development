@@ -90,9 +90,11 @@ import { PatientProfileDisplayedComponent } from './Modules/Patient/patient prof
 import { FavoritesComponent } from './Modules/Patient/favorites/favorites/favorites.component';
 import { PatientSignupPageComponent } from './Modules/Patient/patient-signup-page/patient-signup-page.component';
 import { AmbulanceSignupPageComponent } from './Modules/Ambulance/ambulance-signup-page/ambulance-signup-page.component';
+
+import {HttpClientModule} from "@angular/common/http";
+
 import { HospitalSignupPageComponent } from './Modules/Hospital/hospital-signup-page/hospital-signup-page.component';
 import { PharmacySignupPageComponent } from './Modules/Pharmacy/pharmacy-signup-page/pharmacy-signup-page.component';
-import {HttpClientModule} from "@angular/common/http";
 
 
 import { SidenavComponent } from './Modules/Hospital/dashboard/dashboard/sidenav/sidenav.component';
@@ -128,6 +130,7 @@ import { PatientviewComponent } from './Modules/Pharmacy/patientview/patientview
 import { PharmacydashboardComponent } from './Modules/Pharmacy/pharmacydashboard/pharmacydashboard.component';
 import { HospitalprofileforpatientComponent } from './Modules/Hospital/hospitalprofileforpatient/hospitalprofileforpatient.component';
 import { PharmacyprofileforpatientComponent } from './Modules/Pharmacy/pharmacyprofileforpatient/pharmacyprofileforpatient.component';
+
 
 
 
@@ -217,7 +220,6 @@ import { PharmacyprofileforpatientComponent } from './Modules/Pharmacy/pharmacyp
   ],
   imports: [
     BrowserModule,
-
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,

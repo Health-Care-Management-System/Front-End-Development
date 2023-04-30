@@ -14,7 +14,12 @@ export const doctorProfileData = [
     {
         name:'Joe Mandir',
         degree:'Bsc. hons MBBS',
-        image:'../../../../../assets/img/docimage.jpg'
+        image:'../../../../../assets/img/docimage.jpg',
+        city:'Nugegoda',
+        workdays:'Mon, Tue, Wed, Thu, Fri, Sat, Sun',
+        votes:'1 Votes',
+        price:'Starting From Rs,2000.00',
+        availability:'Available Today'
 
     }
 ]
