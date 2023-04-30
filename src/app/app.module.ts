@@ -126,6 +126,8 @@ import { RejectedComponent } from './Modules/Pharmacy/rejected/rejected.componen
 import { ApprovedComponent } from './Modules/Pharmacy/approved/approved.component';
 import { PatientviewComponent } from './Modules/Pharmacy/patientview/patientview.component';
 import { PharmacydashboardComponent } from './Modules/Pharmacy/pharmacydashboard/pharmacydashboard.component';
+import { HospitalprofileforpatientComponent } from './Modules/Hospital/hospitalprofileforpatient/hospitalprofileforpatient.component';
+import { PharmacyprofileforpatientComponent } from './Modules/Pharmacy/pharmacyprofileforpatient/pharmacyprofileforpatient.component';
 
 
 
@@ -207,7 +209,9 @@ import { PharmacydashboardComponent } from './Modules/Pharmacy/pharmacydashboard
 
     HospitalProfileComponent,
     OnboardDoctorsComponent,
-    HospitalDetailsComponent
+    HospitalDetailsComponent,
+    HospitalprofileforpatientComponent,
+    PharmacyprofileforpatientComponent
 
 
   ],

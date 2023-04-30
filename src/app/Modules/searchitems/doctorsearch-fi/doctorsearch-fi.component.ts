@@ -54,12 +54,20 @@ export class DoctorsearchFiComponent implements OnInit {
       });
     } else {
       // Filter based on the text input
-      this.books = this.allbooks.filter((book: { name: string; }) => {
+      const filteredBooks = this.allbooks.filter((book: { name: string; }) => {
         const nameMatch = book.name.toLowerCase().includes(this.searchText.toLowerCase());
         return nameMatch;
       });
+  
+      if (filteredBooks.length === 0) {
+        // Show an alert if no books match the search text
+        alert("Name not found!");
+      }
+  
+      this.books = filteredBooks;
     }
   }
+  
   
   onOptionSelected(event: MatAutocompleteSelectedEvent) {
     this.selectedBook = event.option.value;

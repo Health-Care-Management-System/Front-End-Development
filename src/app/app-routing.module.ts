@@ -63,6 +63,8 @@ import { PharmacydashboardComponent } from './Modules/Pharmacy/pharmacydashboard
 
 
 import {HospitalProfileComponent} from "./Modules/Hospital/hospital-profile-page/hospital-profile/hospital-profile.component";
+import { HospitalprofileforpatientComponent } from './Modules/Hospital/hospitalprofileforpatient/hospitalprofileforpatient.component';
+import { PharmacyprofileforpatientComponent } from './Modules/Pharmacy/pharmacyprofileforpatient/pharmacyprofileforpatient.component';
 
 
 
@@ -134,7 +136,12 @@ const routes: Routes = [
 {path:'contactus' , component:ContactusComponent},
 
 {path:'contactus' , component:ContactusComponent},
-  {path:'hospital-profile' , component:HospitalProfileComponent}
+  {path:'hospital-profile' , component:HospitalProfileComponent},
+  {path:'hospitalprofileforpatient',component:HospitalprofileforpatientComponent},
+  {path:'pharmacyprofileforpatient',component:PharmacyprofileforpatientComponent},
+  {path:'pharmacyprofileforpatient/:id',component:PharmacyprofileforpatientComponent},
+  {path:'hospitalprofileforpatient/:id',component:HospitalprofileforpatientComponent},
+  
 
 ];
 

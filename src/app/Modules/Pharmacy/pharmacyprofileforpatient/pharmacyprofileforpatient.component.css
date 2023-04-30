@@ -185,18 +185,9 @@
     line-height: 30px;
 }
 
-.hospitals {
-    position: relative;
-    top: -590px;
-    margin-left: 100px;
-    left: 530px;
-    z-index: 1;
-}
-
-
-/* .ABCHospital1 {
+.ABCHospital1 {
     position: absolute;
-    width: 499px;
+    width: 129px;
     height: 31px;
     left: 620px;
     top: 459px;
@@ -210,7 +201,45 @@
     line-height: 18px;
     color: #4648AE;
     border-style: hidden;
-} */
+}
+
+.ABCHospital2 {
+    position: absolute;
+    width: 129px;
+    height: 31px;
+    left: 766px;
+    top: 459px;
+    background: rgba(215, 215, 252, 0.8);
+    border-radius: 5px;
+    background: rgba(215, 215, 252, 0.8);
+    border-radius: 5px;
+    border-color: rgba(215, 215, 252, 0.8);
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: #4648AE;
+    border-style: hidden;
+}
+
+.ABCHospital3 {
+    position: absolute;
+    width: 129px;
+    height: 31px;
+    left: 915px;
+    top: 458px;
+    background: rgba(215, 215, 252, 0.8);
+    border-radius: 5px;
+    border-color: rgba(215, 215, 252, 0.8);
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: #4648AE;
+    border-style: hidden;
+}
 
 .AddWorkplace {
     position: absolute;
@@ -274,7 +303,7 @@
 
 .ex {
     position: absolute;
-    width: 650px;
+    width: 193px;
     height: 20px;
     left: 621px;
     top: 658px;
@@ -284,8 +313,6 @@
     font-size: 16px;
     line-height: 20px;
     color: #02010D;
-    display: flex;
-    justify-content: space-evenly;
 }
 
 .AddWorkExperience {
