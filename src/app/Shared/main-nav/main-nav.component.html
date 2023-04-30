@@ -1,7 +1,7 @@
 <mat-toolbar color="primary">
 
-  <!-- <mat-toolbar color="primary" class="mat-elevation-za"></mat-toolbar> -->
-  <span>
+    <!-- <mat-toolbar color="primary" class="mat-elevation-za"></mat-toolbar> -->
+    <span>
 
         <a routerLink="/home" >
         <img src="../../../assets/img/logo-light-background.png" class="logo" alt="logo" >
@@ -10,29 +10,29 @@
     <div class="spacer"></div>
 
 
-  <div fxLayout="row" fxHide fxShow.gt-sm>
-    <a class="nav-link" routerLink="/home" mat-button>Home</a>
-    <a class="nav-link" routerLink="/doctor" mat-button>Doctor</a>
-    <a class="nav-link" routerLink="/hospital" mat-button>Hospitals</a>
-    <a class="nav-link" routerLink="/pharmacy" mat-button>Pharmacy</a>
-    <a class="nav-link" routerLink="/ambulance" mat-button>Ambulance</a>
-    <a class="nav-link" routerLink="/aboutus" mat-button>About</a>
-  </div>
+    <div fxLayout="row" fxHide fxShow.gt-sm>
+        <a class="nav-link" routerLink="/home" mat-button>Home</a>
+        <a class="nav-link" routerLink="/doctor" mat-button>Doctor</a>
+        <a class="nav-link" routerLink="/hospital" mat-button>Hospitals</a>
+        <a class="nav-link" routerLink="/pharmacy" mat-button>Pharmacy</a>
+        <a class="nav-link" routerLink="/ambulance" mat-button>Ambulance</a>
+        <a class="nav-link" routerLink="/aboutus" mat-button>About</a>
+    </div>
 
 
-        <div class="spacer"></div>
-        <a class="nav-link" routerLink="/login" mat-stroked-button>Login</a>
-        <a class="nav-link" routerLink="/userselect" mat-raised-button>Sign up</a>
-        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button">
-      <!-- <mat-icon>person</mat-icon> -->
-      <img class="profileimg" src="../../../../../../assets/img/team1.jpg" alt="Avatar">
+    <div class="spacer"></div>
+    <a class="nav-link" routerLink="/login" mat-stroked-button>Login</a>
+    <a class="nav-link" routerLink="/userselect" mat-raised-button>Sign up</a>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button">
+   
+      
     </button>
-        <!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button">
+    <!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button">
       <mat-icon>person_outline</mat-icon> -->
-        <!-- <mat-icon >account_circle</mat-icon>
+    <!-- <mat-icon >account_circle</mat-icon>
       <img  src="../../../../../../assets/img/doc23.png" />
   </button> -->
-        <mat-menu #menu="matMenu">
+    <!-- <mat-menu #menu="matMenu">
             <button mat-menu-item routerLink="/patientprofile">
             <mat-icon><i class="fa fa-sign-out"  aria-hidden="true"  routerLink="/patientprofile"></i></mat-icon>
             <span  routerLink="/patientprofile">Login Patient</span>
@@ -43,9 +43,13 @@
           <mat-icon><i class="fa fa-sign-out"  aria-hidden="true"  routerLink="/dashboard"></i></mat-icon>
           <span  routerLink="/dashboard">Login Doctor</span>
       </button>
-        </mat-menu>
-  <!-- responsive menu part -->
-  <button mat-button [mat-menu-trigger-for]="menu" fxShow fxHide.gt-sm>
+
+        </mat-menu> -->
+    <!-- </div> -->
+
+    <!-- responsive menu part -->
+    <!-- fxShow fxHide.md  - means the the above element will be shown by default and ONLY hidden on viewport sizes == md mediaQuery ranges. -->
+    <button mat-button [mat-menu-trigger-for]="menu" fxShow fxHide.gt-sm>
     <mat-icon>menu</mat-icon>
   </button>
 </mat-toolbar>

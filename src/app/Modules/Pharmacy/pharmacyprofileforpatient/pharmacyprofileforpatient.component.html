@@ -4,7 +4,7 @@
     <mat-card class="example-card">
 
         <div class="image">
-            <!-- <img src="..\assets\images\doctor.jpg"></div> -->
+
             <img class="imgradius" mat-card-md-image [src]='doctor.empImage'>
         </div>
         <div class="harry">{{doctor.name}} </div>
@@ -21,7 +21,7 @@
         <div class=" harry2 ">{{doctor.name}}</div>
         <div class="speci ">{{doctor.spciality}}</div>
     </div>
-    <mat-icon class="loc "></mat-icon>
+    <mat-icon class="loc ">support</mat-icon>
     <div class="location ">Location</div>
     <div class="add ">{{doctor.city}} </div>
 
@@ -31,21 +31,16 @@
     <div class="Cardiology ">{{doctor.spciality}}</div>
     <div class="WorkPlaces ">Work Places</div>
     <mat-icon class="loc3 ">support</mat-icon>
-    <!-- <button mat-button class="ABCHospital1 ">ABC Hospital1</button>
+    <button mat-button class="ABCHospital1 ">ABC Hospital1</button>
     <button mat-button class="ABCHospital2 ">ABC Hospital2</button>
-    <button mat-button class="ABCHospital3 ">ABC Hospital3</button> -->
-    <div class="ABCHospital1">
-        <button mat-button class="hospitals " *ngFor="let doc of doctor.hospitals " [routerLink]="['/hospitalprofileforpatient', doc.id]">{{doc.name}}</button>
-    </div>
+    <button mat-button class="ABCHospital3 ">ABC Hospital3</button>
+
     <div class="Qualification ">Qualification</div>
     <mat-icon class="loc4 ">support</mat-icon>
 
     <div class="slmc ">SLMC Number: 1952</div>
     <div class="Experiance ">Experiance</div>
-    <!-- <div class="ex ">{{doctor.hospital}} </div> -->
-    <div class="ex ">
-        <!-- <div class="hospitals " *ngFor="let doc of doctor.hospitals ">{{doc.name}}</div> -->
-    </div>
+    <div class="ex ">{{doctor.hospital}} </div>
 
 
     <button mat-button class="manage " [routerLink]="[ '/makeanappoinment', doctor.id] ">Make an Appoinment</button>

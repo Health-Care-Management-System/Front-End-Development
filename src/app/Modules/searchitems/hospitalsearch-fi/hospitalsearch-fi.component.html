@@ -1,115 +1,110 @@
 <app-main-nav></app-main-nav>
 <div class="container">
-    <div class="flex-container" fxLayout="row" fxLayout.xs="column">
+    <!-- <div class="flex-container" fxLayout="row" fxLayout.xs="column"> -->
 
-        <div class="searchfilter">
-            <form class="example-form">
-                <input type="text" placeholder="Search for a street" [formControl]="streetControl" [matAutocomplete]="streetAuto" class="example-input">
-                <mat-autocomplete #streetAuto="matAutocomplete">
-                    <mat-option *ngFor="let street of filteredStreets | async" [value]="street">
-                        {{street}}
+    <div class="searchfilter">
+        <form class="example-form">
+            <input type="text" [(ngModel)]="searchText" placeholder="Search for a name" [formControl]="streetControl" [matAutocomplete]="streetAuto" class="example-input">
+            <mat-autocomplete #streetAuto="matAutocomplete" [displayWith]="displayFn" (optionSelected)="onOptionSelected($event)">
+                <mat-option *ngFor="let book of filteredBooks  | async" [value]="book">
+                    {{book.name}}
 
-                    </mat-option>
+                </mat-option>
 
-                </mat-autocomplete>
-                <mat-icon class="icon3" matSuffix>search</mat-icon>
+            </mat-autocomplete>
+            <div> <button (click)="filterbooks()" class="icon3" mat-button><mat-icon  matSuffix>search</mat-icon></button></div>
+            <!-- <button (click)="clearSelection()" mat-button class="clear">Clear</button> -->
 
-            </form>
+        </form>
 
-            <form class="example-form">
-                <input type="text" placeholder="Search for a city" [formControl]="cityControl" [matAutocomplete]="cityAuto" class="example-input">
-                <mat-autocomplete #cityAuto="matAutocomplete">
-                    <mat-option *ngFor="let city of filteredCities | async" [value]="city">
-                        {{city}}
-                    </mat-option>
-                </mat-autocomplete>
-                <mat-icon class="icon3" matSuffix>search</mat-icon>
-            </form>
+        <form class="example-form">
+            <input type="text" [(ngModel)]="searchText2" placeholder="Search for a city" [formControl]="cityControl" [matAutocomplete]="cityAuto" class="example-input">
+
+            <mat-autocomplete #cityAuto="matAutocomplete" [displayWith]="displayFn2" (optionSelected)="onOptionSelected2($event)">
+                <mat-option *ngFor="let book of filteredCities| async" [value]="book">
+                    {{book.city}}
+                </mat-option>
+            </mat-autocomplete>
+
+            <div> <button (click)="filterbooks2()" class="icon3" mat-button><mat-icon  matSuffix>search</mat-icon></button></div>
+        </form>
 
 
-            <form class="example-form">
-                <input type="text" placeholder="Search for a city" [formControl]="districtControl" [matAutocomplete]="districtAuto" class="example-input">
-                <mat-autocomplete #districtAuto="matAutocomplete">
-                    <mat-option *ngFor="let district of filteredDistricts| async" [value]="district">
-                        {{district}}
-                    </mat-option>
-                </mat-autocomplete>
-                <mat-icon class="icon3" matSuffix>search</mat-icon>
-            </form>
 
-            <form class="example-form">
-                <input type="text" placeholder="Search for a Hospital" [formControl]="hospitalControl" [matAutocomplete]="hospitalAuto" class="example-input">
-                <mat-autocomplete #hospitalAuto="matAutocomplete">
-                    <mat-option *ngFor="let hospital of filteredHospitals| async" [value]="hospital">
-                        {{hospital}}
-                    </mat-option>
-                </mat-autocomplete>
-                <mat-icon class="icon3" matSuffix>search</mat-icon>
-            </form>
+        <form class="example-form">
+            <input type="text" [(ngModel)]="searchText3" placeholder="Search for a disrict" [formControl]="districtControl" [matAutocomplete]="districtAuto" class="example-input">
+            <mat-autocomplete #districtAuto="matAutocomplete" [displayWith]="displayFn3" (optionSelected)="onOptionSelected3($event)">
+                <mat-option *ngFor="let book of filteredDistricts| async" [value]="book">
+                    {{book.district}}
+                </mat-option>
+            </mat-autocomplete>
+
+            <div> <button (click)="filterbooks3()" class="icon3" mat-button><mat-icon  matSuffix>search</mat-icon></button></div>
+        </form>
+
+        <form class="example-form">
+            <input type="text" [(ngModel)]="searchText4" placeholder="Search for a Hospital" [formControl]="hospitalControl" [matAutocomplete]="hospitalAuto" class="example-input">
+            <mat-autocomplete #hospitalAuto="matAutocomplete" [displayWith]="displayFn4" (optionSelected)="onOptionSelected4($event)">
+                <mat-option *ngFor="let book of filteredHospitals| async" [value]="book">
+                    {{book.hospital}}
+                </mat-option>
+            </mat-autocomplete>
+
+            <div> <button (click)="filterbooks4()" class="icon3" mat-button><mat-icon  matSuffix>search</mat-icon></button></div>
+        </form>
+    </div>
+    <div class="qqq">
+        <div class="headding">Select Speciality</div>
+        <div class="overflow-auto eee">
+
+            <p *ngFor="let book of books">
+
+                <mat-checkbox> {{book.spciality}} </mat-checkbox>
+
+            </p>
         </div>
-        <div class="qqq">
-            <div class="headding">Select Speciality</div>
-            <div class="overflow-auto eee">
+    </div>
+    <div class="vl"></div>
+    <div class="container-flud">
 
-                <p *ngFor="let item of catagory">
-
-                    <mat-checkbox> {{item}} </mat-checkbox>
-
-                </p>
-            </div>
-        </div>
-        <div class="vl"></div>
-        <div class="container-flud">
-
-            <div class="searchfordoctors">
-                <span class="search1">
+        <div class="searchfordoctors">
+            <span class="search1">
             Search&#160;</span>
-                <span class="fordoctors">
+            <span class="fordoctors">
             for doctors </span>
-            </div>
-            <span class="search2">Search
+        </div>
+        <span class="search2">Search
         <span style="color: orangered;">5500+</span> Dotors from any speciality in island wide
 
-            </span>
+        </span>
+    </div>
+    <div> <button class="button" mat-raised-button>Show Doctors</button></div>
+
+
+    <div class="allbooks">
+        <div *ngFor="let book of books.slice(0, showMore ? books.length : 6)">
+            <mat-card class="x">
+
+                <div class=image>
+                    <img class="imageori" [src]="book.empImage "><br>
+                    <br>
+                </div>
+                <div class=" text1 ">{{ book.name }}</div>
+
+                <div class="text2 ">{{ book.spciality }}</div>
+                <div class="text3 ">{{ book.hospital }}</div>
+
+                <button mat-stroked-button color="warn" class="viewprofile" [routerLink]="['/hospitalprofileforpatient', book.id]">View Profile</button>
+                <button mat-stroked-button class="favorite"><mat-icon >favorite</mat-icon></button>
+
+            </mat-card>
         </div>
-        <div> <button class="button" mat-raised-button>Show Doctors</button></div>
-
-
-        <div class="allcards">
-            <div *ngFor="let card of cards.slice(0, showMore ? cards.length : 6)">
-                <mat-card class="x">
-
-                    <div class=image>
-                        <img class="imageori" [src]="card.image"><br>
-                        <br>
-                    </div>
-                    <div class=" text1 ">{{ card.text1 }}</div>
-
-                    <div class="text2 ">{{ card.text2 }}</div>
-                    <div class="text3 ">{{ card.text3 }}</div>
-
-                    <div class="star ">
-                        <mat-icon class="star1 ">star</mat-icon>
-                        <mat-icon class="star2 ">star</mat-icon>
-                        <mat-icon class="star3 ">star</mat-icon>
-                        <mat-icon class="star4 ">star</mat-icon>
-                        <mat-icon class="star5 ">star</mat-icon>
-                    </div>
-                </mat-card>
-            </div>
-            <button mat-button class="showmore2" *ngIf="showMore" (click)="showMore = false">Show less</button>
-        </div>
-
-
-        <!-- <ngx-stars [size]="20" [value]="rating" (rate)="onRate($event)"></ngx-stars> -->
-        <!-- <button mat-button class="showmore1 " (click)="showMore=! showMore ">Show more</button> -->
-        <button mat-button class="showmore1 " *ngIf="!showMore " (click)="showMore=true ">Show more</button>
-
-        <!-- <button class="showmore1 " (click)="showMore=! showMore; console.log(showMore) ">Show more</button> -->
-        <!-- <button class="showmore1 " (click)="showMore=! showMore; console.log(showMore) ">Show more</button> -->
     </div>
 
+    <!-- <button mat-button class="showmore2" *ngIf="showMore" (click)="showMore = false">Show less</button> -->
 
-
+    <button mat-button class="showmore1 " *ngIf="!showMore " (click)="showMore=true ">Show more</button>
+    <!-- 
+    </div> -->
 
 </div>

@@ -8,7 +8,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./doctorprofileforpatient.component.css']
 })
 export class DoctorprofileforpatientComponent implements OnInit {
+[x: string]: any;
   doctor: any;
+  hospital: any;
+  allbooks: any[] | undefined;
+  books: any[] | undefined;
+  
 
   constructor(
     private route: ActivatedRoute,
@@ -20,6 +25,20 @@ export class DoctorprofileforpatientComponent implements OnInit {
     this.http.get(`http://localhost:8070/api1/${id}`).subscribe((data) => {
       this.doctor = data;
     });
+    
+    // this.http.get<any[]>('http://localhost:8070/apihospital/all').subscribe(
+    //   data => {
+    //     this.books = data;
+      
+        
+        
+    //   },
+    //   error => {
+    //     console.log(error);
+    //   });
+    // this.http.get(`http://localhost:8070/apihospital/all`).subscribe((data) => {
+    //   this.hospital = data;
+    // });
   }
 
 }
