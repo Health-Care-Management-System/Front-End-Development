@@ -4,6 +4,7 @@ import { FormControl } from '@angular/forms';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { Observable } from 'rxjs';
 import { startWith, map, debounceTime } from 'rxjs/operators';
+import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-doctorsearch-fi',
   templateUrl: './doctorsearch-fi.component.html',
@@ -180,9 +181,10 @@ export class DoctorsearchFiComponent implements OnInit {
   filteredHospitals: Observable<any[]> | undefined;
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private snackBar: MatSnackBar) { }
   
   ngOnInit() {
+    
     this.http.get<any[]>("http://localhost:8070/api1/all").subscribe(
       data => {
         this.allbooks = data;
@@ -259,6 +261,43 @@ this.filteredHospitals = this.hospitalControl.valueChanges.pipe(
     return value.toLowerCase().replace(/\s/g, '');
   }
   
-}
-
-
+  makeFavorite(book: any) {
+    if (book.isFavorite) {
+      // Book is already a favorite, remove it
+      this.removeFromFavorites(book);
+    } else {
+      // Book is not a favorite, add it
+      this.addToFavorites(book);
+    }
+  }
+  
+  addToFavorites(book: any) {
+    book.isFavorite = true; // Set the favorite status to true
+   
+  
+    // Send the book data to the backend for addition
+    this.http.post('http://localhost:8070/apifavorite/add', book)
+      .subscribe(
+        () => {
+          console.log('Book added to favorites successfully');
+         
+          book.isFavorite = true; // Update the favorite status locally
+        },
+        (error) => console.error('Failed to add book to favorites:', error)
+      );
+  }
+  
+  removeFromFavorites(book: any) {
+    
+    book.isFavorite = false;
+    // Send the book's ID to the backend for deletion
+    this.http.delete(`http://localhost:8070/apifavorite/delete/${book.id}`,book)
+      .subscribe(
+        () => {
+          console.log('Book removed from favorites successfully');
+          
+          book.isFavorite = false; // Update the favorite status locally
+        },
+        (error) => console.error('Failed to remove book from favorites:', error)
+      );
+  }}

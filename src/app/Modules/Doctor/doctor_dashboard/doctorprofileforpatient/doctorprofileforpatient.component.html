@@ -48,7 +48,9 @@
     </div>
 
 
-    <button mat-button class="manage " [routerLink]="[ '/makeanappoinment', doctor.id] ">Make an Appoinment</button>
+    <!-- <button mat-button class="manage " [routerLink]="[ '/makeanappoinment2', doctor.id] " queryParamsHandling="merge">Make an Appoinment</button> -->
+    <button mat-button class="manage" [routerLink]="['/makeanappoinment2', doctor.id]" [queryParams]="{ doctorName: doctor.name, doctorSpeciality: doctor.spciality }" queryParamsHandling="merge">Make an Appointment</button>
+
     <div class="are ">Do you want to channel ?</div>
     <mat-icon class="loc5 ">support</mat-icon>
     <div class="number ">Mobile Number</div>

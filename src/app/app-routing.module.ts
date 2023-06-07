@@ -65,6 +65,7 @@ import { PharmacydashboardComponent } from './Modules/Pharmacy/pharmacydashboard
 import {HospitalProfileComponent} from "./Modules/Hospital/hospital-profile-page/hospital-profile/hospital-profile.component";
 import { HospitalprofileforpatientComponent } from './Modules/Hospital/hospitalprofileforpatient/hospitalprofileforpatient.component';
 import { PharmacyprofileforpatientComponent } from './Modules/Pharmacy/pharmacyprofileforpatient/pharmacyprofileforpatient.component';
+import { MakeAnAppoinmentWithDoctorComponent } from './Modules/Patient/make-an-appoinment-with-doctor/make-an-appoinment-with-doctor.component';
 
 
 
@@ -122,6 +123,8 @@ const routes: Routes = [
 {path:'myappoinments',component:MyappoinmentsComponent},
 {path:'makeanappoinment',component:MakeAnApppoinmentComponent},
 {path:'makeanappoinment/:id',component:MakeAnApppoinmentComponent},
+{path:'makeanappoinment2/:id',component:MakeAnAppoinmentWithDoctorComponent},
+// { path: 'makeanappoinment2/:doctorId', component: MakeAppointmentComponent },
 
 {path:'canceled',component:CanceledComponent},
 {path:'new',component:NewComponent},

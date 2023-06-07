@@ -95,8 +95,11 @@
                 <div class="text3 ">{{ book.hospital }}</div>
 
                 <button mat-stroked-button color="warn" class="viewprofile" [routerLink]="['/doctorprofileforpatient', book.id]">View Profile</button>
-                <button mat-stroked-button class="favorite"><mat-icon >favorite</mat-icon></button>
-
+                <!-- <button mat-stroked-button class="favorite" (click)="makeFavorite(book)"><mat-icon >favorite</mat-icon></button> -->
+                <button mat-stroked-button class="favorite" (click)="makeFavorite(book)">
+                    <mat-icon *ngIf="book.isFavorite">favorite</mat-icon>
+                    <mat-icon *ngIf="!book.isFavorite">favorite_border</mat-icon>
+                  </button>
             </mat-card>
         </div>
     </div>
