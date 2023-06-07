@@ -13,8 +13,8 @@
             <!-- lllll -->
             <div class="doctor1" style="text-align: center;">
                 Doctors</div>
-            <mat-card *ngFor="let doctor of doctors" class="doctorall">
-                <img src="{{doctor.imgSrc}}" class="docimage1"> {{doctor.name}}
+            <mat-card *ngFor="let favorite of favorites" class="doctorall">
+                <img src="{{favorite.imgSrc}}" class="docimage1"> {{favorite.name}}
                 <button mat-button color="primary" class="button1">view profile</button>
             </mat-card>
             <button mat-button class="addmore">Add More</button>

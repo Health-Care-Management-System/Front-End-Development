@@ -130,6 +130,8 @@ import { PatientviewComponent } from './Modules/Pharmacy/patientview/patientview
 import { PharmacydashboardComponent } from './Modules/Pharmacy/pharmacydashboard/pharmacydashboard.component';
 import { HospitalprofileforpatientComponent } from './Modules/Hospital/hospitalprofileforpatient/hospitalprofileforpatient.component';
 import { PharmacyprofileforpatientComponent } from './Modules/Pharmacy/pharmacyprofileforpatient/pharmacyprofileforpatient.component';
+import { MakeAnAppoinmentWithDoctorComponent } from './Modules/Patient/make-an-appoinment-with-doctor/make-an-appoinment-with-doctor.component';
+
 
 
 
@@ -214,7 +216,9 @@ import { PharmacyprofileforpatientComponent } from './Modules/Pharmacy/pharmacyp
     OnboardDoctorsComponent,
     HospitalDetailsComponent,
     HospitalprofileforpatientComponent,
-    PharmacyprofileforpatientComponent
+    PharmacyprofileforpatientComponent,
+    MakeAnAppoinmentWithDoctorComponent,
+  
 
 
   ],

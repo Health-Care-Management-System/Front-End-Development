@@ -13,87 +13,112 @@
                 <thead class="bg-light">
                     <tr>
                         <th>Doctor Name</th>
+                        <th>Hospital</th>
+                        <th>Speciality</th>
                         <th>Date</th>
                         <th>Time</th>
-                        <th>Status</th>
-                        <th>Action</th>
+
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let item of data">
+                    <tr *ngFor="let appoinment of appoinments; let i = index">
                         <td>
+
+
+
                             <div class="d-flex align-items-center">
                                 <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt="" style="width: 45px; height: 45px" class="rounded-circle" />
                                 <div class="ms-3">
-                                    <p class="fw-bold mb-1">{{item.name}}</p>
-                                    <p class="text-muted mb-0">{{item.email}}</p>
+                                    <p class="fw-normal mb-1">{{appoinment.doctorName}}</p>
+                                    <!-- <p class="fw-bold mb-1">{{appoinment.searchText}}</p> -->
+                                    <!-- <p class="text-muted mb-0">{{appoinment.hospital}}</p> -->
                                 </div>
                             </div>
                         </td>
                         <td>
-                            <p class="fw-normal mb-1">{{item.date}}</p>
-                            <p class="text-muted mb-0 time1">{{item.time}}</p>
+                            <p class="fw-normal mb-1">{{appoinment.searchText}}</p>
+
                         </td>
                         <td>
-                            <span class="badge badge-{{item.status === 'Active' ? 'success' : item.status === 'Onboarding' ? 'primary' : 'warning'}} rounded-pill d-inline">{{item.status}}</span>
+                            <p class="fw-normal mb-1">{{appoinment.doctorSpeciality}}</p>
+
                         </td>
                         <td>
-                            <button type="button" class="btn btn-link btn-sm btn-rounded">Change</button>
+                            <p class="fw-normal mb-1">{{appoinment.bookingDate | date}}</p>
+
                         </td>
                         <td>
-                            <button type="button" class="btn btn-link btn-rounded btn-sm fw-bold" data-mdb-ripple-color="dark">Reject</button>
+                            <p class="fw-normal mb-1">{{appoinment.bookingTime}}</p>
+                        </td>
+                        <td>
+                            <span class="badge badge-{{appoinment.status === 'Active' ? 'success' : appoinment.status === 'Onboarding' ? 'primary' : 'warning'}} rounded-pill d-inline">{{appoinment.status}}</span>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-link btn-sm btn-rounded" (click)="deleteAppoinment(i)">Delete</button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-link btn-rounded btn-sm fw-bold" data-mdb-ripple-color="dark">Edit</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
 
-        </div>
-
-
-
-
-
-        <div class="availabilitypic2">
-            <h2 style="text-align: center;">Past Appoinments
-
-            </h2>
+            <br><br><br>
+            <h2 style="text-align: center;">Deleted Appointments</h2>
             <table class="table align-middle mb-0 bg-white">
                 <thead class="bg-light">
                     <tr>
                         <th>Doctor Name</th>
+                        <th>Hospital</th>
+                        <th>Speciality</th>
                         <th>Date</th>
                         <th>Time</th>
-                        <th>Status</th>
-
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let item of data">
-                        <td>
-                            <div class="d-flex align-items-center">
-                                <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt="" style="width: 45px; height: 45px" class="rounded-circle" />
-                                <div class="ms-3">
-                                    <p class="fw-bold mb-1">{{item.name}}</p>
-                                    <p class="text-muted mb-0">{{item.email}}</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <p class="fw-normal mb-1">{{item.date}}</p>
-                            <p class="text-muted mb-0 time1">{{item.time}}</p>
-                        </td>
-                        <td>
-                            <span class="badge badge-{{item.status === 'Active' ? 'success' : item.status === 'Onboarding' ? 'primary' : 'warning'}} rounded-pill d-inline">{{item.status}}</span>
-                        </td>
-                        <td>
-                            <button type="button" class="btn btn-link btn-sm btn-rounded">Successfull</button>
-                        </td>
+                    <tr *ngFor="let myappoinment of myappoinments">
+                        <!-- Populate the table with the deleted appointment data -->
+                        <td>{{ myappoinment.doctorName }}</td>
 
+                        <td>{{ myappoinment.searchText }}</td>
+                        <td>{{ myappoinment.doctorSpeciality }}</td>
+                        <td>{{ myappoinment.bookingDate }}</td>
+                        <td>{{ myappoinment.bookingTime }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <br><br><br>
+            <h2 style="text-align: center;">Expired Appointments</h2>
+            <table class="table align-middle mb-0 bg-white">
+                <thead class="bg-light">
+                    <tr>
+                        <th>Doctor Name</th>
+                        <th>Hospital</th>
+                        <th>Speciality</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let expiredappoinment of expiredappoinments">
+                        <!-- Populate the table with the deleted appointment data -->
+                        <td>{{ expiredappoinment.doctorName }}</td>
+
+                        <td>{{ expiredappoinment.searchText }}</td>
+                        <td>{{ expiredappoinment.doctorSpeciality }}</td>
+                        <td>{{ expiredappoinment.bookingDate }}</td>
+                        <td>{{ expiredappoinment.bookingTime }}</td>
                     </tr>
                 </tbody>
             </table>
 
         </div>
+
+
+
+
 
 
 
