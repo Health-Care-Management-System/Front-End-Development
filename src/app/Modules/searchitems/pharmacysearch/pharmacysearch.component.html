@@ -86,16 +86,20 @@
             <mat-card class="x">
 
                 <div class=image>
-                    <img class="imageori" [src]="book.empImage "><br>
+                    <img class="imageori" [src]="book.pImage "><br>
                     <br>
                 </div>
                 <div class=" text1 ">{{ book.name }}</div>
 
                 <div class="text2 ">{{ book.spciality }}</div>
-                <div class="text3 ">{{ book.hospital }}</div>
+                <div class="text3 ">{{ book.city }}</div>
+                <div class="text3 ">{{ book.contactNum }}</div>
 
                 <button mat-stroked-button color="warn" class="viewprofile" [routerLink]="['/pharmacyprofileforpatient', book.id]">View Profile</button>
-                <button mat-stroked-button class="favorite"><mat-icon >favorite</mat-icon></button>
+                <button mat-stroked-button class="favorite" (click)="makeFavorite(book)">
+                    <mat-icon *ngIf="book.favorite">favorite</mat-icon>
+                    <mat-icon *ngIf="!book.favorite">favorite_border</mat-icon>
+                  </button>
 
             </mat-card>
         </div>

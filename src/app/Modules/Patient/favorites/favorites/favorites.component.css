@@ -1,8 +1,8 @@
     .doctor {
         top: 30px;
-        width: 400px;
+        width: 500px;
         height: auto;
-        position: absolute;
+        position: relative;
         left: 400px;
         display: row;
         border-color: #065560;
@@ -11,22 +11,22 @@
     }
     
     .hospital {
-        width: 400px;
+        width: 500px;
         height: auto;
-        position: absolute;
+        position: relative;
         left: 400px;
-        top: 1200px;
+        top: 80px;
         border-color: #065560;
         border-style: solid;
         border-radius: 30px;
     }
     
     .pharmacy {
-        width: 400px;
+        width: 500px;
         height: auto;
-        position: absolute;
+        position: relative;
         left: 400px;
-        top: 2000px;
+        top: 130px;
         border-color: #065560;
         border-style: solid;
         border-radius: 30px;
@@ -87,8 +87,10 @@
         position: relative;
         margin: 30px;
         border-style: solid;
-        border-color: chocolate;
+        border-color: rgb(44, 22, 6);
         background-color: transparent;
+        border-radius: 15%;
+        font-weight: bolder;
     }
     
     .bigimg {
@@ -98,6 +100,7 @@
     
     .img1 {
         position: absolute;
+        top: 50px;
         /* background-position: center;
         background-repeat: no-repeat;
         background-size: cover; */
@@ -112,17 +115,17 @@
     
     .doctor1 {
         font-weight: bold;
-        font-size: large;
+        font-size: 250%;
     }
     
     .hospital1 {
         font-weight: bold;
-        font-size: large;
+        font-size: 250%;
     }
     
     .pharmacy1 {
         font-weight: bold;
-        font-size: large;
+        font-size: 250%;
     }
     
     .addmore {

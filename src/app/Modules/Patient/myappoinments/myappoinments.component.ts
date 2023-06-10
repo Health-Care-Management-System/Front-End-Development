@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { forkJoin } from 'rxjs';
+import { Observable, concatMap, finalize, forkJoin, from } from 'rxjs';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-myappoinments',
@@ -14,14 +16,47 @@ export class MyappoinmentsComponent implements OnInit {
   deletedAppoinments: any[] = [];
   expiredappoinments: any[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit() {
     this.loadAppoinments();
     this.getdeletedAppoinments();
     this.getexpiredAppoinments();
+    this.deleteExpiredAppoinments();
+    
   }
-
+  
+  editAppoinment(appoinment: any): void {
+    // Assuming you have separate input fields for updating the date and time
+    const updatedDate = prompt('Enter the updated appointment date:');
+    const updatedTime = prompt('Enter the updated appointment time:');
+  
+    if (updatedDate !== null && updatedTime !== null) {
+      const updatedAppoinment = {
+        id: appoinment.id,
+        bookingDate: updatedDate,
+        bookingTime: updatedTime,
+        searchText: appoinment.searchText,
+        phone: appoinment.phone
+      };
+  
+      this.updateAppointment(updatedAppoinment);
+    }
+  }
+  
+  updateAppointment(appointment: any): void {
+    this.http.put<any>(`http://localhost:8070/apiappoinment/${appointment.id}`, appointment)
+      .subscribe(
+        (data) => {
+          console.log('Appointment updated successfully', data);
+          // Handle success, e.g., show a success message or navigate to a different page
+        },
+        (error) => {
+          console.error('Error updating appointment', error);
+          // Handle error, e.g., show an error message
+        }
+      );
+  }
   loadAppoinments() {
     this.http.get<any[]>('http://localhost:8070/apiappoinment/all').subscribe(
       (data) => {
@@ -78,7 +113,7 @@ export class MyappoinmentsComponent implements OnInit {
             // Remove the appointment from the array
             
             this.loadAppoinments();
-            window.location.reload();
+            
           },
           (error) => {
             console.log('Error deleting appointment:', error);
@@ -86,56 +121,56 @@ export class MyappoinmentsComponent implements OnInit {
             this.appoinments.splice(index, 0, deletedAppoinment);
           }
         );
+
+        location.reload();
   }
   deleteExpiredAppoinments(): void {
-    const currentDate = new Date(); // Get the current date and time
+    
+    const currentDate = new Date().getTime(); // Get the current date and time in milliseconds
     const expiredAppoinments: any[] = [];
   
-    this.appoinments = this.appoinments.filter(appoinment => {
-      const bookingDateTime = new Date(appoinment.bookingDate + ' ' + appoinment.bookingTime);
+    for (let i = 0; i < this.appoinments.length; i++) {
+      const appoinment = this.appoinments[i];
+      const bookingDateTime = new Date(appoinment.bookingDate + ' ' + appoinment.bookingTime).getTime();
   
       if (bookingDateTime < currentDate) {
         expiredAppoinments.push(appoinment);
-        return false; // Remove expired appointments from the appointments array
+        this.appoinments.splice(i, 1); // Remove expired appointment from the array
+        i--; // Decrement the index to adjust for the removed element
       }
-  
-      return true; // Keep non-expired appointments in the appointments array
-    });
+    }
   
     if (expiredAppoinments.length > 0) {
-      this.sendExpiredAppoinments(expiredAppoinments);
-      this.deleteAppoinmentsFromServer(expiredAppoinments);
+      this.sendExpiredAppoinments(expiredAppoinments)
+        .pipe(
+          concatMap(() => this.deleteAppoinmentsFromServer(expiredAppoinments))
+        )
+        .subscribe(
+          () => {
+            console.log('Expired appointments deleted successfully');
+            location.reload();
+          },
+          error => {
+            console.error('Error while deleting expired appointments:', error);
+          }
+        );
     }
   }
-  
-  sendExpiredAppoinments(expiredAppoinments: any[]): void {
-    this.http.post('http://localhost:8070/api/appoinmentexpired/add', expiredAppoinments)
-      .subscribe(
-        response => {
-          console.log('Expired appointments sent to the new table successfully:', response);
-        },
-        error => {
-          console.error('Error while sending expired appointments to the new table:', error);
-        }
-      );
+  sendExpiredAppoinments(expiredAppoinments: any[]): Observable<any> {
+    return this.http.post('http://localhost:8070/apiappoinmentexpired/add', expiredAppoinments);
   }
   
-  deleteAppoinmentsFromServer(appoinments: any[]): void {
+  deleteAppoinmentsFromServer(appoinments: any[]): Observable<any> {
     const deleteRequests = appoinments.map(appoinment => {
-      const deleteUrl = `http://localhost:8070/api/appoinment/delete/${appoinment.id}`;
+      const deleteUrl = `http://localhost:8070/apiappoinment/delete/${appoinment.id}`;
       return this.http.delete(deleteUrl);
     });
   
-    forkJoin(deleteRequests).subscribe(
-      () => {
-        console.log('Appointments deleted successfully');
-      },
-      error => {
-        console.error('Error while deleting appointments:', error);
-      }
+    return from(deleteRequests).pipe(
+      concatMap(deleteRequest => deleteRequest),
+      finalize(() => console.log('Appointments deleted successfully'))
     );
   }
-
   leftToolBarToggler() {
     this.sideBarOpen = !this.sideBarOpen;
   }

@@ -253,6 +253,73 @@ this.filteredHospitals = this.hospitalControl.valueChanges.pipe(
   private _normalizeValue(value: string): string {
     return value.toLowerCase().replace(/\s/g, '');
   }
+  makeFavorite(book: any) {
+    if (book.favorite) {
+      // Book is already a favorite, remove it
+      this.removeFromFavorites(book);
+    } else {
+      // Book is not a favorite, add it
+      this.addToFavorites(book);
+    }
+  }
   
+  addToFavorites(book: any) {
+    book.favorite = true; // Set the favorite status to true
+   
+  
+    // Send the book data to the backend for addition
+    this.http.post('http://localhost:8070/apihospitalfavorite/add', book)
+      .subscribe(
+        () => {
+          console.log('Book added to favorites successfully');
+         
+          book.isFavorite = true; // Update the favorite status locally
+        },
+        (error) => console.error('Failed to add book to favorites:', error)
+      );
+
+      this.http.put(`http://localhost:8070/apihospital/${book.id}`, { favorite: true })
+     
+      .subscribe(
+        (response) => {
+         
+          console.log('Book updated successfully', response);
+
+          // Handle success
+        },
+        (error) => {
+          console.error('Error updating book', error);
+          // Handle error
+        }
+      );
+  }
+  
+  removeFromFavorites(book: any) {
+    
+    book.favorite = false;
+    // Send the book's ID to the backend for deletion
+    this.http.delete(`http://localhost:8070/apihospitalfavorite/delete/${book.id}`,book)
+      .subscribe(
+        () => {
+          console.log('Book removed from favorites successfully');
+          
+          book.isFavorite = false; // Update the favorite status locally
+        },
+        (error) => console.error('Failed to remove book from favorites:', error)
+      );
+      this.http.put(`http://localhost:8070/apihospital/${book.id}`, { favorite: false })
+    .subscribe(
+        (response) => {
+         
+          console.log('Book updated successfully', response);
+
+          // Handle success
+        },
+        (error) => {
+          console.error('Error updating book', error);
+          // Handle error
+        }
+      );
+  }
 }
 

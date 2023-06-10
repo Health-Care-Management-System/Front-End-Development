@@ -260,9 +260,9 @@ this.filteredHospitals = this.hospitalControl.valueChanges.pipe(
   private _normalizeValue(value: string): string {
     return value.toLowerCase().replace(/\s/g, '');
   }
-  
+
   makeFavorite(book: any) {
-    if (book.isFavorite) {
+    if (book.favorite) {
       // Book is already a favorite, remove it
       this.removeFromFavorites(book);
     } else {
@@ -272,7 +272,7 @@ this.filteredHospitals = this.hospitalControl.valueChanges.pipe(
   }
   
   addToFavorites(book: any) {
-    book.isFavorite = true; // Set the favorite status to true
+    book.favorite = true; // Set the favorite status to true
    
   
     // Send the book data to the backend for addition
@@ -285,11 +285,26 @@ this.filteredHospitals = this.hospitalControl.valueChanges.pipe(
         },
         (error) => console.error('Failed to add book to favorites:', error)
       );
+
+      this.http.put(`http://localhost:8070/api1/${book.id}`, { favorite: true })
+     
+      .subscribe(
+        (response) => {
+         
+          console.log('Book updated successfully', response);
+
+          // Handle success
+        },
+        (error) => {
+          console.error('Error updating book', error);
+          // Handle error
+        }
+      );
   }
   
   removeFromFavorites(book: any) {
     
-    book.isFavorite = false;
+    book.favorite = false;
     // Send the book's ID to the backend for deletion
     this.http.delete(`http://localhost:8070/apifavorite/delete/${book.id}`,book)
       .subscribe(
@@ -300,4 +315,18 @@ this.filteredHospitals = this.hospitalControl.valueChanges.pipe(
         },
         (error) => console.error('Failed to remove book from favorites:', error)
       );
-  }}
+      this.http.put(`http://localhost:8070/api1/${book.id}`, { favorite: false })
+    .subscribe(
+        (response) => {
+         
+          console.log('Book updated successfully', response);
+
+          // Handle success
+        },
+        (error) => {
+          console.error('Error updating book', error);
+          // Handle error
+        }
+      );
+  }
+}

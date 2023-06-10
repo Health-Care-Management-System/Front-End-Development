@@ -7,39 +7,50 @@
     <mat-drawer-content class="matcontent">
         <img src="">
         <mat-card class="doctor">
+            <div class="doctor1" style="text-align: center;">
+                Favorite Doctors</div>
             <div>
                 <img class="img1" src="\assets\img\11111.jpg"> </div>
 
             <!-- lllll -->
-            <div class="doctor1" style="text-align: center;">
-                Doctors</div>
+
             <mat-card *ngFor="let favorite of favorites" class="doctorall">
-                <img src="{{favorite.imgSrc}}" class="docimage1"> {{favorite.name}}
-                <button mat-button color="primary" class="button1">view profile</button>
+                <img src="{{favorite.empImage}}" class="docimage1"> {{favorite.name}}
+                <button mat-button color="primary" class="button1" [routerLink]="['/doctorprofileforpatient', favorite.id]">view profile</button>
             </mat-card>
             <button mat-button class="addmore">Add More</button>
         </mat-card>
+
+
+
         <mat-card class="hospital">
+            <div class="hospital1" style="text-align: center;">
+                Favorite Hospitals</div>
             <div>
                 <img class="img1" src="\assets\img\11111.jpg"> </div>
-            <div class="hospital1" style="text-align: center;">
-                hospitals</div>
-            <mat-card *ngFor="let doctor of doctors" class="doctorall">
-                <img src="{{doctor.imgSrc}}" class="docimage1"> {{doctor.name}}
-                <button mat-button color="primary" class="button1">view profile</button>
+
+            <mat-card *ngFor="let hospital of hospitals" class="doctorall">
+                <img src="{{hospital.hImage}}" class="docimage1"> {{hospital.name}}
+                <button mat-button color="primary" class="button1" [routerLink]="['/hospitalprofileforpatient', hospital.id]">view profile</button>
             </mat-card>
             <button mat-button class="addmore">Add More</button>
         </mat-card>
+
+
+
+
+
 
 
         <mat-card class="pharmacy">
+            <div class="pharmacy1" style="text-align: center;">
+                Favorite Pharmacies</div>
             <div>
                 <img class="img1" src="\assets\img\11111.jpg"> </div>
-            <div class="pharmacy1" style="text-align: center;">
-                pharmacies</div>
-            <mat-card *ngFor="let doctor of doctors" class="doctorall">
-                <img src="{{doctor.imgSrc}}" class="docimage1"> {{doctor.name}}
-                <button mat-button color="primary" class="button1">view profile</button>
+
+            <mat-card *ngFor="let pharmacy of pharmacies" class="doctorall">
+                <img src="{{pharmacy.pImage}}" class="docimage1"> {{pharmacy.name}}
+                <button mat-button color="primary" class="button1" [routerLink]="['/pharmacyprofileforpatient', pharmacy.id]">view profile</button>
             </mat-card>
             <button mat-button class="addmore">Add More</button>
         </mat-card>
