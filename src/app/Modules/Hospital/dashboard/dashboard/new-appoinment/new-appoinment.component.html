@@ -6,47 +6,63 @@
             <button mat-stroked-button class="mx-2 action-button" >Add New Doctors</button>
         </div> -->
     </div>
-<div class="container-fluid">
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<div class="container mt-3">
+<table mat-table [dataSource]="appoinmentDetails" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
-  
-    <!-- Position Column -->
+  <ng-container matColumnDef="appoinment_ID">
+    <th mat-header-cell *matHeaderCellDef> Appoinment Id</th>
+    <td mat-cell *matCellDef="let element"> {{element.booking_id}} </td>
+  </ng-container>
+
     <ng-container matColumnDef="pat_ID">
       <th mat-header-cell *matHeaderCellDef> Patient ID</th>
-      <td mat-cell *matCellDef="let element"> {{element.pat_ID}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.patient_id.id}} </td>
     </ng-container>
   
-    <!-- Name Column -->
+    <!--  Column -->
     <ng-container matColumnDef="pat_name">
+      <th mat-header-cell *matHeaderCellDef>Patient Email </th>
+      <td mat-cell *matCellDef="let element"> {{element.patient_id.firstname}} {{element.patient_id.lastname}}  </td>
+    </ng-container>
+
+    <!--  Column -->
+    <ng-container matColumnDef="pat_email">
       <th mat-header-cell *matHeaderCellDef>Patient Name </th>
-      <td mat-cell *matCellDef="let element"> {{element.pat_name}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.patient_id.emailID}}   </td>
     </ng-container>
   
-    <!-- Weight Column -->
-    <ng-container matColumnDef="doc_name">
+    <!--  Column -->
+    <ng-container matColumnDef="doc_id">
+      <th mat-header-cell *matHeaderCellDef> Doctor Id </th>
+      <td mat-cell *matCellDef="let element"> {{element.doctor.doc_id}}</td>
+    </ng-container>
+
+     <!--  Column -->
+     <ng-container matColumnDef="doc_name">
       <th mat-header-cell *matHeaderCellDef> Doctor Name </th>
-      <td mat-cell *matCellDef="let element"> {{element.doc_name}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.doctor.firstname}} {{element.doctor.lastname}}</td>
     </ng-container>
+
   
-    <!-- Symbol Column -->
+    <!--  Column -->
     <ng-container matColumnDef="time">
       <th mat-header-cell *matHeaderCellDef> Time Slot </th>
       <td mat-cell *matCellDef="let element"> {{element.time}} </td>
     </ng-container>
 
     <ng-container matColumnDef="actions1">
-        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <th mat-header-cell *matHeaderCellDef>Reject</th>
         <td mat-cell *matCellDef="let element">
-          <button mat-button class="actions1">{{element.actions1}}</button>
+          <button mat-button class="actions1">Reject</button>
         </td>
       </ng-container>
 
       <ng-container matColumnDef="actions2">
-        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <th mat-header-cell *matHeaderCellDef>Accept</th>
         <td mat-cell *matCellDef="let element">
-          <button mat-button class="actions2">{{element.actions2}}</button>
+          <button mat-button class="actions2">Accept</button>
         </td>
       </ng-container>
   
