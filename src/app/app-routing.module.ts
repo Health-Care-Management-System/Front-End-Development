@@ -66,6 +66,14 @@ import {HospitalProfileComponent} from "./Modules/Hospital/hospital-profile-page
 import { HospitalprofileforpatientComponent } from './Modules/Hospital/hospitalprofileforpatient/hospitalprofileforpatient.component';
 import { PharmacyprofileforpatientComponent } from './Modules/Pharmacy/pharmacyprofileforpatient/pharmacyprofileforpatient.component';
 import { MakeAnAppoinmentWithDoctorComponent } from './Modules/Patient/make-an-appoinment-with-doctor/make-an-appoinment-with-doctor.component';
+import {AdminMainComponent} from "./Modules/Admin/admin-main/admin-main.component";
+import {AdminDoctorComponent} from "./Modules/Admin/admin-doctor/admin-doctor.component";
+import {AdminPatientComponent} from "./Modules/Admin/admin-patient/admin-patient.component";
+import {AdminPharmacyComponent} from "./Modules/Admin/admin-pharmacy/admin-pharmacy.component";
+import {AdminHospitalComponent} from "./Modules/Admin/admin-hospital/admin-hospital.component";
+import {AdminAmbulenceComponent} from "./Modules/Admin/admin-ambulence/admin-ambulence.component";
+import {AdminDetailsComponent} from "./Modules/Admin/admin-details/admin-details.component";
+
 
 
 
@@ -145,7 +153,15 @@ const routes: Routes = [
   {path:'pharmacyprofileforpatient',component:PharmacyprofileforpatientComponent},
   {path:'pharmacyprofileforpatient/:id',component:PharmacyprofileforpatientComponent},
   {path:'hospitalprofileforpatient/:id',component:HospitalprofileforpatientComponent},
-  
+
+  {path:'admin',component:AdminMainComponent},
+  {path:'admindoctor',component:AdminDoctorComponent},
+  {path:'adminpatient',component:AdminPatientComponent},
+  {path:'adminpharmacy',component:AdminPharmacyComponent},
+  {path:'adminhospital',component:AdminHospitalComponent},
+  {path:'adminambulance',component:AdminAmbulenceComponent},
+  {path:'admindetails',component:AdminDetailsComponent}
+
 
 ];
 

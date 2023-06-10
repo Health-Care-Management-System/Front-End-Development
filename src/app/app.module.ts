@@ -131,6 +131,14 @@ import { PharmacydashboardComponent } from './Modules/Pharmacy/pharmacydashboard
 import { HospitalprofileforpatientComponent } from './Modules/Hospital/hospitalprofileforpatient/hospitalprofileforpatient.component';
 import { PharmacyprofileforpatientComponent } from './Modules/Pharmacy/pharmacyprofileforpatient/pharmacyprofileforpatient.component';
 import { MakeAnAppoinmentWithDoctorComponent } from './Modules/Patient/make-an-appoinment-with-doctor/make-an-appoinment-with-doctor.component';
+import {AdminAmbulenceComponent} from "./Modules/Admin/admin-ambulence/admin-ambulence.component";
+import {AdminDetailsComponent} from "./Modules/Admin/admin-details/admin-details.component";
+import {AdminDoctorComponent} from "./Modules/Admin/admin-doctor/admin-doctor.component";
+import {AdminHospitalComponent} from "./Modules/Admin/admin-hospital/admin-hospital.component";
+import {AdminMainComponent} from "./Modules/Admin/admin-main/admin-main.component";
+import {AdminNavComponent} from "./Modules/Admin/admin-nav/admin-nav.component";
+import {AdminPharmacyComponent} from "./Modules/Admin/admin-pharmacy/admin-pharmacy.component";
+import {AdminPatientComponent} from "./Modules/Admin/admin-patient/admin-patient.component";
 
 
 
@@ -158,6 +166,18 @@ import { MakeAnAppoinmentWithDoctorComponent } from './Modules/Patient/make-an-a
     DoctorSignupNextComponent,
     LoginComponent,
     // FilterComponent,
+
+
+    AdminAmbulenceComponent,
+    AdminDetailsComponent,
+    AdminDetailsComponent,
+    AdminDoctorComponent,
+    AdminHospitalComponent,
+    AdminMainComponent,
+    AdminNavComponent,
+    AdminPharmacyComponent,
+
+
 
     HomeComponent,
     FooterComponent,
@@ -203,7 +223,7 @@ import { MakeAnAppoinmentWithDoctorComponent } from './Modules/Patient/make-an-a
     ContactusComponent,
 
     // SearchdoctorcontentComponent
-  
+
     CanceledComponent,
     NewComponent,
     RejectedComponent,
@@ -218,7 +238,9 @@ import { MakeAnAppoinmentWithDoctorComponent } from './Modules/Patient/make-an-a
     HospitalprofileforpatientComponent,
     PharmacyprofileforpatientComponent,
     MakeAnAppoinmentWithDoctorComponent,
-  
+    AdminPatientComponent,
+    AdminPharmacyComponent
+
 
 
   ],
