@@ -15,6 +15,8 @@ export class FavoritesComponent implements OnInit {
     { id: 4, name: 'Dr.Chen', imgSrc: 'assets/img/doc23.png' },
     { id: 4, name: 'Dr.Chen', imgSrc: 'assets/img/doc23.png' },
   ];
+  hospitals: any[] = [];
+  pharmacies: any[] = [];
 
   constructor(private http: HttpClient) { }
 
@@ -22,12 +24,34 @@ export class FavoritesComponent implements OnInit {
   sideBarOpen=true;
   ngOnInit(){
     this.favoriteitems();
+    this.favoritehospitals();
+    this.favoritepharmacies();
   }
 
   favoriteitems() {
     this.http.get<any[]>('http://localhost:8070/apifavorite/all').subscribe(
       (data) => {
         this.favorites = data;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
+  favoritehospitals() {
+    this.http.get<any[]>('http://localhost:8070/apihospitalfavorite/all').subscribe(
+      (data) => {
+        this.hospitals = data;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
+  favoritepharmacies() {
+    this.http.get<any[]>('http://localhost:8070/apipharmacyfavorite/all').subscribe(
+      (data) => {
+        this.pharmacies = data;
       },
       (error) => {
         console.log(error);

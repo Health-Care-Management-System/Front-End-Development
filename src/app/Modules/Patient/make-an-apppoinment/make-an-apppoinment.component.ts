@@ -29,7 +29,7 @@ export class MakeAnApppoinmentComponent implements OnInit {
   streetControl = new FormControl('');
 selectedBook: any;
 books: any[] = [];
-  phone: any;
+phone: any; 
   date: any;
   time: any;
   hospitalControl: any;

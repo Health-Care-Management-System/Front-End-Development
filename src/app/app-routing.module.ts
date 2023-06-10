@@ -124,6 +124,7 @@ const routes: Routes = [
 {path:'makeanappoinment',component:MakeAnApppoinmentComponent},
 {path:'makeanappoinment/:id',component:MakeAnApppoinmentComponent},
 {path:'makeanappoinment2/:id',component:MakeAnAppoinmentWithDoctorComponent},
+{ path: 'makeanappoinment2/:doctorId', component: MakeAnApppoinmentComponent },
 // { path: 'makeanappoinment2/:doctorId', component: MakeAppointmentComponent },
 
 {path:'canceled',component:CanceledComponent},

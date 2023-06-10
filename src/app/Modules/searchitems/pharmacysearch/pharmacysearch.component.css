@@ -173,6 +173,13 @@ top: 575.03px; */
     position: relative;
 }
 
+.text4 {
+    text-align: center;
+    font-weight: 10;
+    padding: 5px;
+    position: relative;
+}
+
 
 /* .allbooks {
     display: flex;
