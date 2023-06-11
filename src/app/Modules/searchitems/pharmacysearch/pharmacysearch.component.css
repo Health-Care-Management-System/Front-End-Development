@@ -24,7 +24,7 @@
 
 .searchfilter {
     position: absolute;
-    top: 180px;
+    top: 320px;
     left: 40px;
 }
 
@@ -114,7 +114,7 @@
     width: 200px;
     height: 50px;
     left: 90px;
-    top: 826px;
+    top: 626px;
     font-size: 24px;
     line-height: 30px;
     background-color: #00be99;

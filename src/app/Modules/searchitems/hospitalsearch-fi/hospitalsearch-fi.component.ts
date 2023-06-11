@@ -279,7 +279,6 @@ this.filteredHospitals = this.hospitalControl.valueChanges.pipe(
       );
 
       this.http.put(`http://localhost:8080/apihospital/${book.id}`, { favorite: true })
-
       .subscribe(
         (response) => {
 

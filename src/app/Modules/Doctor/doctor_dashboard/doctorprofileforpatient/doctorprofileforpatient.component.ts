@@ -2,6 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+
+
+
+interface Availability {
+  name: string;
+  available: boolean;
+  timeInterval: string;
+}
 @Component({
   selector: 'app-doctorprofileforpatient',
   templateUrl: './doctorprofileforpatient.component.html',
@@ -14,6 +22,9 @@ export class DoctorprofileforpatientComponent implements OnInit {
   allbooks: any[] | undefined;
   books: any[] | undefined;
 
+  daysOfWeek: Availability[] = [];
+  retrievedData: Availability[] = [];
+
 
   constructor(
     private route: ActivatedRoute,
@@ -21,11 +32,11 @@ export class DoctorprofileforpatientComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.retrieveData();
     const id = this.route.snapshot.paramMap.get('id');
     this.http.get(`http://localhost:8080/api1/${id}`).subscribe((data) => {
       this.doctor = data;
     });
-
     // this.http.get<any[]>('http://localhost:8080/apihospital/all').subscribe(
     //   data => {
     //     this.books = data;
@@ -39,6 +50,14 @@ export class DoctorprofileforpatientComponent implements OnInit {
     // this.http.get(`http://localhost:8080/apihospital/all`).subscribe((data) => {
     //   this.hospital = data;
     // });
+  }
+  retrieveData() {
+    this.http.get<Availability[]>(`http://localhost:8080/availability/all`)
+      .subscribe((data) => {
+        this.retrievedData = data;
+      }, (error) => {
+        console.error('Error retrieving data:', error);
+      });
   }
 
 }

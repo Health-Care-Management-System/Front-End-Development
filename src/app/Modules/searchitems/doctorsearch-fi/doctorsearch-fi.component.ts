@@ -96,6 +96,13 @@ export class DoctorsearchFiComponent implements OnInit {
         const cityMatch = book.city.toLowerCase().includes(this.searchText2.toLowerCase());
         return cityMatch;
       });
+      if (this.books.length === 0) {
+        // Show an alert if no books match the search text
+        alert("Name not found!");
+      }
+  
+      
+      
     }
   }
 
@@ -127,6 +134,10 @@ export class DoctorsearchFiComponent implements OnInit {
         const districtMatch = book.district.toLowerCase().includes(this.searchText3.toLowerCase());
         return districtMatch;
       });
+      if (this.books.length === 0) {
+        // Show an alert if no books match the search text
+        alert("Name not found!");
+      }
     }
   }
 
@@ -157,6 +168,11 @@ export class DoctorsearchFiComponent implements OnInit {
         const hospitalMatch = book.hospital.toLowerCase().includes(this.searchText4.toLowerCase());
         return hospitalMatch;
       });
+
+      if (this.books.length === 0) {
+        // Show an alert if no books match the search text
+        alert("Name not found!");
+      }
     }
   }
 

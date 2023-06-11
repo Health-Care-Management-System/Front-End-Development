@@ -22,8 +22,9 @@ export class MyappoinmentsComponent implements OnInit {
     this.loadAppoinments();
     this.getdeletedAppoinments();
     this.getexpiredAppoinments();
-    this.deleteExpiredAppoinments();
 
+    // this.deleteExpiredAppoinments();
+    
   }
 
   editAppoinment(appoinment: any): void {
@@ -124,53 +125,55 @@ export class MyappoinmentsComponent implements OnInit {
 
         location.reload();
   }
-  deleteExpiredAppoinments(): void {
 
-    const currentDate = new Date().getTime(); // Get the current date and time in milliseconds
-    const expiredAppoinments: any[] = [];
+  // deleteExpiredAppoinments(): void {
+    
+  //   const currentDate = new Date().getTime(); // Get the current date and time in milliseconds
+  //   const expiredAppoinments: any[] = [];
+  
+  //   for (let i = 0; i < this.appoinments.length; i++) {
+  //     const appoinment = this.appoinments[i];
+  //     const bookingDateTime = new Date(appoinment.bookingDate + ' ' + appoinment.bookingTime).getTime();
+  
+  //     if (bookingDateTime < currentDate) {
+  //       expiredAppoinments.push(appoinment);
+  //       this.appoinments.splice(i, 1); // Remove expired appointment from the array
+  //       i--; // Decrement the index to adjust for the removed element
+  //     }
+  //   }
+  
+  //   if (expiredAppoinments.length > 0) {
+  //     this.sendExpiredAppoinments(expiredAppoinments)
+  //       .pipe(
+  //         concatMap(() => this.deleteAppoinmentsFromServer(expiredAppoinments))
+  //       )
+  //       .subscribe(
+  //         () => {
+  //           console.log('Expired appointments deleted successfully');
+  //           location.reload();
+  //         },
+  //         error => {
+  //           console.error('Error while deleting expired appointments:', error);
+  //         }
+  //       );
+  //   }
+  // }
+  // sendExpiredAppoinments(expiredAppoinments: any[]): Observable<any> {
+  //   return this.http.post('http://localhost:8080/apiappoinmentexpired/add', expiredAppoinments);
+  // }
+  
+  // deleteAppoinmentsFromServer(appoinments: any[]): Observable<any> {
+  //   const deleteRequests = appoinments.map(appoinment => {
+  //     const deleteUrl = `http://localhost:8080/apiappoinment/delete/${appoinment.id}`;
+  //     return this.http.delete(deleteUrl);
+  //   });
+  
+  //   return from(deleteRequests).pipe(
+  //     concatMap(deleteRequest => deleteRequest),
+  //     finalize(() => console.log('Appointments deleted successfully'))
+  //   );
+  // }
 
-    for (let i = 0; i < this.appoinments.length; i++) {
-      const appoinment = this.appoinments[i];
-      const bookingDateTime = new Date(appoinment.bookingDate + ' ' + appoinment.bookingTime).getTime();
-
-      if (bookingDateTime < currentDate) {
-        expiredAppoinments.push(appoinment);
-        this.appoinments.splice(i, 1); // Remove expired appointment from the array
-        i--; // Decrement the index to adjust for the removed element
-      }
-    }
-
-    if (expiredAppoinments.length > 0) {
-      this.sendExpiredAppoinments(expiredAppoinments)
-        .pipe(
-          concatMap(() => this.deleteAppoinmentsFromServer(expiredAppoinments))
-        )
-        .subscribe(
-          () => {
-            console.log('Expired appointments deleted successfully');
-            location.reload();
-          },
-          error => {
-            console.error('Error while deleting expired appointments:', error);
-          }
-        );
-    }
-  }
-  sendExpiredAppoinments(expiredAppoinments: any[]): Observable<any> {
-    return this.http.post('http://localhost:8080/apiappoinmentexpired/add', expiredAppoinments);
-  }
-
-  deleteAppoinmentsFromServer(appoinments: any[]): Observable<any> {
-    const deleteRequests = appoinments.map(appoinment => {
-      const deleteUrl = `http://localhost:8080/apiappoinment/delete/${appoinment.id}`;
-      return this.http.delete(deleteUrl);
-    });
-
-    return from(deleteRequests).pipe(
-      concatMap(deleteRequest => deleteRequest),
-      finalize(() => console.log('Appointments deleted successfully'))
-    );
-  }
   leftToolBarToggler() {
     this.sideBarOpen = !this.sideBarOpen;
   }

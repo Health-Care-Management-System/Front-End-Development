@@ -66,6 +66,9 @@ import {HospitalProfileComponent} from "./Modules/Hospital/hospital-profile-page
 import { HospitalprofileforpatientComponent } from './Modules/Hospital/hospitalprofileforpatient/hospitalprofileforpatient.component';
 import { PharmacyprofileforpatientComponent } from './Modules/Pharmacy/pharmacyprofileforpatient/pharmacyprofileforpatient.component';
 import { MakeAnAppoinmentWithDoctorComponent } from './Modules/Patient/make-an-appoinment-with-doctor/make-an-appoinment-with-doctor.component';
+
+import { UpdateappoinmentsComponent } from './Modules/Patient/upadateappoinments/updateappoinments/updateappoinments.component';
+
 import {AdminMainComponent} from "./Modules/Admin/admin-main/admin-main.component";
 import {AdminDoctorComponent} from "./Modules/Admin/admin-doctor/admin-doctor.component";
 import {AdminPatientComponent} from "./Modules/Admin/admin-patient/admin-patient.component";
@@ -73,6 +76,7 @@ import {AdminPharmacyComponent} from "./Modules/Admin/admin-pharmacy/admin-pharm
 import {AdminHospitalComponent} from "./Modules/Admin/admin-hospital/admin-hospital.component";
 import {AdminAmbulenceComponent} from "./Modules/Admin/admin-ambulence/admin-ambulence.component";
 import {AdminDetailsComponent} from "./Modules/Admin/admin-details/admin-details.component";
+
 
 
 
@@ -131,8 +135,10 @@ const routes: Routes = [
 {path:'myappoinments',component:MyappoinmentsComponent},
 {path:'makeanappoinment',component:MakeAnApppoinmentComponent},
 {path:'makeanappoinment/:id',component:MakeAnApppoinmentComponent},
+{path:'patientview/:id',component:PatientviewComponent},
 {path:'makeanappoinment2/:id',component:MakeAnAppoinmentWithDoctorComponent},
 { path: 'makeanappoinment2/:doctorId', component: MakeAnApppoinmentComponent },
+{path:'updateappoinment/:doctorId',component: UpdateappoinmentsComponent},
 // { path: 'makeanappoinment2/:doctorId', component: MakeAppointmentComponent },
 
 {path:'canceled',component:CanceledComponent},

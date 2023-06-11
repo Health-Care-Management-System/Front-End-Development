@@ -17,15 +17,16 @@ export class MedicineorderdetailsComponent implements OnInit {
 
   ngOnInit() {
     this.loadAppoinments();
-    this.getdeletedAppoinments();
 
-
-
-
+    
+    
+  
+   
+    
   }
 
   loadAppoinments() {
-    this.http.get<any[]>('http://localhost:8080/apiappoinment/all').subscribe(
+    this.http.get<any[]>('http://localhost:8080/api7/all').subscribe(
       (data: any[]) => {
         this.appoinments = data;
       },
@@ -33,43 +34,6 @@ export class MedicineorderdetailsComponent implements OnInit {
         console.log(error);
       }
     );
-  }
-  getdeletedAppoinments() {
-    this.http.get<any[]>('http://localhost:8080/apiappoinmentdeleted/all').subscribe(
-      (data: any[]) => {
-        this.myappoinments = data;
-      },
-      (error: any) => {
-        console.log(error);
-      }
-    );
-  }
-  deleteAppoinment(index: number) {
-    const appoinmentId = this.appoinments[index].id; // Assuming the appointment has an 'id' property
-    const deletedAppoinment = this.appoinments.splice(index, 1)[0];
-
-
-    this.http.delete(`http://localhost:8080/apiappoinment/delete/${appoinmentId}`).subscribe(
-      () => {
-        console.log('Appoinment deleted successfully.');
-        // Remove the appointment from the array
-
-        this.http.post('http://localhost:8080/apiappoinmentdeleted/add', deletedAppoinment).subscribe(
-          () => {
-            console.log('Deleted appointment sent to another table successfully.');
-            this.getdeletedAppoinments();
-          },
-          (error: any) => {
-            console.log('Error sending deleted appointment to another table:', error);
-          }
-        );
-      },
-      (error: any) => {
-        console.log(error);
-      }
-    );
-
-
   }
 
 

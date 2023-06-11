@@ -134,6 +134,9 @@ import { SettingsComponent } from './Modules/Hospital/dashboard/dashboard/settin
 import { HospitalprofileforpatientComponent } from './Modules/Hospital/hospitalprofileforpatient/hospitalprofileforpatient.component';
 import { PharmacyprofileforpatientComponent } from './Modules/Pharmacy/pharmacyprofileforpatient/pharmacyprofileforpatient.component';
 import { MakeAnAppoinmentWithDoctorComponent } from './Modules/Patient/make-an-appoinment-with-doctor/make-an-appoinment-with-doctor.component';
+
+import { UpdateappoinmentsComponent } from './Modules/Patient/upadateappoinments/updateappoinments/updateappoinments.component';
+
 import {AdminAmbulenceComponent} from "./Modules/Admin/admin-ambulence/admin-ambulence.component";
 import {AdminDetailsComponent} from "./Modules/Admin/admin-details/admin-details.component";
 import {AdminDoctorComponent} from "./Modules/Admin/admin-doctor/admin-doctor.component";
@@ -142,6 +145,7 @@ import {AdminMainComponent} from "./Modules/Admin/admin-main/admin-main.componen
 import {AdminNavComponent} from "./Modules/Admin/admin-nav/admin-nav.component";
 import {AdminPharmacyComponent} from "./Modules/Admin/admin-pharmacy/admin-pharmacy.component";
 import {AdminPatientComponent} from "./Modules/Admin/admin-patient/admin-patient.component";
+
 
 
 
@@ -243,8 +247,13 @@ import {AdminPatientComponent} from "./Modules/Admin/admin-patient/admin-patient
     HospitalprofileforpatientComponent,
     PharmacyprofileforpatientComponent,
     MakeAnAppoinmentWithDoctorComponent,
+
+    UpdateappoinmentsComponent,
+  
+
     AdminPatientComponent,
     AdminPharmacyComponent
+
 
 
 

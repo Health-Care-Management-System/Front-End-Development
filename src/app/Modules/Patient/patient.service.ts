@@ -9,7 +9,7 @@ import { HttpHeaders } from '@angular/common/http';
 })
 export class PatientService {
 
-  private baseURL = "http://localhost:8080/api/patients"
+  private baseURL = "http://localhost:8080/api/all"
 
   constructor(private httpclient:HttpClient) { }
 
