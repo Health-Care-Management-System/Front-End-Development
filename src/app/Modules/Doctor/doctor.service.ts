@@ -16,6 +16,7 @@ export class DoctorService {
     return this.httpclient.get<Doctor>(`${this.baseURL}/${id}`);
   }
 
+
   updateDoctorColumn(id: String, column: string, data: string): void {
     const url = `${this.baseURL}/${id}/${column}/${data}`;
     this.httpclient.put(url, null).subscribe();
@@ -27,4 +28,8 @@ export class DoctorService {
     return this.httpclient.post(`${this.baseURL}/${id}/photo`, photo, { headers: headers });
   }
 
+
+  inviteDoctors(doc_id: any){
+    return this.httpclient.get("http://localhost:8080/api/addToInvitationList/"+ doc_id);
+  }
 }

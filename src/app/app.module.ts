@@ -128,6 +128,9 @@ import { RejectedComponent } from './Modules/Pharmacy/rejected/rejected.componen
 import { ApprovedComponent } from './Modules/Pharmacy/approved/approved.component';
 import { PatientviewComponent } from './Modules/Pharmacy/patientview/patientview.component';
 import { PharmacydashboardComponent } from './Modules/Pharmacy/pharmacydashboard/pharmacydashboard.component';
+
+import { SettingsComponent } from './Modules/Hospital/dashboard/dashboard/settings/settings.component';
+
 import { HospitalprofileforpatientComponent } from './Modules/Hospital/hospitalprofileforpatient/hospitalprofileforpatient.component';
 import { PharmacyprofileforpatientComponent } from './Modules/Pharmacy/pharmacyprofileforpatient/pharmacyprofileforpatient.component';
 import { MakeAnAppoinmentWithDoctorComponent } from './Modules/Patient/make-an-appoinment-with-doctor/make-an-appoinment-with-doctor.component';
@@ -165,6 +168,8 @@ import {AdminPatientComponent} from "./Modules/Admin/admin-patient/admin-patient
     DoctorSignupComponent,
     DoctorSignupNextComponent,
     LoginComponent,
+  
+  
     // FilterComponent,
 
 

@@ -15,6 +15,6 @@ export class ManageTeamComponent implements OnInit {
   }
 
   public openInviteDoctors() :void{
-    const ref = this.dialog.open(InviteDoctorDialogComponent,{width: '500px', height: '450px'});
+    const ref = this.dialog.open(InviteDoctorDialogComponent,{width: '1000px', height: '450px'});
   }
 }
