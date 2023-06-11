@@ -95,5 +95,36 @@
                 </mat-form-field>
                 <button mat-raised-button (click)="picker.open()">Open</button></div>
         </div>
+
+        <div class="tablenew">
+            <table class="availability-table">
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Availability</th>
+                        <th>Time Interval</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+
+                        <td>
+                            <input type="date" [(ngModel)]="newAvailabity.day">
+                        </td>
+
+                        <td>
+                            <input type="checkbox" [(ngModel)]="newAvailabity.availability">
+                        </td>
+
+                        <td>
+                            <input type="text" [(ngModel)]="newAvailabity.timeInterval" [disabled]="!newAvailabity.availability" class="time-input">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button (click)="saveData()">Save</button>
+            <!-- <button (click)="updateData()">Update</button> -->
+        </div>
     </mat-drawer-content>
 </mat-drawer-container>

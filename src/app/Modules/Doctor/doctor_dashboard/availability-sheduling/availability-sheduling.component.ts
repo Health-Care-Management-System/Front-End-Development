@@ -1,7 +1,11 @@
 import { Time } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable, startWith, map } from 'rxjs';
+import { Availability } from './availability';
+
+
 interface Food {
   value: string;
   viewValue: string;
@@ -32,6 +36,19 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./availability-sheduling.component.css']
 })
 export class AvailabilityShedulingComponent implements OnInit {
+
+  //@ts-ignore
+  newAvailabity : Availability = new Availability();
+
+  daysOfWeek = [
+    { name: 'Monday', available: false, timeInterval: '' },
+    { name: 'Tuesday', available: false, timeInterval: '' },
+    { name: 'Wednesday', available: false, timeInterval: '' },
+    { name: 'Thursday', available: false, timeInterval: '' },
+    { name: 'Friday', available: false, timeInterval: '' },
+    { name: 'Saturday', available: false, timeInterval: '' },
+    { name: 'Sunday', available: false, timeInterval: '' }];
+
   displayedColumns: string[] = ['Morning', 'Afternoon',  'Night'];
   dataSource = ELEMENT_DATA;
   streetControl = new FormControl('');
@@ -51,7 +68,11 @@ export class AvailabilityShedulingComponent implements OnInit {
 
   title = 'edowzori';
   sideBarOpen=true;
-  ngOnInit(){this.filteredStreets = this.streetControl.valueChanges.pipe(
+  constructor(private http: HttpClient) {}
+  ngOnInit(){
+    
+    
+    this.filteredStreets = this.streetControl.valueChanges.pipe(
     startWith(''),
     map(value => this._filter(value || '', this.streets)),
   );
@@ -67,5 +88,22 @@ export class AvailabilityShedulingComponent implements OnInit {
   private _normalizeValue(value: string): string {
     return value.toLowerCase().replace(/\s/g, '');
   }
-  
+  saveData() {
+    this.http.post(`http://localhost:8080/availability/add`, this.newAvailabity)
+      .subscribe(() => {
+        console.log('Data saved successfully');
+      }, (error) => {
+        console.error('Error saving data:', error);
+      });
+  }
+
+  // updateData() {
+  //   this.http.put('/http://localhost:8080/availability', this.daysOfWeek)
+  //     .subscribe(() => {
+  //       console.log('Data updated successfully');
+  //     }, (error) => {
+  //       console.error('Error updating data:', error);
+  //     });
+  // }
 }
+

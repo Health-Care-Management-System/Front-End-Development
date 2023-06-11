@@ -43,7 +43,9 @@
     <div class="ex ">{{doctor.hospital}} </div>
 
 
-    <button mat-button class="manage " [routerLink]="[ '/makeanappoinment', doctor.id] ">Make an Appoinment</button>
+    <button mat-button class="manage " [routerLink]="[ '/patientview', doctor.id] " [queryParams]="{ pharmacycity: doctor.city, pharmacyname: doctor.name }" queryParamsHandling="merge">Upload Prescription</button>
+
+
     <div class="are ">Do you want to channel ?</div>
     <mat-icon class="loc5 ">support</mat-icon>
     <div class="number ">Mobile Number</div>

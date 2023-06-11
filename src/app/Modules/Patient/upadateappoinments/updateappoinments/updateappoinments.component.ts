@@ -1,20 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { MatDatepickerInputEvent } from '@angular/material/datepicker';
-import { MatDatepickerModule } from '@angular/material/datepicker';
+import { FormControl, FormBuilder } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { debounceTime, map, Observable, startWith } from 'rxjs';
+import { Observable, startWith, debounceTime, map } from 'rxjs';
 
 @Component({
-  selector: 'app-make-an-apppoinment',
-  templateUrl: './make-an-apppoinment.component.html',
-  styleUrls: ['./make-an-apppoinment.component.css']
+  selector: 'app-updateappoinments',
+  templateUrl: './updateappoinments.component.html',
+  styleUrls: ['./updateappoinments.component.css']
 })
-export class MakeAnApppoinmentComponent implements OnInit {
- 
- 
-   searchText: any;
+export class UpdateappoinmentsComponent implements OnInit {
+  searchText: any;
   sideBarOpen=true;
   districtControl=new FormControl('');
 
@@ -32,7 +28,8 @@ books: any[] = [];
 phone: any; 
   date: any;
   time: any;
-  hospitalControl: any;
+  hospitalControl: any;   
+  tests: any[] = [];
 
  
   constructor(private formBuilder: FormBuilder,private route: ActivatedRoute,private http: HttpClient) {
@@ -59,6 +56,12 @@ phone: any;
       map(value => this._filterDistricts(value || ''))
     );
     const id = this.route.snapshot.paramMap.get('id');
+    this.http.get<any[]>(`http://localhost:8080/apiappoinment/${id}`).subscribe(
+ 
+    data => {
+        this.tests = data;
+      
+      });
    
     // this.http.get<any[]>(`http://localhost:8080/apihospital/all`).subscribe(
       this.http.get<any[]>(`http://localhost:8080/apihospital/all?name=${this.searchText}`).subscribe(
@@ -71,6 +74,8 @@ phone: any;
           map(value => this._filter(value || '', this.books)),
         );
       });
+
+      
   }
   _filterDistricts(arg0: any): any {
     throw new Error('Method not implemented.');
@@ -81,21 +86,29 @@ phone: any;
     return this.books.filter(book => book.name.toLowerCase().includes(filterValue));
   }
   onSubmit() {
-    const name = (<HTMLInputElement>document.getElementById('name')).value;
-    const phone = (<HTMLInputElement>document.getElementById('phone')).value;
-    const date = (<HTMLInputElement>document.getElementById('date')).value;
-    const time = (<HTMLInputElement>document.getElementById('time')).value;
-
+    
+    const id = this.route.snapshot.paramMap.get('id'); // Get the ID from the URL parameter
+    
     const data = {
-      name: name,
-      phone: phone,
-      date: date,
-      time: time
+      bookingDate: this.date,
+        bookingTime: this.time,
+        searchText: this.searchText,
+        phone: this.phone
     };
-
-    this.saveAppointmentData(data);
+  
+    const url = `http://localhost:8080/apiappoinment/${id}`; // Update the URL with the appropriate endpoint
+  
+    this.http.put(url, data).subscribe(
+      response => {
+        
+        console.log('Data updated successfully.', response);
+      },
+      error => {
+       
+        console.log('Error occurred while updating the data.', error);
+      }
+    );
   }
-
 
   leftToolBarToggler(){
     this.sideBarOpen=!this.sideBarOpen;
@@ -103,3 +116,4 @@ phone: any;
  
   
 }
+

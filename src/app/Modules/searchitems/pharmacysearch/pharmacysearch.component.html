@@ -42,28 +42,9 @@
             <div> <button (click)="filterbooks3()" class="icon3" mat-button><mat-icon  matSuffix>search</mat-icon></button></div>
         </form>
 
-        <form class="example-form">
-            <input type="text" [(ngModel)]="searchText4" placeholder="Search for a Hospital" [formControl]="hospitalControl" [matAutocomplete]="hospitalAuto" class="example-input">
-            <mat-autocomplete #hospitalAuto="matAutocomplete" [displayWith]="displayFn4" (optionSelected)="onOptionSelected4($event)">
-                <mat-option *ngFor="let book of filteredHospitals| async" [value]="book">
-                    {{book.hospital}}
-                </mat-option>
-            </mat-autocomplete>
 
-            <div> <button (click)="filterbooks4()" class="icon3" mat-button><mat-icon  matSuffix>search</mat-icon></button></div>
-        </form>
     </div>
-    <div class="qqq">
-        <div class="headding">Select Speciality</div>
-        <div class="overflow-auto eee">
 
-            <p *ngFor="let book of books">
-
-                <mat-checkbox> {{book.spciality}} </mat-checkbox>
-
-            </p>
-        </div>
-    </div>
     <div class="vl"></div>
     <div class="container-flud">
 
@@ -71,10 +52,10 @@
             <span class="search1">
             Search&#160;</span>
             <span class="fordoctors">
-            for doctors </span>
+            for Pharmacies </span>
         </div>
         <span class="search2">Search
-        <span style="color: orangered;">5500+</span> Dotors from any speciality in island wide
+        <span style="color: orangered;">5500+</span>Pharmacies from that located in island wide
 
         </span>
     </div>

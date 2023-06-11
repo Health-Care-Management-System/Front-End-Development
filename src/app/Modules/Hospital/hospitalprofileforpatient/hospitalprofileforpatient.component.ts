@@ -18,7 +18,7 @@ export class HospitalprofileforpatientComponent implements OnInit {
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
-    this.http.get(`http://localhost:8070/apihospital/${id}`).subscribe((data) => {
+    this.http.get(`http://localhost:8080/apihospital/${id}`).subscribe((data) => {
       this.doctor = data;
     });
   }

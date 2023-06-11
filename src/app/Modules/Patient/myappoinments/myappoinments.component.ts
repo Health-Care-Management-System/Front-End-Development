@@ -22,7 +22,7 @@ export class MyappoinmentsComponent implements OnInit {
     this.loadAppoinments();
     this.getdeletedAppoinments();
     this.getexpiredAppoinments();
-    this.deleteExpiredAppoinments();
+    // this.deleteExpiredAppoinments();
     
   }
   
@@ -45,7 +45,7 @@ export class MyappoinmentsComponent implements OnInit {
   }
   
   updateAppointment(appointment: any): void {
-    this.http.put<any>(`http://localhost:8070/apiappoinment/${appointment.id}`, appointment)
+    this.http.put<any>(`http://localhost:8080/apiappoinment/${appointment.id}`, appointment)
       .subscribe(
         (data) => {
           console.log('Appointment updated successfully', data);
@@ -58,7 +58,7 @@ export class MyappoinmentsComponent implements OnInit {
       );
   }
   loadAppoinments() {
-    this.http.get<any[]>('http://localhost:8070/apiappoinment/all').subscribe(
+    this.http.get<any[]>('http://localhost:8080/apiappoinment/all').subscribe(
       (data) => {
         this.appoinments = data;
       },
@@ -69,7 +69,7 @@ export class MyappoinmentsComponent implements OnInit {
   }
 
   getdeletedAppoinments() {
-    this.http.get<any[]>('http://localhost:8070/apiappoinmentdeleted/all').subscribe(
+    this.http.get<any[]>('http://localhost:8080/apiappoinmentdeleted/all').subscribe(
       (data) => {
         this.myappoinments = data;
       },
@@ -79,7 +79,7 @@ export class MyappoinmentsComponent implements OnInit {
     );
   }
   getexpiredAppoinments() {
-    this.http.get<any[]>('http://localhost:8070/apiappoinmentexpired/all').subscribe(
+    this.http.get<any[]>('http://localhost:8080/apiappoinmentexpired/all').subscribe(
       (data) => {
         this.expiredappoinments = data;
       },
@@ -92,7 +92,7 @@ export class MyappoinmentsComponent implements OnInit {
     const appoinmentId = this.appoinments[index].id; // Assuming the appointment has an 'id' property
     const deletedAppoinment = this.appoinments.splice(index, 1)[0];
   
-    this.http.post('http://localhost:8070/apiappoinmentdeleted/add', deletedAppoinment).subscribe(
+    this.http.post('http://localhost:8080/apiappoinmentdeleted/add', deletedAppoinment).subscribe(
       () => {
         console.log('Appointment saved to another table successfully.');
 
@@ -106,7 +106,7 @@ export class MyappoinmentsComponent implements OnInit {
       
     );
 
-    this.http.delete(`http://localhost:8070/apiappoinment/delete/${appoinmentId}`).subscribe(
+    this.http.delete(`http://localhost:8080/apiappoinment/delete/${appoinmentId}`).subscribe(
           () => {
             
             console.log('Appointment deleted successfully.');
@@ -124,53 +124,53 @@ export class MyappoinmentsComponent implements OnInit {
 
         location.reload();
   }
-  deleteExpiredAppoinments(): void {
+  // deleteExpiredAppoinments(): void {
     
-    const currentDate = new Date().getTime(); // Get the current date and time in milliseconds
-    const expiredAppoinments: any[] = [];
+  //   const currentDate = new Date().getTime(); // Get the current date and time in milliseconds
+  //   const expiredAppoinments: any[] = [];
   
-    for (let i = 0; i < this.appoinments.length; i++) {
-      const appoinment = this.appoinments[i];
-      const bookingDateTime = new Date(appoinment.bookingDate + ' ' + appoinment.bookingTime).getTime();
+  //   for (let i = 0; i < this.appoinments.length; i++) {
+  //     const appoinment = this.appoinments[i];
+  //     const bookingDateTime = new Date(appoinment.bookingDate + ' ' + appoinment.bookingTime).getTime();
   
-      if (bookingDateTime < currentDate) {
-        expiredAppoinments.push(appoinment);
-        this.appoinments.splice(i, 1); // Remove expired appointment from the array
-        i--; // Decrement the index to adjust for the removed element
-      }
-    }
+  //     if (bookingDateTime < currentDate) {
+  //       expiredAppoinments.push(appoinment);
+  //       this.appoinments.splice(i, 1); // Remove expired appointment from the array
+  //       i--; // Decrement the index to adjust for the removed element
+  //     }
+  //   }
   
-    if (expiredAppoinments.length > 0) {
-      this.sendExpiredAppoinments(expiredAppoinments)
-        .pipe(
-          concatMap(() => this.deleteAppoinmentsFromServer(expiredAppoinments))
-        )
-        .subscribe(
-          () => {
-            console.log('Expired appointments deleted successfully');
-            location.reload();
-          },
-          error => {
-            console.error('Error while deleting expired appointments:', error);
-          }
-        );
-    }
-  }
-  sendExpiredAppoinments(expiredAppoinments: any[]): Observable<any> {
-    return this.http.post('http://localhost:8070/apiappoinmentexpired/add', expiredAppoinments);
-  }
+  //   if (expiredAppoinments.length > 0) {
+  //     this.sendExpiredAppoinments(expiredAppoinments)
+  //       .pipe(
+  //         concatMap(() => this.deleteAppoinmentsFromServer(expiredAppoinments))
+  //       )
+  //       .subscribe(
+  //         () => {
+  //           console.log('Expired appointments deleted successfully');
+  //           location.reload();
+  //         },
+  //         error => {
+  //           console.error('Error while deleting expired appointments:', error);
+  //         }
+  //       );
+  //   }
+  // }
+  // sendExpiredAppoinments(expiredAppoinments: any[]): Observable<any> {
+  //   return this.http.post('http://localhost:8080/apiappoinmentexpired/add', expiredAppoinments);
+  // }
   
-  deleteAppoinmentsFromServer(appoinments: any[]): Observable<any> {
-    const deleteRequests = appoinments.map(appoinment => {
-      const deleteUrl = `http://localhost:8070/apiappoinment/delete/${appoinment.id}`;
-      return this.http.delete(deleteUrl);
-    });
+  // deleteAppoinmentsFromServer(appoinments: any[]): Observable<any> {
+  //   const deleteRequests = appoinments.map(appoinment => {
+  //     const deleteUrl = `http://localhost:8080/apiappoinment/delete/${appoinment.id}`;
+  //     return this.http.delete(deleteUrl);
+  //   });
   
-    return from(deleteRequests).pipe(
-      concatMap(deleteRequest => deleteRequest),
-      finalize(() => console.log('Appointments deleted successfully'))
-    );
-  }
+  //   return from(deleteRequests).pipe(
+  //     concatMap(deleteRequest => deleteRequest),
+  //     finalize(() => console.log('Appointments deleted successfully'))
+  //   );
+  // }
   leftToolBarToggler() {
     this.sideBarOpen = !this.sideBarOpen;
   }

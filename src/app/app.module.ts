@@ -131,6 +131,7 @@ import { PharmacydashboardComponent } from './Modules/Pharmacy/pharmacydashboard
 import { HospitalprofileforpatientComponent } from './Modules/Hospital/hospitalprofileforpatient/hospitalprofileforpatient.component';
 import { PharmacyprofileforpatientComponent } from './Modules/Pharmacy/pharmacyprofileforpatient/pharmacyprofileforpatient.component';
 import { MakeAnAppoinmentWithDoctorComponent } from './Modules/Patient/make-an-appoinment-with-doctor/make-an-appoinment-with-doctor.component';
+import { UpdateappoinmentsComponent } from './Modules/Patient/upadateappoinments/updateappoinments/updateappoinments.component';
 
 
 
@@ -218,6 +219,7 @@ import { MakeAnAppoinmentWithDoctorComponent } from './Modules/Patient/make-an-a
     HospitalprofileforpatientComponent,
     PharmacyprofileforpatientComponent,
     MakeAnAppoinmentWithDoctorComponent,
+    UpdateappoinmentsComponent,
   
 
 

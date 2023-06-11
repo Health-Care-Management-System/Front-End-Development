@@ -176,7 +176,7 @@ export class PharmacysearchComponent implements OnInit {
   constructor(private http: HttpClient) { }
   
   ngOnInit() {
-    this.http.get<any[]>("http://localhost:8070/apipharmacy/all").subscribe(
+    this.http.get<any[]>("http://localhost:8080/apipharmacy/all").subscribe(
       data => {
         this.allbooks = data;
         this.books = data.slice(0, 30);
@@ -267,7 +267,7 @@ this.filteredHospitals = this.hospitalControl.valueChanges.pipe(
    
   
     // Send the book data to the backend for addition
-    this.http.post('http://localhost:8070/apipharmacyfavorite/add', book)
+    this.http.post('http://localhost:8080/apipharmacyfavorite/add', book)
       .subscribe(
         () => {
           console.log('Book added to favorites successfully');
@@ -277,7 +277,7 @@ this.filteredHospitals = this.hospitalControl.valueChanges.pipe(
         (error) => console.error('Failed to add book to favorites:', error)
       );
 
-      this.http.put(`http://localhost:8070/apipharmacy/${book.id}`, { favorite: true })
+      this.http.put(`http://localhost:8080/apipharmacy/${book.id}`, { favorite: true })
      
       .subscribe(
         (response) => {
@@ -297,7 +297,7 @@ this.filteredHospitals = this.hospitalControl.valueChanges.pipe(
     
     book.favorite = false;
     // Send the book's ID to the backend for deletion
-    this.http.delete(`http://localhost:8070/apipharmacyfavorite/delete/${book.id}`,book)
+    this.http.delete(`http://localhost:8080/apipharmacyfavorite/delete/${book.id}`,book)
       .subscribe(
         () => {
           console.log('Book removed from favorites successfully');
@@ -306,7 +306,7 @@ this.filteredHospitals = this.hospitalControl.valueChanges.pipe(
         },
         (error) => console.error('Failed to remove book from favorites:', error)
       );
-      this.http.put(`http://localhost:8070/apipharmacy/${book.id}`, { favorite: false })
+      this.http.put(`http://localhost:8080/apipharmacy/${book.id}`, { favorite: false })
     .subscribe(
         (response) => {
          
