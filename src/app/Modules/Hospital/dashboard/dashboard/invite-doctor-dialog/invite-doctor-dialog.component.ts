@@ -11,6 +11,7 @@ import { DoctorService } from 'src/app/Modules/Doctor/doctor.service';
 export class InviteDoctorDialogComponent implements OnInit {
 
   displayedColumns: string[] = ['Id', 'SLMC Number', 'Doctor Name', 'Working Experience','Doctor Email' , 'Contact Number' , 'Invite'];
+  
   doctorDetails: Doctor[] = [];
 
   constructor(private doctorService: DoctorService) { }
@@ -39,5 +40,7 @@ export class InviteDoctorDialogComponent implements OnInit {
     }
    );
   }
+
+  //this.http.post('http://localhost:8080/api/send-email/dinirangapremanayake@gmail.com', this.formData)
 
 }

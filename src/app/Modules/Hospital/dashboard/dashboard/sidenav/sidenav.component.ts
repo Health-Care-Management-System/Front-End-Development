@@ -3,6 +3,7 @@ import { navbarData } from './nav-data';
 import { ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { BreakpointObserver } from '@angular/cdk/layout';
+import { Hospital } from '../../../hospital';
 
 interface SideNavToggle {
 
@@ -19,9 +20,11 @@ export class SidenavComponent implements OnInit {
   
   avatar:string | undefined;
 
+  hospitalDetails: Hospital[] = [];
+
 
   constructor(private observer: BreakpointObserver){
-
+    
   }
 
   ngOnInit(): void {
@@ -31,9 +34,11 @@ export class SidenavComponent implements OnInit {
   navData = navbarData;
 
 
+  hospitalId:number | undefined;
+
+
   toggleCollapse(): void{
     this.collapsed = !this.collapsed;
-    
   }
 
   ngAfterViewInit(){
@@ -46,6 +51,10 @@ export class SidenavComponent implements OnInit {
         this.sidenav.open();
       }
     });
+}
+
+editHospitalProfile(){
+  console.log();
 }
 }
 

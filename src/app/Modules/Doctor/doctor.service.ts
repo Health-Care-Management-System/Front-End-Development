@@ -32,7 +32,7 @@ export class DoctorService {
   }
 
   inviteDoctors(doc_id: any){
-    return this.httpclient.get("http://localhost:8080/addToInvitationList/"+ doc_id);
+    return this.httpclient.get("http://localhost:8080/api/addToInvitationList/"+ doc_id);
   }
 
 }

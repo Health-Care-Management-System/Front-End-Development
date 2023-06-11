@@ -1,5 +1,5 @@
 
-<mat-sidenav-container autosize>
+<mat-sidenav-container autosize >
     <mat-sidenav #sidenav mode="side" [opened]="true">
         <mat-nav-list (click)="toggleCollapse()">
             <mat-list-item >
@@ -18,11 +18,52 @@
         </mat-nav-list>
 
 
-        <mat-nav-list *ngFor="let data of navData" (click)="toggleCollapse()">
+        <!-- <mat-nav-list *ngFor="let data of navData" (click)="toggleCollapse()">
             <mat-list-item [routerLink]="data.routeLink" routerLinkActive="active"
                 [routerLinkActiveOptions]="{exact: true}">
                 <mat-icon mat-list-icon class="mt-2">{{data.icon}}</mat-icon>
                 <span class="sidenav-link-text" *ngIf="collapsed">{{data.label}}</span>
+            </mat-list-item>
+        </mat-nav-list> -->
+
+
+        <mat-nav-list  (click)="toggleCollapse()">
+            <mat-list-item routerLink="/dashboardbody" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}">
+                <mat-icon mat-list-icon class="mt-2">home</mat-icon>
+                <span class="sidenav-link-text" *ngIf="collapsed">Dashboard</span>
+            </mat-list-item>
+        </mat-nav-list>
+
+        <mat-nav-list  (click)="toggleCollapse()">
+            <mat-list-item routerLink="/new-appoinment" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}">
+                <mat-icon mat-list-icon class="mt-2">event</mat-icon>
+                <span class="sidenav-link-text" *ngIf="collapsed">New Appoinment</span>
+            </mat-list-item>
+        </mat-nav-list>
+
+        <mat-nav-list  (click)="toggleCollapse()">
+            <mat-list-item routerLink="/manage-team" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}">
+                <mat-icon mat-list-icon class="mt-2">groups</mat-icon>
+                <span class="sidenav-link-text" *ngIf="collapsed">Manage Team</span>
+            </mat-list-item>
+        </mat-nav-list>
+
+        <mat-nav-list  (click)="toggleCollapse()">
+            <mat-list-item routerLink="/manage-service" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}">
+                <mat-icon mat-list-icon class="mt-2">medical_services</mat-icon>
+                <span class="sidenav-link-text" *ngIf="collapsed">Manage Servicers</span>
+            </mat-list-item>
+        </mat-nav-list>
+
+        <mat-nav-list  (click)="toggleCollapse()" (click)="editHospitalProfile()">
+            <mat-list-item routerLink="/settings" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}">
+                <mat-icon mat-list-icon class="mt-2">settings</mat-icon>
+                <span class="sidenav-link-text" *ngIf="collapsed">Account Settings</span>
             </mat-list-item>
         </mat-nav-list>
     </mat-sidenav>
