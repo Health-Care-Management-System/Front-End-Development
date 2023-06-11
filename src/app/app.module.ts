@@ -128,10 +128,24 @@ import { RejectedComponent } from './Modules/Pharmacy/rejected/rejected.componen
 import { ApprovedComponent } from './Modules/Pharmacy/approved/approved.component';
 import { PatientviewComponent } from './Modules/Pharmacy/patientview/patientview.component';
 import { PharmacydashboardComponent } from './Modules/Pharmacy/pharmacydashboard/pharmacydashboard.component';
+
+import { SettingsComponent } from './Modules/Hospital/dashboard/dashboard/settings/settings.component';
+
 import { HospitalprofileforpatientComponent } from './Modules/Hospital/hospitalprofileforpatient/hospitalprofileforpatient.component';
 import { PharmacyprofileforpatientComponent } from './Modules/Pharmacy/pharmacyprofileforpatient/pharmacyprofileforpatient.component';
 import { MakeAnAppoinmentWithDoctorComponent } from './Modules/Patient/make-an-appoinment-with-doctor/make-an-appoinment-with-doctor.component';
+
 import { UpdateappoinmentsComponent } from './Modules/Patient/upadateappoinments/updateappoinments/updateappoinments.component';
+
+import {AdminAmbulenceComponent} from "./Modules/Admin/admin-ambulence/admin-ambulence.component";
+import {AdminDetailsComponent} from "./Modules/Admin/admin-details/admin-details.component";
+import {AdminDoctorComponent} from "./Modules/Admin/admin-doctor/admin-doctor.component";
+import {AdminHospitalComponent} from "./Modules/Admin/admin-hospital/admin-hospital.component";
+import {AdminMainComponent} from "./Modules/Admin/admin-main/admin-main.component";
+import {AdminNavComponent} from "./Modules/Admin/admin-nav/admin-nav.component";
+import {AdminPharmacyComponent} from "./Modules/Admin/admin-pharmacy/admin-pharmacy.component";
+import {AdminPatientComponent} from "./Modules/Admin/admin-patient/admin-patient.component";
+
 
 
 
@@ -158,7 +172,21 @@ import { UpdateappoinmentsComponent } from './Modules/Patient/upadateappoinments
     DoctorSignupComponent,
     DoctorSignupNextComponent,
     LoginComponent,
+  
+  
     // FilterComponent,
+
+
+    AdminAmbulenceComponent,
+    AdminDetailsComponent,
+    AdminDetailsComponent,
+    AdminDoctorComponent,
+    AdminHospitalComponent,
+    AdminMainComponent,
+    AdminNavComponent,
+    AdminPharmacyComponent,
+
+
 
     HomeComponent,
     FooterComponent,
@@ -204,7 +232,7 @@ import { UpdateappoinmentsComponent } from './Modules/Patient/upadateappoinments
     ContactusComponent,
 
     // SearchdoctorcontentComponent
-  
+
     CanceledComponent,
     NewComponent,
     RejectedComponent,
@@ -219,8 +247,14 @@ import { UpdateappoinmentsComponent } from './Modules/Patient/upadateappoinments
     HospitalprofileforpatientComponent,
     PharmacyprofileforpatientComponent,
     MakeAnAppoinmentWithDoctorComponent,
+
     UpdateappoinmentsComponent,
   
+
+    AdminPatientComponent,
+    AdminPharmacyComponent
+
+
 
 
   ],

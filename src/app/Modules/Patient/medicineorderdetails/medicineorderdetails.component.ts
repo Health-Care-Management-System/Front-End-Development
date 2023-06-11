@@ -17,6 +17,7 @@ export class MedicineorderdetailsComponent implements OnInit {
 
   ngOnInit() {
     this.loadAppoinments();
+
     
     
   
@@ -34,7 +35,7 @@ export class MedicineorderdetailsComponent implements OnInit {
       }
     );
   }
- 
+
 
   leftToolBarToggler() {
     this.sideBarOpen = !this.sideBarOpen;

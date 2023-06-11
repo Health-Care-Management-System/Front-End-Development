@@ -4,23 +4,73 @@
       <button mat-button mat-dialog-close class=".spacer">&times;</button>
     </div>
 </mat-toolbar>
-<p class="my-3 text-center">
-  <mat-form-field appearance="outline" style="width:430px; height:10px">
-    <input matInput placeholder="Type Emails of the doctors">
-    <mat-hint>
-      You can add multiple email address to send emails in bulk to invite. Type email address and hit enter
-    </mat-hint>
-  </mat-form-field>
-</p>
 
-<p class="mt-5 text-center">
+
+<h3 class="mt-4 text-center">
+      You can send invitations to invite doctor to join with your hospital
+</h3>
+
+<!-- <p class="mt-5 text-center">
 <mat-form-field style="width:430px; height:10px">
   <mat-label>Type a Message</mat-label>
   <textarea matInput style="height: 150px;"></textarea>
 </mat-form-field>
-</p>
+</p>  -->
 
-<div class="spacer mt-3">
-  <button mat-stroked-button class="py-1 px-5" class="sendClass" >Send</button>
-</div>
+<div class="container mt-5">
+  <table mat-table [dataSource]="doctorDetails" class="mat-elevation-z8">
+  
+      <!-- Position Column -->
+      <ng-container matColumnDef="Id">
+        <th mat-header-cell *matHeaderCellDef> Id </th>
+        <td mat-cell *matCellDef="let element"> {{element.doc_id}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="SLMC Number">
+        <th mat-header-cell *matHeaderCellDef> SLMC Number </th>
+        <td mat-cell *matCellDef="let element"> {{element.slmcnumber}} </td>
+      </ng-container>
+    
+      <!-- Name Column -->
+      <ng-container matColumnDef="Doctor Name">
+        <th mat-header-cell *matHeaderCellDef> Doctor Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.firstname}}{{element.lastname}} </td>
+      </ng-container>
+    
+      <!-- Weight Column -->
+      <ng-container matColumnDef="Working Experience">
+        <th mat-header-cell *matHeaderCellDef> Working Experience </th>
+        <td mat-cell *matCellDef="let element"> {{element.experience }} years </td>
+      </ng-container>
+    
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="Doctor Email">
+          <th mat-header-cell *matHeaderCellDef> Doctor Email</th>
+          <td mat-cell *matCellDef="let element"> {{element.emailID}} </td>
+        </ng-container>
+  
+      <ng-container matColumnDef="Contact Number">
+          <th mat-header-cell *matHeaderCellDef> Contact Number </th>
+          <td mat-cell *matCellDef="let element"> {{element.contactnumber}} </td>
+        </ng-container>
+  
+        <!-- edit button -->
+        <ng-container matColumnDef="Invite">
+          <th mat-header-cell *matHeaderCellDef> Invite </th>
+          <td mat-cell *matCellDef="let element"> 
+            <!-- <button mat-icon-button color="primary" (click)="editProductDetails(element.productId)">
+              <mat-icon>edit</mat-icon>
+            </button> -->
+            <button mat-stroked-button class="py-1 px-5" class="sendClass" (click)="inviteDoctors(element.doc_id)"> Send Invitation </button>
+          </td>
+        </ng-container>
+  
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    
+  </div>
+
   

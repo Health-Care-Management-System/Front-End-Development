@@ -21,8 +21,10 @@ export class DoctorprofileforpatientComponent implements OnInit {
   hospital: any;
   allbooks: any[] | undefined;
   books: any[] | undefined;
+
   daysOfWeek: Availability[] = [];
   retrievedData: Availability[] = [];
+
 
   constructor(
     private route: ActivatedRoute,
@@ -35,13 +37,12 @@ export class DoctorprofileforpatientComponent implements OnInit {
     this.http.get(`http://localhost:8080/api1/${id}`).subscribe((data) => {
       this.doctor = data;
     });
-    
     // this.http.get<any[]>('http://localhost:8080/apihospital/all').subscribe(
     //   data => {
     //     this.books = data;
-      
-        
-        
+
+
+
     //   },
     //   error => {
     //     console.log(error);

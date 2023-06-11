@@ -22,15 +22,16 @@ export class MyappoinmentsComponent implements OnInit {
     this.loadAppoinments();
     this.getdeletedAppoinments();
     this.getexpiredAppoinments();
+
     // this.deleteExpiredAppoinments();
     
   }
-  
+
   editAppoinment(appoinment: any): void {
     // Assuming you have separate input fields for updating the date and time
     const updatedDate = prompt('Enter the updated appointment date:');
     const updatedTime = prompt('Enter the updated appointment time:');
-  
+
     if (updatedDate !== null && updatedTime !== null) {
       const updatedAppoinment = {
         id: appoinment.id,
@@ -39,11 +40,11 @@ export class MyappoinmentsComponent implements OnInit {
         searchText: appoinment.searchText,
         phone: appoinment.phone
       };
-  
+
       this.updateAppointment(updatedAppoinment);
     }
   }
-  
+
   updateAppointment(appointment: any): void {
     this.http.put<any>(`http://localhost:8080/apiappoinment/${appointment.id}`, appointment)
       .subscribe(
@@ -91,29 +92,29 @@ export class MyappoinmentsComponent implements OnInit {
   deleteAppoinment(index: number) {
     const appoinmentId = this.appoinments[index].id; // Assuming the appointment has an 'id' property
     const deletedAppoinment = this.appoinments.splice(index, 1)[0];
-  
+
     this.http.post('http://localhost:8080/apiappoinmentdeleted/add', deletedAppoinment).subscribe(
       () => {
         console.log('Appointment saved to another table successfully.');
 
-     
-  
-        
+
+
+
       },
       (error) => {
         console.log('Error saving appointment to another table:', error);
       }
-      
+
     );
 
     this.http.delete(`http://localhost:8080/apiappoinment/delete/${appoinmentId}`).subscribe(
           () => {
-            
+
             console.log('Appointment deleted successfully.');
             // Remove the appointment from the array
-            
+
             this.loadAppoinments();
-            
+
           },
           (error) => {
             console.log('Error deleting appointment:', error);
@@ -124,6 +125,7 @@ export class MyappoinmentsComponent implements OnInit {
 
         location.reload();
   }
+
   // deleteExpiredAppoinments(): void {
     
   //   const currentDate = new Date().getTime(); // Get the current date and time in milliseconds
@@ -171,6 +173,7 @@ export class MyappoinmentsComponent implements OnInit {
   //     finalize(() => console.log('Appointments deleted successfully'))
   //   );
   // }
+
   leftToolBarToggler() {
     this.sideBarOpen = !this.sideBarOpen;
   }

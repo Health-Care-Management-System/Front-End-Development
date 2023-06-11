@@ -10,7 +10,7 @@ import { ManageServiceComponent } from './manage-service/manage-service.componen
 import { AddServiceDialogComponent } from './add-service-dialog/add-service-dialog.component';
 import { InviteDoctorDialogComponent } from './invite-doctor-dialog/invite-doctor-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     DashboardRoutingModule,
     MaterialModule,
     MatDialogModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   entryComponents:[AddServiceDialogComponent],
 })

@@ -10,9 +10,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./showrequest.component.css']
 })
 export class ShowrequestComponent implements OnInit {
- 
 
-  
+
+
   appoinments: any;
   expiredappoinments: any;
   constructor(private http: HttpClient) { }

@@ -9,3 +9,7 @@ mat-toolbar{
     background-color: #00be99;
     color: aliceblue;
 }
+
+table{
+    width: 100%;
+}

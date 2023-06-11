@@ -1,5 +1,6 @@
 export class Doctor {
-  id: number;
+
+  doc_id: string;
   firstname: string;
   lastname: string;
   dob: string;
@@ -11,8 +12,9 @@ export class Doctor {
   imageapi: string;
   experience: String;
 
-  constructor(id: number, firstname: string, lastname: string, dob: string, address: string, contactnumber: string, emailID: string, slmcnumber: string, image: any, imageapi: string, experience: String) {
-    this.id = id;
+
+  constructor(doc_id: string, firstname: string, lastname: string, dob: string, address: string, contactnumber: string, emailID: string, slmcnumber: string, image: any, imageapi: string, experience: String) {
+    this.doc_id = doc_id;
     this.firstname = firstname;
     this.lastname = lastname;
     this.dob = dob;

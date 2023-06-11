@@ -1,0 +1,8 @@
+mat-drawer {
+  width: 260px;
+  background: #065560;
+}
+
+mat-drawer-container {
+  height: 100%;
+}

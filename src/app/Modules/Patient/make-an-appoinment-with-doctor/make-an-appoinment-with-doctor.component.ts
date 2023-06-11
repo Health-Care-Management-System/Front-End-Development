@@ -57,7 +57,7 @@ export class MakeAnAppoinmentWithDoctorComponent implements OnInit {
     const doctorName=this.doctorName;
 
     const data = {
-   
+
       searchText: hospital,
       bookingDate: date,
       bookingTime: time,
