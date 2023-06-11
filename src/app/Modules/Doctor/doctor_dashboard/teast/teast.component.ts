@@ -12,7 +12,7 @@ import {debounceTime, map, startWith} from 'rxjs/operators';
 })
 export class TeastComponent implements OnInit {
   showMore: boolean = false;
-  
+
   searchText: any;
   searchText2:any;
   searchText3: any;
@@ -46,7 +46,7 @@ export class TeastComponent implements OnInit {
       this.books = this.allbooks;
       return;
     }
-  
+
     if (this.selectedBook) {
       // Filter based on the selected book
       this.books = this.allbooks.filter((book: { name: string; }) => {
@@ -60,12 +60,12 @@ export class TeastComponent implements OnInit {
       });
     }
   }
-  
+
   onOptionSelected(event: MatAutocompleteSelectedEvent) {
     this.selectedBook = event.option.value;
     this.filterbooks();
   }
-  
+
   clearSelection() {
     this.selectedBook = null;
     this.filterbooks();
@@ -75,7 +75,7 @@ export class TeastComponent implements OnInit {
       this.books = this.allbooks;
       return;
     }
-  
+
     if (this.selectedBook) {
       // Filter based on the selected book
       this.books = this.allbooks.filter((book: { city: string; }) => {
@@ -89,24 +89,24 @@ export class TeastComponent implements OnInit {
       });
     }
   }
-  
+
   onOptionSelected2(event: MatAutocompleteSelectedEvent) {
     this.selectedBook = event.option.value;
     this.filterbooks2();
   }
-  
+
   clearSelection2() {
     this.selectedBook = null;
     this.filterbooks2();
   }
-    
-  
+
+
   filterbooks3() {
     if (!this.searchText3) {
       this.books = this.allbooks;
       return;
     }
-  
+
     if (this.selectedBook) {
       // Filter based on the selected book
       this.books = this.allbooks.filter((book: { district: string; }) => {
@@ -120,23 +120,23 @@ export class TeastComponent implements OnInit {
       });
     }
   }
-  
+
   onOptionSelected3(event: MatAutocompleteSelectedEvent) {
     this.selectedBook = event.option.value;
     this.filterbooks3();
   }
-  
+
   clearSelection3() {
     this.selectedBook = null;
     this.filterbooks3();
   }
-  
+
   filterbooks4() {
     if (!this.searchText4) {
       this.books = this.allbooks;
       return;
     }
-  
+
     if (this.selectedBook) {
       // Filter based on the selected book
       this.books = this.allbooks.filter((book: { hospital: string; }) => {
@@ -150,18 +150,18 @@ export class TeastComponent implements OnInit {
       });
     }
   }
-  
+
   onOptionSelected4(event: MatAutocompleteSelectedEvent) {
     this.selectedBook = event.option.value;
     this.filterbooks4();
   }
-  
+
   clearSelection4() {
     this.selectedBook = null;
     this.filterbooks4();
   }
-  
- 
+
+
   streetControl = new FormControl('');
   cityControl = new FormControl('');
   districtControl=new FormControl('');
@@ -173,23 +173,23 @@ export class TeastComponent implements OnInit {
 
 
   constructor(private http: HttpClient) { }
-  
+
   ngOnInit() {
-    this.http.get<any[]>("http://localhost:8070/api1/all").subscribe(
+    this.http.get<any[]>("http://localhost:8080/api1/all").subscribe(
       data => {
         this.allbooks = data;
         this.books = data.slice(0, 30);
-        
+
         // this.bookscards=data.slice(0, 36);
       },
       error => {
         console.log(error);
       });
-      
-    
 
-   
-    
+
+
+
+
       this.filteredBooks = this.streetControl.valueChanges.pipe(
         startWith(''),
         debounceTime(300),
@@ -210,21 +210,21 @@ this.filteredHospitals = this.hospitalControl.valueChanges.pipe(
   debounceTime(300),
  map(value => this._filter4(value || '', this.books)),
 );
-  
-  
-    
-  
 
 
 
 
-    
-  
+
+
+
+
+
+
 
 
   }
-  
- 
+
+
 
   private _filter(value: string, books: any[]): any[] {
     const filterValue = value.toLowerCase();
@@ -242,7 +242,7 @@ this.filteredHospitals = this.hospitalControl.valueChanges.pipe(
     const filterValue = value.toLowerCase();
     return this.books.filter(book => book.hospital.toLowerCase().includes(filterValue));
   }
-  
+
 
 
 
@@ -259,27 +259,27 @@ this.filteredHospitals = this.hospitalControl.valueChanges.pipe(
       this.addToFavorites(book);
     }
   }
-  
+
   addToFavorites(book: any) {
     book.favorite = true; // Set the favorite status to true
-   
-  
+
+
     // Send the book data to the backend for addition
-    this.http.post('http://localhost:8070/apihospitalfavorite/add', book)
+    this.http.post('http://localhost:8080/apihospitalfavorite/add', book)
       .subscribe(
         () => {
           console.log('Book added to favorites successfully');
-         
+
           book.isFavorite = true; // Update the favorite status locally
         },
         (error) => console.error('Failed to add book to favorites:', error)
       );
 
-      this.http.put(`http://localhost:8070/apihospital/${book.id}`, { favorite: true })
-     
+      this.http.put(`http://localhost:8080/apihospital/${book.id}`, { favorite: true })
+
       .subscribe(
         (response) => {
-         
+
           console.log('Book updated successfully', response);
 
           // Handle success
@@ -290,24 +290,24 @@ this.filteredHospitals = this.hospitalControl.valueChanges.pipe(
         }
       );
   }
-  
+
   removeFromFavorites(book: any) {
-    
+
     book.favorite = false;
     // Send the book's ID to the backend for deletion
-    this.http.delete(`http://localhost:8070/apihospitalfavorite/delete/${book.id}`,book)
+    this.http.delete(`http://localhost:8080/apihospitalfavorite/delete/${book.id}`,book)
       .subscribe(
         () => {
           console.log('Book removed from favorites successfully');
-          
+
           book.isFavorite = false; // Update the favorite status locally
         },
         (error) => console.error('Failed to remove book from favorites:', error)
       );
-      this.http.put(`http://localhost:8070/apihospital/${book.id}`, { favorite: false })
+      this.http.put(`http://localhost:8080/apihospital/${book.id}`, { favorite: false })
     .subscribe(
         (response) => {
-         
+
           console.log('Book updated successfully', response);
 
           // Handle success
@@ -321,7 +321,7 @@ this.filteredHospitals = this.hospitalControl.valueChanges.pipe(
 }
 
 
- 
+
 
 
 

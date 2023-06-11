@@ -12,8 +12,8 @@ import { debounceTime, map, Observable, startWith } from 'rxjs';
   styleUrls: ['./make-an-apppoinment.component.css']
 })
 export class MakeAnApppoinmentComponent implements OnInit {
- 
- 
+
+
    searchText: any;
   sideBarOpen=true;
   districtControl=new FormControl('');
@@ -23,22 +23,22 @@ export class MakeAnApppoinmentComponent implements OnInit {
 
 
   // books: any[] | undefined;
- 
+
   filteredBooks: Observable<any[]> | undefined;
- 
+
   streetControl = new FormControl('');
 selectedBook: any;
 books: any[] = [];
-phone: any; 
+phone: any;
   date: any;
   time: any;
   hospitalControl: any;
 
- 
+
   constructor(private formBuilder: FormBuilder,private route: ActivatedRoute,private http: HttpClient) {
   }
   saveAppointmentData(data: any) {
-    const url = 'http://localhost:8070/apiappoinment/add';
+    const url = 'http://localhost:8080/apiappoinment/add';
     this.http.post(url, data)
       .subscribe(res => {
         console.log('Data saved successfully.');
@@ -59,10 +59,10 @@ phone: any;
       map(value => this._filterDistricts(value || ''))
     );
     const id = this.route.snapshot.paramMap.get('id');
-   
+
     // this.http.get<any[]>(`http://localhost:8070/apihospital/all`).subscribe(
-      this.http.get<any[]>(`http://localhost:8070/apihospital/all?name=${this.searchText}`).subscribe(
- 
+      this.http.get<any[]>(`http://localhost:8080/apihospital/all?name=${this.searchText}`).subscribe(
+
     data => {
         this.books = data;
         this.filteredBooks = this.streetControl.valueChanges.pipe(
@@ -75,7 +75,7 @@ phone: any;
   _filterDistricts(arg0: any): any {
     throw new Error('Method not implemented.');
   }
-  
+
   private _filter(value: string, books: any[]): any[] {
     const filterValue = value.toLowerCase();
     return this.books.filter(book => book.name.toLowerCase().includes(filterValue));
@@ -100,6 +100,6 @@ phone: any;
   leftToolBarToggler(){
     this.sideBarOpen=!this.sideBarOpen;
    }
- 
-  
+
+
 }

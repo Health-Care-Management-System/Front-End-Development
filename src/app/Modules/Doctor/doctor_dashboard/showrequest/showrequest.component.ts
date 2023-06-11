@@ -25,7 +25,7 @@ export class ShowrequestComponent implements OnInit {
    this.sideBarOpen=!this.sideBarOpen;
   }
   loadAppoinments() {
-    this.http.get<any[]>('http://localhost:8070/apiappoinment/all').subscribe(
+    this.http.get<any[]>('http://localhost:8080/apiappoinment/all').subscribe(
       (data) => {
         this.appoinments = data;
       },

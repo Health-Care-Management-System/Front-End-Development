@@ -13,7 +13,7 @@ export class DoctorprofileforpatientComponent implements OnInit {
   hospital: any;
   allbooks: any[] | undefined;
   books: any[] | undefined;
-  
+
 
   constructor(
     private route: ActivatedRoute,
@@ -22,21 +22,21 @@ export class DoctorprofileforpatientComponent implements OnInit {
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
-    this.http.get(`http://localhost:8070/api1/${id}`).subscribe((data) => {
+    this.http.get(`http://localhost:8080/api1/${id}`).subscribe((data) => {
       this.doctor = data;
     });
-    
-    // this.http.get<any[]>('http://localhost:8070/apihospital/all').subscribe(
+
+    // this.http.get<any[]>('http://localhost:8080/apihospital/all').subscribe(
     //   data => {
     //     this.books = data;
-      
-        
-        
+
+
+
     //   },
     //   error => {
     //     console.log(error);
     //   });
-    // this.http.get(`http://localhost:8070/apihospital/all`).subscribe((data) => {
+    // this.http.get(`http://localhost:8080/apihospital/all`).subscribe((data) => {
     //   this.hospital = data;
     // });
   }

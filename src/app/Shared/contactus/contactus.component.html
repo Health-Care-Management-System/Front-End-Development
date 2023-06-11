@@ -19,14 +19,13 @@
                                 <h1 class="text-center fw-bold mb-3 mx-1 mx-md-4 mt-4 title">Contact Us</h1>
 
 
-
                                 <form class="mx-1 mx-md-4" novalidate #signupForm="ngForm" (ngSubmit)="onSubmit()">
 
                                     <div fxLayout="row" fxLayoutAlign="start center" class="mb-2">
                                         <mat-icon class="me-3">person</mat-icon>
                                         <mat-form-field fxFlex="100%">
                                             <input matInput type="text" id="form3Example1c"
-                                                [(ngModel)]="registerArray.username" name="username" #username="ngModel"
+                                                   [(ngModel)]="formData.name" name="username" #username="ngModel"
                                                 required />
                                             <mat-label>Your Name</mat-label>
                                             <!--error message displaying-->
@@ -40,8 +39,8 @@
                                     <div fxLayout="row" fxLayoutAlign="start center" class="mb-2">
                                         <mat-icon class="me-3">email</mat-icon>
                                         <mat-form-field fxFlex="100%">
-                                            <input matInput type="email" id="form3Example3c"
-                                                [(ngModel)]="registerArray.email" name="email" #email="ngModel"
+                                            <input matInput type="email" id="form3Examplce3c"
+                                                   [(ngModel)]="formData.email" name="email" #email="ngModel"
                                                 [pattern]="emailPtn" required />
                                             <mat-label>Your Email Address</mat-label>
                                             <mat-error
@@ -57,8 +56,8 @@
                                     <div fxLayout="row" fxLayoutAlign="start center" class="mb-2">
                                         <mat-icon class="me-3">call</mat-icon>
                                         <mat-form-field fxFlex="100%">
-                                            <input matInput type="mobilenumber" id="form3Example3c"
-                                                [(ngModel)]="registerArray.mobilenumber" name="mobilenumber"
+                                            <input matInput type="mobilenumber" id="form3Exampcle3c"
+                                                   [(ngModel)]="formData.telephone" name="mobilenumber"
                                                 #mobilenumber="ngModel" [pattern]="mobNumberPattern" required />
                                             <mat-label>Your Telephone Number</mat-label>
                                             <mat-error
@@ -74,24 +73,18 @@
                                         <mat-icon class="me-3">message</mat-icon>
                                         <mat-form-field fxFlex="100%">
                                             <input matInput type="address" id="form3Example3c"
-                                                [(ngModel)]="registerArray.address" name="address" #address="ngModel"
-                                                minlength="10" required />
+                                                   [(ngModel)]="formData.message" name="address" #address="ngModel"
+                                                minlength="1" required />
                                             <mat-label>Message</mat-label>
                                             <mat-error
                                                 *ngIf="(address.touched ||signupForm.submitted) && address.errors?.['required']">Message
                                                 Required</mat-error>
                                         </mat-form-field>
                                     </div>
-                                    <div fxLayout="row" fxLayoutAlign="center center" class="mb-3">
-                                        <mat-checkbox class="me-2" id="form2Example3c"></mat-checkbox>
-                                        <label for="form2Example3">
-                                            I agree all statements in <a href="#!" class="conditions">Terms of
-                                                service</a>
-                                        </label>
-                                    </div>
+
 
                                     <div fxLayout="row" fxLayoutAlign="center" class="mb-2 mb-lg-4">
-                                        <button mat-raised-button color="primary" type="button"
+                                        <button mat-raised-button color="primary" type="submit"
                                             [disabled]="signupForm.form.invalid" class="btn btn-primary btn-lg next-btn"
                                             routerLink="">Submit</button>
                                     </div>

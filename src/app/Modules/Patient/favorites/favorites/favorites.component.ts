@@ -29,7 +29,7 @@ export class FavoritesComponent implements OnInit {
   }
 
   favoriteitems() {
-    this.http.get<any[]>('http://localhost:8070/apifavorite/all').subscribe(
+    this.http.get<any[]>('http://localhost:8080/apifavorite/all').subscribe(
       (data) => {
         this.favorites = data;
       },
@@ -39,7 +39,7 @@ export class FavoritesComponent implements OnInit {
     );
   }
   favoritehospitals() {
-    this.http.get<any[]>('http://localhost:8070/apihospitalfavorite/all').subscribe(
+    this.http.get<any[]>('http://localhost:8080/apihospitalfavorite/all').subscribe(
       (data) => {
         this.hospitals = data;
       },
@@ -49,7 +49,7 @@ export class FavoritesComponent implements OnInit {
     );
   }
   favoritepharmacies() {
-    this.http.get<any[]>('http://localhost:8070/apipharmacyfavorite/all').subscribe(
+    this.http.get<any[]>('http://localhost:8080/apipharmacyfavorite/all').subscribe(
       (data) => {
         this.pharmacies = data;
       },

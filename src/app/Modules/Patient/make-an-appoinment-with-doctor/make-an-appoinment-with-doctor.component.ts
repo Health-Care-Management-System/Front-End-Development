@@ -29,7 +29,7 @@ export class MakeAnAppoinmentWithDoctorComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private http: HttpClient,private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.http.get<any[]>('http://localhost:8070/apihospital/all').subscribe((data) => {
+    this.http.get<any[]>('http://localhost:8080/apihospital/all').subscribe((data) => {
       this.books = data;
       this.filteredBooks = this.streetControl.valueChanges.pipe(
         startWith(''),
@@ -57,7 +57,7 @@ export class MakeAnAppoinmentWithDoctorComponent implements OnInit {
     const doctorName=this.doctorName;
 
     const data = {
-   
+
       searchText: hospital,
       bookingDate: date,
       bookingTime: time,
@@ -69,7 +69,7 @@ export class MakeAnAppoinmentWithDoctorComponent implements OnInit {
     this.saveAppoinmentData(data);
   }
   saveAppoinmentData(data: any) {
-    const url = 'http://localhost:8070/apiappoinment/add';
+    const url = 'http://localhost:8080/apiappoinment/add';
     const headers = { 'Content-Type': 'application/json' };
     this.http.post(url, data, { headers }).subscribe(
       (response) => {
