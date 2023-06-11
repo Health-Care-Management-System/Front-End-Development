@@ -18,50 +18,31 @@
             </a>
           </div>
           <h4 class="text-center fw-bolder mb-4 fs-2 login"><br>Login</h4>
-          <div class="mb-3">
-            <form novalidate #loginForm="ngForm" class="myclass" (ngSubmit)="onSubmit()">
-              <div fxLayout="row" fxLayoutAlign="start center" class="mb-4">
-                <mat-icon class="me-3">person</mat-icon>
-                <mat-form-field fxFlex="100%">
-                  <input matInput type="text" 
-                         id="form3Example1c"
-                         [(ngModel)]="registerArray.username" 
-                          name="username"
-                          #username="ngModel"
-                          required />
-                  <mat-label>Your Name</mat-label>
-                   <!--error message displaying-->
-                   <mat-error *ngIf="(username.touched ||loginForm.submitted) && username.errors?.['required']"> Your Name is required</mat-error>
-                      
-                </mat-form-field>
-              </div>
 
-              <div fxLayout="row" fxLayoutAlign="start center" class="mb-4">
-                <mat-icon class="me-3">lock</mat-icon>
-                <mat-form-field fxFlex="100%">
-                  <input matInput type="password" 
-                         id="form3Example4c"
-                         name="password"
-                         [(ngModel)]="registerArray.password"
-                         #password="ngModel"
-                         [pattern]="passwordPtn"            
-                         required />
-                  <mat-label>Password</mat-label>
-                  <mat-error *ngIf="(password.touched ||loginForm.submitted) && password.errors?.['required']">Password Required</mat-error>
-                  <mat-error *ngIf="(password.touched ||loginForm.submitted) && password.errors?.['pattern']">Your password must be at least 8 characters and maximum 16 characters long, contain at least one number and have a mixture of uppercase and lowercase letters.</mat-error>
 
-                </mat-form-field>
-              </div>
-            </form>
+          <div class="container mt-5">
+            <div class="card" style="padding: 20px;">
+              <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+                <input type="text"
+                       ngModel
+                       name="userName"
+                       id="userName"
+                       placeholder="Enter your username"
+                       class="form-control mb-3">
+
+                <input type="password"
+                       ngModel
+                       name="userPassword"
+                       id="userPassword"
+                       placeholder="Enter your password"
+                       class="form-control mb-3">
+
+                <input type="submit"
+                       value="Login"
+                       class="btn btn-outline-primary form-control rounded-0">
+              </form>
+            </div>
           </div>
-         
-          <!-- <div class="mb-4">
-            <mat-checkbox  name="remember">Remember me</mat-checkbox>
-          </div> -->
-          <span class="middle" fxLayoutAlign="center center">
-            <button mat-raised-button type="submit" [disabled]="loginForm.form.invalid"
-              class="btn btn-lg fw-bold fs-7 btn-success w-100 loginbtn">Login</button>
-          </span>
         </div>
       </div>
     </div>

@@ -12,45 +12,59 @@
 
 
             <div class="formbold-form-wrapper">
-                <form class="example-form">
+                <!-- <form class="example-form">
 
                     <div class="mmm">
                         <label for="name" class="formbold-form-label"> Select Hospital</label>
                         <input type="text" [(ngModel)]="searchText" name="name" id="name" placeholder="Search for a hospital" [formControl]="streetControl" [matAutocomplete]="streetAuto" class="formbold-form-input">
                         <mat-autocomplete #streetAuto="matAutocomplete">
                             <mat-option *ngFor="let book of filteredBooks| async" [value]="book">
-                                {{book.hospital}}
+                                {{book.name}}
                             </mat-option>
                         </mat-autocomplete>
                         <button mat-button class="icon3">
             <mat-icon matSuffix>search</mat-icon></button></div>
-                </form>
-                <form action="https://formbold.com/s/FORM_ID" method="POST">
+                </form> -->
 
-                    <div class="formbold-mb-5">
-                        <label for="phone" class="formbold-form-label"> Optional Phone Number </label>
-                        <input type="text" name="phone" id="phone" placeholder="Enter your phone number" class="formbold-form-input" />
+                <form (submit)="onSubmit()" method="POST">
+                    <div class="mmm">
+                        <label for="name" class="formbold-form-label"> Select Hospital</label>
+                        <input type="text" [(ngModel)]="searchText" name="name" id="name" placeholder="Search for a hospital" [formControl]="streetControl" [matAutocomplete]="streetAuto" class="formbold-form-input">
+                        <mat-autocomplete #streetAuto="matAutocomplete">
+                            <mat-option *ngFor="let book of filteredBooks | async" [value]="book.name">
+                                {{book.name}}
+                            </mat-option>
+                        </mat-autocomplete>
+                        <!-- <input type="text" [(ngModel)]="searchText" name="name" id="name" placeholder="Search for a hospital" [formControl]="districtControl" [matAutocomplete]="streetAuto" class="formbold-form-input">
+                        <mat-autocomplete #streetAuto="matAutocomplete">
+                            <mat-option *ngFor="let district of filteredDistricts | async" [value]="district">
+                                {{ district }}
+                            </mat-option>
+                        </mat-autocomplete> -->
+                        <button mat-button class="icon3">
+                        <mat-icon matSuffix>search</mat-icon>
+                      </button>
                     </div>
-
-                    <div class="flex flex-wrap formbold--mx-3">
+                    <div class="formbold-mb-5">
+                        <label for="phone" class="formbold-form-label">Optional Phone Number</label>
+                        <input type="text" name="phone" [(ngModel)]="phone" id="phone" placeholder="Enter your phone number" class="formbold-form-input" />
+                    </div>
+                    <div class="flex flex-wrap formbold--mx-3 ">
                         <div class="w-full sm:w-half formbold-px-3">
                             <div class="formbold-mb-5 w-full">
-                                <label for="date" class="formbold-form-label"> Date </label>
-                                <input type="date" name="date" id="date" class="formbold-form-input" />
+                                <label for="date" class="formbold-form-label">Date</label>
+                                <input type="date" name="date" [(ngModel)]="date" id="date" class="formbold-form-input" />
                             </div>
                         </div>
                         <div class="w-full sm:w-half formbold-px-3">
                             <div class="formbold-mb-5">
-                                <label for="time" class="formbold-form-label"> Time </label>
-                                <input type="time" name="time" id="time" class="formbold-form-input" />
+                                <label for="time" class="formbold-form-label">Time</label>
+                                <input type="time" name="time" [(ngModel)]="time" id="time" class="formbold-form-input" />
                             </div>
                         </div>
                     </div>
-
-
-
                     <div>
-                        <button class="formbold-btn">Book Appointment</button>
+                        <button mat-button class="formbold-btn" type="submit">Book Appointment</button>
                     </div>
                 </form>
             </div>

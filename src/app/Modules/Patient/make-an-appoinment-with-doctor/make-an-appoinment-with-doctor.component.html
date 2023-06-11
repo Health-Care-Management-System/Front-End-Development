@@ -1,0 +1,46 @@
+<app-mininavbar (toggleLeftToolBarForMe)="leftToolBarToggler()">
+</app-mininavbar>
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" [opened]="sideBarOpen">
+        <app-patient-left-toolbar></app-patient-left-toolbar>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div>
+            <img class="bb" src="\assets\img\patientori1111.jpg" alt="" />
+        </div>
+        <div class="formbold-main-wrapper">
+            <div class="formbold-form-wrapper">
+                <form (submit)="onSubmit()" method="POST">
+                    <div class="mmm">
+                        <label for="name" class="formbold-form-label">Select Hospital</label>
+                        <input type="text" [(ngModel)]="searchText" name="name" id="name" placeholder="Search for a hospital" [formControl]="streetControl" [matAutocomplete]="streetAuto" class="formbold-form-input" />
+                        <mat-autocomplete #streetAuto="matAutocomplete">
+                            <mat-option *ngFor="let book of filteredBooks | async" [value]="book.name">
+                                {{ book.name }}
+                            </mat-option>
+                        </mat-autocomplete>
+                    </div>
+                    <div class="mmm">
+                        <label class="formbold-form-label">Phone Numberr</label>
+                        <input type="tel" [(ngModel)]="phone" class="formbold-form-input" name="phone" placeholder="Phone Number" pattern="[0-9]{10}" required />
+                    </div>
+                    <div class="mmm">
+                        <label class="formbold-form-label">Appointment Date</label>
+                        <input type="date" [(ngModel)]="date" class="formbold-form-input" name="date" required />
+                    </div>
+                    <div class="mmm">
+                        <label class="formbold-form-label">Appointment Time</label>
+                        <input type="time" [(ngModel)]="time" class="formbold-form-input" name="time" required />
+                    </div>
+                    <div class="mmm">
+                        <button type="submit" class="formbold-form-button">Make Appointment</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <h2>Appointment Details</h2>
+        <p>Doctor Name: {{ doctorName }}</p>
+        <p>Speciality: {{ doctorSpeciality }}</p>
+    </mat-drawer-content>
+
+</mat-drawer-container>

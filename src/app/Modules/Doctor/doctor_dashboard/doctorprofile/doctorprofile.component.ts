@@ -11,7 +11,7 @@ import { Doctor } from '../../doctor';
 export class DoctorprofileComponent implements OnInit {
   constructor(private http: HttpClient, private doc_service: DoctorService) {}
 
-  id = 1;
+  id = "doc1";
   // @ts-ignore
   selectedFile: File;
 
@@ -88,7 +88,7 @@ export class DoctorprofileComponent implements OnInit {
     this.sideBarOpen = !this.sideBarOpen;
   }
 
-  
+
   onFileSelected(event:any) {
     this.selectedFile = event.target.files[0];
   }

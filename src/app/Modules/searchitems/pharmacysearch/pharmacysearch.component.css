@@ -19,24 +19,26 @@
     font-size: 18px;
     font-family: 'Source Sans Pro';
     color: #979797;
+    border-color: #00be99;
 }
 
 .searchfilter {
     position: absolute;
-    top: 240px;
+    top: 180px;
     left: 40px;
 }
 
 .icon3 {
     position: relative;
-    left: -25px;
+    left: 235px;
+    top: -42px;
 }
 
 .qqq {
     position: absolute;
     height: 170px;
     width: 300px;
-    top: 640px;
+    top: 580px;
     left: 40px;
     border-style: solid;
     padding: 10px;
@@ -64,18 +66,18 @@
 
 .vl {
     border-left: 6px solid #00be99;
-    height: 800px;
+    height: 1000px;
     position: absolute;
     left: 450px;
     margin-left: -3px;
-    top: 130px;
+    top: 140px;
 }
 
 .searchfordoctors {
     position: absolute;
-    left: 730px;
+    left: 680px;
     /* right: 36.7%; */
-    top: 100px;
+    top: 80px;
     bottom: 83.92%;
     font-style: normal;
     font-weight: 600;
@@ -95,9 +97,9 @@
 
 .search2 {
     position: absolute;
-    left: 600px;
-    /* right: 16.36%; */
-    top: 190px;
+    left: 550px;
+    right: 16.36%;
+    top: 170px;
     bottom: 80.85%;
     font-family: 'Source Sans Pro';
     font-style: normal;
@@ -143,7 +145,6 @@ top: 540.65px; */
     line-height: 30px;
     color: #000000;
     position: relative;
-    position: relative;
     text-align: center;
     padding: 5px;
 }
@@ -169,11 +170,20 @@ top: 575.03px; */
     text-align: center;
     font-weight: 10;
     padding: 5px;
+    position: relative;
 }
 
-.allcards {
-    display: flex;
+.text4 {
+    text-align: center;
+    font-weight: 10;
+    padding: 5px;
+    position: relative;
 }
+
+
+/* .allbooks {
+    display: flex;
+} */
 
 .imageori {
     position: relative;
@@ -181,22 +191,24 @@ top: 575.03px; */
     border-style: solid;
     left: 55px;
     height: 120px;
+    width: 120px;
 }
 
-.allcards {
-    top: 290px;
+.allbooks {
+    top: 280px;
     position: absolute;
-    left: 510px;
+    left: 520px;
     width: 950px;
     flex-wrap: wrap;
     row-gap: 70px;
     column-gap: 60px;
+    display: flex;
 }
 
 .x {
     /* position: absolute; */
     width: 275px;
-    height: 320px;
+    height: 340px;
     border-style: solid;
     border-color: #00be99;
     border-radius: 40px;
@@ -206,8 +218,15 @@ top: 575.03px; */
     width: 150px;
     height: 40px;
     position: absolute;
-    top: 1050px;
-    left: 880px;
+    top: 1100px;
+    left: 910px;
+}
+
+.showmore2 {
+    width: 150px;
+    height: 40px;
+    position: relative;
+    top: auto;
 }
 
 .star {
@@ -220,9 +239,16 @@ top: 575.03px; */
     display: flex;
 }
 
-.showmore2 {
-    width: 150px;
-    height: 40px;
-    position: relative;
-    top: 10px;
+.viewprofile {
+    position: absolute;
+    top: 290px;
+    left: 40px;
+    color: #00be99;
+}
+
+.favorite {
+    position: absolute;
+    top: 290px;
+    left: 180px;
+    color: #FF6347;
 }

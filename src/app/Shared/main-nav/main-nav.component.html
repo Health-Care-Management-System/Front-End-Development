@@ -7,7 +7,7 @@
         <img src="../../../assets/img/logo-light-background.png" class="logo" alt="logo" >
         </a>
     </span>
-    <div class="spacer"></div>
+  <div class="spacer"></div>
 
 
   <div fxLayout="row" fxHide fxShow.gt-sm>
@@ -17,34 +17,48 @@
     <a class="nav-link" routerLink="/pharmacy" mat-button>Pharmacy</a>
     <a class="nav-link" routerLink="/ambulance" mat-button>Ambulance</a>
     <a class="nav-link" routerLink="/aboutus" mat-button>About</a>
+    <a class="nav-link" routerLink="/patientprofile" mat-button *ngIf="userService.roleMatch(['Patient'])">My Profile</a>
+    <a class="nav-link" routerLink="/dashboard" mat-button *ngIf="userService.roleMatch(['Doctor'])">My Profile</a>
+    <a class="nav-link" routerLink="/pharmacyprofile" mat-button *ngIf="userService.roleMatch(['Hospital'])">My Profile</a>
+    <a class="nav-link" routerLink="/dashboard" mat-button *ngIf="userService.roleMatch(['Pharmacy'])">My Profile</a>
+    <a class="nav-link" routerLink="/dashboard" mat-button *ngIf="userService.roleMatch(['Ambulence'])">My Profile</a>
+    <a class="nav-link" routerLink="/dashboard" mat-button *ngIf="userService.roleMatch(['Admin'])">My Profile</a>
+    <a class="nav-link" routerLink="/dashboard" mat-button *ngIf="userService.roleMatch(['Admin'])">Admin</a>
+
   </div>
 
 
-        <div class="spacer"></div>
-        <a class="nav-link" routerLink="/login" mat-stroked-button>Login</a>
-        <a class="nav-link" routerLink="/userselect" mat-raised-button>Sign up</a>
-        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button">
-      <!-- <mat-icon>person</mat-icon> -->
-      <img class="profileimg" src="../../../../../../assets/img/team1.jpg" alt="Avatar">
-    </button>
-        <!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button">
-      <mat-icon>person_outline</mat-icon> -->
-        <!-- <mat-icon >account_circle</mat-icon>
-      <img  src="../../../../../../assets/img/doc23.png" />
-  </button> -->
-        <mat-menu #menu="matMenu">
-            <button mat-menu-item routerLink="/patientprofile">
-            <mat-icon><i class="fa fa-sign-out"  aria-hidden="true"  routerLink="/patientprofile"></i></mat-icon>
-            <span  routerLink="/patientprofile">Login Patient</span>
+  <div class="spacer"></div>
+  <a class="nav-link" routerLink="/login" mat-stroked-button *ngIf="! isLoggedIn()" >Sign in</a>
+  <a class="nav-link" routerLink="/userselect" mat-raised-button *ngIf="! isLoggedIn()" >Sign up</a>
+  <a class="nav-link" routerLink="/home" mat-raised-button *ngIf="isLoggedIn()" (click)="logout()">Sign out</a>
+
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button">
 
 
-        </button>
-            <button mat-menu-item routerLink="/dashboard">
-          <mat-icon><i class="fa fa-sign-out"  aria-hidden="true"  routerLink="/dashboard"></i></mat-icon>
-          <span  routerLink="/dashboard">Login Doctor</span>
+  </button>
+  <!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button">
+    <mat-icon>person_outline</mat-icon> -->
+  <!-- <mat-icon >account_circle</mat-icon>
+    <img  src="../../../../../../assets/img/doc23.png" />
+</button> -->
+  <!-- <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/patientprofile">
+          <mat-icon><i class="fa fa-sign-out"  aria-hidden="true"  routerLink="/patientprofile"></i></mat-icon>
+          <span  routerLink="/patientprofile">Login Patient</span>
+
+
       </button>
-        </mat-menu>
+          <button mat-menu-item routerLink="/dashboard">
+        <mat-icon><i class="fa fa-sign-out"  aria-hidden="true"  routerLink="/dashboard"></i></mat-icon>
+        <span  routerLink="/dashboard">Login Doctor</span>
+    </button>
+
+      </mat-menu> -->
+  <!-- </div> -->
+
   <!-- responsive menu part -->
+  <!-- fxShow fxHide.md  - means the the above element will be shown by default and ONLY hidden on viewport sizes == md mediaQuery ranges. -->
   <button mat-button [mat-menu-trigger-for]="menu" fxShow fxHide.gt-sm>
     <mat-icon>menu</mat-icon>
   </button>
@@ -53,12 +67,12 @@
 
 
 <mat-menu x-position="before" #menu>
-    <button routerLink="/home" mat-menu-item>Home</button>
-    <button routerLink="/doctor" mat-menu-item>Doctor</button>
-    <button routerLink="/hospital" mat-menu-item>Hospital</button>
-    <button routerLink="/pharmacy" mat-menu-item>Pharmacy</button>
-    <button routerLink="/ambulance" mat-menu-item>Ambulance</button>
-    <button routerLink="/aboutus" mat-menu-item>About</button>
-    <button routerLink="/login" mat-menu-item>Login</button>
-    <button routerLink="/userselect" mat-menu-item>Sign up</button>
+  <button routerLink="/home" mat-menu-item>Home</button>
+  <button routerLink="/doctor" mat-menu-item>Doctor</button>
+  <button routerLink="/hospital" mat-menu-item>Hospital</button>
+  <button routerLink="/pharmacy" mat-menu-item>Pharmacy</button>
+  <button routerLink="/ambulance" mat-menu-item>Ambulance</button>
+  <button routerLink="/aboutus" mat-menu-item>About</button>
+  <button routerLink="/login" mat-menu-item>Login</button>
+  <button routerLink="/userselect" mat-menu-item>Sign up</button>
 </mat-menu>

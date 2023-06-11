@@ -1,0 +1,10 @@
+<app-patient-navbar (toggleLeftToolBarForMe)="leftToolBarToggler()">
+</app-patient-navbar>
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <app-admin-nav></app-admin-nav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <h1>Hospital page</h1>
+  </mat-drawer-content>
+</mat-drawer-container>
