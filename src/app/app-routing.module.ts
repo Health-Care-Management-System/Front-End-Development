@@ -53,7 +53,7 @@ import { MedicineorderdetailsComponent } from './Modules/Patient/medicineorderde
 import { MyappoinmentsComponent } from './Modules/Patient/myappoinments/myappoinments.component';
 import { PatientpwchangeComponent } from './Modules/Patient/patientpwchange/patientpwchange.component';
 
-import { CanceledComponent } from './Modules/Pharmacy/canceled/canceled.component';
+import { DoneComponent } from './Modules/Pharmacy/done/done.component';
 import { NewComponent } from './Modules/Pharmacy/new/new.component';
 import { RejectedComponent } from './Modules/Pharmacy/rejected/rejected.component';
 import { ApprovedComponent } from './Modules/Pharmacy/approved/approved.component';
@@ -141,7 +141,7 @@ const routes: Routes = [
 {path:'updateappoinment/:doctorId',component: UpdateappoinmentsComponent},
 // { path: 'makeanappoinment2/:doctorId', component: MakeAppointmentComponent },
 
-{path:'canceled',component:CanceledComponent},
+{path:'canceled',component:DoneComponent},
 {path:'new',component:NewComponent},
 {path:'rejected',component:RejectedComponent},
 {path:'approved',component:ApprovedComponent},
@@ -166,7 +166,17 @@ const routes: Routes = [
   {path:'adminpharmacy',component:AdminPharmacyComponent},
   {path:'adminhospital',component:AdminHospitalComponent},
   {path:'adminambulance',component:AdminAmbulenceComponent},
-  {path:'admindetails',component:AdminDetailsComponent}
+  {path:'admindetails',component:AdminDetailsComponent},
+
+
+  {path:'done',component:DoneComponent},
+  {path:'new',component:NewComponent},
+  {path:'rejected',component:RejectedComponent},
+  {path:'approved',component:ApprovedComponent},
+  {path:'pharmacydashboard',component:PharmacydashboardComponent},
+  {path:'patientview',component:PatientviewComponent},
+
+
 
 
 ];

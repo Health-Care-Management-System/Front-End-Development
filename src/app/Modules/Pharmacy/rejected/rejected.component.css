@@ -1,139 +1,152 @@
 
+.container-fluid{
+  background-image: url(src\assets\img\top-view-medical-examination-report-cellphone-medical-equipments-wooden-desk.jpg);
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+}
+
+ul li{
+  list-style: none;
+}
+
+mat-toolbar{
+  background-color: #065560;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  height: 70px;
+
+
+}
 
 .card1{
-    width: 100%;
-    height:100px;
-    background-color:#065560;
-    
+  width: 100%;
+  height:100px;
+  background-color:#065560;
 }
 
 
-  
-  .image{
-     
-      margin-top: -2px;
-      margin-left: 20px;
-    width: 65px;
-    height:65px;
-    border-radius: 50%;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-      
-  }
-  
-  .name1{
-      font-family: 'Times New Roman', Times, serif;
-      font-weight: 600;
-      font-size: xx-large;
-      color: #FE8E3C;
-     
-      
-      top: 10px;
-  } 
-
-  .name2{
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 600;
-    font-size: xx-large;
-    color:grey;
-    margin-top: 10px;
-   
-    top: 22px;
-} 
-
-
-.pharmacyname{
-padding-top: 7px;
-padding-left: 10px;
+.backgroundimage{
+  background-image: url(src\assets\img\abstract-blur-defocused-pharmacy-drug-store.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 }
+
+a{
+  text-decoration: none;
+
+}
+
+
+
+.image{
+
+  margin-top: 6px;
+  margin-left: 20px;
+  width: 55px;
+  height:55px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+
+}
+
+.name1{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  font-size: x-large;
+  color: #FE8E3C;
+
+
+
+
+}
+
+.name2{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  font-size: x-large;
+  color:grey;
+  margin-top: 10px;
+
+
+}
+
+
 
 
 
 
 .editbutton{
-    border-radius:20px;
-    border: none;
-    color: white;
-   
-    padding: 5px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-   
-    
-  }
-  
-  .editbutton {
-    background-color:#75E6DA; 
-    color:black; 
-    border: 2px solid#75E6DA;
-  }
-  
-  .editbutton:hover {
-    background-color: white;
-    color:#21B6A8;
-  }
+  border-radius:20px;
+  border: none;
+  color: white;
+  padding: 0px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  transition-duration: 0.4s;
+  cursor: pointer;
 
+
+}
+
+.editbutton {
+  background-color:#75E6DA;
+  color:black;
+  border: 2px solid#75E6DA;
+}
+
+.editbutton:hover {
+  background-color: white;
+  color:#21B6A8;
+}
+
+
+
+.id{
+  color:#00FFFF;
+
+}
+
+table{
+
+  border-spacing: 0 40px;
+  text-align: center;
+  margin-bottom: 50px;
+
+
+
+}
+
+td, th {
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+}
+
+
+th{
+  height: 70px;
+  vertical-align: middle;
+
+}
 
 .header1{
-    position: relative;
-    padding-left:220px;
-    top: 50px;
+  font-size: xx-large;
+  margin-bottom: 50px;
+  padding-top: 80px;
+  padding-left: 160px;
+  color:black;
+  font-weight:bolder;
 }
 
 .header2{
-    position: relative;
-   padding-left:550px;
-    top: 7px;
-    
+  font-size: large;
+  margin-left: 5px;
+  color: red;
 }
 
 
 
-
-
-.table{
-    position: relative;
-    left: 10px;
-    top: 5%;
-    width: 70%;
-    height: 60%;
-    border:5px;
-    border-color: black;
-    margin: auto;
-   
-    
-}
-
-.thead{
-    height: 20%;
-   
-}
-
-.thead1{
-     left:120px;
-     position: relative;
-}
-
-
-
-.thead3{
-    position: relative;
-    left: 100px;
-}
-
-
-.thead1,.thead2,.thead3,.thead4,.thead5{
-    font-size: large;
-   
-}
-
-
-
-.id1,.id2,.id3{
-    color:#00FFFF;
-  
-}

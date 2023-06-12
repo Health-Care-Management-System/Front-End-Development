@@ -1,96 +1,110 @@
 
+<!-- Toolbar and it's properties -->
 
-<div class="card">
-  <mat-card class="card1">
-    <mat-card-content> 
-      
-    <div fxFlex fxlayout="row" fxLayoutAlign="flex-start">
-      <img class="image" src="\assets\img\34bc20ba-3ade-d40e-9316-0d9e71cef5b2.png">
-      <div class="pharmacyname">
-        <div class="name1">
-            Apothecare
-        </div>
-        <div class="name2">
-            Pharmacy
-        </div>
-      </div>
-    </div>
-      <div fxFlex fxlayout="row" fxLayoutAlign="flex-end">
-          <button class="editbutton">
-            Edit Profile
+
+<mat-toolbar>
+  <div fxFlex fxLayout="row" fxLayoutAlign="flex-start" >
+    <a href="" routerLink=""><img class="image" src="\assets\img\34bc20ba-3ade-d40e-9316-0d9e71cef5b2.png"></a>
+    <ul fxLayout="row" fxLayoutGap="row">
+      <li>
+        <a class="name1">
+          Apothecare <br> <em class="name2"> Pharmacy</em>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+    <ul fxLayout="row" fxLayoutGap="row">
+      <li>
+        <button mat-button class="editbutton">
+          Edit Profile
+        </button>
+      </li>
+    </ul>
+  </div>
+</mat-toolbar>
+
+
+<!-- Precription status text -->
+
+
+<div class="container-fluid">
+  <div class="header">
+
+    <p class="h2 header1">New orders<em ><mark class="header2">{{new}}</mark></em></p>
+
+  </div>
+
+  <div class>
+
+    <!-- Table and it's properties -->
+
+
+    <table class="table align-middle table-dark table-striped m-10" style="width:70%; height: 80%; margin-right: auto; margin-left: auto;">
+
+      <thead class="bg-light">
+      <tr>
+        <th></th>
+        <th>Prescription ID</th>
+        <th>Patient ID</th>
+        <th>Date</th>
+        <th>PDF</th>
+        <th>Action</th>
+      </tr>
+      </thead>
+
+      <tbody>
+
+      <tr *ngFor="let prescription of new_prescription">
+
+        <td>
+          <div class="d-flex align-items-center">
+            <img
+              src=""
+              alt=""
+              style="width: 45px; height: 45px"
+              class="rounded-circle"
+            />
+          </div>
+        </td>
+
+        <td>
+          <p class="fw-normal mb-1 id">{{prescription.prescriptionid}}</p>
+        </td>
+
+        <td>
+          <p class="text-muted mb-0">{{prescription.patient.id}}</p>
+          <p class="fw-bold mb-1">{{prescription.patient.firstname}} {{prescription.patient.lastname}}</p>
+        </td>
+
+        <td>
+          <p class="fw-normal mb-1 id">{{prescription.date}}</p>
+        </td>
+
+        <td>
+          <button type="button" class="btn btn-link btn-rounded btn-sm fw-bold" data-mdb-ripple-color="dark">
+            PDF
           </button>
-      </div>
-  </mat-card-content>
-  </mat-card>
+        </td>
+
+        <td>
+          <button type="button" class="btn btn-success btn-rounded button1" (click)="approve_prescription(prescription.prescriptionid)">Approve</button>
+          <button type="button" class="btn btn-danger btn-rounded button2" (click)="reject_prescription(prescription.prescriptionid)">Reject</button>
+        </td>
+
+      </tr>
+
+      </tbody>
+
+    </table>
+
+
+  </div>
 </div>
 
 
 
- 
 
 
-  <div class="header">
-    
-     <p class="h2 header1">New orders</p>
-     <p class="h5 header2"><mark>+3</mark></p>
-   </div>
-
-<table class="table align-middle table-dark table-striped"  >
-    <thead class="table-dark thead">
-      <tr>
-        <th ><p class="thead1">Name</p></th>
-        <th ><p class="thead2">ID</p></th>
-        <th ><p class="thead3">Status</p></th>
-        <th ><p class="thead4">Date</p></th>
-        <th ><p class="thead5">PDF</p></th>
-     
-        
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let data of newdata">
-        <td>
-          <div class="d-flex align-items-center">
-            <img
-                src="{{data.imgurl}}"
-                alt=""
-                style="width: 45px; height: 45px"
-                class="rounded-circle"
-                />
-            <div class="ms-3">
-              <p class="fw-bold mb-1 username1">{{data.username}}</p>
-              <p class="text-muted mb-0 usermail1">{{ data.email}}</p>
-            </div>
-          </div>
-        </td>
-        <td>
-          <p class="fw-normal mb-1 id1">{{data.id}}</p>
-          
-        </td>
-        <td>
-            <button type="button" class="btn btn-success btn-rounded button1">Approve</button>
-            <button type="button" class="btn btn-danger btn-rounded button2">Reject</button>
-        </td>
-        <td>{{data.date}}</td>
-        <td>
-            <button
-            type="button"
-            class="btn btn-link btn-rounded btn-sm fw-bold"
-            data-mdb-ripple-color="dark"
-            >
-     PDF
-    </button>
-        </td>
-        
-      </tr>
-     
-    </tbody>
-  </table>
-
-
-
-
-
-
-
+<app-footer></app-footer>
 

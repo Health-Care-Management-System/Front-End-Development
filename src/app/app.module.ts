@@ -122,7 +122,7 @@ import { MatDialog } from '@angular/material/dialog';
 
 // import { A11yModule } from '@angular/cdk/a11y';
 
-import { CanceledComponent } from './Modules/Pharmacy/canceled/canceled.component';
+import { DoneComponent } from './Modules/Pharmacy/done/done.component';
 import { NewComponent } from './Modules/Pharmacy/new/new.component';
 import { RejectedComponent } from './Modules/Pharmacy/rejected/rejected.component';
 import { ApprovedComponent } from './Modules/Pharmacy/approved/approved.component';
@@ -172,8 +172,8 @@ import {AdminPatientComponent} from "./Modules/Admin/admin-patient/admin-patient
     DoctorSignupComponent,
     DoctorSignupNextComponent,
     LoginComponent,
-  
-  
+
+
     // FilterComponent,
 
 
@@ -233,7 +233,7 @@ import {AdminPatientComponent} from "./Modules/Admin/admin-patient/admin-patient
 
     // SearchdoctorcontentComponent
 
-    CanceledComponent,
+    DoneComponent,
     NewComponent,
     RejectedComponent,
     ApprovedComponent,
@@ -249,7 +249,7 @@ import {AdminPatientComponent} from "./Modules/Admin/admin-patient/admin-patient
     MakeAnAppoinmentWithDoctorComponent,
 
     UpdateappoinmentsComponent,
-  
+
 
     AdminPatientComponent,
     AdminPharmacyComponent
