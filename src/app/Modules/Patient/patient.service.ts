@@ -27,4 +27,13 @@ export class PatientService {
     headers.append('Content-Type', 'multipart/form-data');
     return this.httpclient.post(`${this.baseURL}/${id}/photo`, photo, { headers: headers });
   }
+
+  gelAllPatient(){
+    return this.httpclient.get(`http://localhost:8080/api/patient/getAllPatient`)
+  }
+
+  deletePatientById(id:number){
+
+  }
+
 }

@@ -5,6 +5,72 @@
     <app-admin-nav></app-admin-nav>
   </mat-drawer>
   <mat-drawer-content>
-    <h1>admin page</h1>
+    <div class="container-lg">
+      <div class="row justify-content-center row1">
+        <div class="col-sm-4 col-lg-6  mx-5 shadow card1">
+
+          <h3 class="new" >Doctor</h3>
+
+          <p class="crd1txt2">{{Doctorcount}}</p>
+          <a href="#" routerLink="/admindoctor">
+            <div class="go-corner" >
+
+              <div class="go-arrow" >
+                →
+
+              </div>
+            </div>
+          </a>
+        </div>
+
+
+
+
+        <div class="col-sm-4 col-lg-6  mx-5 shadow card2">
+          <h3 class="approved">Patient</h3>
+          <p class="crd2txt2">{{Patientcount}}</p>
+          <a href="#" routerLink="/adminpatient">
+            <div class="go-corner" >
+              <div class="go-arrow" >
+                →
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+
+
+      <div class="row justify-content-center row2">
+        <div class="col-sm-4 col-lg-6  mx-5 shadow card3">
+
+          <h3 class="rejected">Hospital</h3>
+          <p class="crd3txt2">{{Hospitalcount}}</p>
+          <a href="#" routerLink="/adminhospital">
+            <div class="go-corner" >
+
+              <div class="go-arrow">
+                →
+
+              </div>
+            </div>
+          </a>
+        </div>
+
+
+
+        <div class="col-sm-4 col-lg-6  mx-5 shadow card4">
+          <h3 class="canceled">Pharmacy</h3>
+          <p class="crd4txt2">{{Pharmacycount}}</p>
+          <a href="#" routerLink="/adminpharmacy">
+            <div class="go-corner"  >
+              <div class="go-arrow">
+                →
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
   </mat-drawer-content>
 </mat-drawer-container>

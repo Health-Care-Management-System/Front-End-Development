@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {PatientService} from "../../Patient/patient.service";
+import {Patient} from "../../Patient/patient";
+import {doctorProfileData} from "../../Hospital/hospital-profile-page/hospital-profile";
 
 @Component({
   selector: 'app-admin-patient',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminPatientComponent implements OnInit {
 
-  constructor() { }
+  constructor(private patient_service:PatientService) { }
 
+  patients:Patient[] = [];
   ngOnInit(): void {
+    this.patient_service.gelAllPatient().subscribe((data)=>{
+      console.log("Successful");
+      //@ts-ignore
+      this.patients = data;
+    })
   }
 
   title = 'edowzori';
@@ -20,4 +29,9 @@ export class AdminPatientComponent implements OnInit {
   }
 
 
+  protected readonly doctorProfileData = doctorProfileData;
+
+  deletePatient(id: number) {
+    this.patient_service.deletePatientById(id)
+  }
 }

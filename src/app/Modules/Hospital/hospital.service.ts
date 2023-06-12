@@ -30,4 +30,10 @@ export class HospitalService {
   deleteHospital(hospitalid: number){
     return this.httpclient.delete("http://localhost:8080/api/deleteHospital" + hospitalid);
   }
+
+  getAllPharmacy(){
+    return this.httpclient.get(`http://localhost:8080/apipharmacy/all`)
+  }
+
+
 }

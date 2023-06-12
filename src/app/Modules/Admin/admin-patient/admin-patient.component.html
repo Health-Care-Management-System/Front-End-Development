@@ -5,6 +5,39 @@
     <app-admin-nav></app-admin-nav>
   </mat-drawer>
   <mat-drawer-content>
-    <h1>Patient page</h1>
+    <div class="container-fluid">
+      <div class="header">
+        <p class="h2 header1">Approved orders<em ><mark class="header2"><span style="color: #a10909">Patient Count</span></mark></em></p>
+      </div>
+      <div class="">
+
+        <!-- Table and it's properties -->
+
+        <table class="table align-middle table-dark table-striped m-10" style="width:70%; height: 80%; margin-right: auto; margin-left: auto;">
+
+          <thead class="bg-light">
+          <tr>
+            <th></th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>DOB</th>
+            <th></th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <tr *ngFor="let patient of patients">
+            <td><img src="favicon.ico"></td>
+            <td>{{patient.id}}</td>
+            <td>{{patient.firstname}} {{patient.lastname}}</td>
+            <td>{{patient.emailID}}</td>
+            <td>{{patient.dob}}</td>
+            <td><input type="button" value="Delete" (click)="deletePatient(patient.id)" ></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </mat-drawer-content>
 </mat-drawer-container>

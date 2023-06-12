@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Doctor} from "../../Doctor/doctor";
+import {DoctorService} from "../../Doctor/doctor.service";
 
 @Component({
   selector: 'app-admin-doctor',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminDoctorComponent implements OnInit {
 
-  constructor() { }
+  constructor(private doc_ser:DoctorService) { }
 
+  doctors:Doctor[] = [];
   ngOnInit(): void {
+    this.doc_ser.getAllDoctors().subscribe(list =>{
+      this.doctors = list;
+    })
   }
 
   title = 'edowzori';
@@ -20,4 +26,7 @@ export class AdminDoctorComponent implements OnInit {
   }
 
 
+  deleteDoctor(id: string) {
+    this.doc_ser.deleteDoctor(id)
+  }
 }

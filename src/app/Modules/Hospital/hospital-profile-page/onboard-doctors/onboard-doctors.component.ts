@@ -17,7 +17,7 @@ export class OnboardDoctorsComponent implements OnInit {
   //@ts-ignore
   doctorDetails: Doctor = new Doctor();
 
-  id:number = 1;
+  id:string = "doc1";
 
   ngOnInit(): void {
     this.getDoctorDetails();

@@ -5,6 +5,35 @@
     <app-admin-nav></app-admin-nav>
   </mat-drawer>
   <mat-drawer-content>
-    <h1>Doctor page</h1>
+    <div class="container-fluid">
+      <div class="header">
+        <p class="h2 header1">Approved orders<em ><mark class="header2"><span style="color: red">Doctor Count</span></mark></em></p>
+      </div>
+      <div class="">
+
+        <!-- Table and it's properties -->
+
+        <table class="table align-middle table-dark table-striped m-10" style="width:70%; height: 80%; margin-right: auto; margin-left: auto;">
+
+          <thead class="bg-light">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>SLMC Number</th>
+            <th></th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <tr *ngFor="let doctor of doctors">
+            <td>{{doctor.id}}</td>
+            <td>{{doctor.name}}</td>
+            <td>{{doctor.slmcnumber}}</td>
+            <td><input type="button" value="Delete" (click)="deleteDoctor(doctor.id)"></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </mat-drawer-content>
 </mat-drawer-container>

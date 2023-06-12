@@ -9,6 +9,7 @@ export class AdminHospitalComponent implements OnInit {
 
   constructor() { }
 
+
   ngOnInit(): void {
   }
 
