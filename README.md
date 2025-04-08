@@ -31,11 +31,11 @@ The Edowz Health-Care-Management-System provides an all-in-one digital solution 
 
 ---
 
-## 📸 Screenshots
+## 📸 Some of Screenshots
 
 > Add your screenshots in a `screenshots/` folder and link them here:
 
-| Dashboard | Appointment Booking | Pharmacy Panel |
+|Common Home Page | Doctor Home Page | Hospital Login Page |
 |----------|----------------------|----------------|
 | ![Home](home.png) | ![doctor](doctor.png) | ![Pharmacy](hospital_login.png) |
 
