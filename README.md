@@ -33,8 +33,6 @@ The Edowz Health-Care-Management-System provides an all-in-one digital solution 
 
 ## 📸 Some of Screenshots
 
-> Add your screenshots in a `screenshots/` folder and link them here:
-
 |Common Home Page | Doctor Home Page | Hospital Login Page |
 |----------|----------------------|----------------|
 | ![Home](home.png) | ![doctor](doctor.png) | ![Pharmacy](hospital_login.png) |
